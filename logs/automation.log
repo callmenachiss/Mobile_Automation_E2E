@@ -1,0 +1,33 @@
+2026-08-21 10:41:37.704 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 18 passed, 0 failed, 0 skipped.
+2026-08-21 10:41:37.709 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:41:37.710 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-21 10:44:32.231 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 18 passed, 0 failed, 0 skipped.
+2026-08-21 10:44:32.259 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:44:32.260 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-21 10:48:47.313 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 10 passed, 0 failed, 0 skipped.
+2026-08-21 10:48:47.317 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:48:47.317 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-21 10:49:04.455 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 14 passed, 0 failed, 0 skipped.
+2026-08-21 10:49:04.459 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:49:04.459 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-21 10:49:45.199 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 18 passed, 0 failed, 0 skipped.
+2026-08-21 10:49:45.202 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:49:45.203 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-21 10:49:49.213 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 10 passed, 0 failed, 0 skipped.
+2026-08-21 10:49:49.218 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:49:49.218 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-21 10:49:53.143 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 14 passed, 0 failed, 0 skipped.
+2026-08-21 10:49:53.146 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:49:53.147 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-21 10:55:45.066 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 18 passed, 0 failed, 0 skipped.
+2026-08-21 10:55:45.070 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:55:45.070 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-21 10:55:49.048 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 10 passed, 0 failed, 0 skipped.
+2026-08-21 10:55:49.051 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:55:49.051 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-21 10:55:53.026 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 14 passed, 0 failed, 0 skipped.
+2026-08-21 10:55:53.029 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:55:53.029 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-21 10:57:43.659 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 18 passed, 0 failed, 0 skipped.
+2026-08-21 10:57:43.662 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-21 10:57:43.662 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
