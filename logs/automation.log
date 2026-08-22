@@ -1,33 +1,56 @@
-2026-08-21 10:41:37.704 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 18 passed, 0 failed, 0 skipped.
-2026-08-21 10:41:37.709 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:41:37.710 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
-2026-08-21 10:44:32.231 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 18 passed, 0 failed, 0 skipped.
-2026-08-21 10:44:32.259 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:44:32.260 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
-2026-08-21 10:48:47.313 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 10 passed, 0 failed, 0 skipped.
-2026-08-21 10:48:47.317 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:48:47.317 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
-2026-08-21 10:49:04.455 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 14 passed, 0 failed, 0 skipped.
-2026-08-21 10:49:04.459 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:49:04.459 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
-2026-08-21 10:49:45.199 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 18 passed, 0 failed, 0 skipped.
-2026-08-21 10:49:45.202 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:49:45.203 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
-2026-08-21 10:49:49.213 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 10 passed, 0 failed, 0 skipped.
-2026-08-21 10:49:49.218 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:49:49.218 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
-2026-08-21 10:49:53.143 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 14 passed, 0 failed, 0 skipped.
-2026-08-21 10:49:53.146 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:49:53.147 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
-2026-08-21 10:55:45.066 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 18 passed, 0 failed, 0 skipped.
-2026-08-21 10:55:45.070 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:55:45.070 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
-2026-08-21 10:55:49.048 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 10 passed, 0 failed, 0 skipped.
-2026-08-21 10:55:49.051 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:55:49.051 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
-2026-08-21 10:55:53.026 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 14 passed, 0 failed, 0 skipped.
-2026-08-21 10:55:53.029 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:55:53.029 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
-2026-08-21 10:57:43.659 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 18 passed, 0 failed, 0 skipped.
-2026-08-21 10:57:43.662 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-21 10:57:43.662 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-22 06:03:33.724 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-22 06:03:33.735 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-22 06:03:34.203 [main] FATAL com.ecommerce.mobile.config.AppiumServerManager - Could not start the Appium server. Is another Appium instance already running on this port?
+io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at 'C:\Users\venka\AppData\Roaming\npm\node_modules\appium\build\lib\main.js'
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:159) ~[java-client-8.6.0.jar:?]
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:304) ~[java-client-8.6.0.jar:?]
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:360) ~[java-client-8.6.0.jar:?]
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:57) ~[java-client-8.6.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:496) ~[selenium-remote-driver-4.13.0.jar:?]
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:92) ~[java-client-8.6.0.jar:?]
+	at com.ecommerce.mobile.config.AppiumServerManager.startServer(AppiumServerManager.java:38) ~[classes/:?]
+	at com.ecommerce.mobile.hooks.Hooks.startAppiumServer(Hooks.java:36) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.Invoker.invokeStatic(Invoker.java:80) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:45) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.JavaStaticHookDefinition.execute(JavaStaticHookDefinition.java:49) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.executeHook(Runner.java:112) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.lambda$executeHooks$2(Runner.java:99) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.ThrowableCollector.execute(ThrowableCollector.java:21) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.executeHooks(Runner.java:99) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.runBeforeAllHooks(Runner.java:89) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runBeforeAllHooks(CucumberExecutionContext.java:94) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.testng.TestNGCucumberRunner.<init>(TestNGCucumberRunner.java:124) ~[cucumber-testng-7.15.0.jar:7.15.0]
+	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27) ~[cucumber-testng-7.15.0.jar:7.15.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122) ~[testng-7.8.0.jar:7.8.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1114) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.run(TestNG.java:1082) [testng-7.8.0.jar:7.8.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:67) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109) [testng-rt.jar:?]
+2026-08-22 06:03:34.235 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 0 passed, 0 failed, 0 skipped.
+2026-08-22 06:03:34.238 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
