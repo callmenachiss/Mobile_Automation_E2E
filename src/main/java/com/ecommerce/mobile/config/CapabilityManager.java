@@ -8,9 +8,12 @@ import java.io.File;
 import java.time.Duration;
 
 /**
- * Builds the Appium "capabilities" - the instructions that tell Appium
- * which device to use and which app to install/launch.
- * All the actual values come from config.properties.
+ * Builds the Appium capabilities.
+ *
+ * app.path is OPTIONAL:
+ * - If app.path is provided, Appium uses the APK.
+ * - If app.path is blank, Appium launches the already-installed
+ *   application using appPackage and appActivity.
  */
 public class CapabilityManager {
 
@@ -19,53 +22,107 @@ public class CapabilityManager {
     public UiAutomator2Options getCapabilities() {
         LOGGER.info("Building Appium capabilities from config.properties");
 
-        String appPath = requireValue("app.path");
-        File appFile = new File(appPath);
-        if (!appFile.exists()) {
-            throw new RuntimeException(
-                    "APK not found at '" + appFile.getAbsolutePath() + "'. " +
-                    "Copy your .apk into the /apps folder and update 'app.path' in config.properties.");
-        }
-
         UiAutomator2Options options = new UiAutomator2Options();
+
         options.setPlatformName(ConfigReader.get("platformName"));
         options.setAutomationName(ConfigReader.get("automationName"));
 
-        // deviceName / udid / platformVersion are only added if filled in.
-        // A single connected emulator/device works fine with all three blank;
-        // udid becomes necessary once more than one device is connected.
+        // ============================================================
+        // APP PATH - OPTIONAL
+        // ============================================================
+        String appPath = ConfigReader.get("app.path", "");
+
+        if (!appPath.isBlank()) {
+
+            File appFile = new File(appPath);
+
+            if (!appFile.exists()) {
+                throw new RuntimeException(
+                        "APK not found at '" + appFile.getAbsolutePath() + "'. " +
+                                "Check the 'app.path' value in config.properties."
+                );
+            }
+
+            options.setApp(appFile.getAbsolutePath());
+
+            LOGGER.info("Using APK: {}", appFile.getAbsolutePath());
+
+        } else {
+
+            LOGGER.info(
+                    "app.path is blank. Using already-installed application."
+            );
+        }
+
+        // ============================================================
+        // DEVICE
+        // ============================================================
+
         String deviceName = ConfigReader.get("deviceName", "");
+
         if (!deviceName.isEmpty()) {
             options.setDeviceName(deviceName);
         }
 
         String udid = ConfigReader.get("udid", "");
+
         if (!udid.isEmpty()) {
             options.setUdid(udid);
         }
 
         String platformVersion = ConfigReader.get("platformVersion", "");
+
         if (!platformVersion.isEmpty()) {
             options.setPlatformVersion(platformVersion);
         }
 
-        options.setApp(appFile.getAbsolutePath());
-        options.setAppPackage(requireValue("appPackage"));
-        options.setAppActivity(requireValue("appActivity"));
-        options.setNoReset(ConfigReader.getBoolean("app.noReset"));
-        options.setAutoGrantPermissions(ConfigReader.getBoolean("app.autoGrantPermissions"));
-        options.setNewCommandTimeout(Duration.ofSeconds(ConfigReader.getInt("app.newCommandTimeout")));
+        // ============================================================
+        // APPLICATION
+        // ============================================================
+
+        options.setAppPackage(
+                requireValue("appPackage")
+        );
+
+        options.setAppActivity(
+                requireValue("appActivity")
+        );
+
+        // ============================================================
+        // OTHER SETTINGS
+        // ============================================================
+
+        options.setNoReset(
+                ConfigReader.getBoolean("app.noReset")
+        );
+
+        options.setAutoGrantPermissions(
+                ConfigReader.getBoolean("app.autoGrantPermissions")
+        );
+
+        options.setNewCommandTimeout(
+                Duration.ofSeconds(
+                        ConfigReader.getInt("app.newCommandTimeout")
+                )
+        );
 
         return options;
     }
 
+    /**
+     * Used only for settings that are genuinely required.
+     */
     private String requireValue(String key) {
+
         String value = ConfigReader.get(key, "");
+
         if (value.isEmpty()) {
             throw new RuntimeException(
-                    "'" + key + "' is blank in config.properties. Fill it in with your real device/app " +
-                    "details before running the tests - see README.md -> \"Setting up YOUR app\".");
+                    "'" + key + "' is blank in config.properties. " +
+                            "Please provide the required value."
+            );
         }
+
         return value;
     }
 }
