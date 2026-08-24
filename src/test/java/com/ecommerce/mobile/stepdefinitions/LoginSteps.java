@@ -30,6 +30,7 @@ public class LoginSteps {
         Assert.assertTrue(loginPage.isLoginScreenDisplayed(), "Login screen was not displayed.");
     }
 
+
     @When("I log in with a valid email and password")
     public void i_log_in_with_a_valid_email_and_password() {
         loginPage.login(VALID_EMAIL, VALID_PASSWORD);

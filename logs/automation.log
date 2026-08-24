@@ -1,56 +1,146 @@
-2026-08-22 06:03:33.724 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
-2026-08-22 06:03:33.735 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
-2026-08-22 06:03:34.203 [main] FATAL com.ecommerce.mobile.config.AppiumServerManager - Could not start the Appium server. Is another Appium instance already running on this port?
-io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at 'C:\Users\venka\AppData\Roaming\npm\node_modules\appium\build\lib\main.js'
-	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:159) ~[java-client-8.6.0.jar:?]
-	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:304) ~[java-client-8.6.0.jar:?]
-	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:360) ~[java-client-8.6.0.jar:?]
-	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:57) ~[java-client-8.6.0.jar:?]
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:496) ~[selenium-remote-driver-4.13.0.jar:?]
-	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:92) ~[java-client-8.6.0.jar:?]
-	at com.ecommerce.mobile.config.AppiumServerManager.startServer(AppiumServerManager.java:38) ~[classes/:?]
-	at com.ecommerce.mobile.hooks.Hooks.startAppiumServer(Hooks.java:36) ~[test-classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
-	at io.cucumber.java.Invoker.invokeStatic(Invoker.java:80) ~[cucumber-java-7.15.0.jar:7.15.0]
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:45) ~[cucumber-java-7.15.0.jar:7.15.0]
-	at io.cucumber.java.JavaStaticHookDefinition.execute(JavaStaticHookDefinition.java:49) ~[cucumber-java-7.15.0.jar:7.15.0]
-	at io.cucumber.core.runner.Runner.executeHook(Runner.java:112) ~[cucumber-core-7.15.0.jar:7.15.0]
-	at io.cucumber.core.runner.Runner.lambda$executeHooks$2(Runner.java:99) ~[cucumber-core-7.15.0.jar:7.15.0]
-	at io.cucumber.core.runner.ThrowableCollector.execute(ThrowableCollector.java:21) ~[cucumber-core-7.15.0.jar:7.15.0]
-	at io.cucumber.core.runner.Runner.executeHooks(Runner.java:99) ~[cucumber-core-7.15.0.jar:7.15.0]
-	at io.cucumber.core.runner.Runner.runBeforeAllHooks(Runner.java:89) ~[cucumber-core-7.15.0.jar:7.15.0]
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.15.0.jar:7.15.0]
-	at io.cucumber.core.runtime.CucumberExecutionContext.runBeforeAllHooks(CucumberExecutionContext.java:94) ~[cucumber-core-7.15.0.jar:7.15.0]
-	at io.cucumber.testng.TestNGCucumberRunner.<init>(TestNGCucumberRunner.java:124) ~[cucumber-testng-7.15.0.jar:7.15.0]
-	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27) ~[cucumber-testng-7.15.0.jar:7.15.0]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.8.0.jar:7.8.0]
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) ~[testng-7.8.0.jar:7.8.0]
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390) ~[testng-7.8.0.jar:7.8.0]
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325) ~[testng-7.8.0.jar:7.8.0]
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180) ~[testng-7.8.0.jar:7.8.0]
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122) ~[testng-7.8.0.jar:7.8.0]
-	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:848) [testng-7.8.0.jar:7.8.0]
-	at org.testng.TestRunner.run(TestRunner.java:621) [testng-7.8.0.jar:7.8.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.8.0.jar:7.8.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.8.0.jar:7.8.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.8.0.jar:7.8.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.8.0.jar:7.8.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.8.0.jar:7.8.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.8.0.jar:7.8.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280) [testng-7.8.0.jar:7.8.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200) [testng-7.8.0.jar:7.8.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1114) [testng-7.8.0.jar:7.8.0]
-	at org.testng.TestNG.run(TestNG.java:1082) [testng-7.8.0.jar:7.8.0]
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:67) [testng-rt.jar:?]
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109) [testng-rt.jar:?]
-2026-08-22 06:03:34.235 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 0 passed, 0 failed, 0 skipped.
-2026-08-22 06:03:34.238 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-24 10:39:21.160 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-24 10:39:21.168 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-24 10:39:21.784 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-24 10:39:21.923 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-24 10:39:21.924 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:39:21.940 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-24 10:39:21.950 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Stopping Appium server...
+2026-08-24 10:42:05.130 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-24 10:42:05.133 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-24 10:42:05.637 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-24 10:42:05.860 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login screen is displayed when the app opens ==========
+2026-08-24 10:42:05.861 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:05.877 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login screen is displayed when the app opens
+2026-08-24 10:42:05.883 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:05.891 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login screen is displayed when the app opens ==========
+2026-08-24 10:42:05.891 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:05.893 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login screen is displayed when the app opens
+2026-08-24 10:42:05.909 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-24 10:42:05.909 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:05.913 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-24 10:42:05.915 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:05.924 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-24 10:42:05.925 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:05.928 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-24 10:42:05.937 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with invalid credentials shows an error ==========
+2026-08-24 10:42:05.938 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:05.940 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with invalid credentials shows an error
+2026-08-24 10:42:05.942 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:05.949 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with invalid credentials shows an error ==========
+2026-08-24 10:42:05.949 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:05.953 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with invalid credentials shows an error
+2026-08-24 10:42:05.968 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login successful ==========
+2026-08-24 10:42:05.969 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:05.971 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login successful
+2026-08-24 10:42:05.975 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:05.984 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login successful ==========
+2026-08-24 10:42:05.984 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:05.988 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login successful
+2026-08-24 10:42:06.007 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Product list is displayed on the Home page ==========
+2026-08-24 10:42:06.007 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.012 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Product list is displayed on the Home page
+2026-08-24 10:42:06.015 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.025 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Product list is displayed on the Home page ==========
+2026-08-24 10:42:06.026 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.030 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Product list is displayed on the Home page
+2026-08-24 10:42:06.048 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Search for a product by name ==========
+2026-08-24 10:42:06.048 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.051 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Search for a product by name
+2026-08-24 10:42:06.054 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.062 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Search for a product by name ==========
+2026-08-24 10:42:06.062 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.066 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Search for a product by name
+2026-08-24 10:42:06.077 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Sort products by price ==========
+2026-08-24 10:42:06.077 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.081 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Sort products by price
+2026-08-24 10:42:06.083 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.088 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Sort products by price ==========
+2026-08-24 10:42:06.089 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.093 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Sort products by price
+2026-08-24 10:42:06.103 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Open a product from the list ==========
+2026-08-24 10:42:06.103 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.108 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Open a product from the list
+2026-08-24 10:42:06.112 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.121 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Open a product from the list ==========
+2026-08-24 10:42:06.122 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.128 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Open a product from the list
+2026-08-24 10:42:06.139 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Product details are displayed correctly ==========
+2026-08-24 10:42:06.139 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.144 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Product details are displayed correctly
+2026-08-24 10:42:06.147 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.154 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Product details are displayed correctly ==========
+2026-08-24 10:42:06.155 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.158 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Product details are displayed correctly
+2026-08-24 10:42:06.168 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Add a product to the cart ==========
+2026-08-24 10:42:06.168 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.173 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Add a product to the cart
+2026-08-24 10:42:06.176 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.182 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Add a product to the cart ==========
+2026-08-24 10:42:06.182 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.186 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Add a product to the cart
+2026-08-24 10:42:06.196 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Increase the product quantity before adding to cart ==========
+2026-08-24 10:42:06.197 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.200 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Increase the product quantity before adding to cart
+2026-08-24 10:42:06.203 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.215 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Increase the product quantity before adding to cart ==========
+2026-08-24 10:42:06.215 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.221 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Increase the product quantity before adding to cart
+2026-08-24 10:42:06.232 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Added product appears in the cart ==========
+2026-08-24 10:42:06.232 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.236 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Added product appears in the cart
+2026-08-24 10:42:06.239 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.246 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Added product appears in the cart ==========
+2026-08-24 10:42:06.247 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.251 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Added product appears in the cart
+2026-08-24 10:42:06.260 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Update the quantity of an item in the cart ==========
+2026-08-24 10:42:06.260 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.263 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Update the quantity of an item in the cart
+2026-08-24 10:42:06.267 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.271 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Update the quantity of an item in the cart ==========
+2026-08-24 10:42:06.272 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.277 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Update the quantity of an item in the cart
+2026-08-24 10:42:06.285 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Remove an item from the cart ==========
+2026-08-24 10:42:06.285 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.290 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Remove an item from the cart
+2026-08-24 10:42:06.292 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.297 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Remove an item from the cart ==========
+2026-08-24 10:42:06.297 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.301 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Remove an item from the cart
+2026-08-24 10:42:06.310 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Complete checkout with address and payment ==========
+2026-08-24 10:42:06.310 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.315 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Complete checkout with address and payment
+2026-08-24 10:42:06.317 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.322 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Complete checkout with address and payment ==========
+2026-08-24 10:42:06.323 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.326 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Complete checkout with address and payment
+2026-08-24 10:42:06.334 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Shipping address is saved during checkout ==========
+2026-08-24 10:42:06.334 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.337 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Shipping address is saved during checkout
+2026-08-24 10:42:06.340 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.346 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Shipping address is saved during checkout ==========
+2026-08-24 10:42:06.347 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.350 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Shipping address is saved during checkout
+2026-08-24 10:42:06.355 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Checkout is blocked when the cart is empty ==========
+2026-08-24 10:42:06.355 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.358 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Checkout is blocked when the cart is empty
+2026-08-24 10:42:06.361 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.365 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Checkout is blocked when the cart is empty ==========
+2026-08-24 10:42:06.366 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.369 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Checkout is blocked when the cart is empty
+2026-08-24 10:42:06.378 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Order confirmation is displayed after placing an order ==========
+2026-08-24 10:42:06.378 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.383 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Order confirmation is displayed after placing an order
+2026-08-24 10:42:06.385 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.390 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Order confirmation is displayed after placing an order ==========
+2026-08-24 10:42:06.390 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.396 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Order confirmation is displayed after placing an order
+2026-08-24 10:42:06.403 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-24 10:42:06.404 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.406 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-24 10:42:06.410 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-24 10:42:06.416 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-24 10:42:06.417 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-24 10:42:06.419 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-24 10:42:06.428 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Stopping Appium server...
+2026-08-24 10:42:07.061 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 0 passed, 19 failed, 19 skipped.
+2026-08-24 10:42:07.063 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".

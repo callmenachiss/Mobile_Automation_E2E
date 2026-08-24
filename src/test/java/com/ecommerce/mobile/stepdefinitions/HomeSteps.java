@@ -19,6 +19,8 @@ public class HomeSteps {
         Assert.assertTrue(homePage.isProductListDisplayed(), "Product list was not displayed on the Home page.");
     }
 
+
+
     @When("I search for the product {string}")
     public void i_search_for_the_product(String productName) {
         homePage.searchForProduct(productName);

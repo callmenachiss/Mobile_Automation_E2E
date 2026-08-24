@@ -16,6 +16,19 @@ public class HomePage extends BasePage {
 
     private static final Logger LOGGER = LogManager.getLogger(HomePage.class);
 
+
+    @AndroidFindBy(id = "com.sec.android.app.popupcalculator:id/calc_keypad_btn_08")
+    private WebElement NumberBox;
+
+    @AndroidFindBy(id = "com.sec.android.app.popupcalculator:id/calc_keypad_btn_add")
+    private WebElement PlusBox;
+
+    @AndroidFindBy(id = "com.sec.android.app.popupcalculator:id/calc_keypad_btn_equal")
+    private WebElement EqualBox;
+
+    @AndroidFindBy(id = "com.sec.android.app.popupcalculator:id/calc_edt_formula")
+    private WebElement AnswerBox;
+
     @AndroidFindBy(id = "com.example.ecommerceapp:id/et_search")
     private WebElement searchBox;
 
@@ -55,6 +68,10 @@ public class HomePage extends BasePage {
         }
         throw new RuntimeException("Product '" + productName + "' was not found on the Home page.");
     }
+
+
+
+
 
     public int getDisplayedProductCount() {
         return productNames.size();

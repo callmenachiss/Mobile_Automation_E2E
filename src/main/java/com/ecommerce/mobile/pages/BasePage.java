@@ -42,6 +42,10 @@ public class BasePage {
         element.click();
     }
 
+    public void sleep() throws InterruptedException {
+        Thread.sleep(2000);
+    }
+
     protected void enterText(WebElement element, String text) {
         waitUntilVisible(element);
         element.clear();
