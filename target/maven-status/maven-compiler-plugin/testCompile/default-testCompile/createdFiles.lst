@@ -1,0 +1,12 @@
+com\ecommerce\mobile\stepdefinitions\ProductDetailsSteps.class
+com\ecommerce\mobile\hooks\Hooks.class
+com\ecommerce\mobile\stepdefinitions\HomeSteps.class
+com\ecommerce\mobile\runner\TestRunner.class
+com\ecommerce\mobile\stepdefinitions\CartSteps.class
+com\ecommerce\web\package-info.class
+com\ecommerce\mobile\stepdefinitions\CalculatorSteps.class
+com\ecommerce\mobile\stepdefinitions\LoginSteps.class
+com\ecommerce\mobile\stepdefinitions\OrderConfirmationSteps.class
+com\ecommerce\mobile\listeners\RetryAnalyzer.class
+com\ecommerce\mobile\stepdefinitions\CheckoutSteps.class
+com\ecommerce\mobile\listeners\EmailReportListener.class

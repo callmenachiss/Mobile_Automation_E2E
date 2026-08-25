@@ -1,0 +1,12 @@
+C:\Automation\src\test\java\com\ecommerce\mobile\hooks\Hooks.java
+C:\Automation\src\test\java\com\ecommerce\mobile\listeners\EmailReportListener.java
+C:\Automation\src\test\java\com\ecommerce\mobile\listeners\RetryAnalyzer.java
+C:\Automation\src\test\java\com\ecommerce\mobile\runner\TestRunner.java
+C:\Automation\src\test\java\com\ecommerce\mobile\stepdefinitions\CalculatorSteps.java
+C:\Automation\src\test\java\com\ecommerce\mobile\stepdefinitions\CartSteps.java
+C:\Automation\src\test\java\com\ecommerce\mobile\stepdefinitions\CheckoutSteps.java
+C:\Automation\src\test\java\com\ecommerce\mobile\stepdefinitions\HomeSteps.java
+C:\Automation\src\test\java\com\ecommerce\mobile\stepdefinitions\LoginSteps.java
+C:\Automation\src\test\java\com\ecommerce\mobile\stepdefinitions\OrderConfirmationSteps.java
+C:\Automation\src\test\java\com\ecommerce\mobile\stepdefinitions\ProductDetailsSteps.java
+C:\Automation\src\test\java\com\ecommerce\web\package-info.java
