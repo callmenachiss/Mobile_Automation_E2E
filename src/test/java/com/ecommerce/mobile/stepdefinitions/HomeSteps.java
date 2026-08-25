@@ -26,7 +26,7 @@ public class HomeSteps {
     @Then("I logout from the Application")
     public void I_logout_from_the_Application() throws InterruptedException {
         //homePage.clickBargainingButton();
-        homePage.dismissBargainingPopup();
+        //homePage.dismissBargainingPopup();
         homePage.clickProfileAvatar();
         homePage.clickPersonalDetails();
         homePage.clickLogout();
