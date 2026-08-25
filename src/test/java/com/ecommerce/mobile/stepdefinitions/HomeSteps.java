@@ -1,9 +1,12 @@
 package com.ecommerce.mobile.stepdefinitions;
 
 import com.ecommerce.mobile.pages.HomePage;
+import com.ecommerce.mobile.pages.LoginPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
+
+import static java.lang.Thread.sleep;
 
 /**
  * Step definitions for src/test/resources/features/02_home_product_listing.feature.
@@ -13,13 +16,22 @@ import org.testng.Assert;
 public class HomeSteps {
 
     private final HomePage homePage = new HomePage();
+    private final LoginPage loginpage = new LoginPage();
 
     @Then("a list of products should be displayed")
     public void a_list_of_products_should_be_displayed() {
         Assert.assertTrue(homePage.isProductListDisplayed(), "Product list was not displayed on the Home page.");
     }
 
-
+    @Then("I logout from the Application")
+    public void I_logout_from_the_Application() throws InterruptedException {
+        //homePage.clickBargainingButton();
+        homePage.dismissBargainingPopup();
+        homePage.clickProfileAvatar();
+        homePage.clickPersonalDetails();
+        homePage.clickLogout();
+        Assert.assertTrue(loginpage.isGetStartedLabelDisplayed(), "Get Started was not displayed on the splash page.");
+    }
 
     @When("I search for the product {string}")
     public void i_search_for_the_product(String productName) {

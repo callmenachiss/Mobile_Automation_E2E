@@ -44,6 +44,48 @@ public class HomePage extends BasePage {
     @AndroidFindBy(id = "com.example.ecommerceapp:id/iv_cart_icon")
     private WebElement cartIcon;
 
+    //locators for gajab application
+    @AndroidFindBy(accessibility = "Start Bargaining Today!")
+    private WebElement bargainingButton;
+
+    @AndroidFindBy(accessibility = "Home & Kitchen")
+    private WebElement homeKitchenMenu;
+
+    @AndroidFindBy(xpath = "//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[4]")
+    private WebElement profileAvatar;
+
+    @AndroidFindBy(accessibility = "Personal details")
+    private WebElement personalDetailsButton;
+
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='END SESSION\nLogout']")
+    private WebElement logoutButton;
+
+    public void clickBargainingButton() throws InterruptedException {
+        sleep();
+        tap(bargainingButton);
+    }
+
+    public void clickLogout() {
+        tap(logoutButton);
+        LOGGER.info("User logged out");
+    }
+
+    public void clickProfileAvatar() {
+        tap(profileAvatar);
+        LOGGER.info("User clicked profile avatar");
+    }
+
+    public void clickPersonalDetails() {
+        tap(personalDetailsButton);
+        LOGGER.info("User  clicked personal details");
+    }
+
+    public boolean isHomePageDisplayed() {
+        LOGGER.info("User is able to see menu items");
+        LOGGER.info("User landed in HomePage");
+        return isDisplayed(homeKitchenMenu);
+    }
+
     public boolean isProductListDisplayed() {
         return isDisplayed(productList) && !productNames.isEmpty();
     }

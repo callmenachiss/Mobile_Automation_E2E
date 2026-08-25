@@ -8,6 +8,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
+import java.util.logging.Level;
+
 /**
  * Step definitions for src/test/resources/features/01_login.feature.
  *
@@ -17,10 +19,17 @@ import org.testng.Assert;
  */
 public class LoginSteps {
 
-    private static final String VALID_EMAIL = "standarduser@example.com";
+
     private static final String VALID_PASSWORD = "Password123!";
-    private static final String INVALID_EMAIL = "invalid@example.com";
     private static final String INVALID_PASSWORD = "wrongPassword";
+
+    private static final String VALID_EMAIL = "piccosofttest@gmail.com";
+    private static final String VALID_PHONENUMBER = "8973029876";
+
+    private static final String INVALID_EMAIL = "invalid@example.com";
+    private static final String INVALID_PHONENUMBER = "3794892927";
+
+    private static final String TEST_OTP = "123456";
 
     private final LoginPage loginPage = new LoginPage();
     private final HomePage homePage = new HomePage();
@@ -31,14 +40,26 @@ public class LoginSteps {
     }
 
 
-    @When("I log in with a valid email and password")
-    public void i_log_in_with_a_valid_email_and_password() {
-        loginPage.login(VALID_EMAIL, VALID_PASSWORD);
+    @When("I log in with mobile number")
+    public void i_log_in_with_mobile_number() throws InterruptedException {
+        loginPage.clickGetStartedButton();
+        Assert.assertTrue(loginPage.isMemberLoginLabelDisplayed(), "Gajab Member login label is not displayed");
+        Assert.assertTrue(loginPage.isAgeConfirmationLabelDisplayed(), "Age confirmation message is not displayed");
+        loginPage.enterRandomPhoneNumber();
+        loginPage.clickCheckbox();
+        loginPage.clickNext();
     }
 
-    @Then("I should be taken to the Home page")
-    public void i_should_be_taken_to_the_home_page() {
-        Assert.assertTrue(homePage.isProductListDisplayed(), "Home page was not displayed after login.");
+    @Then("I should enter OTP received in my mobile device")
+    public void i_should_enter_OTP_received_in_my_mobile_device() throws InterruptedException {
+        Assert.assertTrue(loginPage.isAccountSetupMessageDisplayed(), "Account setup message is not displayed");
+        loginPage.enterOtp(TEST_OTP);
+        Assert.assertTrue(loginPage.isAccountSetupHeaderDisplayed(), "Account setup screen is not displayed");
+        loginPage.enterRandomName();
+        loginPage.selectFemale();
+        loginPage.clickNext();
+        //loginPage.clickEnglishOption();
+        //loginPage.handleOptionalLocationPermission();
     }
 
     @When("I log in with an invalid email and password")

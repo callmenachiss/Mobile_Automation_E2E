@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Parent class for every Page Object. It gives each page a small, plain
@@ -40,6 +42,41 @@ public class BasePage {
     protected void tap(WebElement element) {
         waitUntilVisible(element);
         element.click();
+    }
+
+    public void dismissBargainingPopup() {
+        Map<String, Object> params = new HashMap<>();
+        params.put("x", 30);
+        params.put("y", 100);
+        driver.executeScript("mobile: clickGesture", params);
+    }
+
+    public void clickElement(WebElement element){
+        element.click();
+    }
+
+
+    public void handleOptionalLocationPermission() {
+        try {
+            WebDriverWait permissionWait =
+                    new WebDriverWait(driver, Duration.ofSeconds(3));
+
+            WebElement allowButton = permissionWait.until(
+                    ExpectedConditions.presenceOfElementLocated(
+                            AppiumBy.id(
+                                    "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+                            )
+                    )
+            );
+
+            if (allowButton.isDisplayed()) {
+                LOGGER.info("Location permission popup appeared. Clicking Allow.");
+                allowButton.click();
+            }
+
+        } catch (Exception e) {
+            LOGGER.info("Location permission popup did not appear. Continuing test.");
+        }
     }
 
     public void sleep() throws InterruptedException {
