@@ -6,6 +6,7 @@ Feature: Login
 
   @smoke @regression @gajab @login
   Scenario: Login with valid credentials
+    Given I verify existing login
     When I log in with mobile number
     Then I should enter OTP received in my mobile device
     Then I logout from the Application

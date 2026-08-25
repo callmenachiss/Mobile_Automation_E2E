@@ -125,16 +125,24 @@ public class LoginPage extends BasePage {
 
     private String generateRandomName() {
         String[] names = {
-                "Ganesh",
-                "Dinesh",
-                "Suresh",
-                "Ramesh",
-                "Mahesh",
-                "Karthik",
-                "Arun",
-                "Vijay",
-                "Ajay",
-                "Prakash"
+                "Ganika",
+                "Divya",
+                "Sureshi",
+                "Rameshi",
+                "Maheshwari",
+                "Karthika",
+                "Meena",
+                "Januma",
+                "Oviya",
+                "Trisha",
+                "Aruna",
+                "Vijaya",
+                "Ajaya",
+                "Pragaya",
+                "Nayanthara",
+                "Nathiya",
+                "Mamitha",
+                "Sherya"
         };
 
         Random random = new Random();

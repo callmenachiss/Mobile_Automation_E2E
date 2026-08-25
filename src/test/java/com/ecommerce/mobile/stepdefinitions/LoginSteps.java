@@ -39,6 +39,15 @@ public class LoginSteps {
         Assert.assertTrue(loginPage.isLoginScreenDisplayed(), "Login screen was not displayed.");
     }
 
+    @Given("I verify existing login")
+    public void I_verify_existing_login() {
+        Assert.assertTrue(homePage.isMenuDisplayed(), "Existing Login was not deducted.");
+        homePage.clickProfileAvatar();
+        homePage.clickPersonalDetails();
+        homePage.clickLogout();
+        Assert.assertTrue(loginPage.isGetStartedLabelDisplayed(), "Get Started was not displayed on the splash page.");
+    }
+
 
     @When("I log in with mobile number")
     public void i_log_in_with_mobile_number() throws InterruptedException {

@@ -381,3 +381,124 @@
 2026-08-25 15:31:44.294 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
 2026-08-25 15:31:44.893 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 1 passed, 0 failed, 0 skipped.
 2026-08-25 15:31:44.898 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-25 15:32:10.585 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-25 15:32:10.588 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-25 15:32:11.168 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-25 15:32:11.454 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-25 15:32:11.456 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-25 15:32:11.502 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-25 15:32:11.503 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-25 15:32:22.436 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-25 15:32:24.308 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-25 15:32:58.335 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-25 15:32:58.336 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see member login label displayed
+2026-08-25 15:32:58.484 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  is able to see age confirmation label displayed
+2026-08-25 15:32:58.588 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 4771645097
+2026-08-25 15:33:01.292 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-25 15:33:03.571 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  clicked next button
+2026-08-25 15:33:03.575 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see account setup message displayed
+2026-08-25 15:33:04.610 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-25 15:33:06.945 [main] INFO  com.ecommerce.mobile.pages.LoginPage - randomNumber = Ajay
+2026-08-25 15:33:06.946 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered name: automationAjay
+2026-08-25 15:33:12.806 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked female menu
+2026-08-25 15:33:13.077 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  clicked next button
+2026-08-25 15:34:24.946 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-08-25 15:34:46.011 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-25 15:34:49.067 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\Login_with_valid_credentials_25-Aug-2026_15-34-49.png
+2026-08-25 15:34:49.087 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-25 15:34:50.170 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-25 15:34:50.178 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-25 15:34:50.194 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-25 15:34:50.195 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-25 15:34:50.195 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-25 15:34:50.195 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-25 15:34:57.197 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-25 15:34:58.088 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-25 15:35:45.140 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-25 15:35:45.140 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see member login label displayed
+2026-08-25 15:35:45.262 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  is able to see age confirmation label displayed
+2026-08-25 15:35:45.375 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 6008858180
+2026-08-25 15:35:47.615 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-25 15:35:49.948 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  clicked next button
+2026-08-25 15:35:49.951 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see account setup message displayed
+2026-08-25 15:35:50.954 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-25 15:35:54.702 [main] INFO  com.ecommerce.mobile.pages.LoginPage - randomNumber = Ajay
+2026-08-25 15:35:54.702 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered name: automationAjay
+2026-08-25 15:35:57.784 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked female menu
+2026-08-25 15:35:59.158 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  clicked next button
+2026-08-25 15:37:01.528 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-08-25 15:37:02.315 [main] INFO  com.ecommerce.mobile.pages.HomePage - User  clicked personal details
+2026-08-25 15:37:03.317 [main] INFO  com.ecommerce.mobile.pages.HomePage - User logged out
+2026-08-25 15:37:03.317 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see get started label displayed
+2026-08-25 15:37:35.976 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Login with valid credentials
+2026-08-25 15:37:35.976 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-25 15:37:37.137 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-25 15:37:37.750 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 1 passed, 0 failed, 1 skipped.
+2026-08-25 15:37:37.754 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-25 15:39:28.198 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-25 15:39:28.202 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-25 15:39:28.700 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-25 15:39:28.955 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-25 15:39:28.956 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-25 15:39:29.017 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-25 15:39:29.018 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-25 15:39:37.940 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-25 15:39:40.055 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-25 15:40:14.283 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-25 15:40:14.284 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see member login label displayed
+2026-08-25 15:40:14.493 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  is able to see age confirmation label displayed
+2026-08-25 15:40:14.624 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 5061751759
+2026-08-25 15:40:17.263 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-25 15:40:19.960 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  clicked next button
+2026-08-25 15:40:19.964 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see account setup message displayed
+2026-08-25 15:40:20.995 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-25 15:40:27.309 [main] INFO  com.ecommerce.mobile.pages.LoginPage - randomNumber = Ganika
+2026-08-25 15:40:27.309 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered name: automationGanika
+2026-08-25 15:40:31.268 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked female menu
+2026-08-25 15:40:34.544 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  clicked next button
+2026-08-25 15:41:46.218 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-08-25 15:42:47.937 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-08-25 15:42:48.970 [main] INFO  com.ecommerce.mobile.pages.HomePage - User  clicked personal details
+2026-08-25 15:42:50.080 [main] INFO  com.ecommerce.mobile.pages.HomePage - User logged out
+2026-08-25 15:42:50.080 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see get started label displayed
+2026-08-25 15:43:21.901 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Login with valid credentials
+2026-08-25 15:43:21.902 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-25 15:43:23.106 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-25 15:43:23.627 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 1 passed, 0 failed, 0 skipped.
+2026-08-25 15:43:23.631 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-25 15:50:40.284 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-25 15:50:40.287 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-25 15:50:40.864 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-25 15:50:41.083 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-25 15:50:41.085 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-25 15:50:41.132 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-25 15:50:41.133 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-25 15:50:50.439 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-25 15:50:53.469 [main] INFO  com.ecommerce.mobile.pages.HomePage - User in HomePage
+2026-08-25 15:50:53.469 [main] INFO  com.ecommerce.mobile.pages.HomePage - Existing login deducted.. performing logout and login again
+2026-08-25 15:52:26.334 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-08-25 15:52:27.982 [main] INFO  com.ecommerce.mobile.pages.HomePage - User  clicked personal details
+2026-08-25 15:52:28.923 [main] INFO  com.ecommerce.mobile.pages.HomePage - User logged out
+2026-08-25 15:52:28.924 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see get started label displayed
+2026-08-25 15:53:01.684 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-25 15:53:35.416 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-25 15:53:35.416 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see member login label displayed
+2026-08-25 15:53:35.588 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  is able to see age confirmation label displayed
+2026-08-25 15:53:35.698 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 9600474784
+2026-08-25 15:53:37.029 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-25 15:53:40.192 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  clicked next button
+2026-08-25 15:53:40.194 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see account setup message displayed
+2026-08-25 15:53:41.220 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-25 15:53:45.419 [main] INFO  com.ecommerce.mobile.pages.LoginPage - randomNumber = Divya
+2026-08-25 15:53:45.421 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered name: automationDivya
+2026-08-25 15:53:49.168 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked female menu
+2026-08-25 15:53:50.282 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User  clicked next button
+2026-08-25 15:54:52.992 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-08-25 15:54:53.213 [main] INFO  com.ecommerce.mobile.pages.HomePage - User  clicked personal details
+2026-08-25 15:54:54.501 [main] INFO  com.ecommerce.mobile.pages.HomePage - User logged out
+2026-08-25 15:54:54.501 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see get started label displayed
+2026-08-25 15:55:26.970 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Login with valid credentials
+2026-08-25 15:55:26.971 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-25 15:55:28.193 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-25 15:55:28.626 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 1 passed, 0 failed, 0 skipped.
+2026-08-25 15:55:28.633 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".

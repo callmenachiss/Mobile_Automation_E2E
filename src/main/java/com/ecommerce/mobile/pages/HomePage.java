@@ -86,6 +86,15 @@ public class HomePage extends BasePage {
         return isDisplayed(homeKitchenMenu);
     }
 
+
+    public boolean isMenuDisplayed() {
+        LOGGER.info("User in HomePage");
+        LOGGER.info("Existing login deducted.. performing logout and login again");
+        return isDisplayed(homeKitchenMenu);
+    }
+
+
+
     public boolean isProductListDisplayed() {
         return isDisplayed(productList) && !productNames.isEmpty();
     }
