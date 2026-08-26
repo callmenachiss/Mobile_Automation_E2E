@@ -44,6 +44,8 @@ public class BasePage {
         element.click();
     }
 
+
+
     public void dismissBargainingPopup() {
         Map<String, Object> params = new HashMap<>();
         params.put("x", 30);
@@ -87,6 +89,13 @@ public class BasePage {
         waitUntilVisible(element);
         element.clear();
         element.sendKeys(text);
+    }
+
+    protected void clickDoneOnKeyboard() {
+        driver.executeScript(
+                "mobile: performEditorAction",
+                Map.of("action", "done")
+        );
     }
 
     protected String getText(WebElement element) {

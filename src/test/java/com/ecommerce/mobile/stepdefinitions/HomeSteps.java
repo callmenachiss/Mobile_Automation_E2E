@@ -2,11 +2,13 @@ package com.ecommerce.mobile.stepdefinitions;
 
 import com.ecommerce.mobile.pages.HomePage;
 import com.ecommerce.mobile.pages.LoginPage;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
 import static java.lang.Thread.sleep;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Step definitions for src/test/resources/features/02_home_product_listing.feature.
@@ -20,7 +22,7 @@ public class HomeSteps {
 
     @Then("a list of products should be displayed")
     public void a_list_of_products_should_be_displayed() {
-        Assert.assertTrue(homePage.isProductListDisplayed(), "Product list was not displayed on the Home page.");
+        assertTrue(homePage.isProductListDisplayed(), "Product list was not displayed on the Home page.");
     }
 
     @Then("I logout from the Application")
@@ -30,17 +32,36 @@ public class HomeSteps {
         homePage.clickProfileAvatar();
         homePage.clickPersonalDetails();
         homePage.clickLogout();
-        Assert.assertTrue(loginpage.isGetStartedLabelDisplayed(), "Get Started was not displayed on the splash page.");
+        assertTrue(loginpage.isGetStartedLabelDisplayed(), "Get Started was not displayed on the splash page.");
     }
 
     @When("I search for the product {string}")
     public void i_search_for_the_product(String productName) {
+        //homePage.clickProfileAvatar();
         homePage.searchForProduct(productName);
+    }
+
+    @Then("I click on product to proceed purchase")
+    public void I_click_on_product_to_proceed_purchase() throws InterruptedException {
+        homePage.clickFirstProduct();
+        homePage.getFirstProductText();
+        String name = homePage.firstProducttextlbl.getAttribute("content-desc");
+        //Assert.assertTrue(name.contains(productName), "'" + productName + "' was not visible in the search results.");
+        homePage.clickStartBargaining();
+        homePage.clickOfferYourPrice();
+        homePage.clickAcceptOffer();
+        homePage.clickBuyNow();
+    }
+
+    @Then("I proceed with payment to complete the order")
+    public void iProceedWithPaymentToCompleteTheOrder() {
+        homePage.clickPay();
+
     }
 
     @Then("{string} should be visible in the search results")
     public void product_should_be_visible_in_the_search_results(String productName) {
-        Assert.assertTrue(homePage.isProductVisible(productName),
+        assertTrue(homePage.isProductVisible(productName),
                 "'" + productName + "' was not visible in the search results.");
     }
 
@@ -54,7 +75,7 @@ public class HomeSteps {
         // Basic check that sorting did not break the page. Once real
         // locators are wired up, this can be extended to read each
         // product's price and assert they are in ascending order.
-        Assert.assertTrue(homePage.isProductListDisplayed(), "Product list was not displayed after sorting.");
+        assertTrue(homePage.isProductListDisplayed(), "Product list was not displayed after sorting.");
     }
 
     @When("I open the product {string}")
@@ -66,4 +87,7 @@ public class HomeSteps {
     public void i_open_the_cart() {
         homePage.openCart();
     }
+
+
+
 }

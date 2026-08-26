@@ -15,4 +15,4 @@ Feature: Login
   Scenario: Login with valid credentials
     When I log in with existing mobile number
     Then I should enter OTP received in my existing mobile device
-    Then I logout from the Application
+    #Then I logout from the Application

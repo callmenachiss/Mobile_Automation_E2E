@@ -60,14 +60,85 @@ public class HomePage extends BasePage {
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='END SESSION\nLogout']")
     private WebElement logoutButton;
 
+    @AndroidFindBy(className = "android.widget.EditText")
+    private WebElement inputField;
+
+    @AndroidFindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[3]")
+    private WebElement Menulabel;
+
+    @AndroidFindBy(xpath = "(//android.widget.ScrollView//android.widget.ImageView)[1]")
+    private WebElement firstProductCard;
+
+    @AndroidFindBy(xpath = "(//android.widget.ScrollView//android.widget.ImageView)[1]")
+    public WebElement firstProducttextlbl;
+
+    @AndroidFindBy(accessibility = "Start Bargaining")
+    private WebElement startBargainingButton;
+
+    @AndroidFindBy(accessibility = "Offer Your Price")
+    private WebElement offerYourPriceButton;
+
+    @AndroidFindBy(accessibility = "Accept the offer")
+    private WebElement acceptOfferButton;
+
+    @AndroidFindBy(accessibility = "Buy Now")
+    private WebElement buyNowButton;
+
+    @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Pay ₹')]")
+    private WebElement payButton;
+
+
+
     public void clickBargainingButton() throws InterruptedException {
         sleep();
         tap(bargainingButton);
     }
 
+    public void clickAcceptOffer() {
+        tap(acceptOfferButton);
+        LOGGER.info("User accepting the offer");
+    }
+
+    public void clickBuyNow() {
+        tap(buyNowButton);
+        LOGGER.info("User clicking the buy now button");
+    }
+
+    public void clickPay() {
+        tap(payButton);
+        LOGGER.info("User clicking pay button");
+    }
+
+    public void clickStartBargaining() throws InterruptedException {
+        sleep();
+        tap(startBargainingButton);
+        LOGGER.info("User clicked start Bargaining button");
+    }
+
+    public void clickOfferYourPrice() {
+        tap(offerYourPriceButton);
+        LOGGER.info("User clicked offer price button");
+    }
+
     public void clickLogout() {
         tap(logoutButton);
         LOGGER.info("User logged out");
+    }
+
+    public void clickFirstProduct() {
+        tap(firstProductCard);
+        LOGGER.info("User clicked on first product card");
+    }
+
+    public void getFirstProductText() {
+        waitUntilVisible(firstProducttextlbl);
+        String text = firstProducttextlbl.getAttribute("content-desc");
+        LOGGER.info("First product text: {}", text);
+    }
+
+    public String getTextElement(WebElement element) {
+        waitUntilVisible(element);
+        return element.getText();
     }
 
     public void clickProfileAvatar() {
@@ -100,9 +171,13 @@ public class HomePage extends BasePage {
     }
 
     public void searchForProduct(String productName) {
+        tap(Menulabel);
+        enterText(inputField, productName);
+        clickDoneOnKeyboard();
         LOGGER.info("Searching for product: {}", productName);
-        enterText(searchBox, productName);
-        hideKeyboard();
+
+        //enterText(searchBox, productName);
+        //hideKeyboard();
     }
 
     public void sortProductsByPrice() {
