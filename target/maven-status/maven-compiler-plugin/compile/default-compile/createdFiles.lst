@@ -1,6 +1,0 @@
-com/ecommerce/web/pages/HomePage.class
-com/ecommerce/web/config/WebCapabilityManager.class
-com/ecommerce/web/pages/LoginPage.class
-com/ecommerce/web/pages/BaseWebPage.class
-com/ecommerce/mobile/pages/HomePage.class
-com/ecommerce/web/config/WebDriverManager.class
