@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- standard, dark -->
+        <theme>standard</theme>
+        <encoding>UTF-8</encoding>
+        <protocol>https</protocol>
+        <documentTitle>Ecommerce Web Automation Report</documentTitle>
+        <reportName>Ecommerce App - Web Regression Results</reportName>
+        <!-- top, bottom -->
+        <testViewChartLocation>top</testViewChartLocation>
+        <scripts>
+            <![CDATA[
+            ]]>
+        </scripts>
+        <styles>
+            <![CDATA[
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>

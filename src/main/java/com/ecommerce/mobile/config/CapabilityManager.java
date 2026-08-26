@@ -1,5 +1,6 @@
 package com.ecommerce.mobile.config;
 
+import com.ecommerce.core.config.ConfigReader;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

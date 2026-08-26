@@ -9,10 +9,15 @@
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
 
-        <!-- One log file per run, saved under /logs at the project root -->
+        <!-- One log file per run, saved under /logs at the project root.
+             ${sys:platform} is set to "mobile" or "web" by TestRunner /
+             WebTestRunner before anything else touches Log4j2, so mobile
+             and web runs never share (or interleave into) the same log
+             file; the ":-mobile" default only applies if some other entry
+             point runs the suite without going through either runner. -->
         <RollingFile name="FileLogger"
-                     fileName="logs/automation.log"
-                     filePattern="logs/automation-%d{yyyy-MM-dd}-%i.log.gz">
+                     fileName="logs/${sys:platform:-mobile}-automation.log"
+                     filePattern="logs/${sys:platform:-mobile}-automation-%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
                 <SizeBasedTriggeringPolicy size="10 MB"/>

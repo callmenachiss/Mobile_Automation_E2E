@@ -1,4 +1,4 @@
-package com.ecommerce.mobile.config;
+package com.ecommerce.core.config;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,6 +11,9 @@ import java.util.Properties;
  * Reads config.properties once and hands out values by key.
  * Every setting a beginner needs to change (APK path, package name,
  * device name, timeouts...) lives in that one file, not in Java code.
+ * Shared by both the mobile and web frameworks - lives outside both
+ * mobile.* and web.* so log lines from it don't misleadingly read as
+ * one platform's package when the other platform is what's running.
  */
 public class ConfigReader {
 

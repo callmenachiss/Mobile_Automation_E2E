@@ -91,7 +91,7 @@ public class LoginPage extends BaseWebPage {
 
 
     public void clickCloseTourpopup() throws InterruptedException {
-        LOGGER.info("Starting mobile login flow");
+        LOGGER.info("Starting web login flow");
         closeTourPopupIfPresent();
     }
 

@@ -1,6 +1,6 @@
 package com.ecommerce.mobile.utils;
 
-import com.ecommerce.mobile.config.ConfigReader;
+import com.ecommerce.core.config.ConfigReader;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.EmailException;

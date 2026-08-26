@@ -1,4 +1,4 @@
-package com.ecommerce.mobile.listeners;
+package com.ecommerce.core.listeners;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
