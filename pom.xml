@@ -28,7 +28,6 @@
         <extentreports.version>5.1.0</extentreports.version>
         <extent.cucumber.adapter.version>1.14.0</extent.cucumber.adapter.version>
         <log4j.version>2.20.0</log4j.version>
-        <commons.email.version>1.6.0</commons.email.version>
 
         <!-- Override on the command line to pick a different TestNG suite file,
              e.g. mvn test -DsuiteXmlFile=testng-smoke.xml -->
@@ -98,13 +97,6 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>${log4j.version}</version>
-        </dependency>
-
-        <!-- Commons Email - sends the pass/fail summary email once the run finishes -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-email</artifactId>
-            <version>${commons.email.version}</version>
         </dependency>
 
     </dependencies>

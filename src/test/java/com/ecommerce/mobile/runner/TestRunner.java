@@ -1,6 +1,5 @@
 package com.ecommerce.mobile.runner;
 
-import com.ecommerce.mobile.listeners.EmailReportListener;
 import com.ecommerce.mobile.listeners.RetryAnalyzer;
 import com.ecommerce.mobile.listeners.RetryListener;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -13,14 +12,13 @@ import org.testng.annotations.Test;
 /**
  * The entry point that ties everything together: it tells Cucumber where
  * the .feature files and step definitions are, tells TestNG to retry any
- * failed scenario once (via RetryAnalyzer) before marking it failed,
+ * failed scenario once (via RetryAnalyzer) before marking it failed, and
  * cleans up the "skipped" artifact that retry leaves behind on an
- * eventual pass (via RetryListener), and emails a pass/fail summary once
- * the whole run finishes (via EmailReportListener). @Listeners is a
- * class-level annotation, so this fires no matter how the class is run -
- * mvn test, testng.xml, or IntelliJ's right-click Run/Debug.
+ * eventual pass (via RetryListener). @Listeners is a class-level
+ * annotation, so this fires no matter how the class is run - mvn test,
+ * testng.xml, or IntelliJ's right-click Run/Debug.
  */
-@Listeners({EmailReportListener.class, RetryListener.class})
+@Listeners(RetryListener.class)
 @CucumberOptions(
         // Cucumber scans "features" recursively, so pointing this at the
         // parent "features" folder (which also contains "features/web")

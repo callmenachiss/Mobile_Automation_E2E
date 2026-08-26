@@ -76,7 +76,7 @@ Mobile_Automation_E2E/                   # This folder is the whole project - on
 ├── testng-smoke.xml                     # Mobile only: runs @smoke-tagged scenarios - click & Run
 ├── testng-regression.xml                # Mobile only: runs @regression-tagged scenarios
 ├── testng-web.xml                       # Runs the @web-tagged web suite
-├── .github/workflows/                   # CI starter(s) - see section 10
+├── .github/workflows/                   # CI starter(s) - see section 9
 ├── src/
 │   ├── main/java/com/ecommerce/
 │   │   ├── mobile/
@@ -84,7 +84,7 @@ Mobile_Automation_E2E/                   # This folder is the whole project - on
 │   │   │   │                            # AppiumServerManager - reads config.properties,
 │   │   │   │                            # starts Appium server, manages the driver
 │   │   │   ├── pages/                   # One class per app screen (Page Object Model)
-│   │   │   └── utils/                   # ScreenshotUtil (→ screenshots/mobile), MailUtil
+│   │   │   └── utils/                   # ScreenshotUtil (→ screenshots/mobile)
 │   │   └── web/
 │   │       ├── config/                  # ConfigReader, WebCapabilityManager, WebDriverManager -
 │   │       │                            # web's own copies, mirroring mobile's config/ 1:1
@@ -96,8 +96,7 @@ Mobile_Automation_E2E/                   # This folder is the whole project - on
 │       │   │   ├── hooks/               # Before/after every scenario (launch app, screenshot on fail)
 │       │   │   ├── stepdefinitions/     # Java code behind each English sentence in the .feature files
 │       │   │   ├── runner/              # TestRunner - the Cucumber + TestNG entry point
-│       │   │   └── listeners/           # RetryAnalyzer, RetryListener (retry + clean reporting),
-│       │   │                            # EmailReportListener (mobile-only summary email)
+│       │   │   └── listeners/           # RetryAnalyzer, RetryListener (retry + clean reporting)
 │       │   └── web/
 │       │       ├── hooks/               # WebHooks - web's own copy of Hooks
 │       │       ├── stepdefinitions/     # Java code behind each web .feature sentence
@@ -308,7 +307,7 @@ The framework supports every common way of triggering a run:
 5. **In IntelliJ, one scenario at a time:** open any `.feature` file — a
    green ▶ appears in the gutter next to each `Scenario:` line (and next
    to `Feature:` to run the whole file). Click it to run just that one.
-6. **In CI:** see section 10 below — the same `mvn test` command is what
+6. **In CI:** see section 9 below — the same `mvn test` command is what
    the pipeline runs.
 
 ### Running a tag straight from a `testng.xml` file (no command-line flags)
@@ -338,36 +337,34 @@ one of these two files, rename it, and change that one line — that's the
 entire recipe, verified working the same way.
 
 ### Execution modes: what each one actually supports
-Retry-on-failure and the summary email are provided by **TestNG**
-(`RetryAnalyzer`, `EmailReportListener`). The Cucumber gutter ▶ icon
-bypasses TestNG entirely and talks to Cucumber's own CLI runner, so it
-won't trigger either of those two things (the app-launch/screenshot hooks
-still fire either way, since those are Cucumber-native, not TestNG).
+Retry-on-failure is provided by **TestNG** (`RetryAnalyzer`). The Cucumber
+gutter ▶ icon bypasses TestNG entirely and talks to Cucumber's own CLI
+runner, so it won't trigger that (the app-launch/screenshot hooks still
+fire either way, since those are Cucumber-native, not TestNG).
 
-| How you run it | Retry-on-failure | Summary email | Screenshot on failure |
-|---|---|---|---|
-| `mvn test` | ✅ | ✅ | ✅ |
-| `mvn test -Dcucumber.filter.tags=...` | ✅ | ✅ | ✅ |
-| `mvn test -DsuiteXmlFile=testng-smoke.xml` (or `-regression.xml`) | ✅ | ✅ | ✅ |
-| IntelliJ → right-click `testng.xml` / `testng-smoke.xml` / `testng-regression.xml` → Run/Debug | ✅ | ✅ | ✅ |
-| IntelliJ → right-click `TestRunner.java` → Run/Debug | ✅ | ✅ | ✅ |
-| IntelliJ → ▶ gutter icon on one `Scenario:`/`Feature:` | ❌ | ❌ | ✅ |
-| CI pipeline (`mvn test ...`) | ✅ | ✅ | ✅ |
+| How you run it | Retry-on-failure | Screenshot on failure |
+|---|---|---|
+| `mvn test` | ✅ | ✅ |
+| `mvn test -Dcucumber.filter.tags=...` | ✅ | ✅ |
+| `mvn test -DsuiteXmlFile=testng-smoke.xml` (or `-regression.xml`) | ✅ | ✅ |
+| IntelliJ → right-click `testng.xml` / `testng-smoke.xml` / `testng-regression.xml` → Run/Debug | ✅ | ✅ |
+| IntelliJ → right-click `TestRunner.java` → Run/Debug | ✅ | ✅ |
+| IntelliJ → ▶ gutter icon on one `Scenario:`/`Feature:` | ❌ | ✅ |
+| CI pipeline (`mvn test ...`) | ✅ | ✅ |
 
 If you're actively writing/debugging a single scenario, the gutter icon
 is the fastest loop. Once it works, confirm it end-to-end with
 `mvn test -Dcucumber.filter.tags="@focus"` (see `DEVELOPER_GUIDE.md`) so
-retry and the email path get exercised too.
+retry gets exercised too.
 
 ### Where to look afterwards
 This is the mobile suite's output - the web suite's is a separate,
-identically-shaped set of files, see section 11:
+identically-shaped set of files, see section 10:
 | What | Where |
 |---|---|
 | HTML test report | `test-output/MobileExtentReport <timestamp>/reports/GajabAutomationReport.html` - see 7B, it's a new folder every run, not a fixed path |
 | Execution log | `logs/mobile-automation.log` |
 | Screenshots of failed scenarios | `screenshots/mobile/` |
-| Summary email | the inbox at `mail.to` in `config.properties` |
 
 ---
 
@@ -417,6 +414,8 @@ say "Web" but can't make the report *file inside it* say "Web" too - hence the n
 `GajabAutomationReport.html` name and "Gajab Automation Report" title. **Which platform a report
 is from is told apart by its folder name, not its filename or its title.**
 
+## 8. How failure screenshots work
+
 In `Hooks.java` (mobile) / `WebHooks.java` (web), the `@After` hook checks
 `scenario.isFailed()`. If true:
 1. A screenshot is taken of the device screen (mobile) or browser window
@@ -431,73 +430,10 @@ In `Hooks.java` (mobile) / `WebHooks.java` (web), the `@After` hook checks
 
 ---
 
-## 9. Email notifications
+## 9. Continuous Integration (CI)
 
-Once the **whole run finishes** (not per-scenario), `EmailReportListener`
-(a TestNG `IReporter`, registered via `@Listeners` on `TestRunner.java`)
-sends one summary email:
-- **Subject**: pass/fail status and count, e.g. `Gajab Mobile
-  Automation - FAILED (15/18 passed) - 21-Aug-2026 10:41`.
-- **Body**: a pass/fail/skip table, a simple HTML bar chart, the list of
-  failed scenario names, and a link to the HTML report.
-- **Attachment**: the full report, *if* `MailUtil` can find it at
-  `reports/GajabAutomationReport.html` when the email is being built.
-  **Known gap, not yet fixed:** per 7B, the report never actually lands at
-  that fixed path - it's always under a fresh
-  `test-output/MobileExtentReport <timestamp>/reports/...` folder instead -
-  so this lookup will currently always miss and the warning at
-  `MailUtil.java:75` ("Report file not found...") will always fire,
-  meaning the summary email is sent without the report attached (a link to
-  it can still be provided via `mail.report.link` in `config.properties`
-  in the meantime). This predates today's changes and wasn't triggered by
-  any of them - `mail.from` has never been filled in, so no email has
-  actually been sent yet to observe it.
-
-### Setup
-1. In `config.properties`, fill in:
-   ```properties
-   mail.from=your-sending-address@gmail.com
-   mail.smtp.host=smtp.gmail.com      # already set for Gmail; change for another provider
-   ```
-   `mail.to` is already set to `nachiyappanworks@gmail.com`.
-2. **Do not put the mailbox password in `config.properties`.** Set it as
-   the `MAIL_FROM_PASSWORD` environment variable instead:
-   - Locally: `export MAIL_FROM_PASSWORD="your-app-password"` before
-     running `mvn test`.
-   - In IntelliJ: Run/Debug Configuration → Environment variables →
-     `MAIL_FROM_PASSWORD=...`.
-   - In CI: store it as a repository secret (see section 10) — never
-     commit it.
-3. **If using Gmail**: enable 2-Step Verification on the account, then
-   create an **App Password** (Google Account → Security → App
-   passwords) and use that as `MAIL_FROM_PASSWORD` — not the normal
-   account password.
-
-If any of `mail.from` / `mail.smtp.host` / `mail.to` / `MAIL_FROM_PASSWORD`
-is missing, the email is simply skipped (logged as a warning) — it never
-fails the build. Set `mail.enabled=false` to turn the feature off
-entirely.
-
----
-
-## 10. Continuous Integration (CI)
-
-Two starter GitHub Actions workflows live in this repo, one per platform -
-each triggers and reports independently, so a red web build never blocks
-mobile (or vice versa):
-
-### [.github/workflows/mobile-regression.yml](.github/workflows/mobile-regression.yml)
-1. Sets up JDK 11, Node.js, and Appium (+ the UiAutomator2 driver).
-2. Boots an Android emulator (via `reactivecircus/android-emulator-runner`)
-   and runs `mvn test -Dcucumber.filter.tags="@smoke"` against it
-   (configurable per-run via the workflow's manual "tags" input).
-3. Uploads the mobile report, `screenshots/mobile/`, and
-   `logs/mobile-automation.log` as build artifacts, whether the run passed
-   or failed.
-4. Passes `MAIL_FROM_PASSWORD` in from a GitHub **repository secret** —
-   add it under Settings → Secrets and variables → Actions.
-
-### [.github/workflows/web-regression.yml](.github/workflows/web-regression.yml)
+A starter GitHub Actions workflow for web lives at
+[.github/workflows/web-regression.yml](.github/workflows/web-regression.yml):
 1. Sets up JDK 11 (no Node.js/Appium/emulator needed - Chrome ships
    preinstalled on `ubuntu-latest`, and Selenium Manager fetches a matching
    chromedriver automatically).
@@ -508,21 +444,27 @@ mobile (or vice versa):
 3. Uploads the web report, `screenshots/web/`, and `logs/web-automation.log`
    as build artifacts, whether the run passed or failed.
 
-Both are **starting points** — adjust the emulator API level/target, the
-default tag expressions, and the trigger branches for your actual setup.
-If you use a different CI provider (Jenkins, GitLab CI, Azure DevOps), the
-same commands each workflow already runs (install Appium + boot an
-emulator for mobile; just `mvn test -DsuiteXmlFile=testng-web.xml` for web)
-are what needs to be reproduced there - the emulator-boot and `xvfb` steps
-are the only GitHub-Actions-specific parts.
+There is currently no mobile CI workflow in this repo. If you want to add
+one, it needs: JDK 11 + Node.js + Appium (+ the UiAutomator2 driver), a
+booted Android emulator (e.g. via `reactivecircus/android-emulator-runner`
+on a `macos-latest` runner), then `mvn test -Dcucumber.filter.tags="@smoke"`
+(or `-DsuiteXmlFile=testng-smoke.xml`) - same shape as web-regression.yml,
+uploading the mobile report, `screenshots/mobile/`, and
+`logs/mobile-automation.log` as artifacts instead.
 
-Either workflow's `-D...` flag can be swapped for `-DsuiteXmlFile=...`
-pointed at any of the dedicated suite files from section 6 instead, the
-same way a local run can.
+This is a **starting point** — adjust the trigger branches and default tag
+expression for your actual setup. If you use a different CI provider
+(Jenkins, GitLab CI, Azure DevOps), the same command it already runs
+(`mvn test -DsuiteXmlFile=testng-web.xml`) is what needs to be reproduced
+there - the `xvfb` step is the only GitHub-Actions-specific part.
+
+The `-D...` flag can be swapped for `-DsuiteXmlFile=...` pointed at any of
+the dedicated suite files from section 6 instead, the same way a local run
+can.
 
 ---
 
-## 11. Web automation
+## 10. Web automation
 
 A Selenium **web** suite lives alongside the mobile one under
 `com.ecommerce.web`, mirroring the same concepts (Page Object Model, hooks,
@@ -541,7 +483,6 @@ copy of every layer, not a shared one:
 | `mobile.listeners.RetryAnalyzer` | `web.listeners.RetryAnalyzer` | Retries a failed scenario once before marking it failed. |
 | `mobile.listeners.RetryListener` | `web.listeners.RetryListener` | Cleans up the "skipped" artifact TestNG's retry leaves behind on an eventual pass (see section 7). |
 | `mobile.runner.TestRunner` | `web.runner.WebTestRunner` | Cucumber-TestNG entry point. |
-| *(mobile-only)* `mobile.listeners.EmailReportListener` | *(no web equivalent yet)* | The summary email is currently mobile-only - see section 9. |
 
 **Why duplicated instead of shared:** so mobile and web can build and run
 in complete isolation - a broken/missing class on one side can never break
@@ -603,13 +544,11 @@ See DEVELOPER_GUIDE.md section 2B for a worked example.
 
 ---
 
-## 12. Troubleshooting
+## 11. Troubleshooting
 
 | Problem | Likely cause / fix |
 |---|---|
 | `session not created` / Appium fails to start | Another Appium instance is already using the port in `config.properties`. Stop it, or change `appium.server.port`. |
-| No summary email arrives | Check the log for the `MailUtil` warning — it names exactly which of `mail.from` / `mail.smtp.host` / `mail.to` / `MAIL_FROM_PASSWORD` is missing. Also confirm you ran via `mvn test`/`testng.xml`/`TestRunner.java`, not the per-scenario gutter icon (see section 6). |
-| Gmail rejects the login | You're using your normal account password. Create an App Password instead (see section 9) — Gmail blocks plain-password SMTP logins by default. |
 | `adb: no devices/emulators found` | Start your emulator or reconnect your device; confirm with `adb devices`. |
 | `APK not found at ...` | Check `app.path` in `config.properties` matches the actual file name in `apps/`. |
 | Element not found / `NoSuchElementException` | The locator in the relevant `pages/*.java` file is still a placeholder or is stale — re-check it in Appium Inspector. |

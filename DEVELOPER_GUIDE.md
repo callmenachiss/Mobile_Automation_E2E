@@ -70,18 +70,6 @@ STEP 6  ExtentCucumberAdapter (the "plugin" in TestRunner's @CucumberOptions)
         writes  test-output/MobileExtentReport <timestamp>/reports/GajabAutomationReport.html
         (a NEW timestamped folder every run - see README.md section 7B for why)
         Log4j2 has been writing to  logs/mobile-automation.log  the whole time.
-        │
-        ▼
-STEP 7  Once the WHOLE TestNG suite has finished (all scenarios, all retries):
-        src/test/java/.../listeners/EmailReportListener.java   (a TestNG IReporter,
-        registered via @Listeners on TestRunner.java) fires ONCE with the
-        final pass/fail/skip counts
-        → src/main/java/.../utils/MailUtil.java builds the HTML email
-          (subject, pass/fail chart, failed-scenario list, report attached)
-          and sends it via config.properties' mail.* settings +
-          the MAIL_FROM_PASSWORD environment variable
-        → if mail settings/credentials are missing, this step just logs a
-          warning and does nothing else - it never fails the build
 ```
 
 **The single most useful sentence to remember:**
@@ -90,7 +78,7 @@ STEP 7  Once the WHOLE TestNG suite has finished (all scenarios, all retries):
 
 ### 1B. Same flow, for web
 `WebTestRunner`/`WebHooks`/`web/stepdefinitions`/`web/pages` follow the
-**exact same 7 steps**, just under `web.*` instead of `mobile.*`, with
+**exact same 6 steps**, just under `web.*` instead of `mobile.*`, with
 these differences:
 - STEP 1 is `testng-web.xml`, with the same `cucumber.filter.tags`
   `<parameter>` mechanism (here `@web`) as the mobile smoke/regression
@@ -98,13 +86,11 @@ these differences:
 - STEP 3/4's "launch app" is "launch the browser" (`WebCapabilityManager`
   + `WebDriverManager`), and "restart the app process" between scenarios
   is "clear cookies and reload `web.baseUrl`" instead.
-- STEP 6/7 write to `logs/web-automation.log`,
+- STEP 6 writes to `logs/web-automation.log`,
   `test-output/WebExtentReport <timestamp>/reports/GajabAutomationReport.html`,
   and `screenshots/web/` - separate from mobile's, except the report's
   filename/title themselves, which are unavoidably shared (see README.md
   section 7B for why - it's a real library constraint, not an oversight).
-- There is currently no web equivalent of STEP 7's summary email
-  (`EmailReportListener`/`MailUtil` are mobile-only).
 
 See README.md section 11 for the full class-by-class mobile ↔ web mapping.
 
@@ -286,17 +272,17 @@ so plain `mvn test` is unaffected.)
 The framework runs the same way whether triggered by `mvn test`,
 `testng.xml`, `TestRunner.java`, a CI pipeline, or IntelliJ's per-scenario
 ▶ gutter icon. The one thing to know: the gutter icon calls Cucumber's own
-CLI runner directly and skips TestNG entirely, so it won't exercise
-TestNG-provided features (retry, the summary email). Everything else
-(hooks, screenshots) behaves identically.
+CLI runner directly and skips TestNG entirely, so it won't exercise the
+TestNG-provided retry feature. Everything else (hooks, screenshots)
+behaves identically.
 
-| How you run it | Retry-on-failure | Summary email |
-|---|---|---|
-| `mvn test` / `mvn test -Dcucumber.filter.tags=...` | ✅ | ✅ |
-| `mvn test -DsuiteXmlFile=testng-smoke.xml` | ✅ | ✅ |
-| IntelliJ → any `testng*.xml` or `TestRunner.java` → Run/Debug | ✅ | ✅ |
-| IntelliJ → ▶ gutter icon on one scenario/feature | ❌ | ❌ |
-| CI pipeline | ✅ | ✅ |
+| How you run it | Retry-on-failure |
+|---|---|
+| `mvn test` / `mvn test -Dcucumber.filter.tags=...` | ✅ |
+| `mvn test -DsuiteXmlFile=testng-smoke.xml` | ✅ |
+| IntelliJ → any `testng*.xml` or `TestRunner.java` → Run/Debug | ✅ |
+| IntelliJ → ▶ gutter icon on one scenario/feature | ❌ |
+| CI pipeline | ✅ |
 
 See README.md section 6 for the full breakdown including screenshots.
 
@@ -340,8 +326,6 @@ Since everything is plain Java, normal breakpoints work:
 | `Undefined step` in dry-run | The exact wording in the `.feature` file doesn't match any `@Given/@When/@Then` text | Either fix a typo in the feature file, or add the missing step definition (see section 2) |
 | `Multiple step definitions match` (ambiguous) | Two step definitions have the identical (or overlapping) text pattern | Reword one of them to be more specific |
 | Scenario passes on retry but failed once | This is the retry mechanism (`RetryAnalyzer`) working as intended — one-off flakiness | Only worry if it fails **twice** in a row |
-| No summary email, but the run completed | Either `mail.from`/`mail.smtp.host`/`mail.to` in `config.properties` or the `MAIL_FROM_PASSWORD` env var is unset, or you ran via the per-scenario gutter icon (see 3.2) | Check `logs/automation.log` for the exact `MailUtil` warning line naming what's missing |
-| Email send fails with an auth error (Gmail) | Using the real account password instead of an App Password | Create an App Password (Google Account → Security → App passwords) and use that as `MAIL_FROM_PASSWORD` |
 
 ---
 
@@ -358,8 +342,5 @@ Since everything is plain Java, normal breakpoints work:
 | Change the retry count | `src/test/java/.../listeners/RetryAnalyzer.java` |
 | Change which feature files/step packages Cucumber loads | `src/test/java/.../runner/TestRunner.java` |
 | Change report look, screenshot folder, or log format | `extent.properties`, `extent-config.xml`, `log4j2.xml` |
-| Change the summary email's content/subject/chart | `src/main/java/.../utils/MailUtil.java` |
-| Change which counts feed the email (pass/fail/skip aggregation) | `src/test/java/.../listeners/EmailReportListener.java` |
-| Change mail server/recipient settings | `src/test/resources/config.properties` (`mail.*` keys) — password stays in the `MAIL_FROM_PASSWORD` env var, never here |
-| Change the CI pipeline | `.github/workflows/mobile-regression.yml` |
+| Change the web CI pipeline | `.github/workflows/web-regression.yml` |
 | Add a new tag-scoped suite runnable straight from an XML file | copy `testng-smoke.xml`, rename it, change its `cucumber.filter.tags` value (see 3.1) |
