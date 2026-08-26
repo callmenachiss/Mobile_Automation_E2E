@@ -11,7 +11,7 @@ Feature: Home page - Product listing
 
   @regression @home
   Scenario: Purchase product workflow
-    When I search for the product "Wireless Headphones"
+    Given I search for the product
     Then I click on product to proceed purchase
     Then I proceed with payment to complete the order
 

@@ -110,7 +110,7 @@ public class HomePage extends BasePage {
     }
 
     public void clickStartBargaining() throws InterruptedException {
-        sleep();
+        //sleep();
         tap(startBargainingButton);
         LOGGER.info("User clicked start Bargaining button");
     }
@@ -170,14 +170,12 @@ public class HomePage extends BasePage {
         return isDisplayed(productList) && !productNames.isEmpty();
     }
 
-    public void searchForProduct(String productName) {
+    public void searchForProduct() {
         tap(Menulabel);
-        enterText(inputField, productName);
+        String productName="Wireless Headphones";
+        enterText(inputField,productName);
         clickDoneOnKeyboard();
         LOGGER.info("Searching for product: {}", productName);
-
-        //enterText(searchBox, productName);
-        //hideKeyboard();
     }
 
     public void sortProductsByPrice() {

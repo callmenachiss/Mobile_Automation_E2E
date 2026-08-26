@@ -3,6 +3,7 @@ package com.ecommerce.mobile.stepdefinitions;
 import com.ecommerce.mobile.pages.HomePage;
 import com.ecommerce.mobile.pages.LoginPage;
 import io.cucumber.java.PendingException;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
@@ -35,10 +36,9 @@ public class HomeSteps {
         assertTrue(loginpage.isGetStartedLabelDisplayed(), "Get Started was not displayed on the splash page.");
     }
 
-    @When("I search for the product {string}")
-    public void i_search_for_the_product(String productName) {
-        //homePage.clickProfileAvatar();
-        homePage.searchForProduct(productName);
+    @Given("I search for the product")
+    public void i_search_for_the_product() {
+        homePage.searchForProduct();
     }
 
     @Then("I click on product to proceed purchase")
