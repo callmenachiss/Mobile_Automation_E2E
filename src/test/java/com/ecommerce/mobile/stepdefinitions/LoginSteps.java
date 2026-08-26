@@ -24,7 +24,7 @@ public class LoginSteps {
     private static final String INVALID_PASSWORD = "wrongPassword";
 
     private static final String VALID_EMAIL = "piccosofttest@gmail.com";
-    private static final String VALID_PHONENUMBER = "8973029876";
+    private static final String VALID_PHONENUMBER = "9876543211";
 
     private static final String INVALID_EMAIL = "invalid@example.com";
     private static final String INVALID_PHONENUMBER = "3794892927";
@@ -59,6 +59,16 @@ public class LoginSteps {
         loginPage.clickNext();
     }
 
+    @When("I log in with existing mobile number")
+    public void i_log_in_with_existing_mobile_number() throws InterruptedException {
+        loginPage.clickGetStartedButton();
+        Assert.assertTrue(loginPage.isMemberLoginLabelDisplayed(), "Gajab Member login label is not displayed");
+        Assert.assertTrue(loginPage.isAgeConfirmationLabelDisplayed(), "Age confirmation message is not displayed");
+        loginPage.enterValidPhoneNUmber(VALID_PHONENUMBER);
+        loginPage.clickCheckbox();
+        loginPage.clickNext();
+    }
+
     @Then("I should enter OTP received in my mobile device")
     public void i_should_enter_OTP_received_in_my_mobile_device() throws InterruptedException {
         Assert.assertTrue(loginPage.isAccountSetupMessageDisplayed(), "Account setup message is not displayed");
@@ -69,6 +79,13 @@ public class LoginSteps {
         loginPage.clickNext();
         //loginPage.clickEnglishOption();
         //loginPage.handleOptionalLocationPermission();
+    }
+
+    @Then("I should enter OTP received in my existing mobile device")
+    public void i_should_enter_OTP_received_in_my_existing_mobile_device() throws InterruptedException {
+        Assert.assertTrue(loginPage.isAccountSetupMessageDisplayed(), "Account setup message is not displayed");
+        loginPage.enterOtp(TEST_OTP);
+        Assert.assertTrue(homePage.isHomePageDisplayed(), "User not landed in HomePage");
     }
 
     @When("I log in with an invalid email and password")

@@ -115,7 +115,7 @@ public class LoginPage extends BasePage {
 
     public String enterRandomName() throws InterruptedException {
         String randomNumber = generateRandomName();
-        String name = "automation" + randomNumber;
+        String name = "autoUser" + randomNumber;
         LOGGER.info("randomNumber = {}", randomNumber);
         LOGGER.info("User entered name: {}", name);
         sleep();
@@ -199,6 +199,11 @@ public class LoginPage extends BasePage {
         String phoneNumber = generatePhoneNumber();
         LOGGER.info("User entered phone number: {}", phoneNumber);
         enterText(phoneNumberField, phoneNumber);
+    }
+
+    public void enterValidPhoneNUmber(String phoneNumber){
+        enterText(phoneNumberField, phoneNumber);
+        LOGGER.info("User entered the existing phone number: {}", phoneNumber);
     }
 
 
