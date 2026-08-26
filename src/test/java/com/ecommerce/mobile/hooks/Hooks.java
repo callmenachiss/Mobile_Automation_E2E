@@ -37,9 +37,16 @@ public class Hooks {
 
     @BeforeAll
     public static void setUp() throws MalformedURLException {
+        long serverStart = System.currentTimeMillis();
         SERVER_MANAGER.startServer();
+        long serverElapsedMs = System.currentTimeMillis() - serverStart;
+        LOGGER.info("Appium server ready in {} ms", serverElapsedMs);
+
         URL serverUrl = new URL(SERVER_MANAGER.getServerUrl());
+        long sessionStart = System.currentTimeMillis();
         DriverManager.initializeDriver(serverUrl, new CapabilityManager().getCapabilities());
+        long sessionElapsedMs = System.currentTimeMillis() - sessionStart;
+        LOGGER.info("Driver session (device init + UiAutomator2 install/launch + app launch) ready in {} ms", sessionElapsedMs);
     }
 
     @AfterAll
