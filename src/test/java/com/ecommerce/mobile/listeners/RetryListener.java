@@ -1,4 +1,4 @@
-package com.ecommerce.core.listeners;
+package com.ecommerce.mobile.listeners;
 
 import org.testng.IResultMap;
 import org.testng.ITestContext;
@@ -23,6 +23,8 @@ import java.util.Set;
  * Once the suite finishes, this drops any skipped result that was later
  * superseded by a passed or failed result for the same scenario, so
  * reports and summaries reflect only the final outcome per scenario.
+ * Web has its own independent copy (com.ecommerce.web.listeners.RetryListener)
+ * so a web run never depends on mobile's test classpath.
  */
 public class RetryListener implements ITestListener {
 

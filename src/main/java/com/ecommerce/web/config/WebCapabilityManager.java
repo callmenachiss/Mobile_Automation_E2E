@@ -1,6 +1,5 @@
 package com.ecommerce.web.config;
 
-import com.ecommerce.core.config.ConfigReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.MutableCapabilities;

@@ -1,6 +1,6 @@
 package com.ecommerce.mobile.utils;
 
-import com.ecommerce.core.config.ConfigReader;
+import com.ecommerce.mobile.config.ConfigReader;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.EmailException;
@@ -24,7 +24,7 @@ import java.util.List;
 public class MailUtil {
 
     private static final Logger LOGGER = LogManager.getLogger(MailUtil.class);
-    private static final String REPORT_FILE = "reports/EcommerceMobileAutomationReport.html";
+    private static final String REPORT_FILE = "reports/GajabMobileAutomationReport.html";
 
     public static void sendRunSummary(int passed, int failed, int skipped, List<String> failedScenarioNames) {
         if (!ConfigReader.getBoolean("mail.enabled")) {
@@ -55,12 +55,12 @@ public class MailUtil {
 
             int total = passed + failed + skipped;
             String status = failed > 0 ? "FAILED" : "PASSED";
-            email.setSubject(ConfigReader.get("mail.subject.prefix", "Ecommerce Mobile Automation")
+            email.setSubject(ConfigReader.get("mail.subject.prefix", "Gajab Mobile Automation")
                     + " - " + status + " (" + passed + "/" + total + " passed) - "
                     + new SimpleDateFormat("dd-MMM-yyyy HH:mm").format(new Date()));
 
             email.setHtmlMsg(buildHtmlBody(passed, failed, skipped, failedScenarioNames));
-            email.setTextMsg("Ecommerce Mobile Automation run finished: " + passed + " passed, "
+            email.setTextMsg("Gajab Mobile Automation run finished: " + passed + " passed, "
                     + failed + " failed, " + skipped + " skipped. Open the HTML report for full details.");
 
             File reportFile = new File(REPORT_FILE);
@@ -108,7 +108,7 @@ public class MailUtil {
         }
 
         return "<html><body style=\"font-family:Arial,sans-serif;color:#222;\">"
-                + "<h2>Ecommerce Mobile Automation - Run Summary</h2>"
+                + "<h2>Gajab Mobile Automation - Run Summary</h2>"
                 + "<table cellpadding=\"6\"><tr>"
                 + "<td><b>Total</b></td><td><b>Passed</b></td><td><b>Failed</b></td><td><b>Skipped</b></td></tr>"
                 + "<tr><td>" + total + "</td>"
@@ -128,7 +128,7 @@ public class MailUtil {
                 + failedList
                 + (reportLink.isEmpty() ? "" : "<p><a href=\"" + reportLink + "\">Open the full HTML report</a></p>")
                 + "<p style=\"color:#777;font-size:12px;\">"
-                + "Generated automatically by the Ecommerce Mobile Automation Framework. "
+                + "Generated automatically by the Gajab Mobile Automation Framework. "
                 + "The full report is also attached to this email."
                 + "</p></body></html>";
     }

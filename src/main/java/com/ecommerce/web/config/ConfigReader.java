@@ -1,4 +1,4 @@
-package com.ecommerce.core.config;
+package com.ecommerce.web.config;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,12 +8,11 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * Reads config.properties once and hands out values by key.
- * Every setting a beginner needs to change (APK path, package name,
- * device name, timeouts...) lives in that one file, not in Java code.
- * Shared by both the mobile and web frameworks - lives outside both
- * mobile.* and web.* so log lines from it don't misleadingly read as
- * one platform's package when the other platform is what's running.
+ * Reads config.properties once and hands out values by key, for the web
+ * framework. Mobile has its own independent copy
+ * (com.ecommerce.mobile.config.ConfigReader) - both read the same
+ * config.properties file, but neither package depends on the other's
+ * classes, so mobile and web can build and run in complete isolation.
  */
 public class ConfigReader {
 

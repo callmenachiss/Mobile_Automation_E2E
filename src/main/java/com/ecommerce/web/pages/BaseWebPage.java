@@ -1,6 +1,6 @@
 package com.ecommerce.web.pages;
 
-import com.ecommerce.core.config.ConfigReader;
+import com.ecommerce.web.config.ConfigReader;
 import com.ecommerce.web.config.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

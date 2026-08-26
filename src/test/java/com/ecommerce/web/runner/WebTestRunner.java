@@ -1,7 +1,7 @@
 package com.ecommerce.web.runner;
 
-import com.ecommerce.core.listeners.RetryAnalyzer;
-import com.ecommerce.core.listeners.RetryListener;
+import com.ecommerce.web.listeners.RetryAnalyzer;
+import com.ecommerce.web.listeners.RetryListener;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
@@ -44,7 +44,7 @@ public class WebTestRunner extends AbstractTestNGCucumberTests {
         // and this static block runs before anything else in the JVM
         // touches either one.
         System.setProperty("platform", "web");
-        System.setProperty("extent.reporter.spark.out", "reports/EcommerceWebAutomationReport.html");
+        System.setProperty("extent.reporter.spark.out", "reports/GajabWebAutomationReport.html");
         System.setProperty("extent.reporter.spark.config", "src/test/resources/extent-config-web.xml");
         System.setProperty("basefolder.name", "test-output/WebExtentReport");
     }

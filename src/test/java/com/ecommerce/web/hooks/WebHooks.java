@@ -1,8 +1,8 @@
 package com.ecommerce.web.hooks;
 
-import com.ecommerce.core.utils.ScreenshotUtil;
 import com.ecommerce.web.config.WebCapabilityManager;
 import com.ecommerce.web.config.WebDriverManager;
+import com.ecommerce.web.utils.ScreenshotUtil;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
@@ -52,7 +52,7 @@ public class WebHooks {
         if (scenario.isFailed()) {
             LOGGER.error("Scenario FAILED: {}", scenario.getName());
             WebDriver driver = WebDriverManager.getDriver();
-            byte[] screenshot = ScreenshotUtil.captureAndSave((TakesScreenshot) driver, scenario.getName(), "web");
+            byte[] screenshot = ScreenshotUtil.captureAndSave((TakesScreenshot) driver, scenario.getName());
             scenario.attach(screenshot, "image/png", scenario.getName());
         } else {
             LOGGER.info("Scenario PASSED: {}", scenario.getName());

@@ -1,6 +1,6 @@
 package com.ecommerce.mobile.pages;
 
-import com.ecommerce.core.config.ConfigReader;
+import com.ecommerce.mobile.config.ConfigReader;
 import com.ecommerce.mobile.config.DriverManager;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;

@@ -1,9 +1,9 @@
 package com.ecommerce.mobile.hooks;
 
-import com.ecommerce.core.utils.ScreenshotUtil;
 import com.ecommerce.mobile.config.AppiumServerManager;
 import com.ecommerce.mobile.config.CapabilityManager;
 import com.ecommerce.mobile.config.DriverManager;
+import com.ecommerce.mobile.utils.ScreenshotUtil;
 import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
@@ -66,7 +66,7 @@ public class Hooks {
         if (scenario.isFailed()) {
             LOGGER.error("Scenario FAILED: {}", scenario.getName());
             AndroidDriver driver = DriverManager.getDriver();
-            byte[] screenshot = ScreenshotUtil.captureAndSave(driver, scenario.getName(), "mobile");
+            byte[] screenshot = ScreenshotUtil.captureAndSave(driver, scenario.getName());
             scenario.attach(screenshot, "image/png", scenario.getName());
         } else {
             LOGGER.info("Scenario PASSED: {}", scenario.getName());
