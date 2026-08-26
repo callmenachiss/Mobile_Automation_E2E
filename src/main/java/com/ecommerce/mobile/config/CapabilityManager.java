@@ -127,6 +127,13 @@ public class CapabilityManager {
                 ConfigReader.getBoolean("appium.skipServerInstallation")
         );
 
+        // Don't let session creation itself launch the app and wait for it
+        // to gain focus - Hooks.resetAppState() already does exactly that
+        // (terminateApp + activateApp) in @Before for every scenario,
+        // including the first. Without this, the very first scenario pays
+        // for a full launch, then an immediate terminate + relaunch.
+        options.setCapability("appium:autoLaunch", false);
+
         return options;
     }
 
