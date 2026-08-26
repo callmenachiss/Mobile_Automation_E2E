@@ -3,18 +3,23 @@ package com.ecommerce.web.config;
 import com.ecommerce.mobile.config.ConfigReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.MutableCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 /**
  * Builds the browser options from config.properties, the same way
  * CapabilityManager builds Appium capabilities for mobile.
  *
- * web.browser picks the browser (chrome/firefox); web.headless runs it
+ * web.browser picks the browser (chrome/firefox/edge); web.headless runs it
  * without a visible window (handy for CI). No driver-binary management is
- * needed - Selenium Manager (bundled since Selenium 4.6) downloads the
- * matching chromedriver/geckodriver automatically.
+ * needed for LOCAL runs - Selenium Manager (bundled since Selenium 4.6)
+ * downloads the matching chromedriver/geckodriver/msedgedriver
+ * automatically. For REMOTE runs (web.remote.enabled=true, e.g. a Selenium
+ * Grid or a cloud provider), the grid itself owns the matching driver, so
+ * these options are just sent over as desired capabilities - see
+ * WebDriverManager.
  */
 public class WebCapabilityManager {
 
@@ -32,6 +37,14 @@ public class WebCapabilityManager {
                 if (headless) {
                     options.addArguments("--headless");
                 }
+                return options;
+            }
+            case "edge": {
+                EdgeOptions options = new EdgeOptions();
+                if (headless) {
+                    options.addArguments("--headless=new");
+                }
+                options.addArguments("--remote-allow-origins=*");
                 return options;
             }
             case "chrome":

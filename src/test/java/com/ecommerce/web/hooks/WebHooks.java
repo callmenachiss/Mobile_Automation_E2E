@@ -13,6 +13,8 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import java.net.MalformedURLException;
+
 /**
  * Runs once for the whole suite and before/after every scenario - the web
  * counterpart of the mobile Hooks, same pattern:
@@ -28,7 +30,7 @@ public class WebHooks {
     private static final Logger LOGGER = LogManager.getLogger(WebHooks.class);
 
     @BeforeAll
-    public static void setUp() {
+    public static void setUp() throws MalformedURLException {
         long start = System.currentTimeMillis();
         WebDriverManager.initializeDriver(new WebCapabilityManager().getCapabilities());
         LOGGER.info("Browser ready in {} ms", System.currentTimeMillis() - start);
