@@ -67,7 +67,8 @@ STEP 5  After the LAST scenario:
         │
         ▼
 STEP 6  ExtentCucumberAdapter (the "plugin" in TestRunner's @CucumberOptions)
-        writes  reports/GajabMobileAutomationReport.html
+        writes  test-output/MobileExtentReport <timestamp>/reports/GajabAutomationReport.html
+        (a NEW timestamped folder every run - see README.md section 7B for why)
         Log4j2 has been writing to  logs/mobile-automation.log  the whole time.
         │
         ▼
@@ -98,8 +99,10 @@ these differences:
   + `WebDriverManager`), and "restart the app process" between scenarios
   is "clear cookies and reload `web.baseUrl`" instead.
 - STEP 6/7 write to `logs/web-automation.log`,
-  `reports/GajabWebAutomationReport.html`, and `screenshots/web/` -
-  entirely separate files from mobile's, never shared.
+  `test-output/WebExtentReport <timestamp>/reports/GajabAutomationReport.html`,
+  and `screenshots/web/` - separate from mobile's, except the report's
+  filename/title themselves, which are unavoidably shared (see README.md
+  section 7B for why - it's a real library constraint, not an oversight).
 - There is currently no web equivalent of STEP 7's summary email
   (`EmailReportListener`/`MailUtil` are mobile-only).
 
@@ -323,7 +326,7 @@ Since everything is plain Java, normal breakpoints work:
 |---|---|
 | "What actually happened, in order?" | `logs/mobile-automation.log` — every hook, step, and error is logged with a timestamp. |
 | "What did the screen look like when it failed?" | `screenshots/mobile/<scenario-name>_<timestamp>.png` |
-| "Give me the whole picture (pass/fail counts, screenshots inline, step timings)" | `reports/GajabMobileAutomationReport.html` — open it in a browser |
+| "Give me the whole picture (pass/fail counts, screenshots inline, step timings)" | the most recent `test-output/MobileExtentReport <timestamp>/reports/GajabAutomationReport.html` — open it in a browser (see README.md section 7B) |
 
 ### 4.4 Common errors and what they actually mean
 

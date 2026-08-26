@@ -39,16 +39,24 @@ import org.testng.annotations.Test;
 public class WebTestRunner extends AbstractTestNGCucumberTests {
 
     static {
-        // Keeps the web run's Extent report, its archived snapshots and
-        // its logs completely separate from mobile's, without touching
-        // extent.properties / log4j2.xml defaults that mobile relies on:
-        // both ExtentService and log4j2's ${sys:platform} lookup check
-        // System properties before falling back to their own defaults,
-        // and this static block runs before anything else in the JVM
-        // touches either one.
+        // Keeps web's logs and archived Extent report snapshots separate
+        // from mobile's, without touching extent.properties/log4j2.xml
+        // defaults that mobile relies on - both log4j2's ${sys:platform}
+        // lookup and ExtentService's basefolder.name resolution check
+        // System properties before falling back to their file/config
+        // default, and this static block runs before anything else in
+        // the JVM touches either one.
+        //
+        // NOTE: extent.reporter.spark.out/spark.config can NOT be
+        // overridden this way, despite looking like they should be -
+        // the adapter resolves those two specific keys straight from the
+        // loaded extent.properties file (see initSpark/getOutputPath in
+        // ExtentService, verified by decompiling the adapter jar),
+        // ignoring any system property for them. Don't re-add overrides
+        // for those two keys here; they're silently no-ops. See
+        // extent.properties for how mobile/web reports actually get told
+        // apart instead (by basefolder.name below, not by filename).
         System.setProperty("platform", "web");
-        System.setProperty("extent.reporter.spark.out", "reports/GajabWebAutomationReport.html");
-        System.setProperty("extent.reporter.spark.config", "src/test/resources/extent-config-web.xml");
         System.setProperty("basefolder.name", "test-output/WebExtentReport");
     }
 

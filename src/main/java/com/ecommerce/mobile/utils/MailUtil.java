@@ -24,7 +24,7 @@ import java.util.List;
 public class MailUtil {
 
     private static final Logger LOGGER = LogManager.getLogger(MailUtil.class);
-    private static final String REPORT_FILE = "reports/GajabMobileAutomationReport.html";
+    private static final String REPORT_FILE = "reports/GajabAutomationReport.html";
 
     public static void sendRunSummary(int passed, int failed, int skipped, List<String> failedScenarioNames) {
         if (!ConfigReader.getBoolean("mail.enabled")) {

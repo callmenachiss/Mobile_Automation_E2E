@@ -5,8 +5,14 @@
         <theme>standard</theme>
         <encoding>UTF-8</encoding>
         <protocol>https</protocol>
-        <documentTitle>Gajab Mobile Automation Report</documentTitle>
-        <reportName>Gajab App - Mobile Regression Results</reportName>
+        <!-- Shared by both mobile and web runs - the adapter reads this
+             straight from this file and ignores any runtime override,
+             so it can't say "Mobile" or "Web" specifically. Which
+             platform a given report is from is shown by its folder
+             name instead (test-output/MobileExtentReport vs
+             WebExtentReport - see extent.properties). -->
+        <documentTitle>Gajab Automation Report</documentTitle>
+        <reportName>Gajab App - Automation Results</reportName>
         <!-- top, bottom -->
         <testViewChartLocation>top</testViewChartLocation>
         <scripts>

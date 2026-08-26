@@ -47,7 +47,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: web-extent-report
-          path: reports/GajabWebAutomationReport.html
+          # Every run gets its own timestamped folder - see README.md
+          # section 7B for why there's no fixed reports/... path.
+          path: test-output/WebExtentReport*/reports/GajabAutomationReport.html
 
       - name: Upload failure screenshots
         if: always()

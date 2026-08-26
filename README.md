@@ -65,15 +65,18 @@ Mobile_Automation_E2E/                   # This folder is the whole project - on
 ├── logs/
 │   ├── mobile-automation.log            # Auto-created: every mobile run appends here
 │   └── web-automation.log               # Auto-created: every web run appends here
-├── reports/                             # Auto-created: the HTML test reports
-│   ├── GajabMobileAutomationReport.html
-│   └── GajabWebAutomationReport.html
+├── test-output/                         # Auto-created: EVERY run's own timestamped Extent report
+│   ├── MobileExtentReport <timestamp>/reports/GajabAutomationReport.html
+│   └── WebExtentReport <timestamp>/reports/GajabAutomationReport.html
+│                                        # (see section 7B - the report always lives under a fresh
+│                                        #  timestamped folder here, never at a fixed reports/ path;
+│                                        #  the folder name - Mobile vs Web - is what tells them apart)
 ├── pom.xml                              # ONE Maven build file for both platforms
 ├── testng.xml                           # Runs EVERY mobile scenario (the default mobile suite)
 ├── testng-smoke.xml                     # Mobile only: runs @smoke-tagged scenarios - click & Run
 ├── testng-regression.xml                # Mobile only: runs @regression-tagged scenarios
 ├── testng-web.xml                       # Runs the @web-tagged web suite
-├── .github/workflows/                   # CI: mobile-regression.yml + web-regression.yml
+├── .github/workflows/                   # CI starter(s) - see section 10
 ├── src/
 │   ├── main/java/com/ecommerce/
 │   │   ├── mobile/
@@ -109,9 +112,8 @@ Mobile_Automation_E2E/                   # This folder is the whole project - on
 │           │   └── web/                 # The web .feature files (@web-tagged scenarios)
 │           ├── config.properties        # ALL settings for BOTH platforms live here
 │           ├── log4j2.xml               # Logging config - routes to mobile- or web-automation.log
-│           ├── extent.properties        # Mobile report output location (web overrides at runtime)
-│           ├── extent-config.xml        # Mobile report look & feel
-│           └── extent-config-web.xml    # Web report look & feel
+│           ├── extent.properties        # Report filename/basefolder for BOTH platforms - see 7B
+│           └── extent-config.xml        # Report look & feel for BOTH platforms - see 7B
 ```
 
 ---
@@ -362,7 +364,7 @@ This is the mobile suite's output - the web suite's is a separate,
 identically-shaped set of files, see section 11:
 | What | Where |
 |---|---|
-| HTML test report | `reports/GajabMobileAutomationReport.html` |
+| HTML test report | `test-output/MobileExtentReport <timestamp>/reports/GajabAutomationReport.html` - see 7B, it's a new folder every run, not a fixed path |
 | Execution log | `logs/mobile-automation.log` |
 | Screenshots of failed scenarios | `screenshots/mobile/` |
 | Summary email | the inbox at `mail.to` in `config.properties` |
@@ -392,7 +394,28 @@ that eventually passes is reported as exactly that — one pass, nothing
 else. This is standard TestNG behavior being cleaned up, not a bug in
 `RetryAnalyzer` itself.
 
-## 8. How failure screenshots work
+## 7B. Where the Extent report actually lives, and why
+
+`extent.properties` sets both `basefolder.name` and `basefolder.datetimepattern`, which together
+mean the Extent adapter writes **every run's report into a brand-new timestamped folder** -
+`test-output/MobileExtentReport <timestamp>/reports/GajabAutomationReport.html` for mobile,
+`test-output/WebExtentReport <timestamp>/reports/GajabAutomationReport.html` for web - never to a
+single fixed `reports/...html` path that gets overwritten each time. That's why old
+`test-output/*ExtentReport <timestamp>/` folders pile up over time (see the cleanup note in
+[Troubleshooting](#12-troubleshooting) if that bothers you) - each one is a genuinely separate
+run's report, not a leftover mistake.
+
+**The report's filename and title/branding are identical for mobile and web, by necessity, not
+by choice.** `extent.properties` is one single file on the classpath, shared by both platforms -
+there's no way to load a second, platform-specific copy of it. The `extentreports-cucumber7-adapter`
+resolves `extent.reporter.spark.out` (the filename) and `extent.reporter.spark.config` (the
+title/branding XML) straight from that one loaded file, and - unlike most other keys - ignores any
+JVM system property override for those two specific keys (verified by decompiling the adapter jar;
+this is a real quirk in the library, not a misconfiguration here). Only `basefolder.name` actually
+respects a runtime override, which is why `WebTestRunner`'s static block can make web's *folder*
+say "Web" but can't make the report *file inside it* say "Web" too - hence the neutral
+`GajabAutomationReport.html` name and "Gajab Automation Report" title. **Which platform a report
+is from is told apart by its folder name, not its filename or its title.**
 
 In `Hooks.java` (mobile) / `WebHooks.java` (web), the `@After` hook checks
 `scenario.isFailed()`. If true:
@@ -417,7 +440,18 @@ sends one summary email:
   Automation - FAILED (15/18 passed) - 21-Aug-2026 10:41`.
 - **Body**: a pass/fail/skip table, a simple HTML bar chart, the list of
   failed scenario names, and a link to the HTML report.
-- **Attachment**: the full `GajabMobileAutomationReport.html`.
+- **Attachment**: the full report, *if* `MailUtil` can find it at
+  `reports/GajabAutomationReport.html` when the email is being built.
+  **Known gap, not yet fixed:** per 7B, the report never actually lands at
+  that fixed path - it's always under a fresh
+  `test-output/MobileExtentReport <timestamp>/reports/...` folder instead -
+  so this lookup will currently always miss and the warning at
+  `MailUtil.java:75` ("Report file not found...") will always fire,
+  meaning the summary email is sent without the report attached (a link to
+  it can still be provided via `mail.report.link` in `config.properties`
+  in the meantime). This predates today's changes and wasn't triggered by
+  any of them - `mail.from` has never been filled in, so no email has
+  actually been sent yet to observe it.
 
 ### Setup
 1. In `config.properties`, fill in:
@@ -539,13 +573,17 @@ section "Adding a brand-new web use case" below.
 **Where to look afterwards** (the web equivalent of section 6's table):
 | What | Where |
 |---|---|
-| HTML test report | `reports/GajabWebAutomationReport.html` |
+| HTML test report | `test-output/WebExtentReport <timestamp>/reports/GajabAutomationReport.html` - see 7B |
 | Execution log | `logs/web-automation.log` |
 | Screenshots of failed scenarios | `screenshots/web/` |
 
-Mobile and web share only `config.properties` itself (as data, read by two
-independent `ConfigReader` copies) and the underlying Maven/library setup
-(`pom.xml`) - everything else (logs, screenshots, reports, retry, hooks,
+Mobile and web share `config.properties` itself (as data, read by two
+independent `ConfigReader` copies), the underlying Maven/library setup
+(`pom.xml`), and - unavoidably, per 7B - the Extent report's filename and
+title/branding (`extent.properties`/`extent-config.xml` are one classpath
+resource neither platform can override for those two specific keys).
+Everything else (logs, screenshots, which *folder* the report lands in,
+retry, hooks,
 driver manager, page-object base class) is fully separate per platform.
 
 ### Adding a brand-new web use case
