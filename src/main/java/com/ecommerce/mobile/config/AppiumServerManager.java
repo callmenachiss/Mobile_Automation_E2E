@@ -6,6 +6,7 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.File;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -30,10 +31,14 @@ public class AppiumServerManager {
         }
         try {
             LOGGER.info("Starting Appium server...");
+            // Captures the driver's own step-by-step session log (device init,
+            // UiAutomator2 server install/launch, app launch...) so a slow
+            // startup can be diagnosed by timestamp instead of guessed at.
             AppiumServiceBuilder builder = new AppiumServiceBuilder()
                     .withIPAddress(ConfigReader.get("appium.server.ip"))
                     .usingPort(ConfigReader.getInt("appium.server.port"))
-                    .withArgument(GeneralServerFlag.SESSION_OVERRIDE);
+                    .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
+                    .withLogFile(new File("logs/appium-server.log"));
 
             service = AppiumDriverLocalService.buildService(builder);
             service.start();
