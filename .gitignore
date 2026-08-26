@@ -2,3 +2,18 @@
 # causing spurious merge conflicts between branches since it's compiled
 # independently (and differently) on every machine.
 target/
+
+# Test run output - logs, failure screenshots, and HTML reports are all
+# regenerated fresh by every run and differ per machine/run, so tracking
+# them causes the exact same kind of repo bloat and spurious diffs
+# target/ used to. Keep the folders themselves (via .gitkeep) so a fresh
+# clone has somewhere for the app to write into before the first run -
+# each platform's own ScreenshotUtil/log4j2 config creates the rest.
+logs/*.log
+logs/*.log.gz
+screenshots/mobile/*
+screenshots/web/*
+!screenshots/mobile/.gitkeep
+!screenshots/web/.gitkeep
+reports/
+test-output/
