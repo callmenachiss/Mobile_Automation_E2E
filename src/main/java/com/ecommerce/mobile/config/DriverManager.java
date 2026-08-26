@@ -11,13 +11,17 @@ import java.net.URL;
  * Owns the AndroidDriver (our remote control for the app on the device).
  * Kept as a ThreadLocal so this same framework can later run tests in
  * parallel across multiple devices without one test stealing another's driver.
+ *
+ * The driver session is created once for the whole suite and reused across
+ * scenarios (see Hooks) - creating a new UiAutomator2 session per scenario is
+ * far more expensive than restarting the app process within an existing one.
  */
 public class DriverManager {
 
     private static final Logger LOGGER = LogManager.getLogger(DriverManager.class);
     private static final ThreadLocal<AndroidDriver> DRIVER = new ThreadLocal<>();
 
-    public AndroidDriver initializeDriver(URL appiumServerUrl, UiAutomator2Options options) {
+    public static AndroidDriver initializeDriver(URL appiumServerUrl, UiAutomator2Options options) {
         LOGGER.info("Initializing AndroidDriver against Appium server at {}", appiumServerUrl);
         AndroidDriver driver = new AndroidDriver(appiumServerUrl, options);
         DRIVER.set(driver);
@@ -28,12 +32,24 @@ public class DriverManager {
     public static AndroidDriver getDriver() {
         AndroidDriver driver = DRIVER.get();
         if (driver == null) {
-            throw new IllegalStateException("Driver has not been initialized. Is the @Before hook running?");
+            throw new IllegalStateException("Driver has not been initialized. Is the @BeforeAll hook running?");
         }
         return driver;
     }
 
-    public void quitDriver() {
+    /**
+     * Restarts the app process (not the driver session) so each scenario starts
+     * from a clean screen without paying the cost of a brand-new Appium session.
+     */
+    public static void resetApp() {
+        AndroidDriver driver = getDriver();
+        String appPackage = ConfigReader.get("appPackage");
+        LOGGER.info("Resetting app state by restarting {}", appPackage);
+        driver.terminateApp(appPackage);
+        driver.activateApp(appPackage);
+    }
+
+    public static void quitDriver() {
         AndroidDriver driver = DRIVER.get();
         if (driver != null) {
             LOGGER.info("Closing app session.");

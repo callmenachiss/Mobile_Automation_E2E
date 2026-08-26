@@ -89,8 +89,7 @@ public class HomePage extends BasePage {
 
 
 
-    public void clickBargainingButton() throws InterruptedException {
-        sleep();
+    public void clickBargainingButton() {
         tap(bargainingButton);
     }
 
@@ -109,8 +108,7 @@ public class HomePage extends BasePage {
         LOGGER.info("User clicking pay button");
     }
 
-    public void clickStartBargaining() throws InterruptedException {
-        sleep();
+    public void clickStartBargaining() {
         tap(startBargainingButton);
         LOGGER.info("User clicked start Bargaining button");
     }
