@@ -1,9 +1,9 @@
 package com.ecommerce.mobile.utils;
 
-import io.appium.java_client.android.AndroidDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,9 +13,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Saves a screenshot of the device screen into the /screenshots folder
- * whenever a scenario fails, so anyone can open the file and see exactly
- * what the app looked like at the moment of failure.
+ * Saves a screenshot (device screen or browser window) into the
+ * /screenshots folder whenever a scenario fails, so anyone can open the
+ * file and see exactly what the app looked like at the moment of failure.
+ * Shared by both mobile (AndroidDriver) and web (WebDriver) - both
+ * implement TakesScreenshot.
  */
 public class ScreenshotUtil {
 
@@ -23,11 +25,11 @@ public class ScreenshotUtil {
     private static final String SCREENSHOT_FOLDER = "screenshots";
 
     /**
-     * @param driver       the active AndroidDriver
+     * @param driver       the active driver (AndroidDriver or WebDriver)
      * @param scenarioName name of the failed scenario, used to name the file
      * @return the bytes of the screenshot (also used to attach it to the HTML report)
      */
-    public static byte[] captureAndSave(AndroidDriver driver, String scenarioName) {
+    public static byte[] captureAndSave(TakesScreenshot driver, String scenarioName) {
         byte[] screenshotBytes = driver.getScreenshotAs(OutputType.BYTES);
         try {
             Path folder = Paths.get(SCREENSHOT_FOLDER);

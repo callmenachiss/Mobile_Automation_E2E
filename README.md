@@ -407,18 +407,41 @@ of the dedicated suite files from section 6 instead.
 
 ---
 
-## 11. Roadmap: adding web automation later
+## 11. Web automation
 
-This project is deliberately structured so a Selenium **web** suite can be
-added without restructuring anything:
-- `com.ecommerce.web` packages already exist (empty, under both
-  `src/main/java` and `src/test/java`) as the reserved home for web page
-  objects and web step definitions.
-- `src/test/resources/features/web/` is reserved for web `.feature` files.
-- When ready: add `selenium-java`'s WebDriverManager dependency, create a
-  `WebDriverManager`/`WebCapabilityManager` under `com.ecommerce.web`
-  mirroring the mobile `config/` classes, and add a second TestNG runner
-  (e.g. `WebTestRunner`) pointed at the web features/glue.
+A Selenium **web** suite lives alongside the mobile one under
+`com.ecommerce.web`, mirroring the same concepts (Page Object Model, hooks,
+logging, screenshots-on-failure, ExtentReports) so it's familiar to anyone
+who already knows the mobile suite:
+
+| Mobile | Web | Role |
+|---|---|---|
+| `mobile.config.CapabilityManager` | `web.config.WebCapabilityManager` | Builds driver capabilities from `config.properties` (`web.browser`, `web.headless`). |
+| `mobile.config.DriverManager` | `web.config.WebDriverManager` | Owns the driver (ThreadLocal), created once per suite, reset between scenarios. |
+| `mobile.pages.BasePage` | `web.pages.BaseWebPage` | Shared page-object vocabulary (`click`/`enterText`/`isDisplayed`/...). |
+| `mobile.hooks.Hooks` | `web.hooks.WebHooks` | `@BeforeAll` launch once, `@Before` reset state, `@After` screenshot on failure, `@AfterAll` quit. |
+| `mobile.runner.TestRunner` | `web.runner.WebTestRunner` | Cucumber-TestNG entry point. |
+
+No driver-binary setup is needed - Selenium Manager (bundled with
+Selenium 4.6+) downloads the matching chromedriver/geckodriver
+automatically. `mobile.utils.ScreenshotUtil` and
+`mobile.listeners.RetryAnalyzer` are reused as-is by both suites (neither
+is actually mobile-specific).
+
+**Before running:** fill in `web.baseUrl` in `config.properties`, and
+replace the placeholder `@FindBy` locators in `web/pages/LoginPage.java`
+and `web/pages/HomePage.java` with the real ones from the site (same
+"note on locators" convention as the mobile pages).
+
+**To run:**
+```
+mvn test -DsuiteXmlFile=testng-web.xml
+```
+or point IntelliJ's right-click Run/Debug at `WebTestRunner.java` directly.
+
+Web and mobile share `config.properties`, `logs/automation.log`, and the
+ExtentReports output path/config (`extent.properties`) - the same way the
+mobile smoke/regression suites already share them today.
 
 ---
 
