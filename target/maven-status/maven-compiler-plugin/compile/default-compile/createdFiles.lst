@@ -1,16 +1,1 @@
-com\ecommerce\mobile\config\ConfigReader.class
-com\ecommerce\mobile\utils\MailUtil.class
-com\ecommerce\mobile\config\CapabilityManager1.class
-com\ecommerce\mobile\pages\CalculatorPage.class
-com\ecommerce\mobile\pages\ProductDetailsPage.class
-com\ecommerce\mobile\utils\ScreenshotUtil.class
-com\ecommerce\mobile\pages\CheckoutPage.class
-com\ecommerce\web\package-info.class
-com\ecommerce\mobile\config\AppiumServerManager.class
-com\ecommerce\mobile\pages\CartPage.class
-com\ecommerce\mobile\config\CapabilityManager.class
-com\ecommerce\mobile\pages\HomePage.class
-com\ecommerce\mobile\config\DriverManager.class
-com\ecommerce\mobile\pages\BasePage.class
-com\ecommerce\mobile\pages\OrderConfirmationPage.class
-com\ecommerce\mobile\pages\LoginPage.class
+com/ecommerce/mobile/pages/HomePage.class
