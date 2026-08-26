@@ -3,9 +3,7 @@
 <suite name="Ecommerce Web Suite" verbose="1">
 
     <test name="Web Tests">
-        <!-- The tag filter is declared on WebTestRunner's @CucumberOptions
-             instead of here - a TestNG <parameter> isn't read by Cucumber's
-             tag filter, so this used to have no effect. -->
+        <parameter name="cucumber.filter.tags" value="@web"/>
         <classes>
             <class name="com.ecommerce.web.runner.WebTestRunner"/>
         </classes>

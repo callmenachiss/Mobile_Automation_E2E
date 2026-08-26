@@ -1,8 +1,18 @@
-# Ecommerce Mobile Automation Framework
+# Gajab Automation Framework (Mobile + Web)
 
-Mobile UI automation for the Ecommerce Android app, written in plain-English
-BDD scenarios so that QA, developers **and** business/leadership can read
-what is being tested without needing to read a line of code.
+UI automation for the Gajab app, written in plain-English BDD scenarios so
+that QA, developers **and** business/leadership can read what is being
+tested without needing to read a line of code.
+
+**Everything - mobile (Appium/Android) and web (Selenium) - lives in this
+one project, `Mobile_Automation_E2E/`.** There is no separate framework or
+repo per platform: mobile and web are two independent, side-by-side
+subtrees (`com.ecommerce.mobile.*` and `com.ecommerce.web.*`) inside the
+same Maven build, the same way `pages/` already has one class per screen.
+Neither platform's code depends on the other's - see section 2 - but both
+are built, run, and documented from this single project root. If you ever
+find mobile or web automation code living outside this folder, that's
+stale/out of place and should be moved in here.
 
 This is a standard **Maven** project (`pom.xml` at the root, no Gradle
 anywhere) and opens directly in **IntelliJ IDEA**: `File → Open` and point
@@ -34,40 +44,70 @@ one page class instead of every test.
 
 ## 2. Project structure
 
+Mobile and web are **fully independent, parallel subtrees** - every layer
+that exists for one exists for the other, under its own package, and
+neither imports a class from the other's package. This is a deliberate
+standard, not an accident: if you ever add a class that both platforms
+would use identically, **duplicate it into both `mobile.*` and `web.*`
+rather than factor out a shared "common" package** - a shared package is
+still a cross-platform dependency, and the whole point is that a change to
+web (or a broken web run) can never affect mobile, and vice versa. The one
+thing genuinely shared is `config.properties` itself, and that's a data
+file each platform's own `ConfigReader` reads independently, not code.
+
 ```
-mobile/
-├── apps/                                # Put your .apk file here
-├── screenshots/                         # Auto-created: screenshots of FAILED tests
-├── logs/                                # Auto-created: automation.log for every run
-├── reports/                             # Auto-created: the HTML test report
-├── pom.xml                              # Maven build file (all dependencies)
-├── testng.xml                           # Runs EVERY scenario (the default suite)
-├── testng-smoke.xml                     # Runs only @smoke-tagged scenarios - just click & Run
-├── testng-regression.xml                # Runs only @regression-tagged scenarios - just click & Run
-├── .github/workflows/                   # CI pipeline (GitHub Actions starter)
+Mobile_Automation_E2E/                   # This folder is the whole project - one Maven build,
+├── apps/                                # both platforms, nothing lives outside it.
+│                                         # Put your .apk file here (mobile only)
+├── screenshots/
+│   ├── mobile/                          # Auto-created: screenshots of FAILED mobile scenarios
+│   └── web/                             # Auto-created: screenshots of FAILED web scenarios
+├── logs/
+│   ├── mobile-automation.log            # Auto-created: every mobile run appends here
+│   └── web-automation.log               # Auto-created: every web run appends here
+├── reports/                             # Auto-created: the HTML test reports
+│   ├── GajabMobileAutomationReport.html
+│   └── GajabWebAutomationReport.html
+├── pom.xml                              # ONE Maven build file for both platforms
+├── testng.xml                           # Runs EVERY mobile scenario (the default mobile suite)
+├── testng-smoke.xml                     # Mobile only: runs @smoke-tagged scenarios - click & Run
+├── testng-regression.xml                # Mobile only: runs @regression-tagged scenarios
+├── testng-web.xml                       # Runs the @web-tagged web suite
+├── .github/workflows/                   # CI: mobile-regression.yml + web-regression.yml
 ├── src/
 │   ├── main/java/com/ecommerce/
 │   │   ├── mobile/
-│   │   │   ├── config/                  # Reads config.properties, builds capabilities,
+│   │   │   ├── config/                  # ConfigReader, CapabilityManager, DriverManager,
+│   │   │   │                            # AppiumServerManager - reads config.properties,
 │   │   │   │                            # starts Appium server, manages the driver
 │   │   │   ├── pages/                   # One class per app screen (Page Object Model)
-│   │   │   └── utils/                   # ScreenshotUtil, MailUtil (screenshots + summary email)
-│   │   └── web/                         # Reserved for future Selenium WEB automation
+│   │   │   └── utils/                   # ScreenshotUtil (→ screenshots/mobile), MailUtil
+│   │   └── web/
+│   │       ├── config/                  # ConfigReader, WebCapabilityManager, WebDriverManager -
+│   │       │                            # web's own copies, mirroring mobile's config/ 1:1
+│   │       ├── pages/                   # One class per web page (Page Object Model)
+│   │       └── utils/                   # ScreenshotUtil (→ screenshots/web) - web's own copy
 │   └── test/
 │       ├── java/com/ecommerce/
 │       │   ├── mobile/
 │       │   │   ├── hooks/               # Before/after every scenario (launch app, screenshot on fail)
 │       │   │   ├── stepdefinitions/     # Java code behind each English sentence in the .feature files
 │       │   │   ├── runner/              # TestRunner - the Cucumber + TestNG entry point
-│       │   │   └── listeners/           # RetryAnalyzer (reruns a failed scenario once),
-│       │   │                            # EmailReportListener (sends the summary email once the run finishes)
-│       │   └── web/                     # Reserved for future web step definitions
+│       │   │   └── listeners/           # RetryAnalyzer, RetryListener (retry + clean reporting),
+│       │   │                            # EmailReportListener (mobile-only summary email)
+│       │   └── web/
+│       │       ├── hooks/               # WebHooks - web's own copy of Hooks
+│       │       ├── stepdefinitions/     # Java code behind each web .feature sentence
+│       │       ├── runner/              # WebTestRunner - web's own Cucumber + TestNG entry point
+│       │       └── listeners/           # RetryAnalyzer, RetryListener - web's own copies
 │       └── resources/
-│           ├── features/                # The 6 .feature files (18 scenarios total)
-│           ├── config.properties        # ALL settings you need to change live here
-│           ├── log4j2.xml               # Logging configuration
-│           ├── extent.properties        # Report output location
-│           └── extent-config.xml        # Report look & feel
+│           ├── features/                # The 6 mobile .feature files (18 scenarios total)
+│           │   └── web/                 # The web .feature files (@web-tagged scenarios)
+│           ├── config.properties        # ALL settings for BOTH platforms live here
+│           ├── log4j2.xml               # Logging config - routes to mobile- or web-automation.log
+│           ├── extent.properties        # Mobile report output location (web overrides at runtime)
+│           ├── extent-config.xml        # Mobile report look & feel
+│           └── extent-config-web.xml    # Web report look & feel
 ```
 
 ---
@@ -314,6 +354,8 @@ is the fastest loop. Once it works, confirm it end-to-end with
 retry and the email path get exercised too.
 
 ### Where to look afterwards
+This is the mobile suite's output - the web suite's is a separate,
+identically-shaped set of files, see section 11:
 | What | Where |
 |---|---|
 | HTML test report | `reports/GajabMobileAutomationReport.html` |
@@ -327,18 +369,38 @@ retry and the email path get exercised too.
 
 `RetryAnalyzer.java` (under `listeners/`) tells TestNG: "if a scenario
 fails, run it one more time before marking it as Failed." This is wired
-into `TestRunner.java` via `retryAnalyzer = RetryAnalyzer.class`.
+into `TestRunner.java` via `retryAnalyzer = RetryAnalyzer.class`. Web has
+its own identical copy wired into `WebTestRunner.java` the same way.
 
 This catches one-off flakiness (a slow device, a slow network call)
 without hiding a genuinely broken feature — if it fails twice in a row,
 it is reported as failed.
 
+**A TestNG quirk this framework specifically corrects for:** when a
+scenario fails once and then passes on retry, TestNG's own retry
+mechanism records that first failed attempt as **SKIPPED**, not discarded
+— so without any further handling, a scenario that ultimately succeeded
+would still show up in the report/summary as "1 skipped, 1 passed" instead
+of a clean single pass. `RetryListener.java` (also under `listeners/`,
+registered via `@Listeners` on both `TestRunner` and `WebTestRunner`)
+removes that now-superseded skip once the suite finishes, so a scenario
+that eventually passes is reported as exactly that — one pass, nothing
+else. This is standard TestNG behavior being cleaned up, not a bug in
+`RetryAnalyzer` itself.
+
 ## 8. How failure screenshots work
 
-In `Hooks.java`, the `@After` hook checks `scenario.isFailed()`. If true:
-1. A screenshot is taken of the device screen at the moment of failure.
-2. It's saved to `screenshots/<scenario-name>_<timestamp>.png`.
-3. It's also embedded directly into the HTML report for quick viewing.
+In `Hooks.java` (mobile) / `WebHooks.java` (web), the `@After` hook checks
+`scenario.isFailed()`. If true:
+1. A screenshot is taken of the device screen (mobile) or browser window
+   (web) at the moment of failure.
+2. It's saved to `screenshots/mobile/<scenario-name>_<timestamp>.png` or
+   `screenshots/web/<scenario-name>_<timestamp>.png` respectively - each
+   platform's own `ScreenshotUtil` copy is hardcoded to its own subfolder,
+   so a web run's screenshots can never land next to (or overwrite)
+   mobile's, and vice versa.
+3. It's also embedded directly into that platform's own HTML report for
+   quick viewing.
 
 ---
 
@@ -347,7 +409,7 @@ In `Hooks.java`, the `@After` hook checks `scenario.isFailed()`. If true:
 Once the **whole run finishes** (not per-scenario), `EmailReportListener`
 (a TestNG `IReporter`, registered via `@Listeners` on `TestRunner.java`)
 sends one summary email:
-- **Subject**: pass/fail status and count, e.g. `Ecommerce Mobile
+- **Subject**: pass/fail status and count, e.g. `Gajab Mobile
   Automation - FAILED (15/18 passed) - 21-Aug-2026 10:41`.
 - **Body**: a pass/fail/skip table, a simple HTML bar chart, the list of
   failed scenario names, and a link to the HTML report.
@@ -382,28 +444,43 @@ entirely.
 
 ## 10. Continuous Integration (CI)
 
-A starter GitHub Actions workflow is at
-[.github/workflows/mobile-regression.yml](.github/workflows/mobile-regression.yml).
-It:
+Two starter GitHub Actions workflows live in this repo, one per platform -
+each triggers and reports independently, so a red web build never blocks
+mobile (or vice versa):
+
+### [.github/workflows/mobile-regression.yml](.github/workflows/mobile-regression.yml)
 1. Sets up JDK 11, Node.js, and Appium (+ the UiAutomator2 driver).
 2. Boots an Android emulator (via `reactivecircus/android-emulator-runner`)
    and runs `mvn test -Dcucumber.filter.tags="@smoke"` against it
    (configurable per-run via the workflow's manual "tags" input).
-3. Uploads `reports/`, `screenshots/`, and `logs/` as build artifacts,
-   whether the run passed or failed.
+3. Uploads the mobile report, `screenshots/mobile/`, and
+   `logs/mobile-automation.log` as build artifacts, whether the run passed
+   or failed.
 4. Passes `MAIL_FROM_PASSWORD` in from a GitHub **repository secret** —
    add it under Settings → Secrets and variables → Actions.
 
-This is a **starting point** — adjust the emulator API level/target, the
-default tag expression, and the trigger branches for your actual setup.
-If you use a different CI provider (Jenkins, GitLab CI, Azure DevOps),
-the same three commands (install Appium, start an emulator/device, run
-`mvn test`) are what needs to be reproduced there; the emulator-boot step
-is the only GitHub-Actions-specific part.
+### [.github/workflows/web-regression.yml](.github/workflows/web-regression.yml)
+1. Sets up JDK 11 (no Node.js/Appium/emulator needed - Chrome ships
+   preinstalled on `ubuntu-latest`, and Selenium Manager fetches a matching
+   chromedriver automatically).
+2. Runs `mvn test -DsuiteXmlFile=testng-web.xml` under a virtual display
+   (`xvfb`, via `coactions/setup-xvfb`), since `config.properties` ships
+   with `web.headless=false` - this keeps CI behaving identically to a
+   local run rather than requiring a headless-only override.
+3. Uploads the web report, `screenshots/web/`, and `logs/web-automation.log`
+   as build artifacts, whether the run passed or failed.
 
-The workflow uses `-Dcucumber.filter.tags=...`, but `-DsuiteXmlFile=testng-smoke.xml`
-works exactly as well as the `script:` line if you'd rather point CI at one
-of the dedicated suite files from section 6 instead.
+Both are **starting points** — adjust the emulator API level/target, the
+default tag expressions, and the trigger branches for your actual setup.
+If you use a different CI provider (Jenkins, GitLab CI, Azure DevOps), the
+same commands each workflow already runs (install Appium + boot an
+emulator for mobile; just `mvn test -DsuiteXmlFile=testng-web.xml` for web)
+are what needs to be reproduced there - the emulator-boot and `xvfb` steps
+are the only GitHub-Actions-specific parts.
+
+Either workflow's `-D...` flag can be swapped for `-DsuiteXmlFile=...`
+pointed at any of the dedicated suite files from section 6 instead, the
+same way a local run can.
 
 ---
 
@@ -411,37 +488,76 @@ of the dedicated suite files from section 6 instead.
 
 A Selenium **web** suite lives alongside the mobile one under
 `com.ecommerce.web`, mirroring the same concepts (Page Object Model, hooks,
-logging, screenshots-on-failure, ExtentReports) so it's familiar to anyone
-who already knows the mobile suite:
+logging, screenshots-on-failure, ExtentReports, retry) so it's familiar to
+anyone who already knows the mobile suite - but it is its own independent
+copy of every layer, not a shared one:
 
 | Mobile | Web | Role |
 |---|---|---|
+| `mobile.config.ConfigReader` | `web.config.ConfigReader` | Reads `config.properties` - two independent copies of the same reader, not one shared class. |
 | `mobile.config.CapabilityManager` | `web.config.WebCapabilityManager` | Builds driver capabilities from `config.properties` (`web.browser`, `web.headless`). |
 | `mobile.config.DriverManager` | `web.config.WebDriverManager` | Owns the driver (ThreadLocal), created once per suite, reset between scenarios. |
 | `mobile.pages.BasePage` | `web.pages.BaseWebPage` | Shared page-object vocabulary (`click`/`enterText`/`isDisplayed`/...). |
+| `mobile.utils.ScreenshotUtil` | `web.utils.ScreenshotUtil` | Saves a failure screenshot - to `screenshots/mobile/` vs `screenshots/web/` respectively. |
 | `mobile.hooks.Hooks` | `web.hooks.WebHooks` | `@BeforeAll` launch once, `@Before` reset state, `@After` screenshot on failure, `@AfterAll` quit. |
+| `mobile.listeners.RetryAnalyzer` | `web.listeners.RetryAnalyzer` | Retries a failed scenario once before marking it failed. |
+| `mobile.listeners.RetryListener` | `web.listeners.RetryListener` | Cleans up the "skipped" artifact TestNG's retry leaves behind on an eventual pass (see section 7). |
 | `mobile.runner.TestRunner` | `web.runner.WebTestRunner` | Cucumber-TestNG entry point. |
+| *(mobile-only)* `mobile.listeners.EmailReportListener` | *(no web equivalent yet)* | The summary email is currently mobile-only - see section 9. |
+
+**Why duplicated instead of shared:** so mobile and web can build and run
+in complete isolation - a broken/missing class on one side can never break
+the other, there's no third "common" package either depends on, and a run
+of one suite never touches the other's logs, screenshots, or report. See
+section 2 for the full rationale.
 
 No driver-binary setup is needed - Selenium Manager (bundled with
 Selenium 4.6+) downloads the matching chromedriver/geckodriver
-automatically. `mobile.utils.ScreenshotUtil` and
-`mobile.listeners.RetryAnalyzer` are reused as-is by both suites (neither
-is actually mobile-specific).
+automatically.
 
 **Before running:** fill in `web.baseUrl` in `config.properties`, and
-replace the placeholder `@FindBy` locators in `web/pages/LoginPage.java`
-and `web/pages/HomePage.java` with the real ones from the site (same
-"note on locators" convention as the mobile pages).
+replace any remaining placeholder `@FindBy` locators in `web/pages/*.java`
+with the real ones from the site (same "note on locators" convention as
+the mobile pages - see section 5, Step 3, but using your browser's DevTools
+"Inspect" instead of Appium Inspector).
 
 **To run:**
 ```
 mvn test -DsuiteXmlFile=testng-web.xml
 ```
 or point IntelliJ's right-click Run/Debug at `WebTestRunner.java` directly.
+`testng-web.xml` runs the web suite, restricted to `@web`-tagged scenarios
+via a `cucumber.filter.tags` `<parameter>` - the same mechanism the mobile
+smoke/regression suites use (see DEVELOPER_GUIDE.md section 3.1). Every
+scenario under `features/web/` needs the `@web` tag for this reason - see
+section "Adding a brand-new web use case" below.
 
-Web and mobile share `config.properties`, `logs/automation.log`, and the
-ExtentReports output path/config (`extent.properties`) - the same way the
-mobile smoke/regression suites already share them today.
+**Where to look afterwards** (the web equivalent of section 6's table):
+| What | Where |
+|---|---|
+| HTML test report | `reports/GajabWebAutomationReport.html` |
+| Execution log | `logs/web-automation.log` |
+| Screenshots of failed scenarios | `screenshots/web/` |
+
+Mobile and web share only `config.properties` itself (as data, read by two
+independent `ConfigReader` copies) and the underlying Maven/library setup
+(`pom.xml`) - everything else (logs, screenshots, reports, retry, hooks,
+driver manager, page-object base class) is fully separate per platform.
+
+### Adding a brand-new web use case
+The exact same 5-step recipe as section 2 of `DEVELOPER_GUIDE.md`, just in
+the `web` package instead of `mobile`:
+1. Write the scenario in `src/test/resources/features/web/*.feature`,
+   tagged `@web` (plus whatever other tag fits) so `WebTestRunner` picks
+   it up.
+2. Add the step definition in `src/test/java/.../web/stepdefinitions/*.java`.
+3. If it needs an action/locator that doesn't exist yet, add it to the
+   relevant `src/main/java/.../web/pages/*.java` class - never put a
+   locator or a raw Selenium call directly in a step definition.
+4. Dry-run it: `mvn test -DsuiteXmlFile=testng-web.xml -Dcucumber.execution.dry-run=true`.
+5. Run it for real: `mvn test -DsuiteXmlFile=testng-web.xml`.
+
+See DEVELOPER_GUIDE.md section 2B for a worked example.
 
 ---
 

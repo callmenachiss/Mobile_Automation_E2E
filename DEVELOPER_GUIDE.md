@@ -87,6 +87,24 @@ STEP 7  Once the WHOLE TestNG suite has finished (all scenarios, all retries):
 `.feature` file text → matched by `stepdefinitions/*.java` → which calls
 `pages/*.java` → which talks to the device. Nothing skips a layer.
 
+### 1B. Same flow, for web
+`WebTestRunner`/`WebHooks`/`web/stepdefinitions`/`web/pages` follow the
+**exact same 7 steps**, just under `web.*` instead of `mobile.*`, with
+these differences:
+- STEP 1 is `testng-web.xml`, with the same `cucumber.filter.tags`
+  `<parameter>` mechanism (here `@web`) as the mobile smoke/regression
+  suites - see section 3.1 for how that actually gets read.
+- STEP 3/4's "launch app" is "launch the browser" (`WebCapabilityManager`
+  + `WebDriverManager`), and "restart the app process" between scenarios
+  is "clear cookies and reload `web.baseUrl`" instead.
+- STEP 6/7 write to `logs/web-automation.log`,
+  `reports/GajabWebAutomationReport.html`, and `screenshots/web/` -
+  entirely separate files from mobile's, never shared.
+- There is currently no web equivalent of STEP 7's summary email
+  (`EmailReportListener`/`MailUtil` are mobile-only).
+
+See README.md section 11 for the full class-by-class mobile ↔ web mapping.
+
 ---
 
 ## 2. How to add a brand-new scenario
@@ -138,6 +156,60 @@ an "ambiguous step definitions" error, fix that before doing anything else
 ```
 mvn test -Dcucumber.filter.tags="@regression"
 ```
+
+---
+
+## 2B. How to add a brand-new WEB scenario
+
+Same recipe as section 2, in the `web` package instead of `mobile`. Say you
+want to add: *"Show an error when the phone number field is left blank."*
+
+### Step 1 — Write the English first (the `.feature` file)
+Open `src/test/resources/features/web/01_login.feature` and add:
+```gherkin
+  @regression @web
+  Scenario: Requesting an OTP with no phone number shows an error
+    Given the login screen will be displayed
+    When I request an OTP without entering a phone number
+    Then an error message should be displayed
+```
+Every web scenario needs the `@web` tag - `testng-web.xml`'s
+`cucumber.filter.tags=@web` filters to it, so an untagged scenario under
+`features/web/` will never actually run via that suite file (see section
+3.1).
+
+### Step 2 — Add the missing step definitions
+Open `src/test/java/.../web/stepdefinitions/LoginSteps.java` and add:
+```java
+@When("I request an OTP without entering a phone number")
+public void i_request_an_otp_without_entering_a_phone_number() {
+    loginPage.clickRequestOtpWithoutNumber();
+}
+
+@Then("an error message should be displayed")
+public void an_error_message_should_be_displayed() {
+    Assert.assertTrue(loginPage.isErrorMessageDisplayed(),
+            "Expected an error message, but none was shown.");
+}
+```
+
+### Step 3 — Only if the page is missing something, add it to the Page Object
+Goes in `src/main/java/.../web/pages/LoginPage.java` (or a new class under
+`web/pages/`) - **never** put a locator or a raw Selenium call directly in
+a step definition. If you need a brand-new locator, find it the same way
+as section 5 Step 3 of README.md, but using your browser's DevTools
+"Inspect" panel instead of Appium Inspector.
+
+### Step 4 — Confirm it's wired up, without needing a real browser
+```
+mvn test -DsuiteXmlFile=testng-web.xml -Dcucumber.execution.dry-run=true
+```
+
+### Step 5 — Run it for real
+```
+mvn test -DsuiteXmlFile=testng-web.xml
+```
+or, to run just this one tag: `mvn test -DsuiteXmlFile=testng-web.xml -Dcucumber.filter.tags="@web and @regression"`.
 
 ---
 

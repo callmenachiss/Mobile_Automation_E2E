@@ -20,12 +20,15 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = "src/test/resources/features/web",
         glue = {"com.ecommerce.web.hooks", "com.ecommerce.web.stepdefinitions"},
-        // testng-web.xml's own "cucumber.filter.tags" <parameter> is a
-        // TestNG concept, not a Cucumber one - cucumber-testng never reads
-        // it, so it silently filtered nothing and every scenario under
-        // features/web (including untagged/unrelated ones) ran on every
-        // "web" suite execution. Declaring the filter here is the only
-        // place cucumber-testng actually honors it.
+        // Fallback default if this class is ever run without a testng.xml
+        // <parameter> (e.g. IntelliJ's right-click Run on this class
+        // directly). testng-web.xml's own "cucumber.filter.tags"
+        // <parameter> - the same mechanism testng-smoke.xml/
+        // testng-regression.xml use for mobile - is read by
+        // cucumber-testng too (TestNGCucumberRunner layers it on top of
+        // this annotation, so it wins whenever both are present) and is
+        // the actual filter in effect for a normal `mvn test
+        // -DsuiteXmlFile=testng-web.xml` run.
         tags = "@web",
         plugin = {
                 "pretty",
