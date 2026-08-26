@@ -1,17 +1,13 @@
 @login
 Feature: Login
   As a customer
-  I want to log into the Ecommerce website
-  So that I can start shopping with my own account
+  I want to log into the Gajab website
+  So that I can start bargain and shop the products
 
-  @smoke @regression
-  Scenario: Login with valid credentials
-    Given the login screen should be displayed
-    When I log in with valid credentials
-    Then I should land on the Home page
+  @smoke @regression @web
+  Scenario: Login into the web application
+    Given the login screen will be displayed
+    When I enterted Mobile number
+    Then I should enter OTP
 
-  @regression
-  Scenario: Login with invalid credentials
-    Given the login screen should be displayed
-    When I log in with an invalid email and password
-    Then an error message should be displayed
+

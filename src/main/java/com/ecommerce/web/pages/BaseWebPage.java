@@ -33,6 +33,12 @@ public class BaseWebPage {
         PageFactory.initElements(driver, this);
     }
 
+
+    protected void executeJavaScript(String script, WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript(script, element);
+    }
+
     protected void waitUntilVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }

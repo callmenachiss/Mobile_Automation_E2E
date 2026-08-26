@@ -91,8 +91,8 @@ public class WebDriverManager {
         WebDriver driver = DRIVER.get();
         if (driver != null) {
             LOGGER.info("Closing browser session.");
-            driver.quit();
-            DRIVER.remove();
+            //driver.quit();
+            //DRIVER.remove();
         }
     }
 }

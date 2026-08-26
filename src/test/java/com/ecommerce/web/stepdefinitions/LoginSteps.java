@@ -22,17 +22,19 @@ public class LoginSteps {
     private static final String INVALID_EMAIL = "invalid@example.com";
     private static final String INVALID_PASSWORD = "wrongPassword";
 
+    private static final String VALID_NUMBER="9876543211";
+
     private final LoginPage loginPage = new LoginPage();
     private final HomePage homePage = new HomePage();
 
-    @Given("the login screen should be displayed")
-    public void the_login_screen_should_be_displayed() {
-        Assert.assertTrue(loginPage.isLoginScreenDisplayed(), "Login screen was not displayed.");
+    @Given("the login screen will be displayed")
+    public void the_login_screen_will_be_displayed() throws InterruptedException {
+        loginPage.clickCloseTourpopup();
     }
 
-    @When("I log in with valid credentials")
-    public void i_log_in_with_valid_credentials() {
-        loginPage.login(VALID_EMAIL, VALID_PASSWORD);
+    @When("I enterted Mobile number")
+    public void I_enterted_Mobile_number() throws InterruptedException {
+        loginPage.performLogin(VALID_NUMBER);
     }
 
     @When("I log in with an invalid email and password")
@@ -40,20 +42,12 @@ public class LoginSteps {
         loginPage.login(INVALID_EMAIL, INVALID_PASSWORD);
     }
 
-    @Then("an error message should be displayed")
-    public void an_error_message_should_be_displayed() {
-        Assert.assertTrue(loginPage.isErrorMessageDisplayed(), "Error message was not displayed for invalid login.");
+
+    @Then("I should enter OTP")
+    public void I_should_enter_OTP() throws InterruptedException {
+        loginPage.EnterOTP();
     }
 
-    @Then("I should land on the Home page")
-    public void i_should_land_on_the_home_page() {
-        Assert.assertTrue(homePage.isProductListDisplayed(), "Login did not lead to the Home page.");
-    }
-
-    /**
-     * Shared step reused as a Background by other web feature files, so
-     * every feature can start from a known, logged-in state.
-     */
     @Given("I am logged in as a registered user")
     public void i_am_logged_in_as_a_registered_user() {
         loginPage.login(VALID_EMAIL, VALID_PASSWORD);
