@@ -1,6 +1,6 @@
 /**
- * Reserved for future web automation (Selenium WebDriver, browser-based tests).
- * Mobile automation (Appium + Cucumber) lives under com.ecommerce.mobile.
- * See README.md -> "Roadmap: adding web automation" for the plan.
+ * Web automation (Selenium WebDriver, browser-based tests), mirroring the
+ * mobile automation (Appium + Cucumber) that lives under com.ecommerce.mobile.
+ * See README.md -> "Web automation" for how to run it.
  */
 package com.ecommerce.web;
