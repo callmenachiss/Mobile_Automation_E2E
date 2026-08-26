@@ -113,12 +113,11 @@ public class LoginPage extends BasePage {
         LOGGER.info("User clicked female menu");
     }
 
-    public String enterRandomName() throws InterruptedException {
+    public String enterRandomName() {
         String randomNumber = generateRandomName();
         String name = "autoUser" + randomNumber;
         LOGGER.info("randomNumber = {}", randomNumber);
         LOGGER.info("User entered name: {}", name);
-        sleep();
         enterText(fullNameField, name);
         return name;
     }
@@ -163,10 +162,9 @@ public class LoginPage extends BasePage {
         LOGGER.info("User  clicked english option");
     }
 
-    public void clickGetStartedButton() throws InterruptedException {
+    public void clickGetStartedButton() {
         LOGGER.info("SignUp flow Execution started");
-        sleep();
-        clickElement(getStartedButton);
+        tap(getStartedButton);
         LOGGER.info("User clicked on Get Started button");
     }
     public boolean isGetStartedLabelDisplayed() {

@@ -106,6 +106,34 @@ public class CapabilityManager {
                 )
         );
 
+        // ============================================================
+        // SESSION STARTUP SPEED
+        // These target the "installing/starting UiAutomator2 on the
+        // device" phase that runs once before the first scenario -
+        // separate from how fast the app itself renders.
+        // ============================================================
+
+        options.setSkipDeviceInitialization(
+                ConfigReader.getBoolean("appium.skipDeviceInitialization")
+        );
+
+        options.setDisableWindowAnimation(
+                ConfigReader.getBoolean("appium.disableWindowAnimation")
+        );
+
+        // Only safe once the UiAutomator2 server APKs are already installed
+        // on this device from a prior run - see config.properties comment.
+        options.setSkipServerInstallation(
+                ConfigReader.getBoolean("appium.skipServerInstallation")
+        );
+
+        // Don't let session creation itself launch the app and wait for it
+        // to gain focus - Hooks.resetAppState() already does exactly that
+        // (terminateApp + activateApp) in @Before for every scenario,
+        // including the first. Without this, the very first scenario pays
+        // for a full launch, then an immediate terminate + relaunch.
+        options.setCapability("appium:autoLaunch", false);
+
         return options;
     }
 

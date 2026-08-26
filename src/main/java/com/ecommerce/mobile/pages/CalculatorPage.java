@@ -28,14 +28,11 @@ public class CalculatorPage extends BasePage {
     private WebElement AnswerBox;
 
 
-    public String SumofNum() throws InterruptedException {
+    public String SumofNum() {
         LOGGER.info("started execution");
         tap(NumberBox);
-        sleep();
         tap(PlusBox);
-        sleep();
         tap(NumberBox);
-        sleep();
         tap(EqualBox);
         String resultText=AnswerBox.getText();
         LOGGER.info("Results are: {}",resultText );
