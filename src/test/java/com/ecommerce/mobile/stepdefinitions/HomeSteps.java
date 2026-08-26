@@ -12,7 +12,7 @@ import static java.lang.Thread.sleep;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Step definitions for src/test/resources/features/02_home_product_listing.feature.
+ * Step definitions for src/test/resources/features/mobile/02_home_product_listing.feature.
  * A couple of these steps ("I open the product", "I open the cart") are
  * reused as Background/Given steps by other feature files too.
  */

@@ -24,7 +24,7 @@ STEP 1  testng.xml  (or testng-smoke.xml / testng-regression.xml)
         ▼
 STEP 2  src/test/java/.../runner/TestRunner.java
         @CucumberOptions(
-            features = "src/test/resources/features",   ← where the .feature files are
+            features = "src/test/resources/features/mobile",   ← where the .feature files are
             glue     = {"...hooks", "...stepdefinitions"} ← where the Java code behind them is
         )
         extends AbstractTestNGCucumberTests
@@ -45,7 +45,7 @@ STEP 4  For EVERY scenario, in this order:
         │     → the app launches fresh on the device/emulator
         │
         ├─ Cucumber matches each line of the scenario to a Java method:
-        │     src/test/resources/features/0X_xxxx.feature   (the English)
+        │     src/test/resources/features/mobile/0X_xxxx.feature   (the English)
         │            ↓ text match
         │     src/test/java/.../stepdefinitions/XxxxSteps.java   (the Java behind it)
         │            ↓ calls
@@ -113,7 +113,7 @@ Say you want to add: *"Show an error when searching for a product that
 does not exist."* Here's the exact sequence:
 
 ### Step 1 — Write the English first (the `.feature` file)
-Open `src/test/resources/features/02_home_product_listing.feature` and add:
+Open `src/test/resources/features/mobile/02_home_product_listing.feature` and add:
 ```gherkin
   @regression
   Scenario: Searching for a product that does not exist shows no results
@@ -346,7 +346,8 @@ Since everything is plain Java, normal breakpoints work:
 
 | I want to... | Edit this |
 |---|---|
-| Change the wording/steps of a test case | `src/test/resources/features/*.feature` |
+| Change the wording/steps of a mobile test case | `src/test/resources/features/mobile/*.feature` |
+| Change the wording/steps of a web test case | `src/test/resources/features/web/*.feature` |
 | Change what a step actually does | `src/test/java/.../stepdefinitions/*.java` |
 | Change how a screen is interacted with, or fix a locator | `src/main/java/.../pages/*.java` |
 | Change device, APK, or timeout settings | `src/test/resources/config.properties` |

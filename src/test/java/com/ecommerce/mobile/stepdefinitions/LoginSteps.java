@@ -11,7 +11,7 @@ import org.testng.Assert;
 import java.util.logging.Level;
 
 /**
- * Step definitions for src/test/resources/features/01_login.feature.
+ * Step definitions for src/test/resources/features/mobile/01_login.feature.
  *
  * TEST DATA NOTE: replace VALID_EMAIL / VALID_PASSWORD with a real test
  * account for your app. Keeping test data here (instead of scattered in

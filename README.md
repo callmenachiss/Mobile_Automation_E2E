@@ -101,7 +101,11 @@ Mobile_Automation_E2E/                   # This folder is the whole project - on
 │       │       ├── runner/              # WebTestRunner - web's own Cucumber + TestNG entry point
 │       │       └── listeners/           # RetryAnalyzer, RetryListener - web's own copies
 │       └── resources/
-│           ├── features/                # The 6 mobile .feature files (18 scenarios total)
+│           ├── features/
+│           │   ├── mobile/              # Mobile's .feature files - scoped here, not the parent
+│           │   │                        # features/ folder, so TestRunner's recursive scan never
+│           │   │                        # picks up web/'s scenarios (they'd fail: mobile's glue
+│           │   │                        # can't satisfy web step text)
 │           │   └── web/                 # The web .feature files (@web-tagged scenarios)
 │           ├── config.properties        # ALL settings for BOTH platforms live here
 │           ├── log4j2.xml               # Logging config - routes to mobile- or web-automation.log
@@ -277,7 +281,7 @@ Open `src/test/java/com/ecommerce/mobile/stepdefinitions/LoginSteps.java`
 and replace `VALID_EMAIL` / `VALID_PASSWORD` with a real test account.
 Do the same for the sample product name `"Wireless Headphones"` used
 throughout the `.feature` files — replace it with a real product from
-your catalog (find-and-replace across the `features/` folder).
+your catalog (find-and-replace across the `features/mobile/` folder).
 
 ---
 
@@ -292,7 +296,7 @@ The framework supports every common way of triggering a run:
    mvn test
    ```
    This uses `testng.xml`, which runs every scenario in
-   `src/test/resources/features/`.
+   `src/test/resources/features/mobile/`.
 3. To run just one tag (e.g. only smoke tests) via the command line, add:
    ```
    mvn test -Dcucumber.filter.tags="@smoke"

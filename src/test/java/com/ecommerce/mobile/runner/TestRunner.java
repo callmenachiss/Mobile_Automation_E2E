@@ -22,7 +22,16 @@ import org.testng.annotations.Test;
  */
 @Listeners({EmailReportListener.class, RetryListener.class})
 @CucumberOptions(
-        features = "src/test/resources/features",
+        // Cucumber scans "features" recursively, so pointing this at the
+        // parent "features" folder (which also contains "features/web")
+        // used to sweep web-authored scenarios into the mobile run too -
+        // mobile's glue can't satisfy their steps, so every mobile suite
+        // (testng.xml, testng-smoke.xml, testng-regression.xml) failed
+        // with UndefinedStepException as soon as a @smoke/@regression-
+        // tagged web scenario existed. Scoping this to "features/mobile"
+        // (mirroring "features/web") is what actually keeps the two
+        // suites from depending on each other.
+        features = "src/test/resources/features/mobile",
         glue = {"com.ecommerce.mobile.hooks", "com.ecommerce.mobile.stepdefinitions"},
         plugin = {
                 "pretty",
