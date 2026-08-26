@@ -17,35 +17,41 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * Runs before/after every single scenario.
- *  - Before: starts the app on the device.
+ * Runs once for the whole suite and before/after every scenario.
+ *  - BeforeAll: starts the Appium server and the app driver session ONCE.
+ *  - Before: resets the app to a clean state by restarting its process -
+ *            much cheaper than creating a brand-new driver session.
  *  - After: if the scenario failed, saves a screenshot to /screenshots
- *           and attaches it to the HTML report, then closes the app.
+ *           and attaches it to the HTML report.
+ *  - AfterAll: closes the app session and stops the Appium server.
  *
- * The Appium server itself is started once for the whole test run
- * (@BeforeAll/@AfterAll), not once per scenario.
+ * The driver session is intentionally NOT recreated per scenario: a new
+ * UiAutomator2 session is far more expensive than restarting the app process,
+ * and app.noReset=true already means app data isn't cleared between scenarios
+ * either way.
  */
 public class Hooks {
 
     private static final Logger LOGGER = LogManager.getLogger(Hooks.class);
     private static final AppiumServerManager SERVER_MANAGER = new AppiumServerManager();
-    private final DriverManager driverManager = new DriverManager();
 
     @BeforeAll
-    public static void startAppiumServer() {
+    public static void setUp() throws MalformedURLException {
         SERVER_MANAGER.startServer();
+        URL serverUrl = new URL(SERVER_MANAGER.getServerUrl());
+        DriverManager.initializeDriver(serverUrl, new CapabilityManager().getCapabilities());
     }
 
     @AfterAll
-    public static void stopAppiumServer() {
+    public static void tearDownAll() {
+        DriverManager.quitDriver();
         SERVER_MANAGER.stopServer();
     }
 
     @Before
-    public void launchApp(Scenario scenario) throws MalformedURLException {
+    public void resetAppState(Scenario scenario) {
         LOGGER.info("========== Starting scenario: {} ==========", scenario.getName());
-        URL serverUrl = new URL(SERVER_MANAGER.getServerUrl());
-        driverManager.initializeDriver(serverUrl, new CapabilityManager().getCapabilities());
+        DriverManager.resetApp();
     }
 
     @After
@@ -58,7 +64,6 @@ public class Hooks {
         } else {
             LOGGER.info("Scenario PASSED: {}", scenario.getName());
         }
-        driverManager.quitDriver();
         LOGGER.info("========== Finished scenario: {} ==========", scenario.getName());
     }
 }
