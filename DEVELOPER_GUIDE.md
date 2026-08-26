@@ -67,8 +67,8 @@ STEP 5  After the LAST scenario:
         │
         ▼
 STEP 6  ExtentCucumberAdapter (the "plugin" in TestRunner's @CucumberOptions)
-        writes  reports/EcommerceMobileAutomationReport.html
-        Log4j2 has been writing to  logs/automation.log  the whole time.
+        writes  reports/GajabMobileAutomationReport.html
+        Log4j2 has been writing to  logs/mobile-automation.log  the whole time.
         │
         ▼
 STEP 7  Once the WHOLE TestNG suite has finished (all scenarios, all retries):
@@ -249,9 +249,9 @@ Since everything is plain Java, normal breakpoints work:
 ### 4.3 Reading the evidence after a run
 | Question | Where to look |
 |---|---|
-| "What actually happened, in order?" | `logs/automation.log` — every hook, step, and error is logged with a timestamp. |
-| "What did the screen look like when it failed?" | `screenshots/<scenario-name>_<timestamp>.png` |
-| "Give me the whole picture (pass/fail counts, screenshots inline, step timings)" | `reports/EcommerceMobileAutomationReport.html` — open it in a browser |
+| "What actually happened, in order?" | `logs/mobile-automation.log` — every hook, step, and error is logged with a timestamp. |
+| "What did the screen look like when it failed?" | `screenshots/mobile/<scenario-name>_<timestamp>.png` |
+| "Give me the whole picture (pass/fail counts, screenshots inline, step timings)" | `reports/GajabMobileAutomationReport.html` — open it in a browser |
 
 ### 4.4 Common errors and what they actually mean
 

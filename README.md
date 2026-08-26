@@ -316,9 +316,9 @@ retry and the email path get exercised too.
 ### Where to look afterwards
 | What | Where |
 |---|---|
-| HTML test report | `reports/EcommerceMobileAutomationReport.html` |
-| Execution log | `logs/automation.log` |
-| Screenshots of failed scenarios | `screenshots/` |
+| HTML test report | `reports/GajabMobileAutomationReport.html` |
+| Execution log | `logs/mobile-automation.log` |
+| Screenshots of failed scenarios | `screenshots/mobile/` |
 | Summary email | the inbox at `mail.to` in `config.properties` |
 
 ---
@@ -351,7 +351,7 @@ sends one summary email:
   Automation - FAILED (15/18 passed) - 21-Aug-2026 10:41`.
 - **Body**: a pass/fail/skip table, a simple HTML bar chart, the list of
   failed scenario names, and a link to the HTML report.
-- **Attachment**: the full `EcommerceMobileAutomationReport.html`.
+- **Attachment**: the full `GajabMobileAutomationReport.html`.
 
 ### Setup
 1. In `config.properties`, fill in:
