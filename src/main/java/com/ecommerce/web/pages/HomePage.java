@@ -2,9 +2,13 @@ package com.ecommerce.web.pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 import java.util.List;
 
 /**
@@ -33,14 +37,55 @@ public class HomePage extends BaseWebPage {
     @FindBy(id = "iv_cart_icon")
     private WebElement cartIcon;
 
-    public boolean isProductListDisplayed() {
-        return isDisplayed(productList) && !productNames.isEmpty();
-    }
+    @FindBy(xpath = "(//img[@alt='profile'])[1]")
+    private WebElement profileIconmenu;
+
+    @FindBy(xpath = "//h3[normalize-space(text())='Personal details']")
+    private WebElement PersonalDetailsMenu;
+
+    @FindBy(xpath = "//button[normalize-space(text())='Logout']")
+    private WebElement LogoutButton;
+
+    @FindBy(xpath = "//p[normalize-space(text())='Logout successfully']")
+    public WebElement LogoutSuccesslbl;
+
 
     public void searchForProduct(String productName) {
         enterText(searchBox, productName);
         searchBox.submit();
         LOGGER.info("Searching for product: {}", productName);
+    }
+
+
+    protected void waitForOverlayToDisappear(int timeoutSeconds) {
+
+        WebDriverWait customWait =
+                new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+
+        try {
+            customWait.until(
+                    ExpectedConditions.invisibilityOfElementLocated(
+                            By.cssSelector("div.fixed.inset-0")
+                    )
+            );
+        } catch (TimeoutException e) {
+            LOGGER.warn("Overlay is still present after {} seconds", timeoutSeconds);
+        }
+    }
+    public void performLogout() throws InterruptedException {
+        goSleep(3000);
+        LOGGER.info("User is performing logout flow");
+        waitForOverlayToDisappear(20);
+        clickDuration(profileIconmenu,10);
+        goSleep(1000);
+        LOGGER.info("User is clicked on profile menu");
+        goSleep(1000);
+        click(PersonalDetailsMenu);
+        LOGGER.info("User is clicked on personal details menu");
+        goSleep(1000);
+        click(LogoutButton);
+        LOGGER.info("User logout successfully");
+        isDisplayed(LogoutSuccesslbl);
     }
 
     public void sortProductsByPrice() {

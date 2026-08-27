@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Random;
 
 /**
  * Parent class for every web Page Object. Mirrors the mobile BasePage's
@@ -31,6 +32,33 @@ public class BaseWebPage {
         int waitSeconds = ConfigReader.getInt("explicit.wait.seconds");
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(waitSeconds));
         PageFactory.initElements(driver, this);
+    }
+
+    public static final String[] MALE_NAMES = {
+            "Arun",
+            "Vijay",
+            "Rahul",
+            "Karthik",
+            "Suresh",
+            "Pradeep",
+            "Rohit",
+            "Aravind",
+            "Manoj",
+            "Dinesh",
+            "Sanjay",
+            "Naveen",
+            "Ajay",
+            "Vignesh",
+            "Surya",
+            "Ashwin",
+            "Gokul",
+            "Harish",
+            "Mohan",
+            "Ramesh"
+    };
+
+    public void goSleep(long num) throws InterruptedException {
+        Thread.sleep(num);
     }
 
 
@@ -66,6 +94,31 @@ public class BaseWebPage {
             LOGGER.debug("Element not displayed: {}", e.getMessage());
             return false;
         }
+    }
+
+    protected void waitForElementDuration(WebElement element, int timeoutSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    protected void clickDuration(WebElement element, int times) {
+        WebDriverWait customWait =
+                new WebDriverWait(driver, Duration.ofSeconds(times));
+        customWait.until(ExpectedConditions.visibilityOf(element));
+        scrollIntoView(element);
+        customWait.until(ExpectedConditions.elementToBeClickable(element));
+        element.click();
+    }
+
+    public String generateMobileNumber() {
+        Random random = new Random();
+        int firstDigit = 6 + random.nextInt(4); // 6, 7, 8, or 9
+        StringBuilder mobileNumber = new StringBuilder();
+        mobileNumber.append(firstDigit);
+        for (int i = 1; i < 10; i++) {
+            mobileNumber.append(random.nextInt(10));
+        }
+        return mobileNumber.toString();
     }
 
     /**

@@ -32,25 +32,25 @@ public class LoginSteps {
         loginPage.clickCloseTourpopup();
     }
 
-    @When("I enterted Mobile number")
-    public void I_enterted_Mobile_number() throws InterruptedException {
+    @When("I entered Mobile number")
+    public void I_entered_Mobile_number() throws InterruptedException {
         loginPage.performLogin(VALID_NUMBER);
     }
 
-    @When("I log in with an invalid email and password")
-    public void i_log_in_with_an_invalid_email_and_password() {
-        loginPage.login(INVALID_EMAIL, INVALID_PASSWORD);
+    @When("I entered new Mobile number")
+    public void I_entered_new_Mobile_number() throws InterruptedException {
+        loginPage.performLoginforNewUser();
     }
-
 
     @Then("I should enter OTP")
     public void I_should_enter_OTP() throws InterruptedException {
         loginPage.EnterOTP();
     }
 
-    @Given("I am logged in as a registered user")
-    public void i_am_logged_in_as_a_registered_user() {
-        loginPage.login(VALID_EMAIL, VALID_PASSWORD);
-        Assert.assertTrue(homePage.isProductListDisplayed(), "Login did not lead to the Home page.");
+
+
+    @Then("I should complete account setup popup")
+    public void iShouldCompleteAccountSetupPopup() throws InterruptedException {
+        loginPage.enterDetailsforAccount();
     }
 }

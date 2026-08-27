@@ -98,34 +98,12 @@ public class LoginSteps {
         Assert.assertTrue(loginPage.isErrorMessageDisplayed(), "Error message was not displayed for invalid login.");
     }
 
-    /**
-     * Shared step reused as a Background in most other feature files,
-     * so every feature can start from a known, logged-in state.
-     */
+
     @Given("I am logged in as a registered user")
     public void i_am_logged_in_as_a_registered_user() {
         loginPage.login(VALID_EMAIL, VALID_PASSWORD);
         Assert.assertTrue(homePage.isProductListDisplayed(), "Login did not lead to the Home page.");
     }
 
-    // =====================================================================
-    // STARTER EXAMPLE - "Login successful" scenario.
-    // These two steps are intentionally left unimplemented (PendingException)
-    // for you to fill in. You already have loginPage / homePage available
-    // above, and VALID_EMAIL / VALID_PASSWORD as test data - e.g.:
-    //   loginPage.login(VALID_EMAIL, VALID_PASSWORD);
-    //   Assert.assertTrue(homePage.isProductListDisplayed(), "...");
-    // =====================================================================
 
-    @When("I submit the login form with valid credentials")
-    public void i_submit_the_login_form_with_valid_credentials() {
-        // TODO: implement this step
-        throw new PendingException();
-    }
-
-    @Then("I should see the Home page with my account logged in")
-    public void i_should_see_the_home_page_with_my_account_logged_in() {
-        // TODO: implement this step
-        throw new PendingException();
-    }
 }

@@ -2,14 +2,14 @@ package com.ecommerce.web.pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.ElementNotInteractableException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
+import java.util.Random;
+
+import static java.lang.Thread.sleep;
 
 public class LoginPage extends BaseWebPage {
 
@@ -55,17 +55,48 @@ public class LoginPage extends BaseWebPage {
     @FindBy(xpath = "//input[@inputmode='numeric']")
     private List<WebElement> otpFields;
 
+    @FindBy(name = "fullName")
+    private WebElement fullNameInput;
+
+    @FindBy(xpath = "//span[normalize-space(text())='Male']")
+    private WebElement Maleradiobtn;
+
+    @FindBy(xpath = "//button[normalize-space(text())='Next']")
+    private WebElement Nextbtn;
+
+
+
+
+
 
 
     public void login(String email, String password) {
         LOGGER.info("Logging in with email: {}", email);
-
         enterText(emailInput, email);
         enterText(passwordInput, password);
         clickSafely(loginButton);
-
         LOGGER.info("User clicked Login button");
     }
+
+    public String generateMaleName() {
+        Random random = new Random();
+        return MALE_NAMES[random.nextInt(MALE_NAMES.length)];
+    }
+
+    public void enterDetailsforAccount() throws InterruptedException {
+        String UserName=generateMaleName()+"Automation";
+        LOGGER.info("User fill up the account setup page for {}", UserName);
+        Thread.sleep(2000);
+        enterText(fullNameInput, UserName);
+        Thread.sleep(1000);
+        click(Maleradiobtn);
+        LOGGER.info("User selected male option in gender menu");
+        Thread.sleep(1000);
+        click(Nextbtn);
+        Thread.sleep(2000);
+        LOGGER.info("Account setup done for {}", UserName);
+    }
+
     public void enterOtp(String otp) {
         if (otp == null || otp.length() != 6) {
             throw new IllegalArgumentException("OTP must contain exactly 6 digits");
@@ -100,20 +131,32 @@ public class LoginPage extends BaseWebPage {
         LOGGER.info("User clicked Login / Sign up");
         enterTextSafely(telephoneInput, number);
         LOGGER.info("User entered telephone number");
-        Thread.sleep(2000);
+        sleep(2000);
         clickCheckbox();
-        Thread.sleep(2000);
+        sleep(2000);
+    }
+
+    public void performLoginforNewUser() throws InterruptedException {
+        String newPhoneNumber=generateMobileNumber();
+        clickSafely(loginSignupButton);
+        LOGGER.info("User clicked Login / Sign up button");
+        enterTextSafely(telephoneInput, newPhoneNumber);
+        LOGGER.info("User entered telephone number {}", newPhoneNumber);
+        sleep(2000);
+        clickCheckbox();
+        sleep(2000);
     }
 
     public void EnterOTP() throws InterruptedException {
         clickSafely(otpButton);
         LOGGER.info("User clicked Request OTP");
-        Thread.sleep(3000);
+        sleep(3000);
         enterOtp(testOtp);
+        LOGGER.info("Login / Sign up success");
     }
 
 
-    private void closeTourPopupIfPresent() {
+    /*private void closeTourPopupIfPresent() {
         try {
             wait.until(driver -> {
                 try {
@@ -122,12 +165,21 @@ public class LoginPage extends BaseWebPage {
                     return false;
                 }
             });
-
             clickSafely(closeButton);
             LOGGER.info("User clicked X icon to close tour popup");
-
         } catch (Exception e) {
             LOGGER.info("Tour popup is not present.");
+        }
+    }*/
+
+    private void closeTourPopupIfPresent() {
+        try {
+            clickDuration(closeButton, 5);
+            LOGGER.info("User clicked X icon to close tour popup");
+        } catch (TimeoutException e) {
+            LOGGER.info("Tour popup is not present.");
+        } catch (Exception e) {
+            LOGGER.warn("Unable to close tour popup: {}", e.getMessage());
         }
     }
 
