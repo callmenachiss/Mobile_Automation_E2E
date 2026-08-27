@@ -16,20 +16,23 @@ public class HomeSteps {
 
 
     @When("I search for the product {string}")
-    public void i_search_for_the_product(String productName) {
+    public void i_search_for_the_product(String productName) throws InterruptedException {
         homePage.searchForProduct(productName);
+
     }
 
-    @Then("{string} should be visible in the search results")
-    public void product_should_be_visible_in_the_search_results(String productName) {
-        Assert.assertTrue(homePage.isProductVisible(productName),
-                "'" + productName + "' was not visible in the search results.");
+
+    @Then("products should be available in search results")
+    public void product_should_be_available_in_the_search_results() throws InterruptedException {
+        homePage.checkAvailableProducts();
     }
 
-    @When("I open the product {string}")
-    public void i_open_the_product(String productName) {
-        homePage.openProductByName(productName);
+    @Then("I start bargain the products")
+    public void I_start_bargain_the_products() throws InterruptedException {
+        homePage.startBargainprocess();
     }
+
+
 
 
     @Then("I should logout into the application")

@@ -5,14 +5,13 @@ Feature: Home page - Product listing
   So that I can find and buy the product I want
 
   Background:
-    Given I am logged in as a registered user
+    Given the login screen will be displayed
+    When I entered Mobile number
+    Then I should enter OTP
 
   @smoke @regression @home
   Scenario: Search for a product
     When I search for the product "Wireless Headphones"
-    Then "Wireless Headphones" should be visible in the search results
+    Then products should be available in search results
+    Then I start bargain the products
 
-  @regression @home
-  Scenario: Sort products by price
-    When I sort the products by price
-    Then the product list should still be displayed

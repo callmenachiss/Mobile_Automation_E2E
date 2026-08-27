@@ -3,8 +3,10 @@ package com.ecommerce.web.pages;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,20 +24,26 @@ public class HomePage extends BaseWebPage {
 
     private static final Logger LOGGER = LogManager.getLogger(HomePage.class);
 
-    @FindBy(id = "et_search")
+    @FindBy(xpath = "(//div[contains(@class,'flex items-center')]//input)[1]")
     private WebElement searchBox;
 
-    @FindBy(id = "rv_product_list")
-    private WebElement productList;
+    @FindBy(xpath = "(//img[@alt='search'])[1]")
+    private WebElement searchbtnicon;
 
-    @FindBy(className = "tv_product_name")
-    private List<WebElement> productNames;
+    @FindBy(xpath = "(//img[contains(@class,'object-contain w-full')])[2]")
+    private WebElement searchproductName;
 
-    @FindBy(id = "btn_sort_by_price")
-    private WebElement sortByPriceButton;
+    @FindBy(xpath = "//span[contains(text(),'Start Bargaining')]")
+    private WebElement StartBargainbtn;
 
-    @FindBy(id = "iv_cart_icon")
-    private WebElement cartIcon;
+    @FindBy(xpath = "//span[normalize-space(text())='Offer Your Price']")
+    private WebElement offerPricebtn;
+
+    @FindBy(xpath = "//span[normalize-space(text())='Accept the offer']")
+    private WebElement AcceptOfferbtn;
+
+    @FindBy(xpath = "//span[normalize-space(text())='Buy Now']")
+    private WebElement BuyNowbtn;
 
     @FindBy(xpath = "(//img[@alt='profile'])[1]")
     private WebElement profileIconmenu;
@@ -50,10 +58,36 @@ public class HomePage extends BaseWebPage {
     public WebElement LogoutSuccesslbl;
 
 
-    public void searchForProduct(String productName) {
+    public void searchForProduct(String productName) throws InterruptedException {
+        goSleep(7000);
         enterText(searchBox, productName);
-        searchBox.submit();
+        goSleep(5000);
+        Actions actions = new Actions(driver);
+        goSleep(2000);
+        actions.sendKeys(Keys.ENTER);
+        goSleep(5000);
+        //clickDuration(searchbtnicon,10);
         LOGGER.info("Searching for product: {}", productName);
+    }
+
+    public void checkAvailableProducts() throws InterruptedException {
+        goSleep(2000);
+        clickDuration(searchproductName,10);
+        LOGGER.info("User selecting the products from search results");
+    }
+
+    public void startBargainprocess() throws InterruptedException {
+        goSleep(2000);
+        click(StartBargainbtn);
+        LOGGER.info("User started the bargain process");
+        goSleep(2000);
+        click(offerPricebtn);
+        goSleep(2000);
+        click(AcceptOfferbtn);
+        LOGGER.info("User accepting offer");
+        goSleep(2000);
+        click(BuyNowbtn);
+        LOGGER.info("User clicked on buy button for payment flow");
     }
 
 
@@ -88,30 +122,8 @@ public class HomePage extends BaseWebPage {
         isDisplayed(LogoutSuccesslbl);
     }
 
-    public void sortProductsByPrice() {
-        click(sortByPriceButton);
-    }
 
-    public void openProductByName(String productName) {
-        LOGGER.info("Opening product details for: {}", productName);
-        for (WebElement product : productNames) {
-            if (getText(product).equalsIgnoreCase(productName)) {
-                click(product);
-                return;
-            }
-        }
-        throw new RuntimeException("Product '" + productName + "' was not found on the Home page.");
-    }
 
-    public int getDisplayedProductCount() {
-        return productNames.size();
-    }
 
-    public boolean isProductVisible(String productName) {
-        return productNames.stream().anyMatch(product -> getText(product).equalsIgnoreCase(productName));
-    }
 
-    public void openCart() {
-        click(cartIcon);
-    }
 }
