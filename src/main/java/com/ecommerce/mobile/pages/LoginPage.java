@@ -45,10 +45,14 @@ public class LoginPage extends BasePage {
     @AndroidFindBy(accessibility = "By continuing, you confirm that you are above 18 years of age, and you agree to Gajab's ")
     private WebElement ageConfirmationLabel;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText")
+    //@AndroidFindBy(xpath = "//android.widget.EditText")
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id=\"login_mobile_number_field\"]/android.widget.EditText")
     private WebElement phoneNumberField;
 
-    @AndroidFindBy(xpath = "//android.widget.CheckBox")
+    //@AndroidFindBy(xpath = "//android.widget.CheckBox")
+
+    @AndroidFindBy(accessibility = "Terms Checkbox")
     private WebElement checkbox;
 
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Fatafat apna account set')]")
