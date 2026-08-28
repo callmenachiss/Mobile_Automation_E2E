@@ -11,8 +11,8 @@ Feature: Login
     Then I should enter OTP received in my mobile device
     Then I logout from the Application
 
-  @smoke @regression @gajab1
+  @smoke @regression @gajab
   Scenario: Login with valid credentials
     When I log in with existing mobile number
-    #Then I should enter OTP received in my existing mobile device
-    #Then I logout from the Application
+    Then I should enter OTP received in my existing mobile device
+    Then I logout from the Application

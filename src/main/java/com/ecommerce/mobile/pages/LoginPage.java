@@ -1,5 +1,6 @@
 package com.ecommerce.mobile.pages;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -35,9 +36,7 @@ public class LoginPage extends BasePage {
     private WebElement appLogo;
 
     //locators for gajab application
-    //@AndroidFindBy(accessibility = "Get Started")
-
-    @AndroidFindBy(id = "welcome_get_started_btn")
+    @AndroidFindBy(accessibility = "Get Started")
     private WebElement getStartedButton;
 
     @AndroidFindBy(accessibility = "Become a Gajab Member\nLogin with Mobile Number")
@@ -46,9 +45,7 @@ public class LoginPage extends BasePage {
     @AndroidFindBy(accessibility = "By continuing, you confirm that you are above 18 years of age, and you agree to Gajab's ")
     private WebElement ageConfirmationLabel;
 
-    //@AndroidFindBy(xpath = "//android.widget.EditText")
-
-    @AndroidFindBy(id = "welcome_get_started_btn")
+    @AndroidFindBy(xpath = "//android.widget.EditText")
     private WebElement phoneNumberField;
 
     @AndroidFindBy(xpath = "//android.widget.CheckBox")
