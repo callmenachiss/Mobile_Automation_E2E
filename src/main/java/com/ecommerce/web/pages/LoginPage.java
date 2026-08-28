@@ -40,13 +40,19 @@ public class LoginPage extends BaseWebPage {
     @FindBy(xpath = "//div[normalize-space(text())='Log in / Sign up']")
     private WebElement loginSignupButton;
 
-    @FindBy(xpath = "//input[@type='tel']")
+    //@FindBy(xpath = "//input[@type='tel']")
+
+    @FindBy(id = "signin-mobile-input")
     private WebElement telephoneInput;
 
-    @FindBy(xpath = "//input[@type='checkbox']")
+    //@FindBy(xpath = "//input[@type='checkbox']")
+
+    @FindBy(id = "signin-terms-checkbox")
     private WebElement checkboxButton;
 
-    @FindBy(xpath = "//button[contains(normalize-space(.),'Request OTP')]")
+    //@FindBy(xpath = "//button[contains(normalize-space(.),'Request OTP')]")
+
+    @FindBy(id = "signin-submit-btn")
     private WebElement otpButton;
 
     @FindBy(xpath = "//p[contains(normalize-space(.),'OTP sent to your mobile number')]")
