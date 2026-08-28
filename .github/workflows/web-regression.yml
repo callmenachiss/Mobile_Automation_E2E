@@ -18,37 +18,60 @@ jobs:
 
     steps:
 
+      # ---------------------------------------------------------------
+      # Checkout
+      # ---------------------------------------------------------------
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # ---------------------------------------------------------------
+      # Java 17
+      # ---------------------------------------------------------------
       - name: Set up Java 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
           cache: maven
 
+      # ---------------------------------------------------------------
+      # Environment verification
+      # ---------------------------------------------------------------
       - name: Verify Java and Maven
         run: |
           java -version
           mvn -version
 
+      # ---------------------------------------------------------------
+      # Chrome verification
+      # ---------------------------------------------------------------
       - name: Verify Chrome
         run: |
           google-chrome --version || true
           chromedriver --version || true
 
+      # ---------------------------------------------------------------
+      # Run Web Automation
+      #
+      # suiteXmlFile is already configured in pom.xml:
+      # <suiteXmlFile>testng-web.xml</suiteXmlFile>
+      # ---------------------------------------------------------------
       - name: Run Web Automation Tests
-        run: mvn clean test "-DsuiteXmlFile=testng-web.xml"
+        run: mvn clean test
 
+      # ---------------------------------------------------------------
+      # Parse TestNG results
+      # ---------------------------------------------------------------
       - name: Parse TestNG Results Summary
         if: always()
         id: test_summary
         shell: bash
         run: |
+
           results_file="test-output/testng-results.xml"
 
           if [ -f "$results_file" ]; then
+
             passed=$(grep -oP '(?<=passed=")[0-9]+' "$results_file" | head -1 || echo "0")
             failed=$(grep -oP '(?<=failed=")[0-9]+' "$results_file" | head -1 || echo "0")
             skipped=$(grep -oP '(?<=skipped=")[0-9]+' "$results_file" | head -1 || echo "0")
@@ -60,14 +83,20 @@ jobs:
             echo "passed=$passed" >> "$GITHUB_OUTPUT"
             echo "failed=$failed" >> "$GITHUB_OUTPUT"
             echo "skipped=$skipped" >> "$GITHUB_OUTPUT"
+
           else
+
             echo "TestNG results file not found."
 
             echo "passed=0" >> "$GITHUB_OUTPUT"
             echo "failed=0" >> "$GITHUB_OUTPUT"
             echo "skipped=0" >> "$GITHUB_OUTPUT"
+
           fi
 
+      # ---------------------------------------------------------------
+      # Upload reports
+      # ---------------------------------------------------------------
       - name: Upload Web Automation Reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -81,12 +110,16 @@ jobs:
             target/surefire-reports/
           if-no-files-found: ignore
 
+      # ---------------------------------------------------------------
+      # Email report
+      # ---------------------------------------------------------------
       - name: Send Web Automation Report Email
         if: always()
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 465
+
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
 
