@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -19,14 +20,14 @@
         <maven.compiler.target>11</maven.compiler.target>
 
         <appium.version>8.6.0</appium.version>
-        <selenium.version>4.16.1</selenium.version>
+        <selenium.version>4.13.0</selenium.version>
         <cucumber.version>7.15.0</cucumber.version>
         <testng.version>7.8.0</testng.version>
         <extentreports.version>5.1.0</extentreports.version>
         <extent.cucumber.adapter.version>1.14.0</extent.cucumber.adapter.version>
         <log4j.version>2.20.0</log4j.version>
 
-        <suiteXmlFile>testng.xml</suiteXmlFile>
+        <suiteXmlFile>testng-web.xml</suiteXmlFile>
     </properties>
 
     <dependencies>
