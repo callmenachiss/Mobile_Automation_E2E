@@ -35,7 +35,9 @@ public class LoginPage extends BasePage {
     private WebElement appLogo;
 
     //locators for gajab application
-    @AndroidFindBy(accessibility = "Get Started")
+    //@AndroidFindBy(accessibility = "Get Started")
+
+    @AndroidFindBy(id = "welcome_get_started_btn")
     private WebElement getStartedButton;
 
     @AndroidFindBy(accessibility = "Become a Gajab Member\nLogin with Mobile Number")
@@ -44,7 +46,9 @@ public class LoginPage extends BasePage {
     @AndroidFindBy(accessibility = "By continuing, you confirm that you are above 18 years of age, and you agree to Gajab's ")
     private WebElement ageConfirmationLabel;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText")
+    //@AndroidFindBy(xpath = "//android.widget.EditText")
+
+    @AndroidFindBy(id = "welcome_get_started_btn")
     private WebElement phoneNumberField;
 
     @AndroidFindBy(xpath = "//android.widget.CheckBox")
