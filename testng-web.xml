@@ -3,7 +3,7 @@
 <suite name="Ecommerce Web Suite" verbose="1">
 
     <test name="Web Tests">
-        <parameter name="cucumber.filter.tags" value="@web"/>
+        <parameter name="cucumber.filter.tags" value="@home"/>
         <classes>
             <class name="com.ecommerce.web.runner.WebTestRunner"/>
         </classes>
