@@ -1,66 +1,133 @@
-name: Web Regression Suite
-
-# Starter CI pipeline for the Gajab Web Automation Framework - the
-# Selenium counterpart of mobile-regression.yml. No Android emulator is
-# needed here (that's the mobile-only cost); Chrome ships preinstalled
-# on GitHub's ubuntu-latest runners, and Selenium Manager (bundled with
-# Selenium 4.6+) downloads a matching chromedriver automatically.
-#
-# config.properties currently ships with web.headless=false, so this
-# runs Chrome under a virtual display (xvfb) rather than requiring a
-# headless override - keeps CI behaving identically to a local run.
+name: Web Automation - Daily Run
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
+
+  schedule:
+    # Every day at 10:00 AM IST (04:30 AM UTC)
+    - cron: "30 4 * * *"
+
   workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Cucumber tag expression to run'
-        required: false
-        default: '@web'
 
 jobs:
   web-tests:
+    name: Web Automation Tests
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up JDK 11
+      - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
-          java-version: '11'
-          distribution: 'temurin'
+          distribution: temurin
+          java-version: "17"
           cache: maven
 
-      - name: Run the web test suite (Chrome, under a virtual display)
-        uses: coactions/setup-xvfb@v1
-        with:
-          run: mvn test -DsuiteXmlFile=testng-web.xml -Dcucumber.filter.tags="${{ github.event.inputs.tags || '@web' }}"
+      - name: Run Web Automation Tests
+        run: mvn clean test -DsuiteXmlFile=testng-web.xml
 
-      - name: Upload HTML report
+      - name: Parse TestNG Results Summary
+        if: always()
+        id: test_summary
+        shell: bash
+        run: |
+          results_file="test-output/testng-results.xml"
+
+          if [ -f "$results_file" ]; then
+            passed=$(grep -oP '(?<=passed=")[0-9]+' "$results_file" | head -1 || echo "0")
+            failed=$(grep -oP '(?<=failed=")[0-9]+' "$results_file" | head -1 || echo "0")
+            skipped=$(grep -oP '(?<=skipped=")[0-9]+' "$results_file" | head -1 || echo "0")
+
+            echo "Passed: $passed"
+            echo "Failed: $failed"
+            echo "Skipped: $skipped"
+
+            echo "passed=$passed" >> "$GITHUB_OUTPUT"
+            echo "failed=$failed" >> "$GITHUB_OUTPUT"
+            echo "skipped=$skipped" >> "$GITHUB_OUTPUT"
+          else
+            echo "passed=0" >> "$GITHUB_OUTPUT"
+            echo "failed=0" >> "$GITHUB_OUTPUT"
+            echo "skipped=0" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Upload Web Automation Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: web-extent-report
-          # Every run gets its own timestamped folder - see README.md
-          # section 7B for why there's no fixed reports/... path.
-          path: test-output/WebExtentReport*/reports/GajabAutomationReport.html
+          name: Web-Automation-Reports-${{ github.run_number }}
+          path: |
+            test-output/
+            target/extent-reports/
+            logs/
+            screenshots/
+          if-no-files-found: ignore
 
-      - name: Upload failure screenshots
+      - name: Send Web Automation Report Email
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: dawidd6/action-send-mail@v3
         with:
-          name: web-failure-screenshots
-          path: screenshots/web/
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
 
-      - name: Upload execution logs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: web-automation-logs
-          path: logs/web-automation.log
+          subject: "Web Automation Report - Run #${{ github.run_number }}"
+
+          to: piccosofttest@gmail.com
+
+          from: "Piccosoft QA Automation <${{ secrets.EMAIL_USERNAME }}>"
+
+          body: |
+            Hi Team,
+
+            The Web Automation test execution has been completed.
+
+            Repository:
+            ${{ github.server_url }}/${{ github.repository }}
+
+            Branch:
+            ${{ github.ref_name }}
+
+            Workflow:
+            ${{ github.workflow }}
+
+            Run:
+            #${{ github.run_number }}
+
+            Trigger:
+            ${{ github.event_name }}
+
+            Status:
+            ${{ job.status }}
+
+            Test Summary:
+
+            Passed: ${{ steps.test_summary.outputs.passed }}
+            Failed: ${{ steps.test_summary.outputs.failed }}
+            Skipped: ${{ steps.test_summary.outputs.skipped }}
+
+            TestNG Suite:
+            testng-web.xml
+
+            Cucumber Tag:
+            @web
+
+            Runner:
+            com.ecommerce.web.runner.WebTestRunner
+
+            GitHub Actions Run:
+            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            TestNG and Extent Reports are available in the GitHub Actions artifacts.
+
+            Regards,
+            Piccosoft QA Automation
+
+          attachments: |
+            test-output/emailable-report.html
+            target/extent-reports/index.html
