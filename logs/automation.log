@@ -362,3 +362,122 @@
 2026-08-26 16:30:16.011 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Stopping Appium server...
 2026-08-26 16:30:16.579 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 0 passed, 1 failed, 1 skipped.
 2026-08-26 16:30:16.583 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-28 17:41:20.645 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-28 17:41:20.648 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-28 17:41:21.131 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-28 17:41:21.131 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 490 ms
+2026-08-28 17:41:21.132 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-28 17:41:21.165 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-28 17:41:21.166 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-28 17:41:22.352 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 0 passed, 0 failed, 0 skipped.
+2026-08-28 17:41:22.357 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-28 17:42:19.354 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-28 17:42:19.356 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-28 17:42:19.808 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-28 17:42:19.809 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 461 ms
+2026-08-28 17:42:19.810 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-28 17:42:19.838 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-28 17:42:19.839 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-28 17:42:26.953 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-28 17:42:26.954 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7145 ms
+2026-08-28 17:42:27.124 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-28 17:42:27.124 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 17:43:29.896 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Purchase product workflow
+2026-08-28 17:43:29.914 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-28 17:43:29.921 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-28 17:43:29.922 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 17:43:29.930 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Purchase product workflow
+2026-08-28 17:43:29.983 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Search for a product ==========
+2026-08-28 17:43:29.983 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 17:43:30.006 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Search for a product
+2026-08-28 17:43:30.014 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-28 17:43:30.023 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Search for a product ==========
+2026-08-28 17:43:30.024 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 17:43:30.034 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Search for a product
+2026-08-28 17:43:30.059 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Sort products by price ==========
+2026-08-28 17:43:30.059 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 17:43:30.069 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Sort products by price
+2026-08-28 17:43:30.077 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-28 17:43:30.085 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Sort products by price ==========
+2026-08-28 17:43:30.085 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 17:43:30.097 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Sort products by price
+2026-08-28 17:43:30.115 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-28 17:43:30.544 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 0 passed, 3 failed, 3 skipped.
+2026-08-28 17:43:30.546 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-28 17:45:13.481 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-28 17:45:13.484 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-28 17:45:13.936 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-28 17:45:13.936 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 460 ms
+2026-08-28 17:45:13.937 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-28 17:45:13.959 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-28 17:45:13.960 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-28 17:45:21.523 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-28 17:45:21.523 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7586 ms
+2026-08-28 17:45:21.681 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-28 17:45:21.682 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 17:45:23.966 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-28 17:46:17.495 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-28 17:46:18.557 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\Login_with_valid_credentials_28-Aug-2026_17-46-18.png
+2026-08-28 17:46:18.569 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-28 17:46:18.577 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-28 17:46:18.590 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-28 17:46:18.591 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 17:46:21.414 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-28 17:47:26.215 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-28 17:47:26.216 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see member login label displayed
+2026-08-28 17:47:46.490 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-28 17:47:48.214 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\Login_with_valid_credentials_28-Aug-2026_17-47-48.png
+2026-08-28 17:47:48.223 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-28 17:47:48.228 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-28 17:47:49.738 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 0 passed, 1 failed, 1 skipped.
+2026-08-28 17:47:49.742 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-28 17:55:22.338 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-28 17:55:22.342 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-28 17:55:22.739 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-28 17:55:22.739 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 406 ms
+2026-08-28 17:55:22.740 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-28 17:55:22.771 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-28 17:55:22.772 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-28 17:55:30.187 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-28 17:55:30.187 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7447 ms
+2026-08-28 17:55:30.334 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-28 17:55:30.334 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 17:55:32.872 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-28 17:55:55.096 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-28 17:55:56.920 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\Login_with_valid_credentials_28-Aug-2026_17-55-56.png
+2026-08-28 17:55:56.934 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-28 17:55:56.938 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-28 17:55:56.946 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-28 17:55:56.946 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 17:55:59.243 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-28 17:56:22.056 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-28 17:56:23.501 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\Login_with_valid_credentials_28-Aug-2026_17-56-23.png
+2026-08-28 17:56:23.506 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-28 17:56:23.517 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-28 17:56:25.227 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 0 passed, 1 failed, 1 skipped.
+2026-08-28 17:56:25.229 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".
+2026-08-28 18:00:50.442 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-28 18:00:50.445 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-28 18:00:50.885 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-28 18:00:50.886 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 447 ms
+2026-08-28 18:00:50.887 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-28 18:00:50.922 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-28 18:00:50.923 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-28 18:00:58.146 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-28 18:00:58.146 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7260 ms
+2026-08-28 18:00:58.298 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-28 18:00:58.298 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 18:01:00.825 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-28 18:01:23.046 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-28 18:01:24.657 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\Login_with_valid_credentials_28-Aug-2026_18-01-24.png
+2026-08-28 18:01:24.673 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-28 18:01:24.678 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-28 18:01:24.686 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-28 18:01:24.686 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstore
+2026-08-28 18:01:26.894 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-28 18:01:49.243 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-28 18:01:51.041 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\Login_with_valid_credentials_28-Aug-2026_18-01-51.png
+2026-08-28 18:01:51.049 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-28 18:01:51.055 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-28 18:01:52.811 [main] INFO  com.ecommerce.mobile.listeners.EmailReportListener - Suite finished: 0 passed, 1 failed, 1 skipped.
+2026-08-28 18:01:52.815 [main] WARN  com.ecommerce.mobile.utils.MailUtil - Email notification skipped - fill in mail.smtp.host / mail.from / mail.to in config.properties, and set the MAIL_FROM_PASSWORD environment variable. See README.md -> "Email notifications".

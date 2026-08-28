@@ -35,7 +35,9 @@ public class LoginPage extends BasePage {
     private WebElement appLogo;
 
     //locators for gajab application
-    @AndroidFindBy(accessibility = "Get Started")
+    //@AndroidFindBy(accessibility = "Get Started")
+
+    @AndroidFindBy(accessibility = "welcome_get_started_btn")
     private WebElement getStartedButton;
 
     @AndroidFindBy(accessibility = "Become a Gajab Member\nLogin with Mobile Number")
@@ -59,7 +61,9 @@ public class LoginPage extends BasePage {
     @AndroidFindBy(accessibility = "English\nFor those who like it simple")
     private WebElement englishOption;
 
-    @AndroidFindBy(accessibility = "Next")
+    //@AndroidFindBy(accessibility = "Next")
+
+    @AndroidFindBy(id = "login_next_btn")
     private WebElement nextButton;
 
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, \"Let's setup your account quickly.\")]")
