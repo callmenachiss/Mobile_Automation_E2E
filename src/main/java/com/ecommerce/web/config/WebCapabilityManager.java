@@ -7,52 +7,71 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-/**
- * Builds the browser options from config.properties, the same way
- * CapabilityManager builds Appium capabilities for mobile.
- *
- * web.browser picks the browser (chrome/firefox/edge); web.headless runs it
- * without a visible window (handy for CI). No driver-binary management is
- * needed for LOCAL runs - Selenium Manager (bundled since Selenium 4.6)
- * downloads the matching chromedriver/geckodriver/msedgedriver
- * automatically. For REMOTE runs (web.remote.enabled=true, e.g. a Selenium
- * Grid or a cloud provider), the grid itself owns the matching driver, so
- * these options are just sent over as desired capabilities - see
- * WebDriverManager.
- */
 public class WebCapabilityManager {
 
-    private static final Logger LOGGER = LogManager.getLogger(WebCapabilityManager.class);
+    private static final Logger LOGGER =
+            LogManager.getLogger(WebCapabilityManager.class);
 
     public MutableCapabilities getCapabilities() {
-        String browser = ConfigReader.get("web.browser", "chrome").toLowerCase();
+
+        String browser = ConfigReader
+                .get("web.browser", "chrome")
+                .toLowerCase();
+
         boolean headless = ConfigReader.getBoolean("web.headless");
 
-        LOGGER.info("Building web capabilities: browser={}, headless={}", browser, headless);
+        LOGGER.info(
+                "Building web capabilities: browser={}, headless={}",
+                browser,
+                headless
+        );
 
         switch (browser) {
+
             case "firefox": {
+
                 FirefoxOptions options = new FirefoxOptions();
+
                 if (headless) {
                     options.addArguments("--headless");
                 }
+
+                options.addArguments("--window-size=1920,1080");
+
                 return options;
             }
+
             case "edge": {
+
                 EdgeOptions options = new EdgeOptions();
+
                 if (headless) {
                     options.addArguments("--headless=new");
                 }
-                options.addArguments("--remote-allow-origins=*");
+
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--window-size=1920,1080");
+
                 return options;
             }
+
             case "chrome":
             default: {
+
                 ChromeOptions options = new ChromeOptions();
+
                 if (headless) {
                     options.addArguments("--headless=new");
                 }
+
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--window-size=1920,1080");
                 options.addArguments("--remote-allow-origins=*");
+
                 return options;
             }
         }

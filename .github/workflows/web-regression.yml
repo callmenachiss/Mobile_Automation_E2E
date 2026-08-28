@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -27,8 +28,18 @@ jobs:
           java-version: "17"
           cache: maven
 
+      - name: Verify Java and Maven
+        run: |
+          java -version
+          mvn -version
+
+      - name: Verify Chrome
+        run: |
+          google-chrome --version || true
+          chromedriver --version || true
+
       - name: Run Web Automation Tests
-        run: mvn clean test -DsuiteXmlFile=testng-web.xml
+        run: mvn clean test "-DsuiteXmlFile=testng-web.xml"
 
       - name: Parse TestNG Results Summary
         if: always()
@@ -50,6 +61,8 @@ jobs:
             echo "failed=$failed" >> "$GITHUB_OUTPUT"
             echo "skipped=$skipped" >> "$GITHUB_OUTPUT"
           else
+            echo "TestNG results file not found."
+
             echo "passed=0" >> "$GITHUB_OUTPUT"
             echo "failed=0" >> "$GITHUB_OUTPUT"
             echo "skipped=0" >> "$GITHUB_OUTPUT"
@@ -65,6 +78,7 @@ jobs:
             target/extent-reports/
             logs/
             screenshots/
+            target/surefire-reports/
           if-no-files-found: ignore
 
       - name: Send Web Automation Report Email

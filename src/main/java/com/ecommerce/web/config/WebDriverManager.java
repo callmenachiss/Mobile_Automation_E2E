@@ -11,25 +11,10 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
+import org.openqa.selenium.chrome.ChromeOptions;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * Owns the WebDriver (our remote control for the browser), the web
- * equivalent of the mobile DriverManager. Kept as a ThreadLocal for the
- * same reason - so this framework can later run web tests in parallel
- * across multiple browser instances without one test stealing another's
- * driver.
- *
- * The driver is created ONCE for the whole suite (see WebHooks), not per
- * scenario - launching a browser is cheap compared to an Appium session,
- * but still far more expensive than navigating back to a known page.
- *
- * web.remote.enabled picks LOCAL (default - a browser on this machine) vs.
- * REMOTE (a Selenium Grid / cloud provider at web.remote.url); the browser
- * itself (chrome/firefox/edge) is still whatever WebCapabilityManager built.
- */
 public class WebDriverManager {
 
     private static final Logger LOGGER = LogManager.getLogger(WebDriverManager.class);
