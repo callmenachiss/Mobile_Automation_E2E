@@ -94,6 +94,10 @@ public class BasePage {
         element.clear();
         element.sendKeys(text);
     }
+    protected void clearElement(WebElement element) {
+        waitUntilVisible(element);
+        element.clear();
+    }
 
     protected void clickDoneOnKeyboard() {
         driver.executeScript(
