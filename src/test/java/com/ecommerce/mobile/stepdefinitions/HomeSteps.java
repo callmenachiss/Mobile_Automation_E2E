@@ -70,6 +70,7 @@ public class HomeSteps {
         homePage.clickOfferYourPrice();
         homePage.clickBargainMorebutton();
         homePage.bargainFirstattempt("95");
+        homePage.clickOfferYourPrice();
         homePage.clickAcceptOffer();
         homePage.clickBuyNow();
     }

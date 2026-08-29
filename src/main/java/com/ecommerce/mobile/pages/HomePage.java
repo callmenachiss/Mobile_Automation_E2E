@@ -165,7 +165,7 @@ public class HomePage extends BasePage {
         //tap(firstProductCard);
         //productCards.get(0).click();
         //LOGGER.info("User clicked on first product from search results");
-        WebElement firstProduct = productCards.get(2);
+        WebElement firstProduct = productCards.get(0);
         waitUntilVisible(firstProduct);
         firstProduct.click();
         LOGGER.info("User clicked on first product from search results");
@@ -176,7 +176,7 @@ public class HomePage extends BasePage {
         //String text = firstProducttextlbl.getAttribute("content-desc");
         //LOGGER.info("First product text: {}", text);
 
-        WebElement firstProduct = productCards.get(2);
+        WebElement firstProduct = productCards.get(0);
         waitUntilVisible(firstProduct);
         String text = firstProduct.getAttribute("content-desc");
         LOGGER.info("First product text: {}", text);
