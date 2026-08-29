@@ -555,3 +555,25 @@
 2026-08-29 20:03:34.690 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Bargain the product workflow
 2026-08-29 20:03:34.690 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
 2026-08-29 20:03:34.701 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 21:22:49.772 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 21:22:49.777 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 21:22:50.388 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 21:22:50.389 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 623 ms
+2026-08-29 21:22:50.391 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 21:22:50.425 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 21:22:50.426 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 21:22:55.265 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 21:22:55.266 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 4877 ms
+2026-08-29 21:22:55.493 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-29 21:22:55.494 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 21:26:07.159 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 21:26:07.162 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 21:26:07.718 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 21:26:07.719 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 569 ms
+2026-08-29 21:26:07.720 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 21:26:07.775 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 21:26:07.776 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 21:26:13.601 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 21:26:13.601 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5882 ms
+2026-08-29 21:26:13.795 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-29 21:26:13.795 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage

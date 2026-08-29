@@ -22,7 +22,7 @@ Feature: Home page - Product listing
     Then I click on product to start bargain to proceed purchase
     Then I proceed with payment to complete the order
 
-  @regression @test
+  @regression @testing
   Scenario: Pin code selection workflow
     When I search the invalid pin code in mobile
     Then I verify the results for invalid pin code
