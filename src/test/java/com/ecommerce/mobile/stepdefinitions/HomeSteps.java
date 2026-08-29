@@ -36,25 +36,48 @@ public class HomeSteps {
         assertTrue(loginpage.isGetStartedLabelDisplayed(), "Get Started was not displayed on the splash page.");
     }
 
-    @Given("I search for the product")
-    public void i_search_for_the_product() {
-        homePage.searchForProduct();
+    @When("I search the product in mobile {string}")
+    public void i_search_for_the_product(String productName) {
+        homePage.searchForProduct(productName);
     }
 
     @Then("I click on product to proceed purchase")
     public void I_click_on_product_to_proceed_purchase() throws InterruptedException {
-        homePage.clickFirstProduct();
-        homePage.getFirstProductText();
-        String name = homePage.firstProducttextlbl.getAttribute("content-desc");
+        //homePage.clickFirstProduct();
+        //homePage.getFirstProductText();
+        //String name = homePage.firstProducttextlbl.getAttribute("content-desc");
+        //String name = homePage.productCards.get(0).getAttribute("content-desc");
         //Assert.assertTrue(name.contains(productName), "'" + productName + "' was not visible in the search results.");
+        //homePage.clickStartBargaining();
+        //homePage.clickOfferYourPrice();
+        //homePage.clickAcceptOffer();
+        //homePage.clickBuyNow();
+
+        String name = homePage.getFirstProductText();
+        homePage.clickFirstProduct();
         homePage.clickStartBargaining();
         homePage.clickOfferYourPrice();
         homePage.clickAcceptOffer();
         homePage.clickBuyNow();
     }
 
+    @Then("I click on product to start bargain to proceed purchase")
+    public void I_click_on_product_to_start_bargain_to_proceed_purchase() throws InterruptedException {
+        String name = homePage.getFirstProductText();
+        homePage.clickFirstProduct();
+        homePage.clickStartBargaining();
+        homePage.bargainFirstattempt("20");
+        homePage.clickOfferYourPrice();
+        homePage.clickBargainMorebutton();
+        homePage.bargainFirstattempt("95");
+        homePage.clickAcceptOffer();
+        homePage.clickBuyNow();
+    }
+
+
+
     @Then("I proceed with payment to complete the order")
-    public void iProceedWithPaymentToCompleteTheOrder() {
+    public void iProceedWithPaymentToCompleteTheOrder() throws InterruptedException {
         homePage.clickPay();
 
     }

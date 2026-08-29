@@ -45,7 +45,6 @@ public class BasePage {
     }
 
 
-
     public void dismissBargainingPopup() {
         Map<String, Object> params = new HashMap<>();
         params.put("x", 30);
@@ -81,7 +80,7 @@ public class BasePage {
         }
     }
 
-    public void sleep() throws InterruptedException {
+    public void sleep(int i) throws InterruptedException {
         Thread.sleep(2000);
     }
 
@@ -123,6 +122,14 @@ public class BasePage {
     }
 
     protected void hideKeyboard() {
+        try {
+            driver.hideKeyboard();
+        } catch (Exception e) {
+            LOGGER.debug("Keyboard was not visible");
+        }
+    }
+
+    protected void hideKeyboards() {
         try {
             if (driver.isKeyboardShown()) {
                 driver.hideKeyboard();

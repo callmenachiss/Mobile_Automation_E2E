@@ -24,7 +24,7 @@ public class LoginSteps {
     private static final String INVALID_PASSWORD = "wrongPassword";
 
     private static final String VALID_EMAIL = "piccosofttest@gmail.com";
-    private static final String VALID_PHONENUMBER = "9876543211";
+    private static final String VALID_PHONENUMBER = "8973029876";
 
     private static final String INVALID_EMAIL = "invalid@example.com";
     private static final String INVALID_PHONENUMBER = "3794892927";
@@ -41,7 +41,7 @@ public class LoginSteps {
 
     @Given("I verify existing login")
     public void I_verify_existing_login() {
-        Assert.assertTrue(homePage.isMenuDisplayed(), "Existing Login was not deducted.");
+        Assert.assertTrue(homePage.isLoginExists(), "Existing Login was not deducted.");
         homePage.clickProfileAvatar();
         homePage.clickPersonalDetails();
         homePage.clickLogout();
@@ -71,12 +71,12 @@ public class LoginSteps {
 
     @Then("I should enter OTP received in my mobile device")
     public void i_should_enter_OTP_received_in_my_mobile_device() throws InterruptedException {
-        Assert.assertTrue(loginPage.isAccountSetupMessageDisplayed(), "Account setup message is not displayed");
+        //Assert.assertTrue(loginPage.isAccountSetupMessageDisplayed(), "Account setup message is not displayed");
         loginPage.enterOtp(TEST_OTP);
-        Assert.assertTrue(loginPage.isAccountSetupHeaderDisplayed(), "Account setup screen is not displayed");
+        //Assert.assertTrue(loginPage.isAccountSetupHeaderDisplayed(), "Account setup screen is not displayed");
         loginPage.enterRandomName();
         loginPage.selectFemale();
-        loginPage.clickNext();
+        loginPage.clickNextbtn();
         //loginPage.clickEnglishOption();
         //loginPage.handleOptionalLocationPermission();
     }

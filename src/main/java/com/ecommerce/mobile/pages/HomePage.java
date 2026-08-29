@@ -51,40 +51,56 @@ public class HomePage extends BasePage {
     @AndroidFindBy(accessibility = "Home & Kitchen")
     private WebElement homeKitchenMenu;
 
-    @AndroidFindBy(xpath = "//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[4]")
+    @AndroidFindBy(accessibility = "home_profile_avatar_button")
     private WebElement profileAvatar;
 
     @AndroidFindBy(accessibility = "Personal details")
     private WebElement personalDetailsButton;
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc='END SESSION\nLogout']")
+    @AndroidFindBy(accessibility = "END SESSION\nLogout")
     private WebElement logoutButton;
 
     @AndroidFindBy(className = "android.widget.EditText")
     private WebElement inputField;
 
-    @AndroidFindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[3]")
+    //@AndroidFindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[3]")
+
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id=\"home_search_bar\"]")
     private WebElement Menulabel;
 
     @AndroidFindBy(xpath = "(//android.widget.ScrollView//android.widget.ImageView)[1]")
     private WebElement firstProductCard;
 
+    @AndroidFindBy(xpath = "//android.view.View[starts-with(@content-desc, 'child_category_product_card_')]")
+    public List<WebElement> productCards;
+
     @AndroidFindBy(xpath = "(//android.widget.ScrollView//android.widget.ImageView)[1]")
     public WebElement firstProducttextlbl;
 
-    @AndroidFindBy(accessibility = "Start Bargaining")
+    @AndroidFindBy(accessibility = "pdp_commonsheet_bargain_button")
     private WebElement startBargainingButton;
 
-    @AndroidFindBy(accessibility = "Offer Your Price")
+    @AndroidFindBy(accessibility = "pdp_bargains_offer_your_price_button")
     private WebElement offerYourPriceButton;
 
-    @AndroidFindBy(accessibility = "Accept the offer")
+    @AndroidFindBy(accessibility = "Bargain More")
+    private WebElement BargainMoreButton;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id=\"pdp_bargains_price_input\"]")
+    private WebElement BargainPriceBox;
+
+    @AndroidFindBy(accessibility = "pdp_bargains_accept_offer_button")
     private WebElement acceptOfferButton;
 
-    @AndroidFindBy(accessibility = "Buy Now")
+    @AndroidFindBy(accessibility = "pdp_deal_buy_now_button")
     private WebElement buyNowButton;
 
-    @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Pay ₹')]")
+    @AndroidFindBy(accessibility= "cart_payment_online_button")
+    private WebElement payOnlineButton;
+
+    //@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Pay ₹')]")
+
+    @AndroidFindBy(accessibility= "cart_checkout_action_button")
     private WebElement payButton;
 
 
@@ -93,7 +109,8 @@ public class HomePage extends BasePage {
         tap(bargainingButton);
     }
 
-    public void clickAcceptOffer() {
+    public void clickAcceptOffer()  throws InterruptedException{
+        sleep(7000);
         tap(acceptOfferButton);
         LOGGER.info("User accepting the offer");
     }
@@ -103,17 +120,38 @@ public class HomePage extends BasePage {
         LOGGER.info("User clicking the buy now button");
     }
 
-    public void clickPay() {
+    public void clickPay() throws InterruptedException {
+        sleep(1000);
+        tap(payOnlineButton);
+        sleep(1000);
         tap(payButton);
         LOGGER.info("User clicking pay button");
     }
 
-    public void clickStartBargaining() {
+    public void clickStartBargaining() throws InterruptedException {
+        sleep(2000);
         tap(startBargainingButton);
         LOGGER.info("User clicked start Bargaining button");
     }
 
-    public void clickOfferYourPrice() {
+    public void bargainFirstattempt(String price) throws InterruptedException {
+        sleep(5000);
+        tap(BargainPriceBox);
+        enterText(BargainPriceBox,price);
+        sleep(2000);
+        driver.navigate().back();
+        sleep(4000);
+        LOGGER.info("User quoted first bargain price for the product");
+    }
+
+    public void clickBargainMorebutton() throws InterruptedException {
+        sleep(1000);
+        tap(BargainMoreButton);
+        LOGGER.info("User clicked on bargain more button to try 1 more attempt on bargain process");
+    }
+
+    public void clickOfferYourPrice() throws InterruptedException {
+        sleep(2000);
         tap(offerYourPriceButton);
         LOGGER.info("User clicked offer price button");
     }
@@ -124,14 +162,25 @@ public class HomePage extends BasePage {
     }
 
     public void clickFirstProduct() {
-        tap(firstProductCard);
-        LOGGER.info("User clicked on first product card");
+        //tap(firstProductCard);
+        //productCards.get(0).click();
+        //LOGGER.info("User clicked on first product from search results");
+        WebElement firstProduct = productCards.get(2);
+        waitUntilVisible(firstProduct);
+        firstProduct.click();
+        LOGGER.info("User clicked on first product from search results");
     }
 
-    public void getFirstProductText() {
-        waitUntilVisible(firstProducttextlbl);
-        String text = firstProducttextlbl.getAttribute("content-desc");
+    public String getFirstProductText() {
+        //waitUntilVisible(firstProducttextlbl);
+        //String text = firstProducttextlbl.getAttribute("content-desc");
+        //LOGGER.info("First product text: {}", text);
+
+        WebElement firstProduct = productCards.get(2);
+        waitUntilVisible(firstProduct);
+        String text = firstProduct.getAttribute("content-desc");
         LOGGER.info("First product text: {}", text);
+        return text;
     }
 
     public String getTextElement(WebElement element) {
@@ -162,15 +211,20 @@ public class HomePage extends BasePage {
         return isDisplayed(homeKitchenMenu);
     }
 
+    public boolean isLoginExists() {
+        LOGGER.info("Existing login deducted.. performing logout and login again");
+        return isDisplayed(profileAvatar);
+    }
+
 
 
     public boolean isProductListDisplayed() {
         return isDisplayed(productList) && !productNames.isEmpty();
     }
 
-    public void searchForProduct() {
+    public void searchForProduct(String productName) {
         tap(Menulabel);
-        String productName="Wireless Headphones";
+        //String productName="Wireless Headphones";
         enterText(inputField,productName);
         clickDoneOnKeyboard();
         LOGGER.info("Searching for product: {}", productName);

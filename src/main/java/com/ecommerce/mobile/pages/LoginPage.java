@@ -36,7 +36,7 @@ public class LoginPage extends BasePage {
     private WebElement appLogo;
 
     //locators for gajab application
-    @AndroidFindBy(accessibility = "Get Started")
+    @AndroidFindBy(accessibility = "welcome_get_started_button")
     private WebElement getStartedButton;
 
     @AndroidFindBy(accessibility = "Become a Gajab Member\nLogin with Mobile Number")
@@ -47,12 +47,12 @@ public class LoginPage extends BasePage {
 
     //@AndroidFindBy(xpath = "//android.widget.EditText")
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id=\"login_mobile_number_field\"]/android.widget.EditText")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id=\"login_mobile_number_field\"]")
     private WebElement phoneNumberField;
 
     //@AndroidFindBy(xpath = "//android.widget.CheckBox")
 
-    @AndroidFindBy(accessibility = "Terms Checkbox")
+    @AndroidFindBy(accessibility = "login_terms_checkbox")
     private WebElement checkbox;
 
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Fatafat apna account set')]")
@@ -64,8 +64,11 @@ public class LoginPage extends BasePage {
     @AndroidFindBy(accessibility = "English\nFor those who like it simple")
     private WebElement englishOption;
 
-    @AndroidFindBy(accessibility = "Next")
+    @AndroidFindBy(accessibility = "login_next_button")
     private WebElement nextButton;
+
+    @AndroidFindBy(accessibility = "profile_next_button")
+    private WebElement NextButton;
 
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, \"Let's setup your account quickly.\")]")
     private WebElement accountSetupHeader;
@@ -73,7 +76,7 @@ public class LoginPage extends BasePage {
     @AndroidFindBy(className = "android.widget.EditText")
     private WebElement fullNameField;
 
-    @AndroidFindBy(accessibility = "Female")
+    @AndroidFindBy(accessibility = "profile_gender_1_button")
     private WebElement femaleOption;
 
     //methods implementation for loginpage of gajab app
@@ -101,7 +104,13 @@ public class LoginPage extends BasePage {
 
     public void clickNext() {
         tap(nextButton);
-        LOGGER.info("User  clicked next button");
+        LOGGER.info("User clicked on Next button in signup/login page");
+    }
+
+    public void clickNextbtn() throws InterruptedException {
+        sleep(1000);
+        tap(NextButton);
+        LOGGER.info("User clicked on Next button in Account setup page");
     }
 
     private String generateRandomNumber(int length) {
@@ -113,17 +122,22 @@ public class LoginPage extends BasePage {
         );
     }
 
-    public void selectFemale() {
+    public void selectFemale() throws InterruptedException {
+        sleep(1000);
         tap(femaleOption);
         LOGGER.info("User clicked female menu");
     }
 
-    public String enterRandomName() {
-        String randomNumber = generateRandomName();
-        String name = "autoUser" + randomNumber;
-        LOGGER.info("randomNumber = {}", randomNumber);
+    public String enterRandomName() throws InterruptedException {
+        String randomName = generateRandomName();
+        String name = "autoUsers" + randomName;
+        LOGGER.info("randomNumber = {}", randomName);
         LOGGER.info("User entered name: {}", name);
+        driver.navigate().back();
+        sleep(2000);
+        //hideKeyboard();
         enterText(fullNameField, name);
+        sleep(2000);
         return name;
     }
 
@@ -157,8 +171,13 @@ public class LoginPage extends BasePage {
         handleOptionalLocationPermission();
     }
 
-    public void enterOtp(String TEST_OTP) {
+    public void enterOtp(String TEST_OTP) throws InterruptedException {
+        sleep(2000);
+        driver.navigate().back();
+        //hideKeyboard();
+        sleep(2000);
         enterText(otpField, TEST_OTP);
+        sleep(2000);
         LOGGER.info("User entered OTP: {}", TEST_OTP);
     }
 
