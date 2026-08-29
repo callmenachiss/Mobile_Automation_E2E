@@ -32,7 +32,12 @@ public class BasePage {
         this.driver = DriverManager.getDriver();
         int waitSeconds = ConfigReader.getInt("explicit.wait.seconds");
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(waitSeconds));
-        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(waitSeconds)), this);
+        // Field decorator gets a near-zero timeout on purpose: waitUntilVisible()/wait
+        // below is the one explicit wait budget for every element. Giving the decorator
+        // its own full waitSeconds here made every stale-element re-locate during a
+        // screen transition restart an independent second wait, stacking on top of the
+        // explicit wait and compounding into multi-minute startup waits on real devices.
+        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofMillis(0)), this);
     }
 
     protected void waitUntilVisible(WebElement element) {
