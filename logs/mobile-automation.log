@@ -1,0 +1,557 @@
+2026-08-29 16:00:38.639 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 16:00:38.650 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 16:00:39.208 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 16:00:39.209 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 574 ms
+2026-08-29 16:00:39.210 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 16:00:39.249 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 16:00:39.251 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 16:00:46.126 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 16:00:46.127 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6918 ms
+2026-08-29 16:00:46.283 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-29 16:00:46.283 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:00:48.599 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:01:50.269 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-29 16:01:50.270 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 7747177677
+2026-08-29 16:01:52.652 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-29 16:01:54.960 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-08-29 16:01:54.964 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see account setup message displayed
+2026-08-29 16:02:15.130 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-29 16:02:16.546 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_29-Aug-2026_16-02-16.png
+2026-08-29 16:02:16.557 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-29 16:02:16.562 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 16:02:16.566 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-29 16:02:16.567 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:02:18.540 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:03:21.591 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-29 16:03:21.592 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 4984765446
+2026-08-29 16:03:23.468 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-29 16:03:25.525 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-08-29 16:03:25.527 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see account setup message displayed
+2026-08-29 16:03:29.754 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-29 16:03:50.032 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-29 16:03:51.348 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_29-Aug-2026_16-03-51.png
+2026-08-29 16:03:51.353 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-29 16:03:51.359 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 16:24:20.882 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 16:24:20.886 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 16:24:21.197 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 16:24:21.197 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 319 ms
+2026-08-29 16:24:21.198 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 16:24:21.201 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 16:24:21.202 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 16:24:26.572 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 16:24:26.572 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5374 ms
+2026-08-29 16:24:26.576 [main] INFO  com.ecommerce.web.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 16:24:26.580 [main] INFO  com.ecommerce.web.config.WebCapabilityManager - Building web capabilities: browser=chrome, headless=false
+2026-08-29 16:24:26.606 [main] INFO  com.ecommerce.web.config.WebDriverManager - Launching browser with capabilities: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--no-sandbox, --disable-dev-shm-usage, --disable-gpu, --window-size=1920,1080, --remote-allow-origins=*], extensions: []}} (remote=false)
+2026-08-29 16:24:28.727 [main] INFO  com.ecommerce.web.config.WebDriverManager - Browser launched and driver session started successfully.
+2026-08-29 16:24:28.728 [main] INFO  com.ecommerce.web.hooks.WebHooks - Browser ready in 2155 ms
+2026-08-29 16:24:28.950 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-29 16:24:28.950 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:24:29.504 [main] INFO  com.ecommerce.web.hooks.WebHooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-29 16:24:38.810 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:24:59.853 [main] ERROR com.ecommerce.web.hooks.WebHooks - Scenario FAILED: Signup into the Application for new user
+2026-08-29 16:25:00.376 [main] INFO  com.ecommerce.web.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\web\Signup_into_the_Application_for_new_user_29-Aug-2026_16-25-00.png
+2026-08-29 16:25:00.396 [main] INFO  com.ecommerce.web.hooks.WebHooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-29 16:25:00.398 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-29 16:25:01.829 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_29-Aug-2026_16-25-01.png
+2026-08-29 16:25:01.829 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-29 16:25:01.869 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-29 16:25:01.870 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:25:03.091 [main] INFO  com.ecommerce.web.hooks.WebHooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-29 16:25:06.785 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:25:41.574 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 16:25:41.577 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 16:25:42.033 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 16:25:42.034 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 465 ms
+2026-08-29 16:25:42.035 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 16:25:42.061 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 16:25:42.064 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 16:25:48.110 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 16:25:48.111 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6077 ms
+2026-08-29 16:25:48.287 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-29 16:25:48.287 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:25:50.928 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:26:52.674 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-29 16:26:52.675 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 1010390371
+2026-08-29 16:26:55.533 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-29 16:26:57.998 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-08-29 16:26:58.004 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see account setup message displayed
+2026-08-29 16:27:18.144 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-29 16:27:19.453 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_29-Aug-2026_16-27-19.png
+2026-08-29 16:27:19.471 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-29 16:27:19.477 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 16:27:19.488 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-29 16:27:19.488 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:27:21.577 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:28:23.909 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-29 16:28:23.910 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 3959882095
+2026-08-29 16:28:26.330 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-29 16:28:28.349 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-08-29 16:28:28.353 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see account setup message displayed
+2026-08-29 16:28:36.476 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-29 16:28:36.479 [main] INFO  com.ecommerce.mobile.pages.LoginPage - randomNumber = Sureshi
+2026-08-29 16:28:36.479 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered name: autoUsersSureshi
+2026-08-29 16:28:37.776 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-29 16:28:39.034 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_29-Aug-2026_16-28-39.png
+2026-08-29 16:28:39.037 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-29 16:28:39.044 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 16:31:54.768 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 16:31:54.771 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 16:31:55.249 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 16:31:55.249 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 485 ms
+2026-08-29 16:31:55.250 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 16:31:55.280 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 16:31:55.281 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 16:32:00.404 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 16:32:00.404 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5155 ms
+2026-08-29 16:32:00.575 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-29 16:32:00.576 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:32:03.259 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:33:05.758 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-29 16:33:05.759 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 1222537814
+2026-08-29 16:33:07.936 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-29 16:33:09.962 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-08-29 16:33:16.091 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-29 16:33:16.092 [main] INFO  com.ecommerce.mobile.pages.LoginPage - randomNumber = Maheshwari
+2026-08-29 16:33:16.092 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered name: autoUsersMaheshwari
+2026-08-29 16:33:18.976 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-29 16:33:20.201 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_29-Aug-2026_16-33-20.png
+2026-08-29 16:33:20.214 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-29 16:33:20.218 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 16:33:20.227 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-29 16:33:20.228 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:33:22.066 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:39:53.434 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 16:39:53.437 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 16:39:53.855 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 16:39:53.855 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 426 ms
+2026-08-29 16:39:53.856 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 16:39:53.890 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 16:39:53.892 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 16:39:59.833 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 16:39:59.833 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5978 ms
+2026-08-29 16:39:59.997 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-29 16:39:59.998 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:40:02.171 [main] INFO  com.ecommerce.mobile.pages.HomePage - Existing login deducted.. performing logout and login again
+2026-08-29 16:41:34.445 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-08-29 16:41:35.370 [main] INFO  com.ecommerce.mobile.pages.HomePage - User  clicked personal details
+2026-08-29 16:41:36.371 [main] INFO  com.ecommerce.mobile.pages.HomePage - User logged out
+2026-08-29 16:41:36.372 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see get started label displayed
+2026-08-29 16:42:08.297 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:43:09.333 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-29 16:43:09.334 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 7583004297
+2026-08-29 16:43:11.897 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-29 16:43:14.141 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-08-29 16:43:19.881 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-29 16:43:19.883 [main] INFO  com.ecommerce.mobile.pages.LoginPage - randomNumber = Nayanthara
+2026-08-29 16:43:19.883 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered name: autoUsersNayanthara
+2026-08-29 16:43:48.804 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked female menu
+2026-08-29 16:43:49.068 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in Account setup page
+2026-08-29 16:44:51.852 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-08-29 16:44:52.682 [main] INFO  com.ecommerce.mobile.pages.HomePage - User  clicked personal details
+2026-08-29 16:44:53.623 [main] INFO  com.ecommerce.mobile.pages.HomePage - User logged out
+2026-08-29 16:44:53.624 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see get started label displayed
+2026-08-29 16:45:25.603 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Signup into the Application for new user
+2026-08-29 16:45:25.603 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-29 16:45:25.621 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 16:49:11.718 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 16:49:11.721 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 16:49:12.322 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 16:49:12.322 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 611 ms
+2026-08-29 16:49:12.324 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 16:49:12.365 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 16:49:12.367 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 16:49:17.752 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 16:49:17.753 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5430 ms
+2026-08-29 16:49:17.955 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-29 16:49:17.956 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:49:21.543 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:50:22.715 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-29 16:50:22.716 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 5487111396
+2026-08-29 16:50:25.435 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-29 16:50:27.640 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-08-29 16:50:35.636 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-29 16:50:35.637 [main] INFO  com.ecommerce.mobile.pages.LoginPage - randomNumber = Sureshi
+2026-08-29 16:50:35.637 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered name: autoUsersSureshi
+2026-08-29 16:50:44.907 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked female menu
+2026-08-29 16:50:47.212 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in Account setup page
+2026-08-29 16:50:47.216 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Signup into the Application for new user
+2026-08-29 16:50:47.217 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-29 16:50:47.232 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 16:51:36.379 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 16:51:36.383 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 16:51:36.937 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 16:51:36.938 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 565 ms
+2026-08-29 16:51:36.939 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 16:51:36.969 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 16:51:36.971 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 16:51:42.114 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 16:51:42.114 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5176 ms
+2026-08-29 16:51:42.314 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-29 16:51:42.314 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 16:51:45.505 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-29 16:52:47.946 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-29 16:52:48.834 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered the existing phone number: 9876543211
+2026-08-29 16:52:50.085 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-29 16:52:50.383 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-08-29 16:52:57.732 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-29 16:52:57.736 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Login with valid credentials
+2026-08-29 16:52:57.736 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-29 16:52:57.748 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 17:27:30.554 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 17:27:30.554 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 17:27:31.236 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 17:27:31.238 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 692 ms
+2026-08-29 17:27:31.240 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 17:27:31.356 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 17:27:31.366 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 17:27:41.425 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 17:27:41.425 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 10186 ms
+2026-08-29 17:27:42.121 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-29 17:27:42.121 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 17:28:52.928 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Wireless Headphones
+2026-08-29 17:29:13.253 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Purchase product workflow
+2026-08-29 17:29:14.304 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Purchase_product_workflow_29-Aug-2026_17-29-14.png
+2026-08-29 17:29:14.318 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Purchase product workflow ==========
+2026-08-29 17:29:14.323 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 17:29:14.332 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-29 17:29:14.333 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 17:29:22.536 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Wireless Headphones
+2026-08-29 17:29:42.891 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Purchase product workflow
+2026-08-29 17:29:43.814 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Purchase_product_workflow_29-Aug-2026_17-29-43.png
+2026-08-29 17:29:43.817 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Purchase product workflow ==========
+2026-08-29 17:29:43.826 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 17:38:39.151 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 17:38:39.159 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 17:38:40.045 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 17:38:40.046 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 908 ms
+2026-08-29 17:38:40.048 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 17:38:40.129 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 17:38:40.132 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 17:38:47.868 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 17:38:47.868 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7822 ms
+2026-08-29 17:38:48.513 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-29 17:38:48.515 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 17:40:02.633 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Wireless Headphones
+2026-08-29 17:40:03.722 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_gadgetsuday-rm_buds-wireless-3-bluetooth-neckband-headphones-compatible-with-devices-134mm-driver-32h-playback-ai-enc-ip55-sweat-resistant_button
+2026-08-29 17:40:03.948 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 17:40:07.472 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 17:40:27.629 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Purchase product workflow
+2026-08-29 17:40:28.915 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Purchase_product_workflow_29-Aug-2026_17-40-28.png
+2026-08-29 17:40:28.930 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Purchase product workflow ==========
+2026-08-29 17:40:28.935 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 17:40:28.945 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-29 17:40:28.945 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 17:41:37.120 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Wireless Headphones
+2026-08-29 17:41:38.276 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_gadgetsuday-rm_buds-wireless-3-bluetooth-neckband-headphones-compatible-with-devices-134mm-driver-32h-playback-ai-enc-ip55-sweat-resistant_button
+2026-08-29 17:41:41.275 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 17:41:42.219 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 17:42:04.138 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Purchase product workflow
+2026-08-29 17:42:05.475 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Purchase_product_workflow_29-Aug-2026_17-42-05.png
+2026-08-29 17:42:05.480 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Purchase product workflow ==========
+2026-08-29 17:42:05.491 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 18:24:29.764 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 18:24:29.767 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 18:24:30.380 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 18:24:30.380 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 622 ms
+2026-08-29 18:24:30.381 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 18:24:30.418 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 18:24:30.420 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 18:24:38.283 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 18:24:38.283 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7903 ms
+2026-08-29 18:24:38.361 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 18:24:38.378 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 18:24:38.390 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 18:25:20.245 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 18:25:20.248 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 18:25:20.809 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 18:25:20.810 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 570 ms
+2026-08-29 18:25:20.811 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 18:25:20.845 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 18:25:20.847 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 18:25:26.052 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 18:25:26.052 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5242 ms
+2026-08-29 18:25:26.141 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 18:25:26.169 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 18:25:26.188 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 18:29:57.162 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 18:29:57.166 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 18:29:57.806 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 18:29:57.806 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 650 ms
+2026-08-29 18:29:57.807 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 18:29:57.844 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 18:29:57.846 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 18:30:03.236 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 18:30:03.237 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5430 ms
+2026-08-29 18:30:03.867 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-29 18:30:03.871 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 18:30:33.545 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Purchase product workflow
+2026-08-29 18:30:34.245 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Purchase_product_workflow_29-Aug-2026_18-30-34.png
+2026-08-29 18:30:34.279 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Purchase product workflow ==========
+2026-08-29 18:30:34.297 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 18:30:34.323 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-29 18:30:34.324 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 18:31:00.003 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Purchase product workflow
+2026-08-29 18:31:02.914 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Purchase_product_workflow_29-Aug-2026_18-31-02.png
+2026-08-29 18:31:02.941 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Purchase product workflow ==========
+2026-08-29 18:31:02.980 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 18:31:02.981 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 18:31:27.163 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 18:31:28.955 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_18-31-28.png
+2026-08-29 18:31:28.979 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 18:31:28.981 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 18:31:28.997 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 18:31:28.998 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 18:31:35.425 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 18:31:36.059 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_18-31-36.png
+2026-08-29 18:31:36.065 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 18:31:36.078 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 18:47:13.547 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 18:47:13.554 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 18:47:14.146 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 18:47:14.147 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 606 ms
+2026-08-29 18:47:14.148 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 18:47:14.184 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 18:47:14.187 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 18:47:19.492 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 18:47:19.492 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5345 ms
+2026-08-29 18:47:19.719 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-29 18:47:19.720 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 18:48:28.618 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: wireless neckband
+2026-08-29 18:48:29.367 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_gadgetsuday-rm_buds-wireless-3-bluetooth-neckband-headphones-compatible-with-devices-134mm-driver-32h-playback-ai-enc-ip55-sweat-resistant_button
+2026-08-29 18:48:32.654 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 18:48:35.119 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 18:48:37.645 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-29 18:48:44.022 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-08-29 18:48:50.709 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-08-29 18:48:58.478 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking pay button
+2026-08-29 18:48:58.483 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Purchase product workflow
+2026-08-29 18:48:58.484 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Purchase product workflow ==========
+2026-08-29 18:48:58.509 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 18:48:58.510 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 18:50:07.146 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 18:50:08.241 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-holders-and-spoon-organizer-for-kitchen-dining-table--home-decor-steel-plastic-glass-holder-_button
+2026-08-29 18:50:08.484 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 18:50:14.385 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 18:50:19.027 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 18:50:21.844 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-29 18:50:28.300 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-08-29 18:50:36.385 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 18:50:58.823 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 18:51:00.880 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_18-51-00.png
+2026-08-29 18:51:00.901 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 18:51:00.902 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 18:51:00.910 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 18:51:00.910 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 18:51:08.420 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 18:51:09.029 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-holders-and-spoon-organizer-for-kitchen-dining-table--home-decor-steel-plastic-glass-holder-_button
+2026-08-29 18:51:09.215 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 18:51:12.409 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 18:51:35.396 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 18:51:36.650 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_18-51-36.png
+2026-08-29 18:51:36.654 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 18:51:36.663 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 18:55:21.518 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 18:55:21.523 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 18:55:22.153 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 18:55:22.153 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 640 ms
+2026-08-29 18:55:22.155 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 18:55:22.197 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 18:55:22.198 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 18:55:27.387 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 18:55:27.388 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5234 ms
+2026-08-29 18:55:27.584 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 18:55:27.584 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 18:56:26.466 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 18:56:27.350 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-holders-and-spoon-organizer-for-kitchen-dining-table--home-decor-steel-plastic-glass-holder-_button
+2026-08-29 18:56:30.589 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 18:56:33.311 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 18:56:56.298 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 18:56:58.252 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_18-56-58.png
+2026-08-29 18:56:58.268 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 18:56:58.274 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 18:56:58.285 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 18:56:58.285 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 18:58:08.784 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 18:58:09.591 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-holders-and-spoon-organizer-for-kitchen-dining-table--home-decor-steel-plastic-glass-holder-_button
+2026-08-29 18:58:09.809 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 18:58:13.060 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 18:58:36.196 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 18:58:37.941 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_18-58-37.png
+2026-08-29 18:58:37.946 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 18:58:37.955 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 19:00:25.266 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 19:00:25.269 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 19:00:25.812 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 19:00:25.812 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 552 ms
+2026-08-29 19:00:25.814 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 19:00:25.863 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 19:00:25.864 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 19:00:32.641 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 19:00:32.641 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6828 ms
+2026-08-29 19:00:32.844 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 19:00:32.845 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 19:01:31.662 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 19:01:32.668 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-holders-and-spoon-organizer-for-kitchen-dining-table--home-decor-steel-plastic-glass-holder-_button
+2026-08-29 19:01:33.474 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 19:01:37.179 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 19:01:41.811 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 19:01:44.192 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-29 19:01:50.762 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-08-29 19:02:00.083 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 19:03:13.036 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 19:03:13.040 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 19:03:13.586 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 19:03:13.586 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 557 ms
+2026-08-29 19:03:13.588 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 19:03:13.624 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 19:03:13.626 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 19:03:19.891 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 19:03:19.891 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6304 ms
+2026-08-29 19:03:20.139 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 19:03:20.140 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 19:04:18.756 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 19:04:19.684 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-holders-and-spoon-organizer-for-kitchen-dining-table--home-decor-steel-plastic-glass-holder-_button
+2026-08-29 19:04:19.949 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 19:04:25.425 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 19:04:48.195 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 19:04:49.826 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_19-04-49.png
+2026-08-29 19:04:49.847 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 19:04:49.855 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 19:04:49.868 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 19:04:49.868 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 19:07:49.540 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 19:07:49.543 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 19:07:50.103 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 19:07:50.104 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 570 ms
+2026-08-29 19:07:50.105 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 19:07:50.133 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 19:07:50.135 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 19:07:55.296 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 19:07:55.297 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5193 ms
+2026-08-29 19:07:55.511 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 19:07:55.512 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 19:09:04.056 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 19:09:05.024 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-stand-and-spoon-organizer-for-kitchen-dining-tablehome-decor-steel-plastic-glass-holder-_button
+2026-08-29 19:09:05.808 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 19:09:09.278 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 19:09:19.168 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 19:09:21.567 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-29 19:09:38.657 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-08-29 19:09:52.631 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 19:10:14.822 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 19:10:16.790 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_19-10-16.png
+2026-08-29 19:10:16.807 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 19:10:16.812 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 19:10:16.821 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 19:10:16.822 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 19:10:25.390 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 19:10:25.927 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-stand-and-spoon-organizer-for-kitchen-dining-tablehome-decor-steel-plastic-glass-holder-_button
+2026-08-29 19:10:26.118 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 19:10:29.188 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 19:10:51.241 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 19:10:52.544 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_19-10-52.png
+2026-08-29 19:10:52.549 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 19:10:52.557 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 19:15:25.545 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 19:15:25.552 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 19:15:26.421 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 19:15:26.421 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 890 ms
+2026-08-29 19:15:26.427 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 19:15:26.546 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 19:15:26.552 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 19:15:34.353 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 19:15:34.353 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7932 ms
+2026-08-29 19:15:34.947 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 19:15:34.950 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 19:17:16.343 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 19:17:18.495 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_19-17-18.png
+2026-08-29 19:17:18.551 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 19:17:18.574 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 19:17:18.602 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 19:17:18.602 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 19:18:28.408 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 19:18:29.062 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-stand-and-spoon-organizer-for-kitchen-dining-tablehome-decor-steel-plastic-glass-holder-_button
+2026-08-29 19:18:29.282 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 19:18:32.672 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 19:18:43.951 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 19:18:46.329 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-29 19:19:03.408 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-08-29 19:19:18.662 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 19:19:41.335 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 19:19:43.178 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_19-19-43.png
+2026-08-29 19:19:43.182 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 19:19:43.190 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-29 19:56:35.160 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 19:56:35.163 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 19:56:35.722 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 19:56:35.723 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 569 ms
+2026-08-29 19:56:35.725 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 19:56:35.771 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 19:56:35.781 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 19:56:41.445 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 19:56:41.445 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5722 ms
+2026-08-29 19:56:41.623 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 19:56:41.624 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 19:57:09.482 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 19:57:10.287 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-stand-and-spoon-organizer-for-kitchen-dining-tablehome-decor-steel-plastic-glass-holder-_button
+2026-08-29 19:57:11.123 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 19:57:14.366 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 19:57:25.494 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 19:57:27.843 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-29 19:57:44.925 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-08-29 19:57:58.263 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 19:58:21.336 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 19:58:22.952 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_19-58-22.png
+2026-08-29 19:58:22.969 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 19:58:22.973 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 19:58:22.984 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 19:58:22.985 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 19:58:49.381 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 19:58:49.385 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 19:58:49.963 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 19:58:49.964 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 587 ms
+2026-08-29 19:58:49.965 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 19:58:50.004 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 19:58:50.006 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 19:58:55.651 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 19:58:55.651 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5687 ms
+2026-08-29 19:58:55.845 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 19:58:55.845 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 20:00:04.020 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 20:00:04.945 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-stand-and-spoon-organizer-for-kitchen-dining-tablehome-decor-steel-plastic-glass-holder-_button
+2026-08-29 20:00:08.173 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 20:00:12.447 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 20:00:34.698 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Bargain the product workflow
+2026-08-29 20:00:36.423 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Bargain_the_product_workflow_29-Aug-2026_20-00-36.png
+2026-08-29 20:00:36.439 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 20:00:36.445 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-29 20:00:36.455 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 20:00:36.456 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 20:01:06.625 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-29 20:01:06.629 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-29 20:01:07.254 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-29 20:01:07.254 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 634 ms
+2026-08-29 20:01:07.255 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-29 20:01:07.288 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-29 20:01:07.290 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-29 20:01:12.942 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-29 20:01:12.943 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5688 ms
+2026-08-29 20:01:13.204 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Bargain the product workflow ==========
+2026-08-29 20:01:13.205 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-29 20:02:21.707 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Decor
+2026-08-29 20:02:22.831 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-6-glass-holders-and-spoon-organizer-for-kitchen-dining-table--home-decor-steel-plastic-glass-holder-_button
+2026-08-29 20:02:23.714 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-29 20:02:27.409 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-29 20:02:38.108 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 20:02:40.766 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-29 20:02:57.948 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-08-29 20:03:13.804 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-29 20:03:16.254 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-29 20:03:22.964 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-08-29 20:03:27.269 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-08-29 20:03:34.686 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking pay button
+2026-08-29 20:03:34.690 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Bargain the product workflow
+2026-08-29 20:03:34.690 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Bargain the product workflow ==========
+2026-08-29 20:03:34.701 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.

@@ -16,8 +16,14 @@ Feature: Home page - Product listing
     Then I proceed with payment to complete the order
 
 
-  @regression @test
+  @regression
   Scenario: Bargain the product workflow
+    When I search the product in mobile "Decor"
+    Then I click on product to start bargain to proceed purchase
+    Then I proceed with payment to complete the order
+
+  @regression @test
+  Scenario: Pin code selection workflow
     When I search the product in mobile "Decor"
     Then I click on product to start bargain to proceed purchase
     Then I proceed with payment to complete the order
