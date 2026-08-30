@@ -11,11 +11,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import java.time.Duration;
+import java.util.Collections;
 /**
  * Parent class for every Page Object. It gives each page a small, plain
  * English "vocabulary" (tap, enterText, isDisplayed...) so step definitions
@@ -123,6 +126,55 @@ public class BasePage {
         driver.findElement(AppiumBy.androidUIAutomator(
                 "new UiScrollable(new UiSelector().scrollable(true))"
                         + ".scrollIntoView(new UiSelector().textContains(\"" + text + "\"));"));
+    }
+
+    protected void scrollToAccessibilityId(String accessibilityId) {
+        driver.findElement(AppiumBy.androidUIAutomator(
+                "new UiScrollable(new UiSelector().scrollable(true))"
+                        + ".scrollIntoView(new UiSelector().descriptionContains(\""
+                        + accessibilityId + "\"));"
+        ));
+    }
+
+    protected void swipeDown() {
+        AndroidDriver driver = DriverManager.getDriver();
+        Dimension size = driver.manage().window().getSize();
+        int x = size.getWidth() / 2;
+        int startY = (int) (size.getHeight() * 0.65);
+        int endY = (int) (size.getHeight() * 0.40);
+        PointerInput finger = new PointerInput(
+                PointerInput.Kind.TOUCH,
+                "finger"
+        );
+        Sequence swipe = new Sequence(finger, 1);
+        swipe.addAction(
+                finger.createPointerMove(
+                        Duration.ZERO,
+                        PointerInput.Origin.viewport(),
+                        x,
+                        startY
+                )
+        );
+        swipe.addAction(
+                finger.createPointerDown(
+                        PointerInput.MouseButton.LEFT.asArg()
+                )
+        );
+        swipe.addAction(
+                finger.createPointerMove(
+                        Duration.ofMillis(400),
+                        PointerInput.Origin.viewport(),
+                        x,
+                        endY
+                )
+        );
+        swipe.addAction(
+                finger.createPointerUp(
+                        PointerInput.MouseButton.LEFT.asArg()
+                )
+        );
+        driver.perform(Collections.singletonList(swipe));
+        LOGGER.info("Performed scroll down swipe in page");
     }
 
     protected void hideKeyboard() {

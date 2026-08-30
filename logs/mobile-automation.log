@@ -331,3 +331,298 @@
 2026-08-30 09:41:23.317 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
 2026-08-30 09:41:23.324 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
 2026-08-30 09:41:24.237 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Stopping Appium server...
+2026-08-30 09:52:30.516 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 09:52:30.519 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 09:52:32.748 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 09:52:32.748 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 2237 ms
+2026-08-30 09:52:32.748 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 09:52:32.754 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 09:52:32.755 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 09:52:37.773 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 09:52:37.773 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5025 ms
+2026-08-30 09:52:37.773 [main] INFO  com.ecommerce.web.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 09:52:37.773 [main] INFO  com.ecommerce.web.config.WebCapabilityManager - Building web capabilities: browser=chrome, headless=false
+2026-08-30 09:52:37.779 [main] INFO  com.ecommerce.web.config.WebDriverManager - Launching browser with capabilities: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--no-sandbox, --disable-dev-shm-usage, --disable-gpu, --window-size=1920,1080, --remote-allow-origins=*], extensions: []}} (remote=false)
+2026-08-30 09:52:39.129 [main] INFO  com.ecommerce.web.config.WebDriverManager - Browser launched and driver session started successfully.
+2026-08-30 09:52:39.130 [main] INFO  com.ecommerce.web.hooks.WebHooks - Browser ready in 1357 ms
+2026-08-30 09:52:39.227 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-30 09:52:39.227 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 09:52:40.193 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 09:52:40.200 [main] INFO  com.ecommerce.web.hooks.WebHooks - ========== Starting scenario: Purchase product workflow ==========
+2026-08-30 09:53:49.462 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: wireless neckband
+2026-08-30 09:53:52.245 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_gadgetsuday-rm_buds-wireless-3-bluetooth-neckband-headphones-compatible-with-devices-134mm-driver-32h-playback-ai-enc-ip55-sweat-resistant_button
+2026-08-30 09:53:55.680 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-30 09:53:58.097 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-30 09:54:01.011 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-30 09:54:07.448 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-08-30 09:54:11.696 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-08-30 09:54:18.459 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking pay button
+2026-08-30 09:54:18.475 [main] INFO  com.ecommerce.web.hooks.WebHooks - Scenario PASSED: Purchase product workflow
+2026-08-30 09:54:18.475 [main] INFO  com.ecommerce.web.hooks.WebHooks - ========== Finished scenario: Purchase product workflow ==========
+2026-08-30 09:54:18.475 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Purchase product workflow
+2026-08-30 09:54:18.475 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Purchase product workflow ==========
+2026-08-30 09:54:18.475 [main] INFO  com.ecommerce.web.config.WebDriverManager - Closing browser session.
+2026-08-30 09:54:18.729 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-30 09:54:19.845 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Stopping Appium server...
+2026-08-30 09:54:55.940 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 09:54:55.942 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 09:54:58.067 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 09:54:58.067 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 2131 ms
+2026-08-30 09:54:58.069 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 09:54:58.103 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 09:54:58.104 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 09:55:02.880 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 09:55:02.880 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 4812 ms
+2026-08-30 09:55:03.033 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 09:55:03.033 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 09:55:03.992 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 09:57:46.920 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 09:57:47.942 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_30-Aug-2026_09-57-47.png
+2026-08-30 09:57:47.952 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 09:57:47.957 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 09:57:47.962 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 09:57:47.962 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 09:57:48.659 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 10:09:24.900 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 10:09:24.918 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-30 10:13:26.568 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 10:13:26.571 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 10:13:28.900 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 10:13:28.901 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 2337 ms
+2026-08-30 10:13:28.902 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 10:13:28.946 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 10:13:28.948 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 10:13:34.345 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 10:13:34.345 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5444 ms
+2026-08-30 10:13:34.547 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 10:13:34.547 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 10:13:35.474 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 10:15:03.302 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 10:15:04.304 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_30-Aug-2026_10-15-04.png
+2026-08-30 10:15:04.316 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 10:15:04.320 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 10:15:04.330 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 10:15:04.330 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 10:15:05.114 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 10:16:31.779 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 10:16:32.595 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_30-Aug-2026_10-16-32.png
+2026-08-30 10:16:32.598 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 10:16:32.606 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-30 10:16:34.040 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Stopping Appium server...
+2026-08-30 10:25:59.266 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 10:25:59.268 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 10:25:59.673 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 10:25:59.673 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 425 ms
+2026-08-30 10:25:59.673 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 10:25:59.705 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 10:25:59.705 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 10:26:07.188 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 10:26:07.189 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7516 ms
+2026-08-30 10:26:07.665 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 10:26:07.665 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 10:26:08.043 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 10:27:53.203 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 10:27:54.045 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_30-Aug-2026_10-27-54.png
+2026-08-30 10:27:54.052 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 10:27:54.056 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 10:27:54.069 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 10:27:54.069 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 10:27:54.898 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 10:28:11.430 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 10:28:11.433 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 10:28:11.853 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 10:28:11.854 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 428 ms
+2026-08-30 10:28:11.855 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 10:28:11.885 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 10:28:11.886 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 10:28:18.343 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 10:28:18.344 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6490 ms
+2026-08-30 10:28:18.797 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 10:28:18.798 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 10:28:20.148 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 10:30:08.590 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 10:30:09.319 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_30-Aug-2026_10-30-09.png
+2026-08-30 10:30:09.342 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 10:30:09.347 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 10:30:09.361 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 10:30:09.362 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 10:30:10.243 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 10:30:44.649 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 10:30:44.652 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 10:30:45.111 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 10:30:45.112 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 466 ms
+2026-08-30 10:30:45.114 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 10:30:45.141 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 10:30:45.142 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 10:30:51.549 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 10:30:51.551 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6438 ms
+2026-08-30 10:30:52.149 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 10:30:52.150 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 10:30:53.107 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 10:32:50.477 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 10:32:52.039 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_30-Aug-2026_10-32-52.png
+2026-08-30 10:32:52.056 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 10:32:52.062 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 10:32:52.069 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 10:32:52.069 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 10:32:53.058 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 10:34:40.423 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 10:34:41.581 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_30-Aug-2026_10-34-41.png
+2026-08-30 10:34:41.586 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 10:34:41.600 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-30 13:51:49.857 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 13:51:49.861 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 13:51:50.407 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 13:51:50.407 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 556 ms
+2026-08-30 13:51:50.408 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 13:51:50.444 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 13:51:50.446 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 13:51:55.586 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 13:51:55.586 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5178 ms
+2026-08-30 13:51:55.794 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-30 13:51:55.794 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 13:51:56.163 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 13:51:58.774 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-30 13:52:19.707 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-30 13:52:21.522 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_30-Aug-2026_13-52-21.png
+2026-08-30 13:52:21.539 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-30 13:52:21.544 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 13:52:21.554 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-30 13:52:21.554 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 13:52:22.447 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 13:52:23.908 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-30 13:52:45.839 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-30 13:52:48.036 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_30-Aug-2026_13-52-48.png
+2026-08-30 13:52:48.042 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-30 13:52:48.058 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-30 13:52:48.059 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 13:52:49.185 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 13:52:50.328 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-30 13:53:12.444 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-30 13:53:14.199 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Login_with_valid_credentials_30-Aug-2026_13-53-14.png
+2026-08-30 13:53:14.216 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-30 13:53:14.218 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 13:53:14.225 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-30 13:53:14.226 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 13:53:15.168 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 13:53:16.134 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-30 13:53:38.611 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-30 13:53:40.110 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Login_with_valid_credentials_30-Aug-2026_13-53-40.png
+2026-08-30 13:53:40.119 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-30 13:53:40.123 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-30 13:54:05.191 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 13:54:05.195 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 13:54:05.752 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 13:54:05.752 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 566 ms
+2026-08-30 13:54:05.753 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 13:54:05.788 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 13:54:05.789 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 13:54:10.859 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 13:54:10.859 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5107 ms
+2026-08-30 13:54:11.043 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-30 13:54:11.044 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 13:54:11.975 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 13:54:14.451 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-30 13:55:15.517 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-30 13:55:15.518 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered phone number: 4645400078
+2026-08-30 13:55:18.743 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-30 13:55:20.030 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-08-30 13:55:36.238 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-30 13:55:36.239 [main] INFO  com.ecommerce.mobile.pages.LoginPage - randomNumber = Nayanthara
+2026-08-30 13:55:36.240 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered name: autoUsersNayanthara
+2026-08-30 13:55:45.294 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked female menu
+2026-08-30 13:55:47.609 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in Account setup page
+2026-08-30 13:56:09.730 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-30 13:56:11.517 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_30-Aug-2026_13-56-11.png
+2026-08-30 13:56:11.534 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-30 13:56:11.539 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 13:56:11.548 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-30 13:56:11.548 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 13:56:12.343 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 13:56:13.576 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-30 13:56:35.548 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-30 13:56:36.869 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_30-Aug-2026_13-56-36.png
+2026-08-30 13:56:36.874 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-30 13:56:36.888 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-30 13:56:36.888 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 13:56:37.738 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 13:56:38.682 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-30 13:58:00.876 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-08-30 13:58:01.397 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered the existing phone number: 8973029876
+2026-08-30 13:58:02.745 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-08-30 13:58:05.006 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-08-30 13:58:13.187 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-08-30 13:59:17.698 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-08-30 13:59:38.288 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-08-30 13:59:39.818 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Login_with_valid_credentials_30-Aug-2026_13-59-39.png
+2026-08-30 13:59:39.831 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-08-30 13:59:39.832 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 13:59:39.845 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-08-30 13:59:39.846 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 13:59:40.882 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 13:59:41.857 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-08-30 16:51:13.038 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 16:51:13.042 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 16:51:16.138 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 16:51:16.138 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 3105 ms
+2026-08-30 16:51:16.142 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 16:51:16.283 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 16:51:16.287 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 16:51:26.486 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 16:51:26.486 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 10346 ms
+2026-08-30 16:51:26.716 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 16:51:26.717 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 16:51:27.795 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 16:53:31.280 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 16:53:32.627 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_30-Aug-2026_16-53-32.png
+2026-08-30 16:53:32.642 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 16:53:32.646 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 16:53:32.654 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 16:53:32.655 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 16:53:33.491 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 17:03:46.242 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 17:03:46.246 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 17:03:46.874 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 17:03:46.875 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 639 ms
+2026-08-30 17:03:46.878 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 17:03:46.922 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 17:03:46.925 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 17:03:53.302 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 17:03:53.303 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6428 ms
+2026-08-30 17:03:53.507 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 17:03:53.508 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 17:03:53.870 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 17:04:59.896 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked profile avatar
+2026-08-30 17:05:06.136 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on Add address button
+2026-08-30 17:05:20.669 [main] INFO  com.ecommerce.mobile.pages.HomePage - User saved the address
+2026-08-30 17:05:43.220 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 17:05:44.546 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_30-Aug-2026_17-05-44.png
+2026-08-30 17:05:44.560 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 17:05:44.567 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 17:05:44.576 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 17:05:44.577 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 17:05:45.421 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 17:06:02.470 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-08-30 17:06:03.036 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_30-Aug-2026_17-06-03.png
+2026-08-30 17:06:03.040 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 17:06:03.050 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-30 17:10:34.570 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 17:10:34.574 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 17:10:35.162 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 17:10:35.163 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 598 ms
+2026-08-30 17:10:35.164 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 17:10:35.192 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 17:10:35.194 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 17:10:41.380 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 17:10:41.381 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6217 ms
+2026-08-30 17:10:41.591 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-08-30 17:10:41.592 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-30 17:10:41.948 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-30 17:11:18.759 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked profile avatar
+2026-08-30 17:11:24.810 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on Add address button
+2026-08-30 17:11:39.123 [main] INFO  com.ecommerce.mobile.pages.HomePage - User saved the address
+2026-08-30 17:11:47.468 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on edit button
+2026-08-30 17:11:53.262 [main] INFO  com.ecommerce.mobile.pages.HomePage - user deleted the address
+2026-08-30 17:11:53.266 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Pin code selection workflow
+2026-08-30 17:11:53.267 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-08-30 17:11:53.281 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
