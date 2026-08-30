@@ -104,3 +104,24 @@
 2026-08-30 08:43:19.479 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_30-Aug-2026_08-43-19.png
 2026-08-30 08:43:19.485 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
 2026-08-30 08:43:19.490 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-30 08:51:08.230 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-30 08:51:08.232 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-30 08:51:08.615 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-30 08:51:08.615 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 390 ms
+2026-08-30 08:51:08.616 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-30 08:51:08.638 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-30 08:51:08.639 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-30 08:51:12.879 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-30 08:51:12.880 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 4264 ms
+2026-08-30 08:51:13.037 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-30 08:51:13.037 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-30 08:51:13.416 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-30 08:51:15.042 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_30-Aug-2026_08-51-15.png
+2026-08-30 08:51:15.068 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-30 08:51:15.073 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-08-30 08:51:15.085 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Signup into the Application for new user ==========
+2026-08-30 08:51:15.085 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app state by restarting com.gajab.buyerstage
+2026-08-30 08:51:15.376 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Signup into the Application for new user
+2026-08-30 08:51:16.655 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Signup_into_the_Application_for_new_user_30-Aug-2026_08-51-16.png
+2026-08-30 08:51:16.661 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
+2026-08-30 08:51:16.667 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
