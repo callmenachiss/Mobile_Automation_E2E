@@ -32,16 +32,7 @@ public class BasePage {
         this.driver = DriverManager.getDriver();
         int waitSeconds = ConfigReader.getInt("explicit.wait.seconds");
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(waitSeconds));
-        // Field decorator gets a small, non-zero timeout on purpose: waitUntilVisible()/
-        // wait below is the one real wait budget for every element. Giving the decorator
-        // its own full waitSeconds here made every stale-element re-locate during a
-        // screen transition restart an independent second wait, stacking on top of the
-        // explicit wait and compounding into multi-minute startup waits on real devices.
-        // NOTE: use a small positive duration here, never Duration.ZERO - a zero timeout
-        // hit an edge case in the decorator's own locate-retry loop that never returned,
-        // hanging indefinitely with no exception (confirmed against the pin-code scenario,
-        // which froze forever on the very first tap() after this was set to 0ms).
-        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofMillis(500)), this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(waitSeconds)), this);
     }
 
     protected void waitUntilVisible(WebElement element) {
