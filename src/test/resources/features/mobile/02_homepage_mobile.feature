@@ -5,8 +5,8 @@ Feature: Home page - Product listing
   So that I can find the product and start bargains which I want to buy
 
   Background:
-    #When I log in with existing mobile number
-    #Then I should enter OTP received in my existing mobile device
+    When I log in with existing mobile number
+    Then I should enter OTP received in my existing mobile device
 
 
   @regression
@@ -22,7 +22,7 @@ Feature: Home page - Product listing
     Then I click on product to start bargain to proceed purchase
     Then I proceed with payment to complete the order
 
-  @regression @testing
+  @regression @test
   Scenario: Pin code selection workflow
     When I search the invalid pin code in mobile
     Then I verify the results for invalid pin code

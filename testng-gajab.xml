@@ -3,7 +3,7 @@
 <suite name="Ecommerce Mobile Smoke Suite" verbose="1">
 
     <test name="Smoke Tests">
-        <parameter name="cucumber.filter.tags" value="@testing"/>
+        <parameter name="cucumber.filter.tags" value="@testss"/>
         <classes>
             <class name="com.ecommerce.mobile.runner.TestRunner"/>
         </classes>
