@@ -32,8 +32,14 @@ public class CheckoutPage extends BasePage {
     @AndroidFindBy(accessibility= "child_category_item_87_button")
     private WebElement CategoryUnderGiftingFestiveEssentialsMenu;
 
+    @AndroidFindBy(accessibility= "child_category_item_19_button")
+    private WebElement CategoryUnderToysandGamesMenu;
+
     @AndroidFindBy(accessibility= "child_category_filter_button")
     private WebElement filtersMenu;
+
+    @AndroidFindBy(accessibility= "category_filter_tab_pricerange_button")
+    private WebElement pricingMenu;
 
     @AndroidFindBy(accessibility= "category_filter_item_0_button")
     private WebElement filtersSubMenu;
@@ -105,10 +111,22 @@ public class CheckoutPage extends BasePage {
         LOGGER.info("User navigated to the Gifting and Festive Essentials Menu");
     }
 
+    public void clickToysandGamesMenu() throws InterruptedException {
+        sleep(2000);
+        tap(ToysandGamesMenu);
+        LOGGER.info("User navigated to the Toys and Games Menu");
+    }
+
     public void clickSubGiftingFestiveEssentialsMenu() throws InterruptedException {
         sleep(2000);
         tap(CategoryUnderGiftingFestiveEssentialsMenu);
         LOGGER.info("User navigated to sub section of Gifting and Festive Essentials Menu");
+    }
+
+    public void clickSubToysandGamesMenu() throws InterruptedException {
+        sleep(2000);
+        tap(CategoryUnderToysandGamesMenu);
+        LOGGER.info("User navigated to sub section of Toys and Games Menu");
     }
 
     public void clickHomeandKitchenMenu() throws InterruptedException {
@@ -125,8 +143,13 @@ public class CheckoutPage extends BasePage {
 
     public void setFiltersAndverifyproductsBasedOnCategory() throws InterruptedException {
         sleep(2000);
-        validateFiltersMenu();
         validateSortingMenu();
+        driver.navigate().back();
+    }
+
+    public void setSeraBrandFilters() throws InterruptedException {
+        sleep(2000);
+        validateFiltersMenu();
         driver.navigate().back();
     }
 

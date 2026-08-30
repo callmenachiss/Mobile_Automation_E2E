@@ -68,9 +68,20 @@ public class CheckoutSteps {
         checkoutPage.clickSubGiftingFestiveEssentialsMenu();
     }
 
+    @Then("I navigate to Toys and Games Menu")
+    public void I_navigate_to_Toys_and_Games_Menu() throws InterruptedException {
+        checkoutPage.clickToysandGamesMenu();
+        checkoutPage.clickSubToysandGamesMenu();
+    }
+
     @Then("I verify products based on this category")
     public void I_verify_products_based_on_this_category() throws InterruptedException {
         checkoutPage.setFiltersAndverifyproductsBasedOnCategory();
+    }
+
+    @Then("I verify products based on brand Sera's basket filter")
+    public void I_verify_products_based_on_brand_Sera_basket_filter() throws InterruptedException {
+        checkoutPage.setSeraBrandFilters();
     }
 
     @Then("I setup filters in this product list page")
