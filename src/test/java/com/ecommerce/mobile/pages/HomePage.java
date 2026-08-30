@@ -4,7 +4,6 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
-
 import java.util.List;
 import java.util.UUID;
 
@@ -115,7 +114,7 @@ public class HomePage extends BasePage {
     private WebElement pinCodebox;
 
     @AndroidFindBy(accessibility = "No address found. Please enter a valid location.")
-    private WebElement NoAddressFoundlbl;
+    public WebElement NoAddressFoundlbl;
 
     @AndroidFindBy(accessibility = "delivery_address_suggestion_0_item")
     private WebElement AddressFoundlbl;
@@ -228,6 +227,15 @@ public class HomePage extends BasePage {
         return element.getText();
     }
 
+    public boolean isdisplayed(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            LOGGER.debug("Element not displayed: {}", e.getMessage());
+            return false;
+        }
+    }
+
     public void clickProfileAvatar() {
         tap(profileAvatar);
         LOGGER.info("User clicked profile avatar");
@@ -270,19 +278,24 @@ public class HomePage extends BasePage {
         LOGGER.info("Searching for product: {}", productName);
     }
 
-    public void searchvalidPincode(String pinCode) throws InterruptedException {
+    public void searchinvalidPincode(String pinCode) throws InterruptedException {
         sleep(2000);
         tap(pinCodeArea);
         sleep(1000);
-        clearElement(pinCodeArea);
+        clearElement(pinCodebox);
         enterText(pinCodebox,pinCode);
     }
 
-    public void verifyStatusforInvalidpincode() throws InterruptedException {
+    public void searchvalidPincode(String pinCode) throws InterruptedException {
         sleep(2000);
-        isDisplayed(NoAddressFoundlbl);
+        clearElement(pinCodebox);
+        enterText(pinCodebox,pinCode);
         sleep(2000);
+        driver.navigate().back();
+        sleep(1000);
+        driver.navigate().back();
     }
+
 
     public void verifyStatusforvalidpincode() throws InterruptedException {
         sleep(2000);

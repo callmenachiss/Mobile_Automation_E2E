@@ -4,7 +4,7 @@ Feature: Login
   I want to log into the Gajab app
   So that I can start shopping with my own account
 
-  @smoke @regression @gajab @god
+  @smoke @regression @gajab
   Scenario: Signup into the Application for new user
     #Given I verify existing login
     When I log in with mobile number

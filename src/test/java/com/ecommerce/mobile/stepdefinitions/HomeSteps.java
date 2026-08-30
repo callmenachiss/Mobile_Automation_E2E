@@ -6,6 +6,7 @@ import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import static java.lang.Thread.sleep;
@@ -43,7 +44,7 @@ public class HomeSteps {
 
     @When("I search the invalid pin code in mobile")
     public void i_search_invalid_pin_code_in_mobile() throws InterruptedException {
-        homePage.searchvalidPincode("525535");
+        homePage.searchinvalidPincode("525535");
     }
 
     @When("I search the valid pin code in mobile")
@@ -53,7 +54,20 @@ public class HomeSteps {
 
     @Then("I verify the results for invalid pin code")
     public void I_verify_the_results_for_invalid_pin_code() throws InterruptedException {
-        homePage.verifyStatusforInvalidpincode();
+        boolean isErrorDisplayed = isdisplayed(homePage.NoAddressFoundlbl);
+        Assert.assertTrue(
+                isErrorDisplayed,
+                "Expected error message was not displayed: " +
+                        "No address found. Please enter a valid location."
+        );
+    }
+
+    public boolean isdisplayed(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     @Then("I verify the results for valid pin code")
