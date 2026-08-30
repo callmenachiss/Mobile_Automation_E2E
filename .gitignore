@@ -9,7 +9,11 @@ target/
 # target/ used to. Keep the folders themselves (via .gitkeep) so a fresh
 # clone has somewhere for the app to write into before the first run -
 # each platform's own ScreenshotUtil/log4j2 config creates the rest.
-logs/*.log
+#
+# mobile-automation.log is temporarily tracked (not ignored) so real-device
+# startup-timing logs reach this branch for the mobile startup-delay debug -
+# re-add it to the ignore list once that's resolved.
+logs/web-automation.log
 logs/*.log.gz
 screenshots/mobile/*
 screenshots/web/*

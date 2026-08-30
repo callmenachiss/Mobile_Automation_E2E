@@ -6,6 +6,7 @@ import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import static java.lang.Thread.sleep;
@@ -41,6 +42,49 @@ public class HomeSteps {
         homePage.searchForProduct(productName);
     }
 
+    @When("I search the invalid pin code in mobile")
+    public void i_search_invalid_pin_code_in_mobile() throws InterruptedException {
+        homePage.searchinvalidPincode("525535");
+    }
+
+    @When("I search the valid pin code in mobile")
+    public void i_search_valid_pin_code_in_mobile() throws InterruptedException {
+        homePage.searchvalidPincode("625535");
+    }
+
+    @Then("I verify the results for invalid pin code")
+    public void I_verify_the_results_for_invalid_pin_code() throws InterruptedException {
+        boolean isErrorDisplayed = isdisplayed(homePage.NoAddressFoundlbl);
+        Assert.assertTrue(
+                isErrorDisplayed,
+                "Expected error message was not displayed: " +
+                        "No address found. Please enter a valid location."
+        );
+    }
+
+    public boolean isdisplayed(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    @Then("I verify the results for valid pin code")
+    public void I_verify_the_results_for_valid_pin_code() throws InterruptedException {
+        homePage.verifyStatusforvalidpincode();
+    }
+
+    @Then("I update Address in profile page")
+    public void I_update_Address_in_profile_page() throws InterruptedException {
+        homePage.AddAddressintoProfile();
+    }
+
+    @Then("I delete Address in profile page")
+    public void I_delete_Address_in_profile_page() throws InterruptedException {
+        homePage.deleteAddressfromProfile();
+    }
+
     @Then("I click on product to proceed purchase")
     public void I_click_on_product_to_proceed_purchase() throws InterruptedException {
         //homePage.clickFirstProduct();
@@ -70,6 +114,7 @@ public class HomeSteps {
         homePage.clickOfferYourPrice();
         homePage.clickBargainMorebutton();
         homePage.bargainFirstattempt("95");
+        homePage.clickOfferYourPrice();
         homePage.clickAcceptOffer();
         homePage.clickBuyNow();
     }

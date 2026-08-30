@@ -41,13 +41,48 @@ public class DriverManager {
      * Restarts the app process (not the driver session) so each scenario starts
      * from a clean screen without paying the cost of a brand-new Appium session.
      */
+
     public static void resetApp() {
         AndroidDriver driver = getDriver();
+
         String appPackage = ConfigReader.get("appPackage");
-        LOGGER.info("Resetting app state by restarting {}", appPackage);
-        driver.terminateApp(appPackage);
-        driver.activateApp(appPackage);
+        String appActivity = ConfigReader.get("appActivity");
+        LOGGER.info(
+                "Resetting app: package={}, activity={}",
+                appPackage,
+                appActivity
+        );
+        try {
+            // Stop the current application
+            driver.terminateApp(appPackage);
+
+            // Explicitly launch the known activity
+            driver.executeScript(
+                    "mobile: startActivity",
+                    java.util.Map.of(
+                            "intent",
+                            appPackage + "/" + appActivity
+                    )
+            );
+            LOGGER.info(
+                    "Application restarted successfully: {}/{}",
+                    appPackage,
+                    appActivity
+            );
+        } catch (Exception e) {
+            LOGGER.error(
+                    "Failed to restart application: {}/{}",
+                    appPackage,
+                    appActivity,
+                    e
+            );
+            throw e;
+        }
     }
+
+
+
+
 
     public static void quitDriver() {
         AndroidDriver driver = DRIVER.get();
