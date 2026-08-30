@@ -47,6 +47,7 @@ public class HomeSteps {
         homePage.searchinvalidPincode("525535");
     }
 
+
     @When("I search the valid pin code in mobile")
     public void i_search_valid_pin_code_in_mobile() throws InterruptedException {
         homePage.searchvalidPincode("625535");
@@ -124,7 +125,6 @@ public class HomeSteps {
     @Then("I proceed with payment to complete the order")
     public void iProceedWithPaymentToCompleteTheOrder() throws InterruptedException {
         homePage.clickPay();
-
     }
 
     @Then("{string} should be visible in the search results")

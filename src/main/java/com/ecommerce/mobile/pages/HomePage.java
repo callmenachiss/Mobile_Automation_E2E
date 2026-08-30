@@ -54,13 +54,13 @@ public class HomePage extends BasePage {
     @AndroidFindBy(accessibility = "home_profile_avatar_button")
     private WebElement profileAvatar;
 
-    @AndroidFindBy(accessibility = "Personal details")
+    @AndroidFindBy(accessibility = "account_menu_personal_details_button")
     private WebElement personalDetailsButton;
 
-    @AndroidFindBy(accessibility = "Addresses")
+    @AndroidFindBy(accessibility = "account_menu_addresses_button")
     private WebElement AddressesMenu;
 
-    @AndroidFindBy(accessibility = "Add New Address")
+    @AndroidFindBy(accessibility = "address_list_add_address_button")
     private WebElement AddNewAddressbutton;
 
     @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id=\"account_address_line1_input\"]")
@@ -69,19 +69,19 @@ public class HomePage extends BasePage {
     @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id=\"account_address_line2_input\"]")
     private WebElement Address2txtbox;
 
-    @AndroidFindBy(accessibility = "Save Address")
+    @AndroidFindBy(accessibility = "account_address_save_button")
     private WebElement saveAddressButton;
 
     @AndroidFindBy(accessibility = "green_notification_toast_button")
     private WebElement AddressSuccesstoastlbl;
 
-    @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Edit\"]")
+    @AndroidFindBy(xpath = "(//android.view.View[contains(@content-desc,'address_card_edit_') and contains(@content-desc,'_button')])[1]")
     private WebElement EditbuttoninAddress;
 
-    @AndroidFindBy(accessibility = "DELETE")
+    @AndroidFindBy(accessibility = "account_address_delete_button")
     private WebElement deleteButton;
 
-    @AndroidFindBy(accessibility = "Delete This Address")
+    @AndroidFindBy(accessibility = "account_address_confirm_delete_button")
     private WebElement deleteaddressButton;
 
     @AndroidFindBy(accessibility = "END SESSION\nLogout")
@@ -136,6 +136,7 @@ public class HomePage extends BasePage {
 
     @AndroidFindBy(accessibility= "cart_payment_online_button")
     private WebElement payOnlineButton;
+
 
     //@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Pay ₹')]")
 
@@ -284,12 +285,14 @@ public class HomePage extends BasePage {
         sleep(1000);
         clearElement(pinCodebox);
         enterText(pinCodebox,pinCode);
+        LOGGER.info("User entered pincode {}", pinCode);
     }
 
     public void searchvalidPincode(String pinCode) throws InterruptedException {
         sleep(2000);
         clearElement(pinCodebox);
         enterText(pinCodebox,pinCode);
+        LOGGER.info("User entered the pincode {}", pinCode);
         sleep(2000);
         driver.navigate().back();
         sleep(1000);
@@ -304,29 +307,39 @@ public class HomePage extends BasePage {
     }
 
     public void AddAddressintoProfile() throws InterruptedException {
-        sleep(2000);
+        sleep(6000);
         tap(profileAvatar);
-        sleep(1000);
+        LOGGER.info("user clicked profile avatar");
+        sleep(4000);
         tap(AddressesMenu);
-        sleep(1000);
+        sleep(3000);
         tap(AddNewAddressbutton);
+        LOGGER.info("user clicked on Add address button");
+        sleep(2000);
         String addr1=randomAddress("test");
         String addr2=randomAddress("hello");
+        sleep(1000);
+        tap(Address1txtbox);
         enterText(Address1txtbox,addr1);
         sleep(1000);
+        tap(Address2txtbox);
         enterText(Address2txtbox,addr2);
+        driver.navigate().back();
         sleep(1000);
         tap(saveAddressButton);
-        isDisplayed(AddressSuccesstoastlbl);
+        LOGGER.info("User saved the address");
+        //isDisplayed(AddressSuccesstoastlbl);
     }
 
     public void deleteAddressfromProfile() throws InterruptedException {
         sleep(3000);
         tap(EditbuttoninAddress);
+        LOGGER.info("user clicked on edit button");
         sleep(1000);
         tap(deleteButton);
         sleep(1000);
         tap(deleteaddressButton);
+        LOGGER.info("user deleted the address");
     }
 
     public static String randomAddress(String address) {

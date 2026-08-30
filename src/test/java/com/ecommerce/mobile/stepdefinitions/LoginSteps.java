@@ -59,12 +59,12 @@ public class LoginSteps {
         loginPage.clickNext();
     }
 
-    @When("I log in with existing mobile number")
-    public void i_log_in_with_existing_mobile_number() throws InterruptedException {
+    @When("I log in with existing mobile number {string}")
+    public void i_log_in_with_existing_mobile_number(String phoneNumber) throws InterruptedException {
         loginPage.clickGetStartedButton();
         //Assert.assertTrue(loginPage.isMemberLoginLabelDisplayed(), "Gajab Member login label is not displayed");
         //Assert.assertTrue(loginPage.isAgeConfirmationLabelDisplayed(), "Age confirmation message is not displayed");
-        loginPage.enterValidPhoneNUmber(VALID_PHONENUMBER);
+        loginPage.enterValidPhoneNUmber(phoneNumber);
         loginPage.clickCheckbox();
         loginPage.clickNext();
     }
