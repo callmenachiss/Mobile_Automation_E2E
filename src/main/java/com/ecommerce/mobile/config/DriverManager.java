@@ -6,8 +6,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Owns the AndroidDriver (our remote control for the app on the device).
@@ -46,18 +44,9 @@ public class DriverManager {
     public static void resetApp() {
         AndroidDriver driver = getDriver();
         String appPackage = ConfigReader.get("appPackage");
-        String appActivity = ConfigReader.get("appActivity");
         LOGGER.info("Resetting app state by restarting {}", appPackage);
         driver.terminateApp(appPackage);
-        // activateApp(appPackage) makes Appium re-resolve the launchable activity
-        // via the device's package manager on every call, which intermittently
-        // fails with "Unable to resolve the launchable activity... No activity
-        // found" and takes down every scenario since this runs in @Before. Naming
-        // the known activity directly skips that resolution step entirely.
-        Map<String, Object> startActivityArgs = new HashMap<>();
-        startActivityArgs.put("appPackage", appPackage);
-        startActivityArgs.put("appActivity", appActivity);
-        driver.executeScript("mobile: startActivity", startActivityArgs);
+        driver.activateApp(appPackage);
     }
 
     public static void quitDriver() {
