@@ -1686,3 +1686,51 @@ Session ID: 20208988-b289-4cea-98da-791c9923c48e
 2026-08-31 21:46:37.228 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify session based deal of the day product in display ==========
 2026-08-31 21:46:37.228 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
 2026-08-31 21:46:38.215 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 21:47:05.260 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify session based deal of the day product in display
+2026-08-31 21:47:07.256 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_session_based_deal_of_the_day_product_in_display_31-Aug-2026_21-47-07.png
+2026-08-31 21:47:07.292 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify session based deal of the day product in display ==========
+2026-08-31 21:47:07.309 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 21:47:29.878 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 21:47:29.882 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 21:47:30.440 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 21:47:30.440 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 568 ms
+2026-08-31 21:47:30.442 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 21:47:30.477 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 21:47:30.478 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 21:47:36.763 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 21:47:36.763 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6322 ms
+2026-08-31 21:47:36.958 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify session based deal of the day product in display ==========
+2026-08-31 21:47:36.958 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 21:47:37.930 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 21:48:45.452 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 21:48:45.454 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the category menu
+2026-08-31 21:48:47.873 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the bazaar menu
+2026-08-31 21:50:52.700 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 21:50:52.705 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 21:50:53.263 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 21:50:53.264 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 573 ms
+2026-08-31 21:50:53.272 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 21:50:53.302 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 21:50:53.303 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 21:50:59.485 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 21:50:59.486 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6222 ms
+2026-08-31 21:50:59.810 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify session based deal of the day product in display ==========
+2026-08-31 21:50:59.811 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 21:51:00.705 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 21:52:08.150 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 21:52:08.151 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the category menu
+2026-08-31 21:52:20.646 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the bazaar menu
+2026-08-31 21:53:29.335 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 21:53:31.491 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the Gajab deals for the active session
+2026-08-31 21:54:37.431 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 21:54:39.522 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see Just bargain deals for the active session
+2026-08-31 21:55:44.999 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 21:55:45.000 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Bargain menu
+2026-08-31 21:55:52.786 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the bazaar menu
+2026-08-31 21:56:58.357 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 21:57:01.317 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the Gajab deals for the active session
+2026-08-31 21:58:07.322 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 21:58:09.425 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see Just bargain deals for the active session
+2026-08-31 21:58:09.429 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify session based deal of the day product in display
+2026-08-31 21:58:09.430 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify session based deal of the day product in display ==========
+2026-08-31 21:58:09.446 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.

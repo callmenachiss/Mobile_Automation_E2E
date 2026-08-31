@@ -387,19 +387,19 @@ public class CheckoutPage extends BasePage {
 
     public void verifyGajabdealforSession() throws InterruptedException{
         sleep(1000);
-        isDisplayed(gajabdealCard);
-        sleep(1000);
         tap(gajabdealCard);
         sleep(1000);
+        swipeDown();
+        sleep(2000);
         driver.navigate().back();
         LOGGER.info("User is able to see the Gajab deals for the active session");
     }
 
     public void verifyJustBargaindealforSession() throws InterruptedException{
         sleep(2000);
-        isDisplayed(JustBargainCard);
-        sleep(1000);
         tap(JustBargainCard);
+        sleep(2000);
+        swipeDown();
         sleep(2000);
         driver.navigate().back();
         LOGGER.info("User is able to see Just bargain deals for the active session");
