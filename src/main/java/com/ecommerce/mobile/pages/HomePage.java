@@ -84,7 +84,7 @@ public class HomePage extends BasePage {
     @AndroidFindBy(accessibility = "account_address_confirm_delete_button")
     private WebElement deleteaddressButton;
 
-    @AndroidFindBy(accessibility = "END SESSION\nLogout")
+    @AndroidFindBy(accessibility = "personal_details_logout_button")
     private WebElement logoutButton;
 
     @AndroidFindBy(className = "android.widget.EditText")
