@@ -41,6 +41,9 @@ public class CheckoutPage extends BasePage {
     @AndroidFindBy(accessibility= "category_filter_tab_pricerange_button")
     private WebElement pricingMenu;
 
+    @AndroidFindBy(accessibility= "the end value is 1356.0")
+    private WebElement endPricingMenu;
+
     @AndroidFindBy(accessibility= "category_filter_item_0_button")
     private WebElement filtersSubMenu;
 
@@ -151,6 +154,18 @@ public class CheckoutPage extends BasePage {
         sleep(2000);
         validateFiltersMenu();
         driver.navigate().back();
+    }
+
+    public void setPriceRangeFilters() throws InterruptedException {
+        sleep(2000);
+        tap(pricingMenu);
+        sleep(1000);
+        tap(endPricingMenu);
+        sleep(1000);
+        tap(filtersApplyBtn);
+        LOGGER.info("Price range Filters applied in product list page");
+        swipeDown();
+        sleep(2000);
     }
 
     public void validateFiltersMenu() throws InterruptedException {

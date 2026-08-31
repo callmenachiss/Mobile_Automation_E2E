@@ -59,6 +59,15 @@ Feature: Checkout page - Product details page
   @regression
   Scenario: verify product filtering based on price range flow
     When I navigate to Home and Kitchen Menu
+    Then I verify products based on price range filter
+    Then I navigate to Gifting and Festive Essentials Menu
+    Then I verify products based on price range filter
+    Then I navigate to Toys and Games Menu
+    Then I verify products based on price range filter
+
+  @regression
+  Scenario: verify specific product checkout flow
+
 
 
 

@@ -79,6 +79,12 @@ public class CheckoutSteps {
         checkoutPage.setFiltersAndverifyproductsBasedOnCategory();
     }
 
+    @Then("I verify products based on price range filter")
+    public void I_verify_products_based_on_price_range_filter() throws InterruptedException {
+        checkoutPage.setPriceRangeFilters();
+    }
+
+
     @Then("I verify products based on brand Sera's basket filter")
     public void I_verify_products_based_on_brand_Sera_basket_filter() throws InterruptedException {
         checkoutPage.setSeraBrandFilters();
