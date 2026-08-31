@@ -120,11 +120,39 @@ public class HomeSteps {
         homePage.clickBuyNow();
     }
 
+    @Then("I click on product to start multiple bargains to proceed purchase")
+    public void I_click_on_product_to_start_multiple_bargains_to_proceed_purchase() throws InterruptedException {
+        String name = homePage.getFirstProductText();
+        homePage.clickFirstProduct();
+        homePage.clickStartBargaining();
+        homePage.bargainFirstattempt("20");
+        homePage.clickOfferYourPrice();
+        homePage.clickBargainMorebutton();
+        homePage.bargainFirstattempt("95");
+        homePage.clickOfferYourPrice();
+        homePage.clickBargainMorebutton();
+        homePage.clickOfferYourPrice();
+        homePage.clickAcceptOffer();
+        homePage.clickBuyNow();
+    }
+
+    @Then("I start bargain to proceed purchase")
+    public void I_start_bargain_to_proceed_purchase() throws InterruptedException {
+        homePage.clickStartBargaining();
+        homePage.clickOfferYourPrice();
+        homePage.clickAcceptOffer();
+        homePage.clickBuyNow();
+    }
 
 
     @Then("I proceed with payment to complete the order")
     public void iProceedWithPaymentToCompleteTheOrder() throws InterruptedException {
         homePage.clickPay();
+    }
+
+    @Then("I proceed with COD payment to complete the order")
+    public void iProceedWithCodPaymentToCompleteTheOrder() throws InterruptedException {
+        homePage.clickCOD();
     }
 
     @Then("{string} should be visible in the search results")

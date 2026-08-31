@@ -1,14 +1,11 @@
-@home
-Feature: Home page - Product listing
+@checkout
+Feature: Checkout page - Product details page
   As a Customer
-  I want to browse, search and sort products on the Home page
-  So that I can find the product and start bargains which I want to buy
+  I want to search and checkout products on the Home page
+  So that I can start bargains and purchase the products
 
   Background:
     #Given I verify existing login
-    #When I log in with existing mobile number
-    #Then I should enter OTP received in my existing mobile device
-
 
   @regression
   Scenario: verify session based deal of the day product in display
@@ -49,6 +46,32 @@ Feature: Home page - Product listing
     Then I verify products based on this category
     Then I navigate to Gifting and Festive Essentials Menu
     Then I verify products based on this category
+
+  @regression
+  Scenario: verify filtering products using brand Sera's basket flow
+    When I navigate to Home and Kitchen Menu
+    Then I verify products based on brand Sera's basket filter
+    Then I navigate to Gifting and Festive Essentials Menu
+    Then I verify products based on brand Sera's basket filter
+    Then I navigate to Toys and Games Menu
+    Then I verify products using brand Sera's basket filter
+
+  @regression
+  Scenario: verify product filtering based on price range flow
+    When I navigate to Home and Kitchen Menu
+    Then I verify products based on price range filter
+    Then I navigate to Gifting and Festive Essentials Menu
+    Then I verify products based on price range filter
+    Then I navigate to Toys and Games Menu
+    Then I verify products based on price range filter
+
+  @regression
+  Scenario: verify specific product checkout flow
+    When I select and click specific product in homepage
+    Then I start bargain to proceed purchase
+    Then I proceed with payment to complete the order
+    Then I do IDBI internet banking for payment to place the order
+
 
 
 

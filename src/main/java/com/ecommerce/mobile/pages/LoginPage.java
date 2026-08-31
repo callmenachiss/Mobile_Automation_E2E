@@ -107,7 +107,7 @@ public class LoginPage extends BasePage {
     }
 
     public void clickNextbtn() throws InterruptedException {
-        sleep(1000);
+        sleep(2000);
         tap(NextButton);
         LOGGER.info("User clicked on Next button in Account setup page");
     }
@@ -122,7 +122,7 @@ public class LoginPage extends BasePage {
     }
 
     public void selectFemale() throws InterruptedException {
-        sleep(1000);
+        sleep(2000);
         tap(femaleOption);
         LOGGER.info("User clicked female menu");
     }
@@ -133,10 +133,10 @@ public class LoginPage extends BasePage {
         LOGGER.info("randomNumber = {}", randomName);
         LOGGER.info("User entered name: {}", name);
         driver.navigate().back();
-        sleep(2000);
+        sleep(5000);
         //hideKeyboard();
         enterText(fullNameField, name);
-        sleep(2000);
+        sleep(3000);
         return name;
     }
 
@@ -171,12 +171,12 @@ public class LoginPage extends BasePage {
     }
 
     public void enterOtp(String TEST_OTP) throws InterruptedException {
-        sleep(2000);
+        sleep(4000);
         driver.navigate().back();
         //hideKeyboard();
-        sleep(2000);
+        sleep(3000);
         enterText(otpField, TEST_OTP);
-        sleep(2000);
+        sleep(7000);
         LOGGER.info("User entered OTP: {}", TEST_OTP);
     }
 

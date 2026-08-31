@@ -84,7 +84,7 @@ public class HomePage extends BasePage {
     @AndroidFindBy(accessibility = "account_address_confirm_delete_button")
     private WebElement deleteaddressButton;
 
-    @AndroidFindBy(accessibility = "END SESSION\nLogout")
+    @AndroidFindBy(accessibility = "personal_details_logout_button")
     private WebElement logoutButton;
 
     @AndroidFindBy(className = "android.widget.EditText")
@@ -137,6 +137,9 @@ public class HomePage extends BasePage {
     @AndroidFindBy(accessibility= "cart_payment_online_button")
     private WebElement payOnlineButton;
 
+    @AndroidFindBy(accessibility= "cart_payment_cod_button")
+    private WebElement CODButton;
+
 
     //@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Pay ₹')]")
 
@@ -165,8 +168,17 @@ public class HomePage extends BasePage {
         tap(payOnlineButton);
         sleep(1000);
         tap(payButton);
-        LOGGER.info("User clicking pay button");
+        LOGGER.info("User clicked on pay online button");
     }
+
+    public void clickCOD() throws InterruptedException {
+        sleep(1000);
+        tap(CODButton);
+        sleep(1000);
+        tap(payButton);
+        LOGGER.info("User clicked COD button");
+    }
+
 
     public void clickStartBargaining() throws InterruptedException {
         sleep(2000);
@@ -215,7 +227,6 @@ public class HomePage extends BasePage {
         //waitUntilVisible(firstProducttextlbl);
         //String text = firstProducttextlbl.getAttribute("content-desc");
         //LOGGER.info("First product text: {}", text);
-
         WebElement firstProduct = productCards.get(0);
         waitUntilVisible(firstProduct);
         String text = firstProduct.getAttribute("content-desc");
