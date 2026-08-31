@@ -7,14 +7,14 @@ Feature: Login
   Background:
     Given the login screen will be displayed
 
-  @smoke @regression @web
+  @smoke @regression
   Scenario: Signup into the web application
     When I entered new Mobile number
     Then I should enter OTP
     Then I should complete account setup popup
     Then I should logout into the application
 
-  @smoke @regression @web
+  @smoke @regression
   Scenario: Login into the web application
     When I entered Mobile number
     Then I should enter OTP

@@ -110,6 +110,7 @@ public class LoginPage extends BasePage {
         sleep(2000);
         tap(NextButton);
         LOGGER.info("User clicked on Next button in Account setup page");
+        sleep(2000);
     }
 
     private String generateRandomNumber(int length) {

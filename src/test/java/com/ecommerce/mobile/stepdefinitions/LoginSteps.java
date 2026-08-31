@@ -77,6 +77,7 @@ public class LoginSteps {
         loginPage.enterRandomName();
         loginPage.selectFemale();
         loginPage.clickNextbtn();
+        homePage.clickProfileAvatar();
         //loginPage.clickEnglishOption();
         //loginPage.handleOptionalLocationPermission();
     }
