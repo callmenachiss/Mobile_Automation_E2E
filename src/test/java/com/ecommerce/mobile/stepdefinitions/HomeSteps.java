@@ -130,9 +130,9 @@ public class HomeSteps {
         homePage.clickBargainMorebutton();
         homePage.bargainFirstattempt("95");
         homePage.clickOfferYourPrice();
-        homePage.clickBargainMorebutton();
+        homePage.clickBargainlastChancebutton();
         homePage.clickOfferYourPrice();
-        homePage.clickAcceptOffer();
+        //homePage.clickAcceptOffer();
         homePage.clickBuyNow();
     }
 

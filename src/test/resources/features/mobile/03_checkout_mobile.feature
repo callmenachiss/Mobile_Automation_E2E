@@ -16,7 +16,7 @@ Feature: Checkout page - Product details page
 
   @regression
   Scenario: Share product details through email flow
-    When I search the product in mobile "Craft"
+    When I search the product in mobile "Gifts"
     Then I click on the product from the list
     Then I share the product details through email
 
@@ -55,17 +55,19 @@ Feature: Checkout page - Product details page
     Then I verify products based on brand Sera's basket filter
     Then I navigate to Toys and Games Menu
     Then I verify products using brand Sera's basket filter
+    Then I navigate to Stationery Menu
+    Then I verify products using brand Sera's basket filter
 
   @regression
   Scenario: verify product filtering based on price range flow
     When I navigate to Home and Kitchen Menu
     Then I verify products based on price range filter
-    Then I navigate to Gifting and Festive Essentials Menu
+    Then I navigate to Stationery Menu
     Then I verify products based on price range filter
     Then I navigate to Toys and Games Menu
     Then I verify products based on price range filter
 
-  @regression
+  @regression @test
   Scenario: verify specific product checkout flow
     When I select and click specific product in homepage
     Then I start bargain to proceed purchase

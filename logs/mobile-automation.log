@@ -714,3 +714,842 @@ Caused by: java.util.concurrent.TimeoutException
 2026-08-31 14:03:42.875 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Signup into the Application for new user
 2026-08-31 14:03:42.876 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Signup into the Application for new user ==========
 2026-08-31 14:03:42.888 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 14:54:22.777 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 14:54:22.780 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 14:54:23.340 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 14:54:23.340 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 568 ms
+2026-08-31 14:54:23.342 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 14:54:23.400 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 14:54:23.402 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 14:54:28.816 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 14:54:28.816 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5476 ms
+2026-08-31 14:54:28.976 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 14:54:28.976 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 14:54:29.949 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 14:55:50.970 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 14:55:54.956 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 14:55:57.876 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 14:56:02.739 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 14:56:05.315 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 14:56:05.315 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 14:56:05.319 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 14:56:05.319 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 14:56:05.331 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 14:58:23.009 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 14:58:23.012 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 14:58:23.439 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 14:58:23.439 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 436 ms
+2026-08-31 14:58:23.440 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 14:58:23.471 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 14:58:23.473 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 14:58:29.600 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 14:58:29.600 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6161 ms
+2026-08-31 14:58:29.770 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 14:58:29.771 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 14:58:30.776 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 14:59:37.297 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 14:59:40.822 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 14:59:43.728 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 14:59:46.035 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied
+2026-08-31 14:59:48.420 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 14:59:51.012 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 14:59:51.012 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 14:59:51.015 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 14:59:51.016 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 14:59:51.029 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:04:25.543 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:04:25.548 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:04:26.002 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:04:26.003 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 465 ms
+2026-08-31 15:04:26.005 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:04:26.044 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:04:26.045 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:04:31.049 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:04:31.049 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5045 ms
+2026-08-31 15:04:31.218 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:04:31.219 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:04:32.077 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:05:38.478 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:05:41.758 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:05:44.070 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 15:05:47.470 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter displayed: true
+2026-08-31 15:05:47.517 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter selected: false
+2026-08-31 15:05:47.562 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter checked: false
+2026-08-31 15:05:47.562 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied
+2026-08-31 15:05:50.806 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 15:05:53.403 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 15:05:53.404 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 15:05:53.407 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 15:05:53.408 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:05:53.429 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:11:23.722 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:11:23.726 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:11:24.288 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:11:24.288 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 577 ms
+2026-08-31 15:11:24.289 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:11:24.326 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:11:24.328 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:11:29.587 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:11:29.587 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5299 ms
+2026-08-31 15:11:29.774 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:11:29.774 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:11:30.759 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:12:37.189 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:12:40.209 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:12:42.986 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 15:12:45.238 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter displayed: true
+2026-08-31 15:12:45.287 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter enabled: true
+2026-08-31 15:12:45.340 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter clickable: false
+2026-08-31 15:12:45.395 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter selected BEFORE: false
+2026-08-31 15:12:45.459 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter checked BEFORE: false
+2026-08-31 15:12:45.515 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter bounds: org.openqa.selenium.Rectangle@a221d1
+2026-08-31 15:12:45.639 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Native click executed
+2026-08-31 15:12:46.859 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 15:12:49.450 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 15:12:49.451 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 15:12:49.455 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 15:12:49.456 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:12:49.471 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:21:25.048 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:21:25.051 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:21:25.464 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:21:25.465 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 421 ms
+2026-08-31 15:21:25.465 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:21:25.499 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:21:25.500 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:21:31.418 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:21:31.418 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5953 ms
+2026-08-31 15:21:31.607 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:21:31.607 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:21:31.970 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:22:40.782 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:22:43.116 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:22:46.020 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 15:22:48.162 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter displayed: true
+2026-08-31 15:22:48.207 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter enabled: true
+2026-08-31 15:22:48.251 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter clickable: false
+2026-08-31 15:22:48.420 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Performing native tap at x=475, y=536
+2026-08-31 15:22:48.541 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter tap executed
+2026-08-31 15:22:51.585 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 15:22:54.157 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 15:22:54.159 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 15:22:54.162 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 15:22:54.163 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:22:54.176 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:25:48.405 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:25:48.407 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:25:48.814 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:25:48.815 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 414 ms
+2026-08-31 15:25:48.815 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:25:48.843 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:25:48.844 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:25:53.758 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:25:53.758 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 4943 ms
+2026-08-31 15:25:53.915 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:25:53.915 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:25:54.729 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:27:01.316 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:27:04.806 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:27:07.764 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 15:27:28.121 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify the filters and sorting functionality
+2026-08-31 15:27:29.000 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_the_filters_and_sorting_functionality_31-Aug-2026_15-27-28.png
+2026-08-31 15:27:29.007 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:27:29.019 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:28:31.655 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:28:31.658 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:28:32.070 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:28:32.070 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 421 ms
+2026-08-31 15:28:32.071 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:28:32.096 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:28:32.097 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:28:37.089 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:28:37.089 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5019 ms
+2026-08-31 15:28:37.269 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:28:37.270 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:28:38.149 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:29:44.284 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:29:48.074 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:30:12.513 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify the filters and sorting functionality
+2026-08-31 15:30:13.304 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_the_filters_and_sorting_functionality_31-Aug-2026_15-30-13.png
+2026-08-31 15:30:13.314 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:30:13.324 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:32:01.873 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:32:01.876 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:32:02.285 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:32:02.286 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 417 ms
+2026-08-31 15:32:02.288 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:32:02.322 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:32:02.323 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:32:07.231 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:32:07.232 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 4945 ms
+2026-08-31 15:32:07.420 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:32:07.420 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:32:08.383 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:33:14.846 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:33:18.272 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:33:25.135 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 15:33:25.136 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:33:25.149 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:38:13.848 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:38:13.851 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:38:14.265 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:38:14.265 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 422 ms
+2026-08-31 15:38:14.266 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:38:14.293 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:38:14.294 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:38:20.562 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:38:20.563 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6297 ms
+2026-08-31 15:38:20.728 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:38:20.728 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:38:21.663 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:39:27.839 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:39:30.993 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:39:33.995 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Found filter: category_filter_item_1_button
+2026-08-31 15:39:34.045 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Displayed: true
+2026-08-31 15:39:34.095 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Enabled: true
+2026-08-31 15:39:34.133 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Clickable: false
+2026-08-31 15:39:34.255 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 15:39:34.256 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:39:34.266 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:42:32.473 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:42:32.479 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:42:32.996 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:42:32.996 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 532 ms
+2026-08-31 15:42:32.997 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:42:33.021 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:42:33.024 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:42:38.912 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:42:38.912 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5916 ms
+2026-08-31 15:42:39.075 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:42:39.075 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:42:39.995 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:43:46.272 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:43:49.142 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:43:52.206 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Found filter: category_filter_item_1_button
+2026-08-31 15:43:52.266 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Displayed: true
+2026-08-31 15:43:52.315 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Enabled: true
+2026-08-31 15:43:52.364 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Clickable: false
+2026-08-31 15:43:52.703 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter center: x=475, y=783
+2026-08-31 15:43:52.706 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 15:43:52.707 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:43:52.722 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:46:06.049 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:46:06.051 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:46:06.462 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:46:06.463 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 419 ms
+2026-08-31 15:46:06.465 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:46:06.495 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:46:06.496 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:46:12.461 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:46:12.462 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5998 ms
+2026-08-31 15:46:12.653 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:46:12.654 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:46:13.539 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:47:19.706 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:47:22.511 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:47:25.450 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Found filter: category_filter_item_1_button
+2026-08-31 15:47:25.511 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Displayed: true
+2026-08-31 15:47:25.571 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Enabled: true
+2026-08-31 15:47:25.621 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Clickable: false
+2026-08-31 15:47:25.695 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter bounds: org.openqa.selenium.Rectangle@a355a3
+2026-08-31 15:47:25.695 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter center: x=475, y=618
+2026-08-31 15:47:25.841 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Tapped category filter item 1
+2026-08-31 15:47:25.846 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 15:47:25.848 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:47:25.859 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:49:15.432 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:49:15.435 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:49:15.844 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:49:15.845 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 417 ms
+2026-08-31 15:49:15.849 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:49:15.883 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:49:15.884 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:49:21.736 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:49:21.736 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5890 ms
+2026-08-31 15:49:21.911 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:49:21.911 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:49:22.698 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:50:28.820 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:50:31.556 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:50:34.506 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Found filter: category_filter_item_1_button
+2026-08-31 15:50:34.572 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Displayed: true
+2026-08-31 15:50:34.631 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Enabled: true
+2026-08-31 15:50:34.699 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Clickable: false
+2026-08-31 15:50:34.700 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - ========== PAGE SOURCE BEFORE TAP ==========
+2026-08-31 15:50:34.958 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filter center: x=475, y=618
+2026-08-31 15:50:35.080 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Tapped category filter item 1
+2026-08-31 15:50:37.082 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - ========== PAGE SOURCE AFTER TAP ==========
+2026-08-31 15:50:37.252 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 15:50:37.253 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:50:37.271 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 15:58:08.240 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 15:58:08.244 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 15:58:08.670 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 15:58:08.670 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 434 ms
+2026-08-31 15:58:08.671 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 15:58:08.702 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 15:58:08.703 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 15:58:14.951 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 15:58:14.951 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6281 ms
+2026-08-31 15:58:15.117 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:58:15.118 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 15:58:16.005 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 15:59:22.470 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 15:59:26.365 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 15:59:46.615 [main] ERROR com.ecommerce.mobile.pages.CheckoutPage - Failed to tap category filter item 1: Expected condition failed: waiting for visibility of element located by AppiumBy.accessibilityId: category_filter_item_1_button (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.gajab.buyerstore.MainAc..., appium:appPackage: com.gajab.buyerstore, appium:autoGrantPermissions: true, appium:autoLaunch: false, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.gajab.buyerstore.MainAc..., appPackage: com.gajab.buyerstore, autoGrantPermissions: true, autoLaunch: false, automationName: UiAutomator2, deviceName: RedmiA45G, disableWindowAnimation: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, skipDeviceInitialization: true, skipServerInstallation: false, udid: 2c4c5f0d}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Xiaomi, appium:deviceModel: 24116RNC1I, appium:deviceName: 2c4c5f0d, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1640, appium:deviceUDID: 2c4c5f0d, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 16, appium:skipDeviceInitialization: true, appium:skipServerInstallation: false, appium:statBarHeight: 68, appium:takesScreenshot: true, appium:udid: 2c4c5f0d, appium:viewportRect: {height: 1572, left: 0, top: 68, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: f9c3ecee-2781-41cd-b205-0be1660400cb
+2026-08-31 15:59:46.631 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify the filters and sorting functionality
+2026-08-31 15:59:48.076 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_the_filters_and_sorting_functionality_31-Aug-2026_15-59-48.png
+2026-08-31 15:59:48.088 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 15:59:48.097 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 16:11:14.450 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 16:11:14.452 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 16:11:14.881 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 16:11:14.882 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 437 ms
+2026-08-31 16:11:14.888 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 16:11:14.912 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 16:11:14.914 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 16:11:21.197 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 16:11:21.197 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6309 ms
+2026-08-31 16:11:21.380 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 16:11:21.380 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 16:11:22.304 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 16:12:33.649 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 16:12:36.904 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 16:12:57.238 [main] ERROR com.ecommerce.mobile.pages.CheckoutPage - Unable to tap category filter item: category_filter_item_1_button
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: AppiumBy.accessibilityId: Filters (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84) ~[selenium-support-4.13.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230) ~[selenium-support-4.13.0.jar:?]
+	at com.ecommerce.mobile.pages.CheckoutPage.validateFiltersMenu(CheckoutPage.java:229) ~[classes/:?]
+	at com.ecommerce.mobile.stepdefinitions.CheckoutSteps.I_setup_filters_in_this_product_list_page(CheckoutSteps.java:107) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132) ~[cucumber-testng-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129) ~[cucumber-testng-7.15.0.jar:7.15.0]
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35) ~[cucumber-testng-7.15.0.jar:7.15.0]
+	at com.ecommerce.mobile.runner.TestRunner.runScenario(TestRunner.java:53) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.8.0.jar:7.8.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1114) [testng-7.8.0.jar:7.8.0]
+	at org.testng.TestNG.run(TestNG.java:1082) [testng-7.8.0.jar:7.8.0]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:67) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109) [testng-rt.jar:?]
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [20208988-b289-4cea-98da-791c9923c48e, findElement {using=accessibility id, value=Filters}]
+Capabilities {appium:appActivity: com.gajab.buyerstore.MainAc..., appium:appPackage: com.gajab.buyerstore, appium:autoGrantPermissions: true, appium:autoLaunch: false, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.gajab.buyerstore.MainAc..., appPackage: com.gajab.buyerstore, autoGrantPermissions: true, autoLaunch: false, automationName: UiAutomator2, deviceName: RedmiA45G, disableWindowAnimation: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, skipDeviceInitialization: true, skipServerInstallation: false, udid: 2c4c5f0d}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Xiaomi, appium:deviceModel: 24116RNC1I, appium:deviceName: 2c4c5f0d, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1640, appium:deviceUDID: 2c4c5f0d, appium:disableWindowAnimation: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 16, appium:skipDeviceInitialization: true, appium:skipServerInstallation: false, appium:statBarHeight: 68, appium:takesScreenshot: true, appium:udid: 2c4c5f0d, appium:viewportRect: {height: 1572, left: 0, top: 68, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 20208988-b289-4cea-98da-791c9923c48e
+	at jdk.internal.reflect.GeneratedConstructorAccessor27.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191) ~[selenium-remote-driver-4.13.0.jar:?]
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250) ~[java-client-8.6.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171) ~[selenium-support-4.13.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168) ~[selenium-support-4.13.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205) ~[selenium-support-4.13.0.jar:?]
+	... 52 more
+2026-08-31 16:12:57.280 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify the filters and sorting functionality
+2026-08-31 16:12:59.245 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_the_filters_and_sorting_functionality_31-Aug-2026_16-12-59.png
+2026-08-31 16:12:59.258 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 16:12:59.268 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 18:23:38.427 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 18:23:38.431 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 18:23:39.040 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 18:23:39.041 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 619 ms
+2026-08-31 18:23:39.044 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 18:23:39.084 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 18:23:39.086 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 18:23:46.025 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 18:23:46.025 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6984 ms
+2026-08-31 18:23:46.232 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-08-31 18:23:46.232 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 18:23:47.474 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 18:24:55.723 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Brush
+2026-08-31 18:24:56.378 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_techtiq-makeup-brush-organizer-multicolor_button
+2026-08-31 18:24:57.232 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-31 18:25:00.053 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-31 18:25:10.350 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-31 18:25:12.663 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-31 18:25:29.585 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-08-31 18:25:41.916 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-31 18:25:44.281 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-31 18:26:07.353 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Verify the multiple Bargain attempt of the product between seller and customer
+2026-08-31 18:26:09.621 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Verify_the_multiple_Bargain_attempt_of_the_product_between_seller_and_customer_31-Aug-2026_18-26-09.png
+2026-08-31 18:26:09.638 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-08-31 18:26:09.653 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 18:38:10.782 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 18:38:10.785 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 18:38:11.369 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 18:38:11.370 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 594 ms
+2026-08-31 18:38:11.372 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 18:38:11.412 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 18:38:11.413 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 18:38:16.957 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 18:38:16.957 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5587 ms
+2026-08-31 18:38:17.190 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-08-31 18:38:17.191 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 18:38:17.604 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 18:39:26.082 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Brush
+2026-08-31 18:39:26.682 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_techtiq-makeup-brush-organizer-multicolor2_button
+2026-08-31 18:39:26.979 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-31 18:39:49.946 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Verify the multiple Bargain attempt of the product between seller and customer
+2026-08-31 18:39:52.037 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Verify_the_multiple_Bargain_attempt_of_the_product_between_seller_and_customer_31-Aug-2026_18-39-52.png
+2026-08-31 18:39:52.055 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-08-31 18:39:52.068 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 18:40:30.941 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 18:40:30.946 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 18:40:31.492 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 18:40:31.493 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 558 ms
+2026-08-31 18:40:31.494 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 18:40:31.527 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 18:40:31.531 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 18:40:38.110 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 18:40:38.110 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6617 ms
+2026-08-31 18:40:38.357 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-08-31 18:40:38.358 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 18:40:39.430 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 18:41:47.776 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Brush
+2026-08-31 18:41:48.645 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_techtiq-makeup-brush-organizer-multicolor2_button
+2026-08-31 18:41:50.044 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-31 18:41:52.383 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-31 18:42:02.691 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-31 18:42:05.066 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-31 18:42:22.037 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-08-31 18:42:34.773 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-08-31 18:42:37.155 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-31 18:42:44.295 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more last shot button on bargain process
+2026-08-31 18:42:49.421 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-31 18:42:54.429 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-08-31 18:43:00.367 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-08-31 18:43:08.282 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User navigated to the Net-Banking menu
+2026-08-31 18:43:11.217 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User clicked on PNB option
+2026-08-31 18:43:16.725 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User is accepting net banking session
+2026-08-31 18:43:19.103 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User completed the payment
+2026-08-31 18:43:25.521 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Verify the multiple Bargain attempt of the product between seller and customer
+2026-08-31 18:43:25.521 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-08-31 18:43:25.534 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 18:45:36.411 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 18:45:36.417 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 18:45:37.054 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 18:45:37.054 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 652 ms
+2026-08-31 18:45:37.056 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 18:45:37.111 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 18:45:37.113 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 18:45:44.094 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 18:45:44.095 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7041 ms
+2026-08-31 18:45:44.670 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Share product details through email flow ==========
+2026-08-31 18:45:44.671 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 18:45:45.827 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 18:46:56.668 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Craft
+2026-08-31 18:46:58.901 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_roze-bhaiya-bhabhi-bhaiya-bhabhi-rakhi04-mauli-thread-rakhi-mug-gre_button
+2026-08-31 18:46:59.682 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-31 18:47:04.928 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User clicked on share button
+2026-08-31 18:47:09.824 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User clicked on Gmail app in list
+2026-08-31 18:47:38.241 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Share product details through email flow
+2026-08-31 18:47:39.411 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Share_product_details_through_email_flow_31-Aug-2026_18-47-39.png
+2026-08-31 18:47:39.422 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Share product details through email flow ==========
+2026-08-31 18:47:39.438 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 18:52:52.346 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 18:52:52.347 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 18:52:53.070 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 18:52:53.070 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 731 ms
+2026-08-31 18:52:53.080 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 18:52:53.208 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 18:52:53.211 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 18:53:02.019 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 18:53:02.019 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 8943 ms
+2026-08-31 18:53:02.682 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Share product details through email flow ==========
+2026-08-31 18:53:02.682 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 18:53:03.140 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 18:54:13.709 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Craft
+2026-08-31 18:54:19.086 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_roze-bhaiya-bhabhi-bhaiya-bhabhi-rakhi04-mauli-thread-rakhi-mug-gre_button
+2026-08-31 18:54:19.361 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-31 18:54:24.424 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User clicked on share button
+2026-08-31 18:54:30.012 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User clicked on Gmail app in list
+2026-08-31 18:54:56.726 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Share product details through email flow
+2026-08-31 18:54:58.980 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Share_product_details_through_email_flow_31-Aug-2026_18-54-58.png
+2026-08-31 18:54:59.030 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Share product details through email flow ==========
+2026-08-31 18:54:59.071 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 19:09:13.870 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 19:09:13.874 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 19:09:16.866 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 19:09:16.866 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 3002 ms
+2026-08-31 19:09:16.868 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 19:09:16.916 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 19:09:16.917 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 19:09:25.224 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 19:09:25.224 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 8357 ms
+2026-08-31 19:09:25.449 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 19:09:25.449 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 19:09:26.504 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 19:10:33.550 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 19:10:35.822 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 19:15:30.470 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 19:15:30.476 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 19:15:30.998 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 19:15:30.999 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 537 ms
+2026-08-31 19:15:31.000 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 19:15:31.039 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 19:15:31.041 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 19:15:36.207 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 19:15:36.207 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5208 ms
+2026-08-31 19:15:36.425 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 19:15:36.425 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 19:15:36.874 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 19:16:46.104 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 19:16:48.375 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 19:16:50.646 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Sorting Menu
+2026-08-31 19:16:56.182 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 19:16:58.183 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is  able to see the new arrival products
+2026-08-31 19:17:06.782 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 19:17:08.795 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products from low to high price order
+2026-08-31 19:17:11.287 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 19:17:11.288 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 19:17:11.293 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 19:17:11.294 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 19:17:11.307 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 19:44:35.072 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 19:44:35.076 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 19:44:35.841 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 19:44:35.843 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 775 ms
+2026-08-31 19:44:35.847 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 19:44:36.013 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 19:44:36.018 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 19:44:42.879 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 19:44:42.880 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7036 ms
+2026-08-31 19:44:43.095 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 19:44:43.095 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 19:44:43.449 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 19:45:09.289 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify the filters and sorting functionality
+2026-08-31 19:45:10.031 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_the_filters_and_sorting_functionality_31-Aug-2026_19-45-10.png
+2026-08-31 19:45:10.045 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 19:45:10.058 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 19:45:27.867 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 19:45:27.874 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 19:45:28.425 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 19:45:28.426 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 567 ms
+2026-08-31 19:45:28.427 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 19:45:28.457 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 19:45:28.458 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 19:45:33.537 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 19:45:33.538 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5111 ms
+2026-08-31 19:45:33.766 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the filters and sorting functionality ==========
+2026-08-31 19:45:33.767 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 19:45:34.615 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 19:46:41.503 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 19:46:43.877 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 19:46:46.767 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 19:46:55.128 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 19:46:57.746 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 19:46:57.747 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 19:47:03.704 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products from low to high price order
+2026-08-31 19:47:06.263 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 19:47:06.263 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products based on filters
+2026-08-31 19:47:12.196 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products from high to low price order
+2026-08-31 19:47:14.748 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 19:47:14.749 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products based on filter
+2026-08-31 19:47:20.610 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the New Arrival products
+2026-08-31 19:47:23.169 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 19:47:23.170 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the product based on filters
+2026-08-31 19:47:29.045 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products based on ratings
+2026-08-31 19:47:31.608 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 19:47:31.609 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to products based on ratings filters
+2026-08-31 19:47:31.612 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the filters and sorting functionality
+2026-08-31 19:47:31.613 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the filters and sorting functionality ==========
+2026-08-31 19:47:31.627 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 19:48:42.527 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 19:48:42.532 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 19:48:43.041 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 19:48:43.041 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 519 ms
+2026-08-31 19:48:43.042 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 19:48:43.080 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 19:48:43.081 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 19:48:49.557 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 19:48:49.557 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6515 ms
+2026-08-31 19:48:49.744 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify filtering products using brand Sera's basket flow ==========
+2026-08-31 19:48:49.745 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 19:48:50.756 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 19:50:04.383 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 19:50:06.772 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 19:50:11.663 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 19:50:19.294 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 19:50:21.891 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 19:50:21.892 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 19:50:26.033 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Gifting and Festive Essentials Menu
+2026-08-31 19:50:29.140 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Gifting and Festive Essentials Menu
+2026-08-31 19:50:33.964 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 19:51:00.081 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify filtering products using brand Sera's basket flow
+2026-08-31 19:51:00.928 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_filtering_products_using_brand_Sera_s_basket_flow_31-Aug-2026_19-51-00.png
+2026-08-31 19:51:00.941 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify filtering products using brand Sera's basket flow ==========
+2026-08-31 19:51:00.959 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 19:59:40.637 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 19:59:40.642 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 19:59:41.188 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 19:59:41.188 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 558 ms
+2026-08-31 19:59:41.190 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 19:59:41.220 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 19:59:41.221 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 19:59:47.670 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 19:59:47.670 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6481 ms
+2026-08-31 19:59:47.890 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify filtering products using brand Sera's basket flow ==========
+2026-08-31 19:59:47.890 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 19:59:48.952 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 20:00:55.821 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 20:00:58.192 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 20:01:03.033 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 20:01:11.593 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 20:01:14.188 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:01:14.189 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 20:01:18.358 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Gifting and Festive Essentials Menu
+2026-08-31 20:01:23.253 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 20:01:30.883 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 20:01:33.457 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:01:33.457 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 20:01:37.885 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Toys and Games Menu
+2026-08-31 20:01:41.157 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Toys and Games Menu
+2026-08-31 20:01:43.986 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to Filters Menu
+2026-08-31 20:01:50.011 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Sera's basket Filter applied in product list page
+2026-08-31 20:01:52.572 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:01:52.573 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to view products based on filters
+2026-08-31 20:02:09.862 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Stationery Menu
+2026-08-31 20:02:12.701 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to Filters Menu
+2026-08-31 20:02:17.328 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Sera's basket Filter applied in product list page
+2026-08-31 20:02:19.885 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:02:19.886 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to view products based on filters
+2026-08-31 20:02:20.741 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify filtering products using brand Sera's basket flow
+2026-08-31 20:02:20.742 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify filtering products using brand Sera's basket flow ==========
+2026-08-31 20:02:20.755 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 20:05:03.139 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 20:05:03.143 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 20:05:03.704 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 20:05:03.704 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 572 ms
+2026-08-31 20:05:03.706 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 20:05:03.743 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 20:05:03.744 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 20:05:10.106 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 20:05:10.107 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6402 ms
+2026-08-31 20:05:10.316 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify filtering products using brand Sera's basket flow ==========
+2026-08-31 20:05:10.317 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 20:05:11.436 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 20:06:18.514 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 20:06:21.201 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 20:06:44.059 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify filtering products using brand Sera's basket flow
+2026-08-31 20:06:45.591 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_filtering_products_using_brand_Sera_s_basket_flow_31-Aug-2026_20-06-45.png
+2026-08-31 20:06:45.608 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify filtering products using brand Sera's basket flow ==========
+2026-08-31 20:06:45.620 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 20:21:08.605 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 20:21:08.610 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 20:21:09.173 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 20:21:09.174 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 577 ms
+2026-08-31 20:21:09.175 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 20:21:09.209 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 20:21:09.211 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 20:21:14.858 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 20:21:14.858 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5684 ms
+2026-08-31 20:21:15.080 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify filtering products using brand Sera's basket flow ==========
+2026-08-31 20:21:15.080 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 20:21:16.187 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 20:22:23.140 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 20:22:26.363 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 20:22:30.686 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 20:22:39.082 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 20:22:41.675 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:22:41.676 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 20:22:45.792 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Gifting and Festive Essentials Menu
+2026-08-31 20:22:50.691 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-08-31 20:22:59.141 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-08-31 20:23:01.700 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:23:01.701 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-08-31 20:23:05.292 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Toys and Games Menu
+2026-08-31 20:23:08.464 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Toys and Games Menu
+2026-08-31 20:23:11.304 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to Filters Menu
+2026-08-31 20:23:17.268 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Sera's basket Filter applied in product list page
+2026-08-31 20:23:19.829 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:23:19.829 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to view products based on filters
+2026-08-31 20:23:25.338 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Stationery Menu
+2026-08-31 20:23:28.193 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to Filters Menu
+2026-08-31 20:23:32.784 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Sera's basket Filter applied in product list page
+2026-08-31 20:23:35.345 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:23:35.346 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to view products based on filters
+2026-08-31 20:23:36.221 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify filtering products using brand Sera's basket flow
+2026-08-31 20:23:36.222 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify filtering products using brand Sera's basket flow ==========
+2026-08-31 20:23:36.234 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 20:24:41.959 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 20:24:41.964 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 20:24:42.625 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 20:24:42.626 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 674 ms
+2026-08-31 20:24:42.629 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 20:24:42.658 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 20:24:42.661 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 20:24:49.110 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 20:24:49.111 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6484 ms
+2026-08-31 20:24:49.301 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify product filtering based on price range flow ==========
+2026-08-31 20:24:49.302 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 20:24:50.256 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 20:25:57.670 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 20:26:00.011 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 20:26:22.322 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify product filtering based on price range flow
+2026-08-31 20:26:23.914 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_product_filtering_based_on_price_range_flow_31-Aug-2026_20-26-23.png
+2026-08-31 20:26:23.934 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify product filtering based on price range flow ==========
+2026-08-31 20:26:23.953 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 20:36:50.880 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 20:36:50.883 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 20:36:51.455 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 20:36:51.455 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 582 ms
+2026-08-31 20:36:51.457 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 20:36:51.498 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 20:36:51.498 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 20:36:58.037 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 20:36:58.038 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6582 ms
+2026-08-31 20:36:58.250 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Share product details through email flow ==========
+2026-08-31 20:36:58.251 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 20:36:58.653 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 20:38:06.525 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Gifts
+2026-08-31 20:38:08.891 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_heart-shaped-dessert-salad-plates-plastic-dinner-plates-for-appetizer_button
+2026-08-31 20:38:09.641 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-08-31 20:38:15.146 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User clicked on share button
+2026-08-31 20:38:20.066 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User clicked on Gmail app in list
+2026-08-31 20:38:35.785 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Email sent to customer for product details
+2026-08-31 20:38:35.789 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Share product details through email flow
+2026-08-31 20:38:35.789 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Share product details through email flow ==========
+2026-08-31 20:38:35.802 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 20:41:49.068 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 20:41:49.072 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 20:41:49.586 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 20:41:49.586 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 524 ms
+2026-08-31 20:41:49.588 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 20:41:49.618 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 20:41:49.620 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 20:41:56.068 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 20:41:56.069 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6482 ms
+2026-08-31 20:41:56.271 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify specific product checkout flow ==========
+2026-08-31 20:41:56.271 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 20:41:57.236 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 20:42:03.181 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:43:06.753 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:43:06.753 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the specific product in menu
+2026-08-31 20:43:11.106 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-08-31 20:43:13.428 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-08-31 20:43:19.782 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-08-31 20:43:23.733 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-08-31 20:43:30.401 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-08-31 20:43:37.339 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User navigated to the Net-Banking menu
+2026-08-31 20:43:39.941 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User clicked on IDBI option
+2026-08-31 20:43:44.369 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User is accepting net banking session
+2026-08-31 20:43:46.763 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User completed the payment
+2026-08-31 20:44:02.956 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify specific product checkout flow
+2026-08-31 20:44:02.957 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify specific product checkout flow ==========
+2026-08-31 20:44:02.968 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 20:45:07.903 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 20:45:07.909 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 20:45:08.487 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 20:45:08.488 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 590 ms
+2026-08-31 20:45:08.489 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 20:45:08.534 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 20:45:08.536 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 20:45:14.802 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 20:45:14.803 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6315 ms
+2026-08-31 20:45:15.013 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the product details in all specific category flow ==========
+2026-08-31 20:45:15.016 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 20:45:15.917 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 20:46:23.207 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-08-31 20:46:25.560 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-08-31 20:46:33.626 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products from low to high price order
+2026-08-31 20:46:36.237 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:46:36.237 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products based on filters
+2026-08-31 20:46:42.156 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products from high to low price order
+2026-08-31 20:46:44.706 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:46:44.706 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products based on filter
+2026-08-31 20:46:50.771 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the New Arrival products
+2026-08-31 20:46:53.345 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:46:53.346 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the product based on filters
+2026-08-31 20:46:59.226 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products based on ratings
+2026-08-31 20:47:01.781 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:47:01.781 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to products based on ratings filters
+2026-08-31 20:47:05.019 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Gifting and Festive Essentials Menu
+2026-08-31 20:47:12.976 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products from low to high price order
+2026-08-31 20:47:15.530 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:47:15.531 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products based on filters
+2026-08-31 20:47:21.426 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products from high to low price order
+2026-08-31 20:47:23.983 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:47:23.984 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products based on filter
+2026-08-31 20:47:30.246 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the New Arrival products
+2026-08-31 20:47:32.805 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:47:32.805 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the product based on filters
+2026-08-31 20:47:38.800 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the products based on ratings
+2026-08-31 20:47:41.360 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:47:41.361 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to products based on ratings filters
+2026-08-31 20:47:42.234 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the product details in all specific category flow
+2026-08-31 20:47:42.235 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the product details in all specific category flow ==========
+2026-08-31 20:47:42.250 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-08-31 20:55:35.994 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-08-31 20:55:35.997 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-08-31 20:55:36.523 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-08-31 20:55:36.524 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 535 ms
+2026-08-31 20:55:36.525 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-08-31 20:55:36.557 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-08-31 20:55:36.559 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-08-31 20:55:43.210 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-08-31 20:55:43.211 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6687 ms
+2026-08-31 20:55:43.421 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify specific product checkout flow ==========
+2026-08-31 20:55:43.421 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-08-31 20:55:44.489 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-08-31 20:55:50.484 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-08-31 20:56:13.873 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify specific product checkout flow
+2026-08-31 20:56:15.555 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_specific_product_checkout_flow_31-Aug-2026_20-56-15.png
+2026-08-31 20:56:15.570 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify specific product checkout flow ==========
+2026-08-31 20:56:15.584 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
