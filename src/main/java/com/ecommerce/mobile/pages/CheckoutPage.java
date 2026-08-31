@@ -342,6 +342,7 @@ public class CheckoutPage extends BasePage {
     public void navigateLiveOrdersSection() throws InterruptedException {
         sleep(2000);
         scrollToAccessibilityId("trending_view_all_button");
+        swipeDown();
     }
 
     public void verifyLiveOrdersSection() throws InterruptedException {

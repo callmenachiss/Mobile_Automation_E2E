@@ -4,9 +4,6 @@ Feature: Checkout page - Product details page
   I want to search and checkout products on the Home page
   So that I can start bargains and purchase the products
 
-  Background:
-    #Given I verify existing login
-
   @regression
   Scenario: verify session based deal of the day product in display
     When I click on Category menu
@@ -29,7 +26,7 @@ Feature: Checkout page - Product details page
   @regression
   Scenario: verify the latest live order flow
     When I search the product in mobile "Cosmetics"
-    Then I click on the product from the list
+    Then I click on product to start bargain to proceed purchase
     Then I proceed with payment to complete the order
     Then I do IDBI internet banking for payment to place the order
     And I verify the placed orders in the live order section
@@ -67,7 +64,7 @@ Feature: Checkout page - Product details page
     Then I navigate to Toys and Games Menu
     Then I verify products based on price range filter
 
-  @regression @test
+  @regression
   Scenario: verify specific product checkout flow
     When I select and click specific product in homepage
     Then I start bargain to proceed purchase
