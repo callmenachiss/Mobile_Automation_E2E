@@ -9,7 +9,7 @@ Feature: Home page - Product listing
     When I entered Mobile number
     Then I should enter OTP
 
-  @smoke @regression @home @web
+  @smoke @regression
   Scenario: Search for a product
     When I search for the product "Wireless Headphones"
     Then products should be available in search results

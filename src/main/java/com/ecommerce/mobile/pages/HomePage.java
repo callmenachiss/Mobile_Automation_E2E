@@ -163,6 +163,8 @@ public class HomePage extends BasePage {
         LOGGER.info("User clicking the buy now button");
     }
 
+
+
     public void clickPay() throws InterruptedException {
         sleep(1000);
         tap(payOnlineButton);
@@ -291,12 +293,13 @@ public class HomePage extends BasePage {
     }
 
     public void searchinvalidPincode(String pinCode) throws InterruptedException {
-        sleep(2000);
+        sleep(4000);
         tap(pinCodeArea);
-        sleep(1000);
-        clearElement(pinCodebox);
+        sleep(4000);
+        //clearElement(pinCodebox);
         enterText(pinCodebox,pinCode);
         LOGGER.info("User entered pincode {}", pinCode);
+        isDisplayed(NoAddressFoundlbl);
     }
 
     public void searchvalidPincode(String pinCode) throws InterruptedException {
@@ -305,9 +308,10 @@ public class HomePage extends BasePage {
         enterText(pinCodebox,pinCode);
         LOGGER.info("User entered the pincode {}", pinCode);
         sleep(2000);
-        driver.navigate().back();
+        tap(AddressFoundlbl);
+        //driver.navigate().back();
         sleep(1000);
-        driver.navigate().back();
+        //driver.navigate().back();
     }
 
 

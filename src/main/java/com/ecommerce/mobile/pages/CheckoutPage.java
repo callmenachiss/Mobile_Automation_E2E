@@ -152,7 +152,8 @@ public class CheckoutPage extends BasePage {
 
     public void clickSpecificProducts() throws InterruptedException {
         sleep(2000);
-        scrollToAccessibilityId("product_template1_product_2_card");
+        swipeDown();
+        //scrollToAccessibilityId("product_template1_product_2_card");
         sleep(2000);
         tap(SpecificProductInMenu);
         swipeDown();
@@ -255,20 +256,20 @@ public class CheckoutPage extends BasePage {
         LOGGER.info("User navigated to the trending menu");
     }
     public void validateAnyoneTrendingProduct() throws InterruptedException {
-        sleep(2000);
+        sleep(3000);
         swipeDown();
-        sleep(1000);
-        clickProductsInTrendingMenu(4);
+        sleep(2000);
+        clickProductsInTrendingMenu(2);
         LOGGER.info("User is able to see trending product details");
     }
 
     public void validateAnotherTrendingProduct() throws InterruptedException {
-        sleep(2000);
+        sleep(3000);
         driver.navigate().back();
-        sleep(1000);
+        sleep(2000);
         swipeDown();
-        sleep(1000);
-        clickProductsInTrendingMenu(8);
+        sleep(2000);
+        clickProductsInTrendingMenu(5);
         LOGGER.info("User is able to access trending product details");
     }
 
@@ -297,11 +298,11 @@ public class CheckoutPage extends BasePage {
     }
 
     public void sentEmailCustomer() throws InterruptedException {
-        sleep(2000);
+        sleep(4000);
         enterText(toEMail, "piccosofttest@gmail.com");
-        sleep(1000);
+        sleep(2000);
         enterText(subjectEmail, "Product details for your orders");
-        sleep(1000);
+        sleep(2000);
         tap(sendButton);
         LOGGER.info("Email sent to customer for product details");
     }
@@ -316,6 +317,7 @@ public class CheckoutPage extends BasePage {
     public void verifyGajabdealforSession() throws InterruptedException{
         sleep(2000);
         isDisplayed(gajabdealCard);
+        sleep(2000);
         tap(gajabdealCard);
         sleep(2000);
         driver.navigate().back();
@@ -325,6 +327,7 @@ public class CheckoutPage extends BasePage {
     public void verifyJustBargaindealforSession() throws InterruptedException{
         sleep(2000);
         isDisplayed(JustBargainCard);
+        sleep(2000);
         tap(JustBargainCard);
         sleep(2000);
         driver.navigate().back();
