@@ -71,7 +71,12 @@ public class CheckoutSteps {
     @Then("I navigate to Gifting and Festive Essentials Menu")
     public void I_navigate_to_Gifting_and_Festive_Essentials_Menu() throws InterruptedException {
         checkoutPage.clickGiftingFestiveEssentialsMenu();
-        checkoutPage.clickSubGiftingFestiveEssentialsMenu();
+        //checkoutPage.clickSubGiftingFestiveEssentialsMenu();
+    }
+
+    @Then("I navigate to Stationery Menu")
+    public void I_navigate_to_Stationerys_Menu() throws InterruptedException {
+        checkoutPage.clickStationeryMenu();
     }
 
     @Then("I navigate to Toys and Games Menu")
@@ -109,7 +114,10 @@ public class CheckoutSteps {
 
     @And("I will apply sorting items in product list page")
     public void I_will_apply_sorting_items_in_product_list_page() throws InterruptedException {
-        checkoutPage.validateSortingMenu();
+        checkoutPage.validateLowToHighMenu();
+        checkoutPage.validateHighToLowMenu();
+        checkoutPage.validateNewArrivalsMenu();
+        checkoutPage.validateRatingsMenu();
     }
 
     @Then("I verify anyone trending products in the list")

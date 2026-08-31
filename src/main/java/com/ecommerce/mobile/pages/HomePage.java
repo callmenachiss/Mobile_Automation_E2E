@@ -125,6 +125,9 @@ public class HomePage extends BasePage {
     @AndroidFindBy(accessibility = "Bargain More")
     private WebElement BargainMoreButton;
 
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc=\"Bargain More\n" + "(Give a last shot!)\"]")
+    private WebElement LastBargainButton;
+
     @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id=\"pdp_bargains_price_input\"]")
     private WebElement BargainPriceBox;
 
@@ -202,6 +205,12 @@ public class HomePage extends BasePage {
         sleep(1000);
         tap(BargainMoreButton);
         LOGGER.info("User clicked on bargain more button to try 1 more attempt on bargain process");
+    }
+
+    public void clickBargainlastChancebutton() throws InterruptedException {
+        sleep(2000);
+        tap(LastBargainButton);
+        LOGGER.info("User clicked on bargain more last shot button on bargain process");
     }
 
     public void clickOfferYourPrice() throws InterruptedException {

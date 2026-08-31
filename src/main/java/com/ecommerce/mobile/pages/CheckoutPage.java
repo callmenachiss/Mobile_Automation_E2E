@@ -1,11 +1,25 @@
 package com.ecommerce.mobile.pages;
 
+import com.ecommerce.mobile.config.DriverManager;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Rectangle;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Pause;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Page 2: Home screen showing the product catalog (list of products).
@@ -22,6 +36,12 @@ public class CheckoutPage extends BasePage {
 
     @AndroidFindBy(accessibility= "home_category_2_item")
     private WebElement GiftingFestiveEssentialsMenu;
+
+    @AndroidFindBy(accessibility= "home_category_4_item")
+    private WebElement FashionandAccessoriesMenu;
+
+    @AndroidFindBy(accessibility= "home_category_5_item")
+    private WebElement StationeryMenu;
 
     @AndroidFindBy(accessibility= "home_category_3_item")
     private WebElement ToysandGamesMenu;
@@ -40,6 +60,9 @@ public class CheckoutPage extends BasePage {
 
     @AndroidFindBy(accessibility= "child_category_filter_button")
     private WebElement filtersMenu;
+
+    @AndroidFindBy(accessibility= "category_filter_tab_brands_button")
+    private WebElement BrandfilterMenu;
 
     @AndroidFindBy(accessibility= "category_filter_tab_pricerange_button")
     private WebElement pricingMenu;
@@ -62,8 +85,14 @@ public class CheckoutPage extends BasePage {
     @AndroidFindBy(accessibility= "category_sort_option_new_arrivals_button")
     private WebElement NewArrivalsMenu;
 
-    @AndroidFindBy(accessibility= "category_sort_option_price_(low_to_high)_button")
+    @AndroidFindBy(accessibility= "category_sort_option_price_low_to_high_button")
     private WebElement LowToHighMenu;
+
+    @AndroidFindBy(accessibility= "category_sort_option_price_high_to_low_button")
+    private WebElement HighToLowMenu;
+
+    @AndroidFindBy(accessibility= "category_sort_option_ratings_button")
+    private WebElement RatingsSortMenu;
 
     @AndroidFindBy(accessibility= "trending_view_all_button")
     private WebElement viewAllMenu;
@@ -80,8 +109,11 @@ public class CheckoutPage extends BasePage {
     @AndroidFindBy(xpath= "//android.widget.TextView[@resource-id=\"com.android.intentresolver:id/text1\" and @text=\"Gmail\"]")
     private WebElement gmailMenu;
 
-    @AndroidFindBy(accessibility= "//android.view.ViewGroup[@resource-id=\"com.google.android.gm:id/peoplekit_autocomplete_chip_group\"]/android.widget.EditText")
+    @AndroidFindBy(xpath= "//android.view.ViewGroup[@resource-id=\"com.google.android.gm:id/peoplekit_autocomplete_chip_group\"]/android.widget.EditText")
     private WebElement toEMail;
+
+    @AndroidFindBy(xpath= "//android.widget.TextView[@resource-id=\"com.google.android.gm:id/peoplekit_listview_contact_name\"]")
+    private WebElement SenderMailMenu;
 
     @AndroidFindBy(xpath= "//android.widget.EditText[@resource-id=\"com.google.android.gm:id/subject\"]")
     private WebElement subjectEmail;
@@ -118,6 +150,14 @@ public class CheckoutPage extends BasePage {
         sleep(2000);
         tap(GiftingFestiveEssentialsMenu);
         LOGGER.info("User navigated to the Gifting and Festive Essentials Menu");
+    }
+
+    public void clickStationeryMenu() throws InterruptedException {
+        sleep(2000);
+        tap(FashionandAccessoriesMenu);
+        sleep(2000);
+        tap(StationeryMenu);
+        LOGGER.info("User navigated to the Stationery Menu");
     }
 
     public void clickToysandGamesMenu() throws InterruptedException {
@@ -162,7 +202,10 @@ public class CheckoutPage extends BasePage {
 
     public void setFiltersAndverifyproductsBasedOnCategory() throws InterruptedException {
         sleep(2000);
-        validateSortingMenu();
+        validateLowToHighMenu();
+        validateHighToLowMenu();
+        validateNewArrivalsMenu();
+        validateRatingsMenu();
         driver.navigate().back();
     }
 
@@ -188,7 +231,7 @@ public class CheckoutPage extends BasePage {
     }
 
     public void setPriceRangeFilters() throws InterruptedException {
-        sleep(2000);
+        sleep(3000);
         tap(pricingMenu);
         sleep(1000);
         tap(endPricingMenu);
@@ -206,6 +249,8 @@ public class CheckoutPage extends BasePage {
         sleep(1000);
         tap(filtersSubMenu);
         sleep(1000);
+        tap(SeraBasketSubMenu);
+        sleep(1000);
         tap(filtersApplyBtn);
         LOGGER.info("Filters applied in product list page");
         sleep(1000);
@@ -213,27 +258,48 @@ public class CheckoutPage extends BasePage {
         LOGGER.info("User is able to see products based on filters");
     }
 
-    public void validateSortingMenu() throws InterruptedException {
+    public void validateLowToHighMenu() throws InterruptedException {
         sleep(2000);
         tap(relevanceMenu);
-        LOGGER.info("User navigated to the Sorting Menu");
-        sleep(1000);
-        tap(NewArrivalsMenu);
-        sleep(1000);
-        swipeDown();
-        sleep(1000);
-        LOGGER.info("User is  able to see the new arrival products");
-        sleep(1000);
-        tap(NewArrivalsMenu);
-        sleep(1000);
+        sleep(2000);
         tap(LowToHighMenu);
-        sleep(1000);
-        swipeDown();
-        sleep(1000);
         LOGGER.info("User is able to see the products from low to high price order");
         sleep(1000);
         swipeDown();
-        LOGGER.info("User is able to see products based on filters");
+        LOGGER.info("User is able to see the products based on filters");
+    }
+
+    public void validateHighToLowMenu() throws InterruptedException {
+        sleep(2000);
+        tap(relevanceMenu);
+        sleep(2000);
+        tap(HighToLowMenu);
+        LOGGER.info("User is able to see the products from high to low price order");
+        sleep(1000);
+        swipeDown();
+        LOGGER.info("User is able to see the products based on filter");
+    }
+
+    public void validateNewArrivalsMenu() throws InterruptedException {
+        sleep(2000);
+        tap(relevanceMenu);
+        sleep(2000);
+        tap(NewArrivalsMenu);
+        LOGGER.info("User is able to see the New Arrival products");
+        sleep(1000);
+        swipeDown();
+        LOGGER.info("User is able to see the product based on filters");
+    }
+
+    public void validateRatingsMenu() throws InterruptedException {
+        sleep(2000);
+        tap(relevanceMenu);
+        sleep(2000);
+        tap(RatingsSortMenu);
+        LOGGER.info("User is able to see the products based on ratings");
+        sleep(1000);
+        swipeDown();
+        LOGGER.info("User is able to products based on ratings filters");
     }
 
     public void clickBargainsMenu() throws InterruptedException {
@@ -301,6 +367,10 @@ public class CheckoutPage extends BasePage {
         sleep(4000);
         enterText(toEMail, "piccosofttest@gmail.com");
         sleep(2000);
+        driver.navigate().back();
+        sleep(2000);
+        tap(SenderMailMenu);
+        sleep(1000);
         enterText(subjectEmail, "Product details for your orders");
         sleep(2000);
         tap(sendButton);
