@@ -4,9 +4,6 @@ Feature: Bargain - Product checkout page
   I want to search and checkout products on the Home page
   So that I can do different level of bargains
 
-  Background:
-    #Given I verify existing login
-
   @regression
   Scenario: Verify the first Bargain attempt of the product between seller and customer
     When I search the product in mobile "Jewellery"
