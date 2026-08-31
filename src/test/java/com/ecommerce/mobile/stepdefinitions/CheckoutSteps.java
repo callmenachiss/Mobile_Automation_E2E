@@ -62,6 +62,12 @@ public class CheckoutSteps {
         checkoutPage.clickSubHomeandKitchenMenu();
     }
 
+
+    @When("I select and click specific product in homepage")
+    public void I_select_and_click_specific_product_in_homepage() throws InterruptedException {
+       checkoutPage.clickSpecificProducts();
+    }
+
     @Then("I navigate to Gifting and Festive Essentials Menu")
     public void I_navigate_to_Gifting_and_Festive_Essentials_Menu() throws InterruptedException {
         checkoutPage.clickGiftingFestiveEssentialsMenu();
@@ -88,6 +94,12 @@ public class CheckoutSteps {
     @Then("I verify products based on brand Sera's basket filter")
     public void I_verify_products_based_on_brand_Sera_basket_filter() throws InterruptedException {
         checkoutPage.setSeraBrandFilters();
+    }
+
+
+    @Then("I verify products using brand Sera's basket filter")
+    public void I_verify_products_using_brand_Sera_basket_filter() throws InterruptedException {
+        checkoutPage.ApplySeraBrandFilter();
     }
 
     @Then("I setup filters in this product list page")

@@ -54,7 +54,7 @@ Feature: Checkout page - Product details page
     Then I navigate to Gifting and Festive Essentials Menu
     Then I verify products based on brand Sera's basket filter
     Then I navigate to Toys and Games Menu
-    Then I verify products based on brand Sera's basket filter
+    Then I verify products using brand Sera's basket filter
 
   @regression
   Scenario: verify product filtering based on price range flow
@@ -67,7 +67,10 @@ Feature: Checkout page - Product details page
 
   @regression
   Scenario: verify specific product checkout flow
-
+    When I select and click specific product in homepage
+    Then I start bargain to proceed purchase
+    Then I proceed with payment to complete the order
+    Then I do IDBI internet banking for payment to place the order
 
 
 
