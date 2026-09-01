@@ -4,7 +4,7 @@ Feature: Checkout page - Product details page
   I want to search and checkout products on the Home page
   So that I can start bargains and purchase the products
 
-  @regression @test
+  @regression
   Scenario: verify session based deal of the day product in display
     When I click on Category menu
     Then I comeback to Bazaar page to verify session based Gajab deal
@@ -55,7 +55,7 @@ Feature: Checkout page - Product details page
     Then I navigate to Stationery Menu
     Then I verify products using brand Sera's basket filter
 
-  @regression
+  @regression @test
   Scenario: verify product filtering based on price range flow
     When I navigate to Home and Kitchen Menu
     Then I verify products based on price range filter
