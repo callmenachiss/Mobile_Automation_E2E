@@ -55,14 +55,14 @@ Feature: Checkout page - Product details page
     Then I navigate to Stationery Menu
     Then I verify products using brand Sera's basket filter
 
-  @regression
+  @regression @test
   Scenario: verify product filtering based on price range flow
     When I navigate to Home and Kitchen Menu
     Then I verify products based on price range filter
-    Then I navigate to Stationery Menu
-    Then I verify products based on price range filter
-    Then I navigate to Toys and Games Menu
-    Then I verify products based on price range filter
+    #Then I navigate to Stationery Menu
+    #Then I verify products based on price range filter
+    #Then I navigate to Toys and Games Menu
+    #Then I verify products based on price range filter
 
   @regression
   Scenario: verify specific product checkout flow

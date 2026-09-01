@@ -696,3 +696,58 @@
 2026-09-01 12:38:27.257 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
 2026-09-01 12:38:27.267 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
 2026-09-01 12:38:28.260 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Stopping Appium server...
+2026-09-01 13:26:54.806 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-01 13:26:54.814 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-01 13:26:55.597 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-01 13:26:55.598 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 801 ms
+2026-09-01 13:26:55.602 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-01 13:26:55.711 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-01 13:26:55.715 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-01 13:27:02.247 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-01 13:27:02.247 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6648 ms
+2026-09-01 13:27:02.524 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-09-01 13:27:02.524 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-01 13:27:02.909 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-01 13:27:05.747 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-09-01 13:27:26.778 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Login with valid credentials
+2026-09-01 13:27:28.667 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Login_with_valid_credentials_01-Sep-2026_13-27-28.png
+2026-09-01 13:27:28.697 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Login with valid credentials ==========
+2026-09-01 13:27:28.734 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify product filtering based on price range flow ==========
+2026-09-01 13:27:28.734 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-01 13:27:29.770 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-01 13:28:35.694 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-09-01 13:28:38.550 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-09-01 13:29:05.527 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify product filtering based on price range flow
+2026-09-01 13:29:06.895 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_product_filtering_based_on_price_range_flow_01-Sep-2026_13-29-06.png
+2026-09-01 13:29:06.900 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify product filtering based on price range flow ==========
+2026-09-01 13:29:06.913 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-09-01 13:30:04.935 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-01 13:30:04.939 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-01 13:30:05.537 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-01 13:30:05.537 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 609 ms
+2026-09-01 13:30:05.540 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-01 13:30:05.599 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-01 13:30:05.602 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-01 13:30:10.945 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-01 13:30:10.945 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5407 ms
+2026-09-01 13:30:11.179 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Login with valid credentials ==========
+2026-09-01 13:30:11.180 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-01 13:30:11.622 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-01 13:30:32.234 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-01 13:30:32.237 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-01 13:30:32.831 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-01 13:30:32.832 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 605 ms
+2026-09-01 13:30:32.834 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-01 13:30:32.876 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-01 13:30:32.877 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-01 13:30:39.245 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-01 13:30:39.246 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6413 ms
+2026-09-01 13:30:39.444 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify product filtering based on price range flow ==========
+2026-09-01 13:30:39.444 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-01 13:30:40.394 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-01 13:31:47.438 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-09-01 13:31:49.841 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-09-01 13:32:18.227 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify product filtering based on price range flow
+2026-09-01 13:32:19.024 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_product_filtering_based_on_price_range_flow_01-Sep-2026_13-32-19.png
+2026-09-01 13:32:19.041 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify product filtering based on price range flow ==========
+2026-09-01 13:32:19.065 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
