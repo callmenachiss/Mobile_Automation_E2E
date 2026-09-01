@@ -43,6 +43,7 @@ public class LoginSteps {
     public void I_verify_existing_login() {
         Assert.assertTrue(homePage.isLoginExists(), "Existing Login was not deducted.");
         homePage.clickProfileAvatar();
+        try {homePage.clickProfileAvatar();} catch (Exception e) {System.out.println(e);}
         homePage.clickPersonalDetails();
         homePage.clickLogout();
         Assert.assertTrue(loginPage.isGetStartedLabelDisplayed(), "Get Started was not displayed on the splash page.");

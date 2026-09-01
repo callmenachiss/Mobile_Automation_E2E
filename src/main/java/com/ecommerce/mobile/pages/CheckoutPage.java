@@ -191,9 +191,9 @@ public class CheckoutPage extends BasePage {
     }
 
     public void clickSpecificProducts() throws InterruptedException {
-        //sleep(2000);
+        sleep(2000);
         swipeDown();
-        //sleep(2000);
+        sleep(2000);
         //scrollToAccessibilityId("product_template1_product_2_card");
         swipeDown();
         sleep(1000);
@@ -236,6 +236,8 @@ public class CheckoutPage extends BasePage {
 
     public void setPriceRangeFilters() throws InterruptedException {
         sleep(3000);
+        tap(filtersMenu);
+        sleep(2000);
         tap(pricingMenu);
         sleep(1000);
         tap(endPricingMenu);
