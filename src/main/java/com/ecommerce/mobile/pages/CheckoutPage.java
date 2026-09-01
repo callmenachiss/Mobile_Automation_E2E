@@ -191,11 +191,15 @@ public class CheckoutPage extends BasePage {
     }
 
     public void clickSpecificProducts() throws InterruptedException {
-        sleep(2000);
+        //sleep(2000);
         swipeDown();
+        //sleep(2000);
         //scrollToAccessibilityId("product_template1_product_2_card");
-        sleep(2000);
+        swipeDown();
+        sleep(1000);
         tap(SpecificProductInMenu);
+        swipeDown();
+        swipeDown();
         swipeDown();
         LOGGER.info("User navigated to the specific product in menu");
     }
@@ -335,8 +339,17 @@ public class CheckoutPage extends BasePage {
         sleep(2000);
         swipeDown();
         sleep(2000);
-        clickProductsInTrendingMenu(5);
+        clickProductsInTrendingMenu(3);
         LOGGER.info("User is able to access trending product details");
+        sleep(1000);
+        driver.navigate().back();
+        swipeDown();
+        swipeDown();
+        swipeDown();
+        swipeDown();
+        swipeDown();
+        swipeDown();
+        driver.navigate().back();
     }
 
     public void navigateLiveOrdersSection() throws InterruptedException {

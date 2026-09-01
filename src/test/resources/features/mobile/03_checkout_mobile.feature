@@ -4,7 +4,7 @@ Feature: Checkout page - Product details page
   I want to search and checkout products on the Home page
   So that I can start bargains and purchase the products
 
-  @regression @test
+  @regression
   Scenario: verify session based deal of the day product in display
     When I click on Category menu
     Then I comeback to Bazaar page to verify session based Gajab deal
