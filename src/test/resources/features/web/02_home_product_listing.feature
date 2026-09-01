@@ -6,12 +6,17 @@ Feature: Home page - Product listing
 
   Background:
     Given the login screen will be displayed
-    When I entered Mobile number
+    When I entered Mobile number "8484848484"
     Then I should enter OTP
 
-  @smoke @regression
-  Scenario: Search for a product
+  @smoke @regression @web
+  Scenario: Search and purchase product workflow
     When I search for the product "Wireless Headphones"
     Then products should be available in search results
     Then I start bargain the products
+    Then I click on pay now button
+    And I selected BOB net banking for payment flow
+    Then I verify purchased product details
+    Then I should logout into the application
+
 

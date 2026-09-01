@@ -27,13 +27,13 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "(//div[contains(@class,'flex items-center')]//input)[1]")
     private WebElement searchBox;
 
-    @FindBy(xpath = "(//img[@alt='search'])[1]")
+    @FindBy(xpath = "//div[@id='header-middle-bar']//img[@id='header-search-btn']")
     private WebElement searchbtnicon;
 
-    @FindBy(xpath = "(//img[contains(@class,'object-contain w-full')])[2]")
+    @FindBy(xpath = "(//img[contains(@class,'object-contain w-full')])[1]")
     private WebElement searchproductName;
 
-    @FindBy(xpath = "//span[contains(text(),'Start Bargaining')]")
+    @FindBy(xpath = "//span[normalize-space()='Start Bargaining']")
     private WebElement StartBargainbtn;
 
     @FindBy(xpath = "//span[normalize-space(text())='Offer Your Price']")
@@ -42,8 +42,23 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//span[normalize-space(text())='Accept the offer']")
     private WebElement AcceptOfferbtn;
 
-    @FindBy(xpath = "//span[normalize-space(text())='Buy Now']")
+    @FindBy(xpath = "//span[contains(text(),\"Buy Now\")]")
     private WebElement BuyNowbtn;
+
+    @FindBy(xpath = "//span[@id='checkout-pay-now-desktop-online-text']")
+    private WebElement PayNowbtn;
+
+    @FindBy(xpath = "//span[contains(text(),\"Netbanking\")]")
+    private WebElement NetBankingmenu;
+
+    @FindBy(xpath = "//span[contains(text(),\"Bank of Baroda\")]")
+    private WebElement BOBNetBankingmenu;
+
+    @FindBy(xpath = "//button[@class='success']")
+    private WebElement Acceptbtn;
+
+    @FindBy(xpath = "//h6[normalize-space(text())='Order placed!']")
+    public WebElement Orderplacedlbl;
 
     @FindBy(xpath = "(//img[@alt='profile'])[1]")
     private WebElement profileIconmenu;
@@ -62,22 +77,21 @@ public class HomePage extends BaseWebPage {
         goSleep(7000);
         enterText(searchBox, productName);
         goSleep(5000);
-        Actions actions = new Actions(driver);
-        goSleep(2000);
-        actions.sendKeys(Keys.ENTER);
-        goSleep(5000);
-        //clickDuration(searchbtnicon,10);
+        //Actions actions = new Actions(driver);
+        //actions.sendKeys(Keys.ENTER);
+        //goSleep(5000);
+        clickDuration(searchbtnicon,10);
         LOGGER.info("Searching for product: {}", productName);
     }
 
     public void checkAvailableProducts() throws InterruptedException {
-        goSleep(2000);
+        goSleep(4000);
         clickDuration(searchproductName,10);
         LOGGER.info("User selecting the products from search results");
     }
 
     public void startBargainprocess() throws InterruptedException {
-        goSleep(2000);
+        goSleep(4000);
         click(StartBargainbtn);
         LOGGER.info("User started the bargain process");
         goSleep(2000);
@@ -85,9 +99,34 @@ public class HomePage extends BaseWebPage {
         goSleep(2000);
         click(AcceptOfferbtn);
         LOGGER.info("User accepting offer");
-        goSleep(2000);
+        goSleep(5000);
         click(BuyNowbtn);
-        LOGGER.info("User clicked on buy button for payment flow");
+        LOGGER.info("User clicked on buy now button");
+    }
+
+    public void clickPayNowButton() throws InterruptedException{
+        goSleep(3000);
+        click(PayNowbtn);
+        LOGGER.info("User clicked on pay now button");
+        goSleep(3000);
+    }
+
+    public void selectBOBNetBankingMenu() throws InterruptedException {
+        goSleep(2000);
+        click(NetBankingmenu);
+        LOGGER.info("User clicked on net banking menu");
+        click(BOBNetBankingmenu);
+        LOGGER.info("User clicked on BOB net banking menu");
+        switchToChildWindow();
+        click(Acceptbtn);
+        switchToParentWindow();
+        LOGGER.info("User completed the payment");
+    }
+
+
+    public void verifyPurchaseProductDetails(){
+        isDisplayed(Orderplacedlbl);
+        LOGGER.info("User is able to see product details");
     }
 
 

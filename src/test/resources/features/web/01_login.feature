@@ -16,7 +16,7 @@ Feature: Login
 
   @smoke @regression
   Scenario: Login into the web application
-    When I entered Mobile number
+    When I entered Mobile number "8585858585"
     Then I should enter OTP
     Then I should logout into the application
 

@@ -32,8 +32,22 @@ public class HomeSteps {
         homePage.startBargainprocess();
     }
 
+    @Then("I click on pay now button")
+    public void I_click_on_pay_now_button() throws InterruptedException {
+        homePage.clickPayNowButton();
+    }
+
+    @Then("I selected BOB net banking for payment flow")
+    public void I_selected_BOB_net_banking_for_payment_flow() throws InterruptedException {
+        homePage.selectBOBNetBankingMenu();
+    }
 
 
+    @Then("I verify purchased product details")
+    public void I_verify_purchased_product_details() throws InterruptedException {
+        homePage.verifyPurchaseProductDetails();
+        Assert.assertEquals(homePage.Orderplacedlbl.getText(),"Order placed!");
+    }
 
     @Then("I should logout into the application")
     public void iShouldLogoutIntoTheApplication() throws InterruptedException {
