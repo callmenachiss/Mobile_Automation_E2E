@@ -76,6 +76,7 @@ public class LoginSteps {
             loginPage.enterValidPhoneNUmber("8484848484");
             loginPage.clickCheckbox();
             loginPage.clickNext();
+            loginPage.enterOtp(TEST_OTP);
         }
     }
 

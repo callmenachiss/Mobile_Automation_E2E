@@ -4,10 +4,11 @@ Feature: Checkout page - Product details page
   I want to search and checkout products on the Home page
   So that I can start bargains and purchase the products
 
-  @regression @retest
+  @regression
   Scenario: verify session based deal of the day product in display
     Given I verify existing login
     When I log in with existing mobile number "8484848484"
+    Then I should enter OTP received in my existing mobile device
     When I click on Category menu
     Then I comeback to Bazaar page to verify session based Gajab deal
     Then I click on Bargain menu
@@ -43,7 +44,7 @@ Feature: Checkout page - Product details page
     #Then I navigate to Toys and Games Menu
     #Then I verify products based on price range filter
 
-  @regression @retest
+  @regression
   Scenario: verify filtering products using brand Sera's basket flow
     When I navigate to Home and Kitchen Menu
     Then I verify products based on brand Sera's basket filter

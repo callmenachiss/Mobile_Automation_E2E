@@ -729,3 +729,221 @@
 2026-09-02 12:36:37.304 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_specific_product_checkout_flow_02-Sep-2026_12-36-37.png
 2026-09-02 12:36:37.316 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify specific product checkout flow ==========
 2026-09-02 12:36:37.324 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-09-02 12:49:03.058 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 12:49:03.064 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 12:49:03.634 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 12:49:03.634 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 584 ms
+2026-09-02 12:49:03.636 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 12:49:03.684 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 12:49:03.685 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 12:49:12.018 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 12:49:12.019 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 8384 ms
+2026-09-02 12:49:12.522 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-09-02 12:49:12.523 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:49:12.950 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:50:55.792 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-09-02 12:50:57.316 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_02-Sep-2026_12-50-57.png
+2026-09-02 12:50:57.333 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-09-02 12:50:57.362 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify session based deal of the day product in display ==========
+2026-09-02 12:50:57.363 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:50:58.345 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:52:32.902 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-09-02 12:52:54.112 [main] INFO  com.ecommerce.mobile.pages.HomePage - User  clicked personal details
+2026-09-02 12:52:55.585 [main] INFO  com.ecommerce.mobile.pages.HomePage - User logged out
+2026-09-02 12:52:55.586 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see get started label displayed
+2026-09-02 12:53:27.570 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-09-02 12:54:29.903 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-09-02 12:54:30.527 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered the existing phone number: 8484848484
+2026-09-02 12:54:31.850 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-09-02 12:54:32.163 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-09-02 12:54:56.350 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify session based deal of the day product in display
+2026-09-02 12:54:58.017 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_session_based_deal_of_the_day_product_in_display_02-Sep-2026_12-54-58.png
+2026-09-02 12:54:58.021 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify session based deal of the day product in display ==========
+2026-09-02 12:54:58.034 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify filtering products using brand Sera's basket flow ==========
+2026-09-02 12:54:58.034 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:54:59.045 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:55:23.703 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify filtering products using brand Sera's basket flow
+2026-09-02 12:55:25.076 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_filtering_products_using_brand_Sera_s_basket_flow_02-Sep-2026_12-55-25.png
+2026-09-02 12:55:25.088 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify filtering products using brand Sera's basket flow ==========
+2026-09-02 12:55:25.101 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify specific product checkout flow ==========
+2026-09-02 12:55:25.101 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:55:26.024 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:55:30.942 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 12:55:33.432 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 12:55:56.398 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify specific product checkout flow
+2026-09-02 12:55:57.799 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_specific_product_checkout_flow_02-Sep-2026_12-55-57.png
+2026-09-02 12:55:57.803 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify specific product checkout flow ==========
+2026-09-02 12:55:57.808 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-09-02 13:00:04.550 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 13:00:04.554 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 13:00:05.086 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 13:00:05.086 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 545 ms
+2026-09-02 13:00:05.088 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 13:00:05.119 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 13:00:05.121 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 13:00:10.787 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 13:00:10.787 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5700 ms
+2026-09-02 13:00:10.992 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-09-02 13:00:10.992 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 13:00:12.005 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 13:01:50.619 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-09-02 13:01:52.168 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_02-Sep-2026_13-01-52.png
+2026-09-02 13:01:52.188 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-09-02 13:01:52.206 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-09-02 13:02:59.155 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 13:02:59.158 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 13:02:59.702 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 13:02:59.703 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 553 ms
+2026-09-02 13:02:59.704 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 13:02:59.737 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 13:02:59.739 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 13:03:04.949 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 13:03:04.949 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5246 ms
+2026-09-02 13:03:05.144 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify session based deal of the day product in display ==========
+2026-09-02 13:03:05.144 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 13:03:06.017 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 13:04:41.884 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-09-02 13:05:02.910 [main] INFO  com.ecommerce.mobile.pages.HomePage - User  clicked personal details
+2026-09-02 13:05:04.351 [main] INFO  com.ecommerce.mobile.pages.HomePage - User logged out
+2026-09-02 13:05:04.352 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see get started label displayed
+2026-09-02 13:05:36.296 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-09-02 13:06:37.366 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-09-02 13:06:38.973 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered the existing phone number: 8484848484
+2026-09-02 13:06:40.303 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-09-02 13:06:42.724 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-09-02 13:07:10.805 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify session based deal of the day product in display
+2026-09-02 13:07:12.215 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_session_based_deal_of_the_day_product_in_display_02-Sep-2026_13-07-12.png
+2026-09-02 13:07:12.229 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify session based deal of the day product in display ==========
+2026-09-02 13:07:12.246 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-09-02 13:08:33.341 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 13:08:33.346 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 13:08:33.912 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 13:08:33.914 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 579 ms
+2026-09-02 13:08:33.915 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 13:08:33.943 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 13:08:33.944 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 13:08:39.119 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 13:08:39.120 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 5206 ms
+2026-09-02 13:08:39.372 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify session based deal of the day product in display ==========
+2026-09-02 13:08:39.372 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 13:08:40.302 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 13:10:30.880 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-09-02 13:10:51.877 [main] INFO  com.ecommerce.mobile.pages.HomePage - User  clicked personal details
+2026-09-02 13:10:52.907 [main] INFO  com.ecommerce.mobile.pages.HomePage - User logged out
+2026-09-02 13:10:52.908 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see get started label displayed
+2026-09-02 13:11:24.849 [main] INFO  com.ecommerce.mobile.pages.LoginPage - SignUp flow Execution started
+2026-09-02 13:12:25.934 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Get Started button
+2026-09-02 13:12:27.090 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered the existing phone number: 8484848484
+2026-09-02 13:12:28.355 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked checkbox
+2026-09-02 13:12:30.489 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User clicked on Next button in signup/login page
+2026-09-02 13:12:38.461 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User entered OTP: 123456
+2026-09-02 13:14:00.764 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:14:00.765 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the category menu
+2026-09-02 13:14:03.168 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the bazaar menu
+2026-09-02 13:15:08.880 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:15:11.249 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the Gajab deals for the active session
+2026-09-02 13:16:17.242 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:16:19.352 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see Just bargain deals for the active session
+2026-09-02 13:17:22.885 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:17:22.885 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Bargain menu
+2026-09-02 13:17:25.250 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the bazaar menu
+2026-09-02 13:18:30.778 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:18:33.257 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see the Gajab deals for the active session
+2026-09-02 13:19:39.171 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:19:41.281 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see Just bargain deals for the active session
+2026-09-02 13:19:41.285 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify session based deal of the day product in display
+2026-09-02 13:19:41.285 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify session based deal of the day product in display ==========
+2026-09-02 13:19:41.299 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-09-02 13:20:20.279 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 13:20:20.283 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 13:20:20.928 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 13:20:20.928 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 657 ms
+2026-09-02 13:20:20.930 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 13:20:20.976 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 13:20:20.977 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 13:20:27.943 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 13:20:27.943 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7014 ms
+2026-09-02 13:20:28.629 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify filtering products using brand Sera's basket flow ==========
+2026-09-02 13:20:28.630 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 13:20:29.765 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 13:21:47.729 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-09-02 13:21:50.795 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-09-02 13:21:55.142 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-09-02 13:22:03.530 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-09-02 13:22:06.156 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:22:06.156 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-09-02 13:22:09.381 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Gifting and Festive Essentials Menu
+2026-09-02 13:22:14.253 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-09-02 13:22:22.473 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-09-02 13:22:25.049 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:22:25.050 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-09-02 13:22:28.643 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Toys and Games Menu
+2026-09-02 13:22:31.596 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Toys and Games Menu
+2026-09-02 13:22:34.419 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to Filters Menu
+2026-09-02 13:22:40.397 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Sera's basket Filter applied in product list page
+2026-09-02 13:22:42.945 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:22:42.946 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to view products based on filters
+2026-09-02 13:22:48.455 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Stationery Menu
+2026-09-02 13:22:51.347 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to Filters Menu
+2026-09-02 13:22:56.708 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Sera's basket Filter applied in product list page
+2026-09-02 13:22:59.245 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:22:59.245 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to view products based on filters
+2026-09-02 13:23:00.234 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify filtering products using brand Sera's basket flow
+2026-09-02 13:23:00.234 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify filtering products using brand Sera's basket flow ==========
+2026-09-02 13:23:00.246 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-09-02 13:25:08.074 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 13:25:08.078 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 13:25:08.598 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 13:25:08.599 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 531 ms
+2026-09-02 13:25:08.600 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 13:25:08.639 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 13:25:08.640 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 13:25:14.958 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 13:25:14.958 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6359 ms
+2026-09-02 13:25:15.169 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify specific product checkout flow ==========
+2026-09-02 13:25:15.169 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 13:25:16.168 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 13:25:22.036 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:25:24.546 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:26:28.283 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:26:28.772 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:26:29.294 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 13:26:29.295 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the specific product in menu
+2026-09-02 13:26:35.122 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-09-02 13:26:37.453 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 13:26:43.934 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-09-02 13:26:47.992 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-09-02 13:26:54.444 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-09-02 13:27:00.842 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User navigated to the Net-Banking menu
+2026-09-02 13:27:03.596 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User clicked on IDBI option
+2026-09-02 13:27:06.215 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User is accepting net banking session
+2026-09-02 13:27:08.613 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User completed the payment
+2026-09-02 13:28:25.704 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked profile avatar
+2026-09-02 13:28:26.558 [main] INFO  com.ecommerce.mobile.pages.HomePage - User  clicked personal details
+2026-09-02 13:28:27.542 [main] INFO  com.ecommerce.mobile.pages.HomePage - User logged out
+2026-09-02 13:28:27.542 [main] INFO  com.ecommerce.mobile.pages.LoginPage - User is able to see get started label displayed
+2026-09-02 13:28:59.484 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify specific product checkout flow
+2026-09-02 13:28:59.484 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify specific product checkout flow ==========
+2026-09-02 13:28:59.498 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-09-02 13:31:02.886 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 13:31:02.889 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 13:31:03.450 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 13:31:03.450 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 570 ms
+2026-09-02 13:31:03.452 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 13:31:03.486 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 13:31:03.488 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 13:31:10.001 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 13:31:10.002 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6551 ms
+2026-09-02 13:31:10.246 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-09-02 13:31:10.246 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 13:31:11.374 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 13:32:20.541 [main] INFO  com.ecommerce.mobile.pages.HomePage - User entered pincode 525535
+2026-09-02 13:32:26.505 [main] INFO  com.ecommerce.mobile.pages.HomePage - User entered the pincode 625535
+2026-09-02 13:33:33.942 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked profile avatar
+2026-09-02 13:33:39.875 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on Add address button
+2026-09-02 13:33:52.811 [main] INFO  com.ecommerce.mobile.pages.HomePage - User saved the address
+2026-09-02 13:33:55.131 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on edit button
+2026-09-02 13:34:01.586 [main] INFO  com.ecommerce.mobile.pages.HomePage - user deleted the address
+2026-09-02 13:34:03.729 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Pin code selection workflow
+2026-09-02 13:34:03.730 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-09-02 13:34:03.740 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.

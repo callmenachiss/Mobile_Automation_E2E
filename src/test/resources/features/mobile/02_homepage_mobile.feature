@@ -31,7 +31,7 @@ Feature: Home page - Product listing
     Then I verify anyone trending products in the list
     And I verify one more products in trending section
 
-  @regression @retest
+  @regression
   Scenario: Pin code selection workflow
     When I search the invalid pin code in mobile
     When I search the valid pin code in mobile

@@ -27,7 +27,7 @@ Feature: Bargain - Product checkout page
     Then I proceed with COD payment to complete the order
     Then I do IDBI internet banking for payment to place the order
 
-  @regression @retest
+  @regression
   Scenario: verify specific product checkout flow
     When I select and click specific product in homepage
     Then I start bargain to proceed purchase

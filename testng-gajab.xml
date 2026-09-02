@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Ecommerce Mobile Smoke Suite" verbose="0">
     <test name="Smoke Tests">
-        <parameter name="cucumber.filter.tags" value="@retest"/>
+        <parameter name="cucumber.filter.tags" value="@test"/>
         <classes>
             <class name="com.ecommerce.mobile.runner.TestRunner"/>
         </classes>
