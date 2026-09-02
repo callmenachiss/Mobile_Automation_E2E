@@ -32,6 +32,7 @@ public class HomeSteps {
         //homePage.clickBargainingButton();
         //homePage.dismissBargainingPopup();
         homePage.clickProfileAvatar();
+
         homePage.clickPersonalDetails();
         homePage.clickLogout();
         assertTrue(loginpage.isGetStartedLabelDisplayed(), "Get Started was not displayed on the splash page.");

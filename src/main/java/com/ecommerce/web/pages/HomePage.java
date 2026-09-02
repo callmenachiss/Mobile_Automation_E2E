@@ -10,6 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.net.URI;
 import java.time.Duration;
 import java.util.List;
 
@@ -33,8 +35,14 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "(//img[contains(@class,'object-contain w-full')])[1]")
     private WebElement searchproductName;
 
+    @FindBy(xpath = "//img[contains(@class,'object-contain w-full')]")
+    private List<WebElement> searchProductNameResults;
+
     @FindBy(xpath = "//span[normalize-space()='Start Bargaining']")
     private WebElement StartBargainbtn;
+
+    @FindBy(xpath = "//input[@id='bargain-offer-price']")
+    private WebElement BargainTxtBox;
 
     @FindBy(xpath = "//span[normalize-space(text())='Offer Your Price']")
     private WebElement offerPricebtn;
@@ -42,7 +50,7 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//span[normalize-space(text())='Accept the offer']")
     private WebElement AcceptOfferbtn;
 
-    @FindBy(xpath = "//span[contains(text(),\"Buy Now\")]")
+    @FindBy(xpath = "//span[@id='bargain-buy-now-text-span']")
     private WebElement BuyNowbtn;
 
     @FindBy(xpath = "//span[@id='checkout-pay-now-desktop-online-text']")
@@ -51,13 +59,25 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//span[contains(text(),\"Netbanking\")]")
     private WebElement NetBankingmenu;
 
+    @FindBy(css = "iframe.razorpay-checkout-frame")
+    private WebElement razorpayFrame;
+
     @FindBy(xpath = "//span[contains(text(),\"Bank of Baroda\")]")
     private WebElement BOBNetBankingmenu;
+
+    @FindBy(xpath = "//span[contains(text(),\"Canara Bank\")]")
+    private WebElement CanaraNetBankingmenu;
+
+    @FindBy(xpath = "//span[contains(text(),\"Punjab National Bank - Retail Banking\")]")
+    private WebElement PNBNetBankingmenu;
+
+    @FindBy(xpath = "//span[contains(text(),\"IDBI\")]")
+    private WebElement IDBINetBankingmenu;
 
     @FindBy(xpath = "//button[@class='success']")
     private WebElement Acceptbtn;
 
-    @FindBy(xpath = "//h6[normalize-space(text())='Order placed!']")
+    @FindBy(xpath = "//*[contains(text(),'Order placed!')]")
     public WebElement Orderplacedlbl;
 
     @FindBy(xpath = "(//img[@alt='profile'])[1]")
@@ -90,11 +110,31 @@ public class HomePage extends BaseWebPage {
         LOGGER.info("User selecting the products from search results");
     }
 
+    public void selectTargetProduct(int option) throws InterruptedException {
+        goSleep(4000);
+        searchProductNameResults.get(option).click();
+    }
+
     public void startBargainprocess() throws InterruptedException {
         goSleep(4000);
         click(StartBargainbtn);
         LOGGER.info("User started the bargain process");
         goSleep(2000);
+        click(offerPricebtn);
+        goSleep(2000);
+        click(AcceptOfferbtn);
+        LOGGER.info("User accepting offer");
+        goSleep(5000);
+        click(BuyNowbtn);
+        LOGGER.info("User clicked on buy now button");
+    }
+
+    public void startFirstBargainprocess() throws InterruptedException {
+        goSleep(4000);
+        click(StartBargainbtn);
+        LOGGER.info("User started the bargain process");
+        goSleep(3000);
+        enterText(BargainTxtBox,"30");
         click(offerPricebtn);
         goSleep(2000);
         click(AcceptOfferbtn);
@@ -112,19 +152,92 @@ public class HomePage extends BaseWebPage {
     }
 
     public void selectBOBNetBankingMenu() throws InterruptedException {
-        goSleep(2000);
+        goSleep(3000);
+        switchToRazorpayFrame(razorpayFrame);
+        //switchToChildWindow();
         click(NetBankingmenu);
         LOGGER.info("User clicked on net banking menu");
+        goSleep(2000);
         click(BOBNetBankingmenu);
-        LOGGER.info("User clicked on BOB net banking menu");
-        switchToChildWindow();
+        LOGGER.info("User selecting BOB net banking menu");
+        goSleep(2000);
         click(Acceptbtn);
-        switchToParentWindow();
+        goSleep(2000);
+        switchToDefaultContent();
+        //switchToParentWindow();
         LOGGER.info("User completed the payment");
     }
 
+    public void selectCanaraNetBankingMenu() throws InterruptedException {
+        goSleep(3000);
+        switchToRazorpayFrame(razorpayFrame);
+        //switchToChildWindow();
+        click(NetBankingmenu);
+        LOGGER.info("User clicked on the net banking menu");
+        goSleep(2000);
+        click(CanaraNetBankingmenu);
+        LOGGER.info("User selecting Canara net banking menu");
+        goSleep(2000);
+        switchToChildWindow();
+        goSleep(2000);
+        click(Acceptbtn);
+        goSleep(7000);
+        //switchToDefaultContent();
+        LOGGER.info("User completed the Payment");
+        goSleep(3000);
+        switchToParentWindow();
+        goSleep(7000);
+    }
+
+    public void selectIDBINetBankingMenu() throws InterruptedException {
+        goSleep(3000);
+        switchToRazorpayFrame(razorpayFrame);
+        //switchToChildWindow();
+        click(NetBankingmenu);
+        LOGGER.info("User clicked on Net banking menu");
+        goSleep(2000);
+        click(IDBINetBankingmenu);
+        LOGGER.info("User selecting IDBI net banking menu");
+        goSleep(2000);
+        switchToChildWindow();
+        goSleep(2000);
+        click(Acceptbtn);
+        goSleep(7000);
+        //switchToDefaultContent();
+        LOGGER.info("User Completed the payment");
+        goSleep(3000);
+        switchToParentWindow();
+        goSleep(7000);
+    }
+
+    public void selectPNBNetBankingMenu() throws InterruptedException {
+        goSleep(3000);
+        switchToRazorpayFrame(razorpayFrame);
+        click(NetBankingmenu);
+        LOGGER.info("User clicked net banking menu");
+        goSleep(2000);
+        click(PNBNetBankingmenu);
+        LOGGER.info("User selecting PNB net banking menu");
+        goSleep(2000);
+        switchToChildWindow();
+        goSleep(2000);
+        click(Acceptbtn);
+        goSleep(7000);
+        //switchToDefaultContent();
+        LOGGER.info("user completed the payment");
+        goSleep(3000);
+        switchToParentWindow();
+        goSleep(7000);
+    }
 
     public void verifyPurchaseProductDetails(){
+        String currentUrl = driver.getCurrentUrl();
+        LOGGER.info(driver.getCurrentUrl());
+        URI uri = URI.create(currentUrl);
+        String path = uri.getPath();
+        String OrderId = path.substring(path.lastIndexOf('/') + 1);
+        LOGGER.info("Order Id: " + OrderId);
+        LOGGER.info(driver.getTitle());
         isDisplayed(Orderplacedlbl);
         LOGGER.info("User is able to see product details");
     }

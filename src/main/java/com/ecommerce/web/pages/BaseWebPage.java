@@ -34,6 +34,10 @@ public class BaseWebPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(waitSeconds));
         PageFactory.initElements(driver, this);
     }
+
+    public void refreshPage() {
+        driver.navigate().refresh();
+    }
     private String parentWindow;
     public static final String[] MALE_NAMES = {
             "Arun",
@@ -70,6 +74,8 @@ public class BaseWebPage {
         }
     }
 
+
+
     public void switchToParentWindow() {
         driver.switchTo().window(parentWindow);
     }
@@ -92,6 +98,15 @@ public class BaseWebPage {
     protected void click(WebElement element) {
         waitUntilVisible(element);
         element.click();
+    }
+
+    public void switchToRazorpayFrame(WebElement element) {
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
+    }
+
+    public void switchToDefaultContent() {
+
+        driver.switchTo().defaultContent();
     }
 
     protected void enterText(WebElement element, String text) {

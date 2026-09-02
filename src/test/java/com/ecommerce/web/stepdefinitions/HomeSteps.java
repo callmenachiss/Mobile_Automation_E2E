@@ -24,12 +24,23 @@ public class HomeSteps {
 
     @Then("products should be available in search results")
     public void product_should_be_available_in_the_search_results() throws InterruptedException {
-        homePage.checkAvailableProducts();
+        //homePage.checkAvailableProducts();
+        homePage.selectTargetProduct(4);
+    }
+
+    @Then("Target products should be available in search results")
+    public void Target_product_should_be_available_in_the_search_results() throws InterruptedException {
+        homePage.selectTargetProduct(3);
     }
 
     @Then("I start bargain the products")
     public void I_start_bargain_the_products() throws InterruptedException {
         homePage.startBargainprocess();
+    }
+
+    @Then("I start first bargain the products")
+    public void I_start_first_bargain_the_products() throws InterruptedException {
+        homePage.startFirstBargainprocess();
     }
 
     @Then("I click on pay now button")
@@ -42,6 +53,20 @@ public class HomeSteps {
         homePage.selectBOBNetBankingMenu();
     }
 
+    @Then("I selected Canara net banking for payment flow")
+    public void I_selected_Canara_net_banking_for_payment_flow() throws InterruptedException {
+        homePage.selectCanaraNetBankingMenu();
+    }
+
+    @Then("I selected IDBI net banking for payment flow")
+    public void I_selected_IDBI_net_banking_for_payment_flow() throws InterruptedException {
+        homePage.selectIDBINetBankingMenu();
+    }
+
+    @Then("I selected PNB net banking for payment flow")
+    public void I_selected_PNB_net_banking_for_payment_flow() throws InterruptedException {
+        homePage.selectPNBNetBankingMenu();
+    }
 
     @Then("I verify purchased product details")
     public void I_verify_purchased_product_details() throws InterruptedException {

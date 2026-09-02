@@ -271,8 +271,8 @@ public class CheckoutPage extends BasePage {
         sleep(1000);
         tap(filtersApplyBtn);
         LOGGER.info("Sera's basket Filter applied in product list page");
-        sleep(1000);
-        swipeDown();
+        //sleep(1000);
+        //swipeDown();
         LOGGER.info("User is able to view products based on filters");
         driver.navigate().back();
     }
@@ -282,11 +282,10 @@ public class CheckoutPage extends BasePage {
         tap(filtersMenu);
         sleep(2000);
         tap(pricingMenu);
-        sleep(1000);
-
+        sleep(2000);
         //setPriceRange(90, 300);
         //tap(endPricingMenu);
-        sleep(1000);
+        //sleep(1000);
         tap(filtersApplyBtn);
         LOGGER.info("Price range Filters applied in product list page");
         swipeDown();

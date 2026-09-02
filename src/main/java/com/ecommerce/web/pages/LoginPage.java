@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
+import org.openqa.selenium.StaleElementReferenceException;
 import java.util.List;
 import java.util.Random;
 
@@ -214,30 +214,27 @@ public class LoginPage extends BaseWebPage {
     }
 
 
-    private void clickSafely(WebElement element) {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(element));
-            scrollIntoView(element);
-            wait.until(ExpectedConditions.elementToBeClickable(element));
 
-            element.click();
 
-        } catch (ElementClickInterceptedException e) {
-            LOGGER.warn("Click intercepted. Retrying after scrolling.");
-
-            scrollIntoView(element);
-
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-            element.click();
-
-        } catch (ElementNotInteractableException e) {
-            LOGGER.warn("Element not interactable. Retrying after scrolling.");
-
-            scrollIntoView(element);
-
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-            element.click();
+    protected void clickSafely(WebElement element) {
+        int attempts = 3;
+        for (int i = 0; i < attempts; i++) {
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+                element.click();
+                LOGGER.info("Element clicked successfully.");
+                return;
+            } catch (StaleElementReferenceException e) {
+                LOGGER.warn(
+                        "Stale element encountered. Retrying... Attempt {}/{}",
+                        i + 1,
+                        attempts
+                );
+            }
         }
+        throw new StaleElementReferenceException(
+                "Element remained stale after " + attempts + " attempts."
+        );
     }
 
 
