@@ -60,7 +60,7 @@ public class LoginPage extends BasePage {
     @AndroidFindBy(xpath = "//android.widget.EditText")
     private WebElement otpField;
 
-    @AndroidFindBy(accessibility = "English\nFor those who like it simple")
+    @AndroidFindBy(accessibility = "language_option_eng_button")
     private WebElement englishOption;
 
     @AndroidFindBy(accessibility = "login_next_button")
@@ -110,7 +110,7 @@ public class LoginPage extends BasePage {
         sleep(2000);
         tap(NextButton);
         LOGGER.info("User clicked on Next button in Account setup page");
-        sleep(2000);
+        sleep(5000);
     }
 
     private String generateRandomNumber(int length) {
@@ -179,6 +179,7 @@ public class LoginPage extends BasePage {
         enterText(otpField, TEST_OTP);
         sleep(7000);
         LOGGER.info("User entered OTP: {}", TEST_OTP);
+        sleep(7000);
     }
 
     public void clickEnglishOption() {

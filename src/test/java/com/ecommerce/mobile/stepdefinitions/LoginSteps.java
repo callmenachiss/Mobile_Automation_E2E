@@ -40,13 +40,44 @@ public class LoginSteps {
     }
 
     @Given("I verify existing login")
-    public void I_verify_existing_login() {
+    public void I_verify_existing_login() throws InterruptedException {
         Assert.assertTrue(homePage.isLoginExists(), "Existing Login was not deducted.");
         homePage.clickProfileAvatar();
         try {homePage.clickProfileAvatar();} catch (Exception e) {System.out.println(e);}
         homePage.clickPersonalDetails();
         homePage.clickLogout();
         Assert.assertTrue(loginPage.isGetStartedLabelDisplayed(), "Get Started was not displayed on the splash page.");
+    }
+
+    @Given("verify existing session")
+    public void verify_existing_session()  throws InterruptedException{
+        Assert.assertTrue(homePage.isLoginExists(), "Existing Login was not deducted.");
+
+        if (homePage.isLoginExists()) {
+           System.out.println("Existing session was found. So we can use the same for better performance");
+        }else{
+            System.out.println("Existing session was not found. New session will be created.");
+            loginPage.clickGetStartedButton();
+            loginPage.enterValidPhoneNUmber("8585858585");
+            loginPage.clickCheckbox();
+            loginPage.clickNext();
+        }
+    }
+
+    @Given("verify the existing session")
+    public void verify_the_existing_session()  throws InterruptedException{
+        Assert.assertTrue(homePage.isLoginExists(), "Existing Login was not deducted.");
+
+        if (homePage.isLoginExists()) {
+            System.out.println("Existing session was found. So we can use the same for better performance");
+        }else{
+            System.out.println("Existing session was not found. New session will be created.");
+            loginPage.clickGetStartedButton();
+            loginPage.enterValidPhoneNUmber("8484848484");
+            loginPage.clickCheckbox();
+            loginPage.clickNext();
+            loginPage.enterOtp(TEST_OTP);
+        }
     }
 
 
@@ -78,8 +109,9 @@ public class LoginSteps {
         loginPage.enterRandomName();
         loginPage.selectFemale();
         loginPage.clickNextbtn();
-        homePage.clickProfileAvatar();
-        //loginPage.clickEnglishOption();
+        try {homePage.clickProfileAvatar();} catch (Exception e) {System.out.println(e);}
+        //homePage.clickProfileAvatar();
+        try {loginPage.clickEnglishOption();} catch (Exception e) {System.out.println(e);}
         //loginPage.handleOptionalLocationPermission();
     }
 

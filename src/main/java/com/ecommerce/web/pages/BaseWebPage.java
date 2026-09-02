@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.Random;
+import java.util.Set;
 
 /**
  * Parent class for every web Page Object. Mirrors the mobile BasePage's
@@ -34,6 +35,10 @@ public class BaseWebPage {
         PageFactory.initElements(driver, this);
     }
 
+    public void refreshPage() {
+        driver.navigate().refresh();
+    }
+    private String parentWindow;
     public static final String[] MALE_NAMES = {
             "Arun",
             "Vijay",
@@ -57,6 +62,25 @@ public class BaseWebPage {
             "Ramesh"
     };
 
+
+    public void switchToChildWindow() {
+        parentWindow = driver.getWindowHandle();
+        Set<String> allWindows = driver.getWindowHandles();
+        for (String window : allWindows) {
+            if (!window.equals(parentWindow)) {
+                driver.switchTo().window(window);
+                break;
+            }
+        }
+    }
+
+
+
+    public void switchToParentWindow() {
+        driver.switchTo().window(parentWindow);
+    }
+
+
     public void goSleep(long num) throws InterruptedException {
         Thread.sleep(num);
     }
@@ -74,6 +98,15 @@ public class BaseWebPage {
     protected void click(WebElement element) {
         waitUntilVisible(element);
         element.click();
+    }
+
+    public void switchToRazorpayFrame(WebElement element) {
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
+    }
+
+    public void switchToDefaultContent() {
+
+        driver.switchTo().defaultContent();
     }
 
     protected void enterText(WebElement element, String text) {

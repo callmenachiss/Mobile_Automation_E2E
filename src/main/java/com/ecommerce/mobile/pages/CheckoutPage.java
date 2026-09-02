@@ -5,13 +5,11 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Rectangle;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -137,6 +135,51 @@ public class CheckoutPage extends BasePage {
     @AndroidFindBy(accessibility= "gajab_deal_block_1_button")
     private WebElement JustBargainCard;
 
+    @AndroidFindBy(id = "category_filter_price_slider")
+    private WebElement priceSlider;
+
+    public void setPriceRange(int fromPrice, int toPrice) {
+        int minPrice = 0;
+        int maxPrice = 1500;
+        Point location = priceSlider.getLocation();
+        int x = location.getX();
+        int y = location.getY();
+        int width = priceSlider.getSize().getWidth();
+        int height = priceSlider.getSize().getHeight();
+        int centerY = y + (height / 2);
+        int leftX = x + 10;
+        int rightX = x + width - 10;
+        double usableWidth = rightX - leftX;
+        int fromX = (int) (
+                leftX +
+                        ((fromPrice - minPrice)
+                                / (double) (maxPrice - minPrice))
+                                * usableWidth
+        );
+        int toX = (int) (
+                leftX +
+                        ((toPrice - minPrice)
+                                / (double) (maxPrice - minPrice))
+                                * usableWidth
+        );
+
+        // Move From thumb
+        drag(
+                leftX,
+                centerY,
+                fromX,
+                centerY
+        );
+
+        // Move To thumb
+        drag(
+                rightX,
+                centerY,
+                toX,
+                centerY
+        );
+    }
+
 
     public void clickCategoryMenu() throws InterruptedException {
         sleep(2000);
@@ -239,9 +282,10 @@ public class CheckoutPage extends BasePage {
         tap(filtersMenu);
         sleep(2000);
         tap(pricingMenu);
-        sleep(1000);
-        tap(endPricingMenu);
-        sleep(1000);
+        sleep(2000);
+        //setPriceRange(90, 300);
+        //tap(endPricingMenu);
+        //sleep(1000);
         tap(filtersApplyBtn);
         LOGGER.info("Price range Filters applied in product list page");
         swipeDown();

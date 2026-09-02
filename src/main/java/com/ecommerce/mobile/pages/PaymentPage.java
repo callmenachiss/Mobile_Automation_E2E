@@ -45,31 +45,31 @@ public class PaymentPage extends BasePage {
 
 
     public void clickNetBankingMenu() throws InterruptedException {
-        sleep(2000);
+        sleep(4000);
         tap(NetBankingMenu);
         LOGGER.info("User navigated to the Net-Banking menu");
     }
 
     public void clickBOBPaymentMenu() throws InterruptedException {
-        sleep(2000);
+        sleep(4000);
         tap(BOBPaymentMenu);
         LOGGER.info("User clicked on BOB option");
     }
 
     public void clickCanaraPaymentMenu() throws InterruptedException {
-        sleep(2000);
+        sleep(3000);
         tap(CanaraPaymentMenu);
         LOGGER.info("User clicked on Canara option");
     }
 
     public void clickPNBPaymentMenu() throws InterruptedException {
-        sleep(2000);
+        sleep(3000);
         tap(PNBPaymentMenu);
         LOGGER.info("User clicked on PNB option");
     }
 
     public void clickIDBIPaymentMenu() throws InterruptedException {
-        sleep(2000);
+        sleep(3000);
         tap(IDBIPaymentMenu);
         LOGGER.info("User clicked on IDBI option");
     }

@@ -282,11 +282,10 @@ public class HomePage extends BasePage {
         return isDisplayed(homeKitchenMenu);
     }
 
-    public boolean isLoginExists() {
-        LOGGER.info("Existing login deducted.. performing logout and login again");
+    public boolean isLoginExists() throws InterruptedException {
+        sleep(4000);
         return isDisplayed(profileAvatar);
     }
-
 
 
     public boolean isProductListDisplayed() {
@@ -355,7 +354,7 @@ public class HomePage extends BasePage {
         //isDisplayed(AddressSuccesstoastlbl);
     }
 
-    public void deleteAddressfromProfile() throws InterruptedException {
+    public void deleteAddressFromProfile() throws InterruptedException {
         sleep(3000);
         tap(EditbuttoninAddress);
         LOGGER.info("user clicked on edit button");
@@ -364,6 +363,8 @@ public class HomePage extends BasePage {
         sleep(1000);
         tap(deleteaddressButton);
         LOGGER.info("user deleted the address");
+        sleep(2000);
+        driver.navigate().back();
     }
 
     public static String randomAddress(String address) {

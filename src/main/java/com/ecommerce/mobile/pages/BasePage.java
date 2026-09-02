@@ -47,6 +47,37 @@ public class BasePage {
         element.click();
     }
 
+    protected void drag(int startX, int startY, int endX, int endY) {
+        PointerInput finger = new PointerInput(
+                PointerInput.Kind.TOUCH,
+                "finger"
+        );
+        Sequence drag = new Sequence(finger, 1);
+        drag.addAction(
+                finger.createPointerMove(
+                        Duration.ZERO,
+                        PointerInput.Origin.viewport(),
+                        startX,
+                        startY
+                )
+        );
+        drag.addAction(
+                finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg())
+        );
+        drag.addAction(
+                finger.createPointerMove(
+                        Duration.ofMillis(1000),
+                        PointerInput.Origin.viewport(),
+                        endX,
+                        endY
+                )
+        );
+        drag.addAction(
+                finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg())
+        );
+        driver.perform(Collections.singletonList(drag));
+    }
+
 
     public void dismissBargainingPopup() {
         Map<String, Object> params = new HashMap<>();
