@@ -25,12 +25,12 @@ public class HomeSteps {
     @Then("products should be available in search results")
     public void product_should_be_available_in_the_search_results() throws InterruptedException {
         //homePage.checkAvailableProducts();
-        homePage.selectTargetProduct(4);
+        homePage.selectTargetProduct(3);
     }
 
     @Then("Target products should be available in search results")
     public void Target_product_should_be_available_in_the_search_results() throws InterruptedException {
-        homePage.selectTargetProduct(3);
+        homePage.selectTargetProduct(2);
     }
 
     @Then("I start bargain the products")
