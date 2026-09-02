@@ -137,12 +137,14 @@ public class HomePage extends BasePage {
     @AndroidFindBy(accessibility = "pdp_deal_buy_now_button")
     private WebElement buyNowButton;
 
+    @AndroidFindBy(accessibility = "pdp_bottom_bargain_button")
+    private WebElement BuyNowButton;
+
     @AndroidFindBy(accessibility= "cart_payment_online_button")
     private WebElement payOnlineButton;
 
     @AndroidFindBy(accessibility= "cart_payment_cod_button")
     private WebElement CODButton;
-
 
     //@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Pay ₹')]")
 
@@ -164,6 +166,11 @@ public class HomePage extends BasePage {
     public void clickBuyNow() {
         tap(buyNowButton);
         LOGGER.info("User clicking the buy now button");
+    }
+
+    public void clickBUYNow() {
+        tap(BuyNowButton);
+        LOGGER.info("User clicking the Buy Now button");
     }
 
 

@@ -27,6 +27,9 @@ Feature: Checkout page - Product details page
     When I navigate to Home and Kitchen Menu
     Then I setup filters in this product list page
     And I will apply sorting items in product list page
+    Then I navigate to Gifting and Festive Essentials Menu
+    Then I setup filters in this product list page
+    And I will apply sorting items in product list page
 
   @regression
   Scenario: verify the product details in all specific category flow
@@ -34,15 +37,6 @@ Feature: Checkout page - Product details page
     Then I verify products based on this category
     Then I navigate to Gifting and Festive Essentials Menu
     Then I verify products based on this category
-
-  #@regression
-  #Scenario: verify product filtering based on price range flow
-    #When I navigate to Home and Kitchen Menu
-    #Then I verify products based on price range filter
-    #Then I navigate to Stationery Menu
-    #Then I verify products based on price range filter
-    #Then I navigate to Toys and Games Menu
-    #Then I verify products based on price range filter
 
   @regression
   Scenario: verify filtering products using brand Sera's basket flow
@@ -54,6 +48,15 @@ Feature: Checkout page - Product details page
     Then I verify products using brand Sera's basket filter
     Then I navigate to Stationery Menu
     Then I verify products using brand Sera's basket filter
+
+  #@regression
+  #Scenario: verify product filtering based on price range flow
+    #When I navigate to Home and Kitchen Menu
+    #Then I verify products based on price range filter
+    #Then I navigate to Stationery Menu
+    #Then I verify products based on price range filter
+    #Then I navigate to Toys and Games Menu
+    #Then I verify products based on price range filter
 
 
 

@@ -61,6 +61,7 @@ public class LoginSteps {
             loginPage.enterValidPhoneNUmber("8585858585");
             loginPage.clickCheckbox();
             loginPage.clickNext();
+            loginPage.enterOtp(TEST_OTP);
         }
     }
 
@@ -109,9 +110,9 @@ public class LoginSteps {
         loginPage.enterRandomName();
         loginPage.selectFemale();
         loginPage.clickNextbtn();
+        try {loginPage.clickEnglishOption();} catch (Exception e) {System.out.println(e);}
         try {homePage.clickProfileAvatar();} catch (Exception e) {System.out.println(e);}
         //homePage.clickProfileAvatar();
-        try {loginPage.clickEnglishOption();} catch (Exception e) {System.out.println(e);}
         //loginPage.handleOptionalLocationPermission();
     }
 

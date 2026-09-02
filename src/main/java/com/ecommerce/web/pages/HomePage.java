@@ -53,6 +53,9 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//span[@id='bargain-buy-now-text-span']")
     private WebElement BuyNowbtn;
 
+    @FindBy(xpath = "//span[contains(text(),'Buy Now')]")
+    private WebElement buyNowbtn;
+
     @FindBy(xpath = "//span[@id='checkout-pay-now-desktop-online-text']")
     private WebElement PayNowbtn;
 
@@ -137,17 +140,22 @@ public class HomePage extends BaseWebPage {
     }
 
     public void startBargainprocess() throws InterruptedException {
-        goSleep(4000);
-        click(StartBargainbtn);
-        LOGGER.info("User started the bargain process");
-        goSleep(2000);
-        click(offerPricebtn);
-        goSleep(2000);
-        click(AcceptOfferbtn);
-        LOGGER.info("User accepting offer");
-        goSleep(5000);
-        click(BuyNowbtn);
-        LOGGER.info("User clicked on buy now button");
+        try{
+            if(StartBargainbtn.isDisplayed()){
+                goSleep(4000);
+                click(StartBargainbtn);
+                LOGGER.info("User started bargain process");
+                goSleep(2000);
+                click(offerPricebtn);
+                goSleep(2000);
+                click(AcceptOfferbtn);
+                LOGGER.info("User accepted the offer");
+                goSleep(5000);
+                click(BuyNowbtn);
+                LOGGER.info("User clicked on Buy Now button");
+            }
+        } catch (Exception e) {click(buyNowbtn);
+        }
     }
 
     public void startFirstBargainprocess() throws InterruptedException {
@@ -166,27 +174,11 @@ public class HomePage extends BaseWebPage {
     }
 
     public void clickPayNowButton() throws InterruptedException{
-        goSleep(3000);
+        goSleep(6000);
+        scrollIntoView(PayNowbtn);
         click(PayNowbtn);
         LOGGER.info("User clicked on pay now button");
         goSleep(3000);
-    }
-
-    public void selectBOBNetBankingMenu() throws InterruptedException {
-        goSleep(3000);
-        switchToRazorpayFrame(razorpayFrame);
-        //switchToChildWindow();
-        click(NetBankingmenu);
-        LOGGER.info("User clicked on net banking menu");
-        goSleep(2000);
-        click(BOBNetBankingmenu);
-        LOGGER.info("User selecting BOB net banking menu");
-        goSleep(2000);
-        click(Acceptbtn);
-        goSleep(2000);
-        switchToDefaultContent();
-        //switchToParentWindow();
-        LOGGER.info("User completed the payment");
     }
 
     public void selectCanaraNetBankingMenu() throws InterruptedException {
@@ -246,6 +238,25 @@ public class HomePage extends BaseWebPage {
         goSleep(7000);
         //switchToDefaultContent();
         LOGGER.info("user completed the payment");
+        goSleep(3000);
+        switchToParentWindow();
+        goSleep(7000);
+    }
+
+    public void selectBOBNetBankingMenu() throws InterruptedException {
+        goSleep(3000);
+        switchToRazorpayFrame(razorpayFrame);
+        click(NetBankingmenu);
+        LOGGER.info("User clicked on net banking menu");
+        goSleep(2000);
+        click(BOBNetBankingmenu);
+        LOGGER.info("User selecting BOB net banking menu");
+        goSleep(2000);
+        switchToChildWindow();
+        goSleep(2000);
+        click(Acceptbtn);
+        goSleep(7000);
+        LOGGER.info("User completed the payment");
         goSleep(3000);
         switchToParentWindow();
         goSleep(7000);
