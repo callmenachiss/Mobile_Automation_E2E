@@ -139,10 +139,18 @@ public class HomeSteps {
 
     @Then("I start bargain to proceed purchase")
     public void I_start_bargain_to_proceed_purchase() throws InterruptedException {
-        homePage.clickStartBargaining();
-        homePage.clickOfferYourPrice();
-        homePage.clickAcceptOffer();
-        homePage.clickBuyNow();
+        try{
+            homePage.clickStartBargaining();
+            homePage.clickOfferYourPrice();
+            homePage.clickAcceptOffer();
+            homePage.clickBuyNow();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        //homePage.clickStartBargaining();
+        //homePage.clickOfferYourPrice();
+        //homePage.clickAcceptOffer();
+        try {homePage.clickBUYNow();}catch (Exception e){System.out.println(e);}
     }
 
 

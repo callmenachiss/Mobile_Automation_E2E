@@ -350,6 +350,8 @@ public class CheckoutPage extends BasePage {
         sleep(1000);
         swipeDown();
         LOGGER.info("User is able to products based on ratings filters");
+        sleep(2000);
+        driver.navigate().back();
     }
 
     public void clickBargainsMenu() throws InterruptedException {
