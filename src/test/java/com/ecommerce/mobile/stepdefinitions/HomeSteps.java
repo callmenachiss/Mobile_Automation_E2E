@@ -84,7 +84,7 @@ public class HomeSteps {
 
     @Then("I delete Address in profile page")
     public void I_delete_Address_in_profile_page() throws InterruptedException {
-        homePage.deleteAddressfromProfile();
+        homePage.deleteAddressFromProfile();
     }
 
     @Then("I click on product to proceed purchase")

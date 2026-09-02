@@ -83,8 +83,29 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "(//img[@alt='profile'])[1]")
     private WebElement profileIconmenu;
 
+    @FindBy(xpath = "//button[normalize-space()='Add New Address']")
+    private WebElement AddAddressbtn;
+
+    @FindBy(xpath = "//input[@id='add-address-modal-address1-input']")
+    private WebElement Address1Txtbox;
+
+    @FindBy(xpath = "//input[@id='add-address-modal-address2-input']")
+    private WebElement Address2Txtbox;
+
     @FindBy(xpath = "//h3[normalize-space(text())='Personal details']")
     private WebElement PersonalDetailsMenu;
+
+    @FindBy(xpath = "//h3[normalize-space(text())='Addresses']")
+    private WebElement AddressesMenu;
+
+    @FindBy(xpath = "//button[@id='location-desktop-menu-btn']")
+    private WebElement LocationMenu;
+
+    @FindBy(xpath = "//input[@id='location-desktop-search-input']")
+    private WebElement LocationTxtbox;
+
+    @FindBy(xpath = "//div[@id='location-desktop-suggestion-item-0']")
+    private WebElement LocationTargetTxtbox;
 
     @FindBy(xpath = "//button[normalize-space(text())='Logout']")
     private WebElement LogoutButton;

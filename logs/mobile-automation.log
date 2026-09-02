@@ -470,3 +470,262 @@
 2026-09-02 10:14:25.519 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Checkout and purchase product through COD workflow ==========
 2026-09-02 10:14:25.520 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
 2026-09-02 10:14:26.664 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 11:53:07.622 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 11:53:07.627 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 11:53:08.812 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 11:53:08.813 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 1200 ms
+2026-09-02 11:53:08.816 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 11:53:08.879 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 11:53:08.881 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 11:53:16.041 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 11:53:16.042 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7229 ms
+2026-09-02 11:53:16.290 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Share product details through email flow ==========
+2026-09-02 11:53:16.291 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 11:53:17.346 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 11:54:25.341 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Gifts
+2026-09-02 11:54:27.604 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_heart-shaped-dessert-salad-plates-plastic-dinner-plates-for-appetizer_button
+2026-09-02 11:54:28.340 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-02 11:54:33.486 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User clicked on share button
+2026-09-02 11:54:38.241 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User clicked on Gmail app in list
+2026-09-02 11:54:53.970 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Email sent to customer for product details
+2026-09-02 11:54:53.973 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Share product details through email flow
+2026-09-02 11:54:53.975 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Share product details through email flow ==========
+2026-09-02 11:54:54.005 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-09-02 11:54:54.006 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 11:54:55.238 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 11:56:02.631 [main] INFO  com.ecommerce.mobile.pages.HomePage - User entered pincode 525535
+2026-09-02 11:56:08.764 [main] INFO  com.ecommerce.mobile.pages.HomePage - User entered the pincode 625535
+2026-09-02 11:57:16.205 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked profile avatar
+2026-09-02 11:57:22.540 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on Add address button
+2026-09-02 11:57:35.549 [main] INFO  com.ecommerce.mobile.pages.HomePage - User saved the address
+2026-09-02 11:57:37.872 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on edit button
+2026-09-02 11:57:44.160 [main] INFO  com.ecommerce.mobile.pages.HomePage - user deleted the address
+2026-09-02 11:58:07.851 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-09-02 11:58:09.091 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_02-Sep-2026_11-58-09.png
+2026-09-02 11:58:09.104 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-09-02 11:58:09.129 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the latest live order flow ==========
+2026-09-02 11:58:09.130 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 11:58:10.151 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 11:59:17.153 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Cosmetics
+2026-09-02 11:59:17.797 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_decaura-cosmetic-pouch-brown_button
+2026-09-02 11:59:17.993 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-02 11:59:21.171 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-09-02 11:59:30.649 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-02 11:59:32.951 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 11:59:49.834 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-09-02 12:00:04.639 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-02 12:00:06.973 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:00:13.428 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-09-02 12:00:17.439 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-09-02 12:00:24.358 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-09-02 12:04:41.579 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 12:04:41.583 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 12:04:42.163 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 12:04:42.164 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 591 ms
+2026-09-02 12:04:42.167 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 12:04:42.279 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 12:04:42.283 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 12:04:49.071 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 12:04:49.072 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6907 ms
+2026-09-02 12:04:49.532 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-09-02 12:04:49.533 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:04:50.662 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:06:04.532 [main] INFO  com.ecommerce.mobile.pages.HomePage - User entered pincode 525535
+2026-09-02 12:06:10.463 [main] INFO  com.ecommerce.mobile.pages.HomePage - User entered the pincode 625535
+2026-09-02 12:07:27.978 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked profile avatar
+2026-09-02 12:07:34.005 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on Add address button
+2026-09-02 12:07:46.749 [main] INFO  com.ecommerce.mobile.pages.HomePage - User saved the address
+2026-09-02 12:07:49.793 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on edit button
+2026-09-02 12:07:56.090 [main] INFO  com.ecommerce.mobile.pages.HomePage - user deleted the address
+2026-09-02 12:08:19.429 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-09-02 12:08:21.699 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_02-Sep-2026_12-08-21.png
+2026-09-02 12:08:21.740 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-09-02 12:08:21.829 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the latest live order flow ==========
+2026-09-02 12:08:21.830 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:08:22.966 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:09:30.878 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Cosmetics
+2026-09-02 12:09:31.457 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_decaura-cosmetic-pouch-brown_button
+2026-09-02 12:09:41.669 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-02 12:10:04.544 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify the latest live order flow
+2026-09-02 12:10:05.686 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_the_latest_live_order_flow_02-Sep-2026_12-10-05.png
+2026-09-02 12:10:05.694 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the latest live order flow ==========
+2026-09-02 12:10:05.723 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify filtering products using brand Sera's basket flow ==========
+2026-09-02 12:10:05.723 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:10:06.788 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:10:56.649 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 12:10:56.655 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 12:10:57.414 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 12:10:57.415 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 774 ms
+2026-09-02 12:10:57.419 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 12:10:57.569 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 12:10:57.574 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 12:11:06.673 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 12:11:06.674 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 9257 ms
+2026-09-02 12:11:07.127 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-09-02 12:11:07.128 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:11:07.951 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:12:20.365 [main] INFO  com.ecommerce.mobile.pages.HomePage - User entered pincode 525535
+2026-09-02 12:12:26.247 [main] INFO  com.ecommerce.mobile.pages.HomePage - User entered the pincode 625535
+2026-09-02 12:13:44.841 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked profile avatar
+2026-09-02 12:13:50.123 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on Add address button
+2026-09-02 12:14:03.713 [main] INFO  com.ecommerce.mobile.pages.HomePage - User saved the address
+2026-09-02 12:14:06.895 [main] INFO  com.ecommerce.mobile.pages.HomePage - user clicked on edit button
+2026-09-02 12:14:13.220 [main] INFO  com.ecommerce.mobile.pages.HomePage - user deleted the address
+2026-09-02 12:14:36.761 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-09-02 12:14:38.462 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_02-Sep-2026_12-14-38.png
+2026-09-02 12:14:38.478 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-09-02 12:14:38.506 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the latest live order flow ==========
+2026-09-02 12:14:38.507 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:14:39.400 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:15:11.528 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify the latest live order flow
+2026-09-02 12:15:12.483 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_the_latest_live_order_flow_02-Sep-2026_12-15-12.png
+2026-09-02 12:15:12.488 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the latest live order flow ==========
+2026-09-02 12:15:12.503 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify filtering products using brand Sera's basket flow ==========
+2026-09-02 12:15:12.503 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:15:13.425 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:17:03.039 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-02 12:17:03.044 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-02 12:17:03.642 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-02 12:17:03.643 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 609 ms
+2026-09-02 12:17:03.644 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-02 12:17:03.674 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-02 12:17:03.676 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-02 12:17:10.180 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-02 12:17:10.181 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 6538 ms
+2026-09-02 12:17:10.368 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Pin code selection workflow ==========
+2026-09-02 12:17:10.369 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:17:11.439 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:18:52.583 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Pin code selection workflow
+2026-09-02 12:18:54.170 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Pin_code_selection_workflow_02-Sep-2026_12-18-54.png
+2026-09-02 12:18:54.189 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Pin code selection workflow ==========
+2026-09-02 12:18:54.229 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify the latest live order flow ==========
+2026-09-02 12:18:54.230 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:18:55.264 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:20:03.014 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Cosmetics
+2026-09-02 12:20:03.499 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_decaura-cosmetic-pouch-brown_button
+2026-09-02 12:20:03.733 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-02 12:20:07.279 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-09-02 12:20:17.242 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-02 12:20:19.541 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:20:36.416 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-09-02 12:20:51.049 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-02 12:20:53.339 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:21:00.372 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-09-02 12:21:04.466 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-09-02 12:21:11.148 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-09-02 12:21:19.534 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User navigated to the Net-Banking menu
+2026-09-02 12:21:22.135 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User clicked on IDBI option
+2026-09-02 12:21:26.184 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User is accepting net banking session
+2026-09-02 12:21:28.597 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User completed the payment
+2026-09-02 12:22:22.649 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 12:22:47.819 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: verify the latest live order flow
+2026-09-02 12:22:47.819 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify the latest live order flow ==========
+2026-09-02 12:22:47.835 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify filtering products using brand Sera's basket flow ==========
+2026-09-02 12:22:47.836 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:22:48.909 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:23:53.691 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Home and Kitchen Menu
+2026-09-02 12:23:55.978 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Home and Kitchen Menu
+2026-09-02 12:24:00.419 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-09-02 12:24:08.908 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-09-02 12:24:11.482 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 12:24:11.482 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-09-02 12:24:14.710 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Gifting and Festive Essentials Menu
+2026-09-02 12:24:19.570 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Filters Menu
+2026-09-02 12:24:27.308 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Filters applied in product list page
+2026-09-02 12:24:29.849 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 12:24:29.850 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to see products based on filters
+2026-09-02 12:24:33.472 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Toys and Games Menu
+2026-09-02 12:24:36.297 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to sub section of Toys and Games Menu
+2026-09-02 12:24:39.149 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to Filters Menu
+2026-09-02 12:24:45.165 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Sera's basket Filter applied in product list page
+2026-09-02 12:24:45.166 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to view products based on filters
+2026-09-02 12:24:49.932 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the Stationery Menu
+2026-09-02 12:24:52.781 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to Filters Menu
+2026-09-02 12:24:57.404 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - Sera's basket Filter applied in product list page
+2026-09-02 12:24:57.404 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User is able to view products based on filters
+2026-09-02 12:25:22.493 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify filtering products using brand Sera's basket flow
+2026-09-02 12:25:23.938 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_filtering_products_using_brand_Sera_s_basket_flow_02-Sep-2026_12-25-23.png
+2026-09-02 12:25:23.947 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify filtering products using brand Sera's basket flow ==========
+2026-09-02 12:25:23.997 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Verify the first Bargain attempt of the product between seller and customer ==========
+2026-09-02 12:25:23.998 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:25:25.200 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:27:37.949 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Jewellery
+2026-09-02 12:27:38.617 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-aattmgya-3-layer-18-grid-adjustable-jewelery-organizer-storage-cosmetic-art--craft-items-baby-toy-jewellery-makeup-multi-purpose-use-vanity-box-multi-colour_button
+2026-09-02 12:27:39.380 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-02 12:27:42.237 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-09-02 12:27:53.675 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-02 12:27:55.958 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:28:12.949 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-09-02 12:28:26.376 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-02 12:28:28.725 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:28:35.153 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-09-02 12:28:39.408 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-09-02 12:28:45.129 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-09-02 12:28:52.543 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User navigated to the Net-Banking menu
+2026-09-02 12:28:55.262 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User clicked on BOB option
+2026-09-02 12:28:57.817 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User is accepting net banking session
+2026-09-02 12:29:00.513 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User completed the payment
+2026-09-02 12:29:16.305 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Verify the first Bargain attempt of the product between seller and customer
+2026-09-02 12:29:16.306 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Verify the first Bargain attempt of the product between seller and customer ==========
+2026-09-02 12:29:16.328 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-09-02 12:29:16.329 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:29:17.370 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:30:24.631 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Brush
+2026-09-02 12:30:25.311 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_techtiq-makeup-brush-organizer-multicolor_button
+2026-09-02 12:30:26.227 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-02 12:30:29.145 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-09-02 12:30:38.748 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-02 12:30:40.991 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:30:57.891 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-09-02 12:31:10.495 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-02 12:31:12.745 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:31:23.953 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more last shot button on bargain process
+2026-09-02 12:31:26.457 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:31:30.761 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-09-02 12:31:36.891 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-09-02 12:31:42.867 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User navigated to the Net-Banking menu
+2026-09-02 12:31:45.350 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User clicked on PNB option
+2026-09-02 12:31:48.644 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User is accepting net banking session
+2026-09-02 12:31:50.958 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User completed the payment
+2026-09-02 12:31:56.825 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Verify the multiple Bargain attempt of the product between seller and customer
+2026-09-02 12:31:56.826 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-09-02 12:31:56.840 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Checkout and purchase product through COD workflow ==========
+2026-09-02 12:31:56.841 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:31:57.875 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:32:54.772 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Evil Eye Rakhi
+2026-09-02 12:32:55.430 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_evil-eye-rakhi_button
+2026-09-02 12:32:55.603 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-02 12:33:01.147 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-09-02 12:33:10.846 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-02 12:33:13.101 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:33:29.895 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-09-02 12:33:42.492 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-02 12:33:44.755 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:33:51.220 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-09-02 12:33:54.695 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-09-02 12:34:01.878 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked COD button
+2026-09-02 12:34:08.069 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User navigated to the Net-Banking menu
+2026-09-02 12:34:10.605 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User clicked on IDBI option
+2026-09-02 12:34:13.751 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User is accepting net banking session
+2026-09-02 12:34:16.081 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User completed the payment
+2026-09-02 12:34:32.347 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Checkout and purchase product through COD workflow
+2026-09-02 12:34:32.348 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Checkout and purchase product through COD workflow ==========
+2026-09-02 12:34:32.361 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify specific product checkout flow ==========
+2026-09-02 12:34:32.362 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-02 12:34:33.416 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-02 12:34:37.210 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 12:34:39.732 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 12:35:43.629 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 12:35:44.113 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 12:35:44.615 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-02 12:35:44.615 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the specific product in menu
+2026-09-02 12:35:48.485 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-09-02 12:35:50.741 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-02 12:35:57.175 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-09-02 12:36:01.163 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-09-02 12:36:08.600 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-09-02 12:36:13.692 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User navigated to the Net-Banking menu
+2026-09-02 12:36:36.068 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify specific product checkout flow
+2026-09-02 12:36:37.304 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_specific_product_checkout_flow_02-Sep-2026_12-36-37.png
+2026-09-02 12:36:37.316 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify specific product checkout flow ==========
+2026-09-02 12:36:37.324 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.

@@ -354,7 +354,7 @@ public class HomePage extends BasePage {
         //isDisplayed(AddressSuccesstoastlbl);
     }
 
-    public void deleteAddressfromProfile() throws InterruptedException {
+    public void deleteAddressFromProfile() throws InterruptedException {
         sleep(3000);
         tap(EditbuttoninAddress);
         LOGGER.info("user clicked on edit button");
@@ -363,7 +363,6 @@ public class HomePage extends BasePage {
         sleep(1000);
         tap(deleteaddressButton);
         LOGGER.info("user deleted the address");
-        driver.navigate().back();
         sleep(2000);
         driver.navigate().back();
     }

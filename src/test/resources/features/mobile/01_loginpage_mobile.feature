@@ -13,6 +13,6 @@ Feature: Login
 
   @smoke @regression
   Scenario: Login with valid credentials
-    When I log in with existing mobile number "9876543211"
+    When I log in with existing mobile number "8585858585"
     Then I should enter OTP received in my existing mobile device
     #Then I logout from the Application

@@ -19,7 +19,7 @@ Feature: Home page - Product listing
     Then I proceed with payment to complete the order
     Then I do PNB internet banking for payment to place the order
 
-  @regression @retest
+  @regression
   Scenario: Share product details through email flow
     When I search the product in mobile "Gifts"
     Then I click on the product from the list
@@ -37,7 +37,7 @@ Feature: Home page - Product listing
     When I search the valid pin code in mobile
     Then I update Address in profile page
     Then I delete Address in profile page
-    Then I logout from the Application
+
 
 
 

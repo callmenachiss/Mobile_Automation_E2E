@@ -271,8 +271,8 @@ public class CheckoutPage extends BasePage {
         sleep(1000);
         tap(filtersApplyBtn);
         LOGGER.info("Sera's basket Filter applied in product list page");
-        //sleep(1000);
-        //swipeDown();
+        sleep(1000);
+        swipeDown();
         LOGGER.info("User is able to view products based on filters");
         driver.navigate().back();
     }
