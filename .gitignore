@@ -14,6 +14,7 @@ target/
 # startup-timing logs reach this branch for the mobile startup-delay debug -
 # re-add it to the ignore list once that's resolved.
 logs/web-automation.log
+logs/mobile-automation.log
 logs/*.log.gz
 screenshots/mobile/*
 screenshots/web/*
@@ -21,3 +22,4 @@ screenshots/web/*
 !screenshots/web/.gitkeep
 reports/
 test-output/
+
