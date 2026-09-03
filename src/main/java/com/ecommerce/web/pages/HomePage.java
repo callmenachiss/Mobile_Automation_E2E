@@ -38,8 +38,21 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//img[contains(@class,'object-contain w-full')]")
     private List<WebElement> searchProductNameResults;
 
+    @FindBy(xpath = "(//div[@id='home-maybe-animate-wrapper'])[1]")
+    private WebElement MostBargainList;
+
     @FindBy(xpath = "//span[normalize-space()='Start Bargaining']")
     private WebElement StartBargainbtn;
+
+    @FindBy(xpath = "//button[@id='checkout-update-address-btn']")
+    private WebElement UpdateAddressbtn;
+
+    @FindBy(xpath = "//span[@id='add-address-modal-submit-update-text']")
+    private WebElement updateAddressbtn;
+
+    @FindBy(xpath = "//a[normalize-space()='Edit']")
+    private WebElement AddressEditbtn;
+
 
     @FindBy(xpath = "//input[@id='bargain-offer-price']")
     private WebElement BargainTxtBox;
@@ -95,11 +108,41 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//input[@id='add-address-modal-address2-input']")
     private WebElement Address2Txtbox;
 
+    @FindBy(xpath = "//span[@id='add-address-modal-type-home-text']")
+    private WebElement HomeRadiobox;
+
+    @FindBy(xpath = "//img[@id='add-address-modal-billing-uncheck']")
+    private WebElement Defaultbox1;
+
+    @FindBy(xpath = "//span[@id='add-address-modal-billing-text']")
+    private WebElement Defaultbox2;
+
+    @FindBy(xpath = "//button[@id='add-address-modal-submit-btn']")
+    private WebElement SubmitBtn;
+
+    @FindBy(xpath = "//input[@id='add-address-modal-pincode-input']")
+    private WebElement pinCodeValue;
+
+    @FindBy(xpath = "//span[@id='social-share-label']")
+    private WebElement ShareMenu;
+
     @FindBy(xpath = "//h3[normalize-space(text())='Personal details']")
     private WebElement PersonalDetailsMenu;
 
     @FindBy(xpath = "//h3[normalize-space(text())='Addresses']")
     private WebElement AddressesMenu;
+
+    @FindBy(xpath = "//span[@id='social-share-label']")
+    private WebElement shareMenu;
+
+    @FindBy(xpath = "//p[@id='social-share-copy-link-text']")
+    private WebElement copiedLinkText;
+
+    @FindBy(xpath = "//button[contains(text(),'Delete')]")
+    private WebElement DeleteAddressesBtn;
+
+    @FindBy(xpath = "//span[contains(text(),'Delete')]")
+    private WebElement deleteAddressesBtn;
 
     @FindBy(xpath = "//button[@id='location-desktop-menu-btn']")
     private WebElement LocationMenu;
@@ -116,6 +159,16 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//p[normalize-space(text())='Logout successfully']")
     public WebElement LogoutSuccesslbl;
 
+    @FindBy(xpath = "//h2[normalize-space(text())='Just Bargained']")
+    public WebElement JustBargainlbl;
+
+    @FindBy(xpath = "//a[@id='home-wp1-view-more']")
+    public WebElement JustBargainProductMenulnk;
+
+    @FindBy(xpath = "//img[@id='header-logo-img']")
+    public WebElement Gajablogo;
+
+
 
     public void searchForProduct(String productName) throws InterruptedException {
         goSleep(7000);
@@ -128,18 +181,137 @@ public class HomePage extends BaseWebPage {
         LOGGER.info("Searching for product: {}", productName);
     }
 
+    public void setPincode(String pinCode) throws InterruptedException {
+        goSleep(3000);
+        waitUntilVisible(LocationMenu);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(LocationMenu).perform();
+        goSleep(2000);
+        click(LocationTxtbox);
+        goSleep(2000);
+        enterText(LocationTxtbox, pinCode);
+        goSleep(2000);
+        click(LocationTargetTxtbox);
+        LOGGER.info("User selected the pin code value");
+    }
+
     public void checkAvailableProducts() throws InterruptedException {
         goSleep(4000);
         clickDuration(searchproductName,10);
-        LOGGER.info("User selecting the products from search results");
+        LOGGER.info("User clicked the available products");
     }
 
     public void selectTargetProduct(int option) throws InterruptedException {
         goSleep(4000);
         searchProductNameResults.get(option).click();
+        LOGGER.info("User selecting the products from search results");
     }
 
+    public void verifyProductDetails() throws InterruptedException {
+        goSleep(5000);
+        scrollUp(200);
+        goSleep(3000);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(ShareMenu).perform();
+        goSleep(2000);
+        click(copiedLinkText);
+        String sharedLink = getClipboardText();
+        LOGGER.info("Product details copied and wrapped as link to share info through email");
+        LOGGER.info("Product details shared link {}",sharedLink);
+    }
+
+    public void verifyAddressDetails() throws InterruptedException {
+        goSleep(2000);
+        click(UpdateAddressbtn);
+        goSleep(2000);
+        click(AddressEditbtn);
+        goSleep(3000);
+        click(pinCodeValue);
+        String value=pinCodeValue.getText();
+        System.out.println(value);
+        LOGGER.info("User is able to see the pin code {}",value);
+        goSleep(2000);
+        click(updateAddressbtn);
+        LOGGER.info("User selected the address details");
+    }
+
+    public void NavigatetoAddressesMenu() throws InterruptedException {
+        goSleep(2000);
+        clickDuration(profileIconmenu,10);
+        goSleep(1000);
+        LOGGER.info("User  clicked on profile menu");
+        click(AddressesMenu);
+        LOGGER.info("User navigating to the address menu");
+    }
+
+    public void deleteAddressDetails()throws InterruptedException{
+        goSleep(2000);
+        click(DeleteAddressesBtn);
+        goSleep(2000);
+        click(deleteAddressesBtn);
+        goSleep(2000);
+        LOGGER.info("User delete the address details");
+    }
+
+    public void NavigateToMostBargainedProductsMenu() throws InterruptedException {
+        goSleep(5000);
+        scrollIntoView(JustBargainlbl);
+        goSleep(1000);
+        isDisplayed(JustBargainlbl);
+        LOGGER.info("User navigated to most bargained products menu");
+        goSleep(1000);
+        click(JustBargainProductMenulnk);
+        goSleep(3000);
+        scrollDown(2000);
+        goSleep(3000);
+        scrollDown(2500);
+        LOGGER.info("User is able to see the most bargained products menu");
+    }
+
+    public void SelectMostBargainedProducts() throws InterruptedException {
+        goSleep(3000);
+        scrollIntoView(JustBargainlbl);
+        goSleep(2000);
+        click(MostBargainList);
+        goSleep(2000);
+        LOGGER.info("User selected product from most bargained products menu");
+    }
+
+    public void NavigateToHomePageMenu() throws InterruptedException {
+        goSleep(2000);
+        click(Gajablogo);
+        goSleep(2000);
+        String url = getCurrentUrl();
+        String title = getPageTitle();
+        LOGGER.info("Current URL: {}", url);
+        LOGGER.info("Page Title: {}", title);
+    }
+
+    public void addAddressIntoMenu() throws InterruptedException {
+        goSleep(1000);
+        click(AddAddressbtn);
+        LOGGER.info("User navigated to Addresses Menu page");
+        goSleep(1000);
+        String addr1=randomAddress("test");
+        String addr2=randomAddress("hello");
+        goSleep(1000);
+        enterText(Address1Txtbox,addr1);
+        goSleep(1000);
+        enterText(Address2Txtbox,addr2);
+        goSleep(1000);
+        click(HomeRadiobox);
+        goSleep(1000);
+        click(Defaultbox1);
+        goSleep(1000);
+        //click(Defaultbox2);
+        //goSleep(1000);
+        click(SubmitBtn);
+        LOGGER.info("User successfully added address");
+    }
+
+
     public void startBargainprocess() throws InterruptedException {
+        goSleep(5000);
         try{
             if(StartBargainbtn.isDisplayed()){
                 goSleep(4000);
