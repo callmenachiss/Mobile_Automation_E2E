@@ -11,9 +11,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
 import java.time.Duration;
 import java.util.Random;
 import java.util.Set;
+import java.util.UUID;
 
 /**
  * Parent class for every web Page Object. Mirrors the mobile BasePage's
@@ -91,6 +95,11 @@ public class BaseWebPage {
         js.executeScript(script, element);
     }
 
+    public static String randomAddress(String address) {
+        return address+ UUID.randomUUID().toString().substring(0, 6);
+    }
+
+
     protected void waitUntilVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
@@ -143,6 +152,29 @@ public class BaseWebPage {
         element.click();
     }
 
+    protected String getClipboardText() {
+
+        try {
+            Clipboard clipboard =
+                    Toolkit.getDefaultToolkit().getSystemClipboard();
+
+            return (String) clipboard.getData(DataFlavor.stringFlavor);
+
+        } catch (Exception e) {
+            LOGGER.error("Unable to get text from clipboard", e);
+            return "";
+        }
+    }
+
+    protected void scrollUp(int pixels) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        js.executeScript(
+                "window.scrollBy(0, arguments[0]);",
+                -pixels
+        );
+    }
+
     public String generateMobileNumber() {
         Random random = new Random();
         int firstDigit = 6 + random.nextInt(4); // 6, 7, 8, or 9
@@ -154,11 +186,23 @@ public class BaseWebPage {
         return mobileNumber.toString();
     }
 
-    /**
-     * Scrolls the element into view. Handy for long product lists, the web
-     * equivalent of the mobile BasePage.scrollToText().
-     */
+    protected String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
+
+    protected String getPageTitle() {
+        return driver.getTitle();
+    }
+
     protected void scrollIntoView(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+    }
+
+    protected void scrollDown(int pixels) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript(
+                "window.scrollBy(0, arguments[0]);",
+                pixels
+        );
     }
 }
