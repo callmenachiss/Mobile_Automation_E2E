@@ -6,7 +6,7 @@ Feature: Bargain - Product checkout page
 
   Background:
     Given the login screen will be displayed
-    When I entered Mobile number "9876543211"
+    When I entered Mobile number "8484848484"
     Then I should enter OTP
 
   @regression
@@ -32,7 +32,7 @@ Feature: Bargain - Product checkout page
 
   @regression
   Scenario: Checkout and purchase the product through COD workflow in web application
-    When I search for the product "Evil Eye Rakhi"
+    When I search for the product "Maruti Plastic (Pack of 12) Table Diya"
     Then Target product should be available in search results
     Then I start multiple bargain attempts for the products
     Then I selected COD payment type for this purchase
@@ -40,10 +40,14 @@ Feature: Bargain - Product checkout page
     Then I verify purchased product details
     Then I should logout into the application
 
-  @regression @test
+  @regression
   Scenario: verify the specific product checkout workflow
     When I click on specific product in homepage
-
+    Then I start first bargain the products
+    Then I click on pay now button
+    And I selected IDBI net banking for payment flow
+    Then I verify purchased product details
+    Then I should logout into the application
 
 
 

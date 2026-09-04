@@ -10,12 +10,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 
 public class WebDriverManager {
 
@@ -25,22 +19,21 @@ public class WebDriverManager {
     private static final ThreadLocal<WebDriver> DRIVER =
             new ThreadLocal<>();
 
-    public static WebDriver initializeDriver(Capabilities options)
-            throws MalformedURLException {
+    private WebDriverManager() {
+        // Prevent object creation
+    }
 
-        boolean remote =
-                ConfigReader.getBoolean("web.remote.enabled");
+    /**
+     * Initialize WebDriver based on configured browser.
+     */
+    public static void initializeDriver(Capabilities options) {
 
         LOGGER.info(
-                "Launching browser with capabilities: {} (remote={})",
-                options,
-                remote
+                "Launching browser with capabilities: {}",
+                options
         );
 
-        WebDriver driver =
-                remote
-                        ? newRemoteDriver(options)
-                        : newLocalDriver(options);
+        WebDriver driver = createDriver(options);
 
         if (ConfigReader.getBoolean("web.window.maximize")) {
             driver.manage().window().maximize();
@@ -51,76 +44,60 @@ public class WebDriverManager {
         LOGGER.info(
                 "Browser launched and driver session started successfully."
         );
-
-        return driver;
     }
 
     /**
-     * Creates a local browser driver.
+     * Create browser driver using Boni Garcia WebDriverManager.
      */
-    private static WebDriver newLocalDriver(Capabilities options) {
+    private static WebDriver createDriver(Capabilities options) {
 
-        // Firefox
-        if (options instanceof FirefoxOptions) {
-            return new FirefoxDriver((FirefoxOptions) options);
+        if (options instanceof ChromeOptions) {
+
+            LOGGER.info("Starting Chrome browser.");
+
+            io.github.bonigarcia.wdm.WebDriverManager
+                    .chromedriver()
+                    .setup();
+
+            return new ChromeDriver(
+                    (ChromeOptions) options
+            );
         }
 
-        // Edge
         if (options instanceof EdgeOptions) {
-            return new EdgeDriver((EdgeOptions) options);
+
+            LOGGER.info("Starting Edge browser.");
+
+            io.github.bonigarcia.wdm.WebDriverManager
+                    .edgedriver()
+                    .setup();
+
+            return new EdgeDriver(
+                    (EdgeOptions) options
+            );
         }
 
-        // Chrome
-        ChromeOptions chromeOptions =
-                (ChromeOptions) options;
+        if (options instanceof FirefoxOptions) {
 
-        Map<String, Object> preferences =
-                new HashMap<>();
+            LOGGER.info("Starting Firefox browser.");
 
-        /*
-         * Chrome Geolocation Permission
-         *
-         * 1 = Allow
-         * 2 = Block
-         *
-         * Block location so the browser does not show
-         * the location permission prompt during automation.
-         */
-        preferences.put(
-                "profile.default_content_setting_values.geolocation",
-                2
-        );
+            io.github.bonigarcia.wdm.WebDriverManager
+                    .firefoxdriver()
+                    .setup();
 
-        chromeOptions.setExperimentalOption(
-                "prefs",
-                preferences
-        );
+            return new FirefoxDriver(
+                    (FirefoxOptions) options
+            );
+        }
 
-        return new ChromeDriver(chromeOptions);
-    }
-
-    /**
-     * Creates a remote browser driver.
-     */
-    private static WebDriver newRemoteDriver(Capabilities options)
-            throws MalformedURLException {
-
-        URL gridUrl =
-                new URL(ConfigReader.get("web.remote.url"));
-
-        LOGGER.info(
-                "Connecting to remote Selenium server at {}",
-                gridUrl
-        );
-
-        return new RemoteWebDriver(
-                gridUrl,
-                options
+        throw new IllegalArgumentException(
+                "Unsupported browser capabilities: "
+                        + options.getClass().getName()
         );
     }
 
     /**
-     * Returns the current WebDriver instance.
+     * Get the current thread's WebDriver.
      */
     public static WebDriver getDriver() {
 
@@ -128,8 +105,8 @@ public class WebDriverManager {
 
         if (driver == null) {
             throw new IllegalStateException(
-                    "Driver has not been initialized. " +
-                            "Is the @BeforeAll hook running?"
+                    "Driver has not been initialized. "
+                            + "Is the @BeforeAll hook running?"
             );
         }
 
@@ -137,11 +114,13 @@ public class WebDriverManager {
     }
 
     /**
-     * Resets the browser state between scenarios.
+     * Reset browser state and navigate to base URL.
      */
     public static void resetState() {
 
         WebDriver driver = getDriver();
+
+        LOGGER.info("Resetting browser state.");
 
         driver.manage().deleteAllCookies();
 
@@ -151,14 +130,17 @@ public class WebDriverManager {
     }
 
     /**
-     * Closes the browser and removes the ThreadLocal driver.
+     * Quit browser and remove ThreadLocal driver.
      */
     public static void quitDriver() {
         WebDriver driver = DRIVER.get();
         if (driver != null) {
             LOGGER.info("Closing browser session.");
-            driver.quit();
-            DRIVER.remove();
+            try {
+                driver.quit();
+            } finally {
+                DRIVER.remove();
+            }
         }
     }
 }

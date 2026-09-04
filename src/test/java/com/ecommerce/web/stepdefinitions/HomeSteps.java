@@ -126,6 +126,7 @@ public class HomeSteps {
 
     @Then("Target product should be available in search results")
     public void Target_products_should_be_available_in_the_search_results() throws InterruptedException {
+        homePage.goSleep(3000);
         homePage.selectTargetProduct(0);
     }
 
