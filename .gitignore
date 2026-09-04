@@ -16,6 +16,8 @@ target/
 logs/web-automation.log
 logs/mobile-automation.log
 logs/*.log.gz
-
+reports
+test-output
+screenshots
 
 
