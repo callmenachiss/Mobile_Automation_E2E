@@ -16,7 +16,7 @@ Feature: Checkout page - Product details page
 
   @regression
   Scenario: verify the latest live order flow
-    When I search the product in mobile "Cosmetics"
+    When I search the product in mobile
     Then I click on product to start bargain to proceed purchase
     Then I proceed with payment to complete the order
     Then I do IDBI internet banking for payment to place the order
