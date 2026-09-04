@@ -85,7 +85,7 @@ public class HomePage extends BaseWebPage {
         return By.xpath("//*[contains(text(),'" + option + "')]");
     }
 
-    @FindBy(xpath = "//span[@id='checkout-pay-now-mobile-cod-now']")
+    @FindBy(xpath = "//span[@id='checkout-pay-now-desktop-cod-symbol']")
     private WebElement CODPayNowbtn;
 
     @FindBy(xpath = "//span[contains(text(),\"Netbanking\")]")
@@ -122,7 +122,7 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//*[contains(text(),'Kitchen & Dining')]")
     private WebElement KitchenandDiningMenu;
 
-    @FindBy(xpath = "(//*[contains(text(),'Puzzles')])[2]")
+    @FindBy(xpath = "//a[.//p[normalize-space()='Puzzles']]")
     private WebElement PuzzlesMenu;
 
     @FindBy(xpath = "//a[.//p[normalize-space()='Games']]")
@@ -284,9 +284,11 @@ public class HomePage extends BaseWebPage {
     public void NavigateToFactoryToYourCartSection() throws InterruptedException {
         goSleep(6000);
         scrollDown(2000);
-        goSleep(2000);
+        goSleep(4000);
         scrollIntoView(FactoryToYourCartMenulnk);
+        goSleep(2000);
         click(FactoryToYourCartMenulnk);
+        goSleep(4000);
     }
 
     public void verifyProductDetails() throws InterruptedException {
@@ -439,7 +441,7 @@ public class HomePage extends BaseWebPage {
     }
 
     public void startFirstBargainprocess() throws InterruptedException {
-        goSleep(4000);
+        goSleep(6000);
         click(StartBargainbtn);
         LOGGER.info("User started the bargain process");
         goSleep(3000);
@@ -457,7 +459,7 @@ public class HomePage extends BaseWebPage {
         goSleep(4000);
         click(StartBargainbtn);
         LOGGER.info("User started the bargain process");
-        goSleep(3000);
+        goSleep(5000);
         enterText(BargainTxtBox,"30");
         click(offerPricebtn);
         LOGGER.info("User quoted first attempt bargain price");
@@ -501,9 +503,9 @@ public class HomePage extends BaseWebPage {
         goSleep(1000);
         click(CODbtn);
         LOGGER.info("COD");
-        goSleep(4000);
+        goSleep(6000);
         click(CODPayNowbtn);
-        LOGGER.info("User clicked on pay now button");
+        LOGGER.info("User clicked on pay now button COD Order");
     }
 
     public void NavigateToHomeAndKitchenMenu() throws InterruptedException {
@@ -520,6 +522,8 @@ public class HomePage extends BaseWebPage {
         goSleep(4000);
         mouseOver(ToysandGamesMenu);
         goSleep(3000);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(PuzzlesMenu).perform();
         click(PuzzlesMenu);
         LOGGER.info("User navigated to Toys and Games Menu");
         scrollToMiddleSlowly();
@@ -596,34 +600,34 @@ public class HomePage extends BaseWebPage {
         selectByText("Relevance");
         goSleep(4000);
         click(NewArrivalsMenu);
-        scrollToMiddleSlowly();
+        scrollDown(600);
         goSleep(4000);
-        scrollToMiddleSlowly();
+        scrollDown(600);
         selectByText("New Arrivals");
         goSleep(4000);
         selectByText("Price (High to Low)");
         goSleep(4000);
-        scrollToMiddleSlowly();
+        scrollDown(600);
         selectByText("Price (High to Low)");
         goSleep(4000);
         selectByText("Price (Low to High)");
         goSleep(4000);
-        scrollToMiddleSlowly();
+        scrollDown(600);
         LOGGER.info("User Applied filters successfully in Home and Kitchen Menu");
     }
 
     public void selectCanaraNetBankingMenu() throws InterruptedException {
-        goSleep(3000);
+        goSleep(4000);
         switchToRazorpayFrame(razorpayFrame);
         //switchToChildWindow();
         click(NetBankingmenu);
         LOGGER.info("User clicked on the net banking menu");
-        goSleep(2000);
+        goSleep(5000);
         click(CanaraNetBankingmenu);
         LOGGER.info("User selecting Canara net banking menu");
-        goSleep(2000);
+        goSleep(5000);
         switchToChildWindow();
-        goSleep(2000);
+        goSleep(5000);
         click(Acceptbtn);
         goSleep(7000);
         //switchToDefaultContent();
@@ -682,17 +686,17 @@ public class HomePage extends BaseWebPage {
 
 
     public void selectIDBINetBankingMenu() throws InterruptedException {
-        goSleep(3000);
+        goSleep(4000);
         switchToRazorpayFrame(razorpayFrame);
         //switchToChildWindow();
         click(NetBankingmenu);
         LOGGER.info("User clicked on Net banking menu");
-        goSleep(2000);
+        goSleep(5000);
         click(IDBINetBankingmenu);
         LOGGER.info("User selecting IDBI net banking menu");
-        goSleep(2000);
+        goSleep(5000);
         switchToChildWindow();
-        goSleep(2000);
+        goSleep(5000);
         click(Acceptbtn);
         goSleep(7000);
         //switchToDefaultContent();
@@ -703,16 +707,16 @@ public class HomePage extends BaseWebPage {
     }
 
     public void selectPNBNetBankingMenu() throws InterruptedException {
-        goSleep(3000);
+        goSleep(4000);
         switchToRazorpayFrame(razorpayFrame);
         click(NetBankingmenu);
         LOGGER.info("User clicked net banking menu");
-        goSleep(2000);
+        goSleep(5000);
         click(PNBNetBankingmenu);
         LOGGER.info("User selecting PNB net banking menu");
-        goSleep(2000);
+        goSleep(5000);
         switchToChildWindow();
-        goSleep(2000);
+        goSleep(5000);
         click(Acceptbtn);
         goSleep(7000);
         //switchToDefaultContent();
@@ -723,16 +727,16 @@ public class HomePage extends BaseWebPage {
     }
 
     public void selectBOBNetBankingMenu() throws InterruptedException {
-        goSleep(3000);
+        goSleep(4000);
         switchToRazorpayFrame(razorpayFrame);
         click(NetBankingmenu);
         LOGGER.info("User clicked on net banking menu");
-        goSleep(2000);
+        goSleep(5000);
         click(BOBNetBankingmenu);
         LOGGER.info("User selecting BOB net banking menu");
-        goSleep(2000);
+        goSleep(5000);
         switchToChildWindow();
-        goSleep(2000);
+        goSleep(5000);
         click(Acceptbtn);
         goSleep(7000);
         LOGGER.info("User completed the payment");
@@ -761,12 +765,9 @@ public class HomePage extends BaseWebPage {
         LOGGER.info("User is able to purchased products in live orders section");
     }
 
-
     protected void waitForOverlayToDisappear(int timeoutSeconds) {
-
         WebDriverWait customWait =
                 new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
-
         try {
             customWait.until(
                     ExpectedConditions.invisibilityOfElementLocated(
@@ -777,6 +778,7 @@ public class HomePage extends BaseWebPage {
             LOGGER.warn("Overlay is still present after {} seconds", timeoutSeconds);
         }
     }
+
     public void performLogout() throws InterruptedException {
         goSleep(3000);
         LOGGER.info("User is performing logout flow");

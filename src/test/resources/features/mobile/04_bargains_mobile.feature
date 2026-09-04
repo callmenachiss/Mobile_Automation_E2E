@@ -22,7 +22,7 @@ Feature: Bargain - Product checkout page
 
   @regression
   Scenario: Checkout and purchase product through COD workflow
-    When I search the product in mobile "Evil Eye Rakhi"
+    When I search the product in mobile "Maruti Plastic (Pack of 12) Table Diya"
     Then I click on product to start bargain to proceed purchase
     Then I proceed with COD payment to complete the order
     Then I do IDBI internet banking for payment to place the order
