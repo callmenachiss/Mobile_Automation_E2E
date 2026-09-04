@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Ecommerce Web Suite" verbose="1">
     <test name="Web Tests">
-        <parameter name="cucumber.filter.tags" value="@regression"/>
+        <parameter name="cucumber.filter.tags" value="@test"/>
         <classes>
             <class name="com.ecommerce.web.runner.WebTestRunner"/>
         </classes>

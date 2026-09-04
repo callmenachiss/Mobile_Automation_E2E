@@ -4,9 +4,11 @@ import com.ecommerce.web.config.ConfigReader;
 import com.ecommerce.web.config.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -89,6 +91,88 @@ public class BaseWebPage {
         Thread.sleep(num);
     }
 
+    protected void ScrollToMiddleSlowly() throws InterruptedException {
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        long totalHeight = ((Number) js.executeScript(
+                "return document.body.scrollHeight;"
+        )).longValue();
+        long viewportHeight = ((Number) js.executeScript(
+                "return window.innerHeight;"
+        )).longValue();
+        long currentPosition = ((Number) js.executeScript(
+                "return window.pageYOffset;"
+        )).longValue();
+        long targetPosition = Math.max(
+                0,
+                (totalHeight - viewportHeight) / 2
+        );
+        int scrollDistance = 100;
+        while (currentPosition < targetPosition) {
+            currentPosition = Math.min(
+                    currentPosition + scrollDistance,
+                    targetPosition
+            );
+            js.executeScript(
+                    "window.scrollTo(0, arguments[0]);",
+                    currentPosition
+            );
+            Thread.sleep(150);
+        }
+    }
+
+    protected void selectByText(String text) {
+        By locator = By.xpath("//*[contains(text(),'" + text + "')]");
+        WebElement element = wait.until(
+                ExpectedConditions.elementToBeClickable(locator)
+        );
+        element.click();
+    }
+
+    protected WebElement menuOption(String menuName) {
+        By locator =By.xpath(
+                "//a[normalize-space(text())='" + menuName + "']"
+        );
+        WebElement element = wait.until(
+                ExpectedConditions.elementToBeClickable(locator)
+        );
+        return element;
+    }
+
+    protected void brandOption(String brandName) {
+        By locator = By.xpath("//span[normalize-space(text())='" + brandName + "']");
+        WebElement element = wait.until(
+                ExpectedConditions.elementToBeClickable(locator)
+        );
+        element.click();
+    }
+
+    protected void scrollToMiddleSlowly() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        long totalHeight = (Long) js.executeScript(
+                "return document.body.scrollHeight;"
+        );
+        long viewportHeight = (Long) js.executeScript(
+                "return window.innerHeight;"
+        );
+        long currentPosition = (Long) js.executeScript(
+                "return window.pageYOffset;"
+        );
+        long targetPosition = (totalHeight - viewportHeight) / 2;
+        int scrollDistance = 100;
+        while (currentPosition < targetPosition) {
+            currentPosition = Math.min(
+                    currentPosition + scrollDistance,
+                    targetPosition
+            );
+            js.executeScript(
+                    "window.scrollTo(0, arguments[0]);",
+                    currentPosition
+            );
+            // Slightly slower than normal user scrolling
+            Thread.sleep(150);
+        }
+    }
 
     protected void executeJavaScript(String script, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -111,6 +195,12 @@ public class BaseWebPage {
 
     public void switchToRazorpayFrame(WebElement element) {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
+    }
+
+    protected void mouseOver(WebElement element) {
+        waitUntilVisible(element);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
     }
 
     public void switchToDefaultContent() {

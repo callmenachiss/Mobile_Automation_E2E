@@ -35,6 +35,9 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "(//img[contains(@class,'object-contain w-full')])[1]")
     private WebElement searchproductName;
 
+    @FindBy(xpath = "//a[@id='home-wp11-curated-view-more-link']")
+    private WebElement FactoryToYourCartMenulnk;
+
     @FindBy(xpath = "//img[contains(@class,'object-contain w-full')]")
     private List<WebElement> searchProductNameResults;
 
@@ -60,6 +63,9 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//span[normalize-space(text())='Offer Your Price']")
     private WebElement offerPricebtn;
 
+    @FindBy(xpath = "//span[@id='bargain-again-btn-text']")
+    private WebElement BargainMorebtn;
+
     @FindBy(xpath = "//span[normalize-space(text())='Accept the offer']")
     private WebElement AcceptOfferbtn;
 
@@ -72,8 +78,64 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//span[@id='checkout-pay-now-desktop-online-text']")
     private WebElement PayNowbtn;
 
+    @FindBy(xpath = "//span[@id='checkout-payment-cod-label']")
+    private WebElement CODbtn;
+
+    private By sortingOption(String option) {
+        return By.xpath("//*[contains(text(),'" + option + "')]");
+    }
+
+    @FindBy(xpath = "//span[@id='checkout-pay-now-mobile-cod-now']")
+    private WebElement CODPayNowbtn;
+
     @FindBy(xpath = "//span[contains(text(),\"Netbanking\")]")
     private WebElement NetBankingmenu;
+
+
+    @FindBy(xpath = "//img[@id='brand-filter-accordion-close-icon']")
+    private WebElement CollapseMenu;
+
+    @FindBy(xpath = "//h4[@id='price-filter-website-title']")
+    private WebElement PriceMenulbl;
+
+    @FindBy(xpath = "//span[@id='price-filter-website-checkbox-text-1']")
+    private WebElement Price1Menu;
+
+    @FindBy(xpath = "//span[@id='price-filter-website-checkbox-text-2']")
+    private WebElement Price2Menu;
+
+    @FindBy(xpath = "//span[@id='price-filter-website-checkbox-text-3']")
+    private WebElement Price3Menu;
+
+    @FindBy(xpath = "//span[@id='price-filter-website-checkbox-text-4']")
+    private WebElement Price4Menu;
+
+    @FindBy(xpath = "//a[contains(text(),'Home & Kitchen')]")
+    private WebElement HomeandKitchenMenu;
+
+    @FindBy(xpath = "//a[contains(text(),'Toys & Games')]")
+    private WebElement ToysandGamesMenu;
+
+    @FindBy(xpath = "//a[contains(text(),'Fashion Accessories')]")
+    private WebElement FashionAccessoriesMenu;
+
+    @FindBy(xpath = "//*[contains(text(),'Kitchen & Dining')]")
+    private WebElement KitchenandDiningMenu;
+
+    @FindBy(xpath = "(//*[contains(text(),'Puzzles')])[2]")
+    private WebElement PuzzlesMenu;
+
+    @FindBy(xpath = "//a[.//p[normalize-space()='Games']]")
+    private WebElement GamesMenu;
+
+    @FindBy(xpath = "(//*[contains(text(),'Watches')])[2]")
+    private WebElement WatchesMenu;
+
+    @FindBy(xpath = "//*[contains(text(),'Relevance')]")
+    private WebElement RelevanceMenu;
+
+    @FindBy(xpath = "//*[contains(text(),'New Arrivals')]")
+    private WebElement NewArrivalsMenu;
 
     @FindBy(css = "iframe.razorpay-checkout-frame")
     private WebElement razorpayFrame;
@@ -84,6 +146,9 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//span[contains(text(),\"Canara Bank\")]")
     private WebElement CanaraNetBankingmenu;
 
+    @FindBy(id = "brand-filter-pagination-actions")
+    private WebElement MoreMenu;
+
     @FindBy(xpath = "//span[contains(text(),\"Punjab National Bank - Retail Banking\")]")
     private WebElement PNBNetBankingmenu;
 
@@ -92,6 +157,9 @@ public class HomePage extends BaseWebPage {
 
     @FindBy(xpath = "//button[@class='success']")
     private WebElement Acceptbtn;
+
+    @FindBy(id = "brand-filter-item-name-14")
+    private WebElement SeraBasketMenu;
 
     @FindBy(xpath = "//*[contains(text(),'Order placed!')]")
     public WebElement Orderplacedlbl;
@@ -162,8 +230,14 @@ public class HomePage extends BaseWebPage {
     @FindBy(xpath = "//h2[normalize-space(text())='Just Bargained']")
     public WebElement JustBargainlbl;
 
+    @FindBy(xpath = "//h2[normalize-space(text())='Gajab Deal Of The Day']")
+    public WebElement DealOfTheDayLbl;
+
     @FindBy(xpath = "//a[@id='home-wp1-view-more']")
     public WebElement JustBargainProductMenulnk;
+
+    @FindBy(xpath = "//img[@id='home-wp3-product-img']")
+    public WebElement DealOfTheDayMenulnk;
 
     @FindBy(xpath = "//img[@id='header-logo-img']")
     public WebElement Gajablogo;
@@ -205,6 +279,14 @@ public class HomePage extends BaseWebPage {
         goSleep(4000);
         searchProductNameResults.get(option).click();
         LOGGER.info("User selecting the products from search results");
+    }
+
+    public void NavigateToFactoryToYourCartSection() throws InterruptedException {
+        goSleep(6000);
+        scrollDown(2000);
+        goSleep(2000);
+        scrollIntoView(FactoryToYourCartMenulnk);
+        click(FactoryToYourCartMenulnk);
     }
 
     public void verifyProductDetails() throws InterruptedException {
@@ -268,6 +350,23 @@ public class HomePage extends BaseWebPage {
         LOGGER.info("User is able to see the most bargained products menu");
     }
 
+    public void NavigateToDealofDayMenu() throws InterruptedException {
+        goSleep(2000);
+        click(Gajablogo);
+        goSleep(5000);
+        scrollIntoView(DealOfTheDayLbl);
+        goSleep(1000);
+        isDisplayed(DealOfTheDayLbl);
+        LOGGER.info("User navigated to Deal Of The Day products menu");
+        goSleep(1000);
+        click(DealOfTheDayMenulnk);
+        goSleep(3000);
+        scrollDown(2000);
+        goSleep(3000);
+        scrollDown(2500);
+        LOGGER.info("User is able to see the Deal of the day products menu");
+    }
+
     public void SelectMostBargainedProducts() throws InterruptedException {
         goSleep(3000);
         scrollIntoView(JustBargainlbl);
@@ -275,6 +374,15 @@ public class HomePage extends BaseWebPage {
         click(MostBargainList);
         goSleep(2000);
         LOGGER.info("User selected product from most bargained products menu");
+    }
+
+    public void SelectDealOfTheDayProducts() throws InterruptedException {
+        goSleep(3000);
+        scrollIntoView(DealOfTheDayLbl);
+        goSleep(2000);
+        click(DealOfTheDayMenulnk);
+        goSleep(2000);
+        LOGGER.info("User selected product from deal of the day menu");
     }
 
     public void NavigateToHomePageMenu() throws InterruptedException {
@@ -345,12 +453,163 @@ public class HomePage extends BaseWebPage {
         LOGGER.info("User clicked on buy now button");
     }
 
+    public void startMultipleAttemptBargainprocess() throws InterruptedException {
+        goSleep(4000);
+        click(StartBargainbtn);
+        LOGGER.info("User started the bargain process");
+        goSleep(3000);
+        enterText(BargainTxtBox,"30");
+        click(offerPricebtn);
+        LOGGER.info("User quoted first attempt bargain price");
+        goSleep(2000);
+        click(BargainMorebtn);
+        goSleep(2000);
+        enterText(BargainTxtBox,"95");
+        click(offerPricebtn);
+        LOGGER.info("User quoted second attempt bargain price");
+        goSleep(2000);
+        click(BargainMorebtn);
+        goSleep(2000);
+        click(offerPricebtn);
+        //goSleep(2000);
+        //enterText(BargainTxtBox,"95");
+        //goSleep(2000);
+        //click(AcceptOfferbtn);
+        LOGGER.info("user accepted the offer");
+        goSleep(5000);
+        click(BuyNowbtn);
+        LOGGER.info("User clicked on Buy now button");
+    }
+
     public void clickPayNowButton() throws InterruptedException{
         goSleep(6000);
         scrollIntoView(PayNowbtn);
         click(PayNowbtn);
         LOGGER.info("User clicked on pay now button");
         goSleep(3000);
+    }
+
+    public void clickBuyNowButton() throws InterruptedException{
+        goSleep(3000);
+        scrollIntoView(BuyNowbtn);
+        click(BuyNowbtn);
+    }
+
+    public void clickCODButton() throws InterruptedException{
+        goSleep(6000);
+        scrollIntoView(CODbtn);
+        goSleep(1000);
+        click(CODbtn);
+        LOGGER.info("COD");
+        goSleep(4000);
+        click(CODPayNowbtn);
+        LOGGER.info("User clicked on pay now button");
+    }
+
+    public void NavigateToHomeAndKitchenMenu() throws InterruptedException {
+        goSleep(7000);
+        mouseOver(HomeandKitchenMenu);
+        goSleep(3000);
+        click(KitchenandDiningMenu);
+        LOGGER.info("User navigated to Home and Kitchen Menu");
+        scrollToMiddleSlowly();
+    }
+    public void NavigateToToysAndGamesMenu() throws InterruptedException {
+        goSleep(3000);
+        click(Gajablogo);
+        goSleep(4000);
+        mouseOver(ToysandGamesMenu);
+        goSleep(3000);
+        click(PuzzlesMenu);
+        LOGGER.info("User navigated to Toys and Games Menu");
+        scrollToMiddleSlowly();
+    }
+
+    public void setPriceRangeFilters() throws InterruptedException {
+        goSleep(3000);
+        click(CollapseMenu);
+        goSleep(1000);
+        isDisplayed(PriceMenulbl);
+        click(Price1Menu);
+        goSleep(3000);
+        scrollDown(200);
+        click(Price1Menu);
+        click(Price2Menu);
+        goSleep(3000);
+        //ScrollToMiddleSlowly();
+        click(Price2Menu);
+        click(Price3Menu);
+        goSleep(3000);
+        //ScrollToMiddleSlowly();
+        click(Price3Menu);
+        click(Price4Menu);
+        goSleep(3000);
+        //ScrollToMiddleSlowly();
+        click(Price4Menu);
+        LOGGER.info("Price range filters applied in product list page");
+    }
+
+    public void NavigateToysGamesMenu() throws InterruptedException {
+        goSleep(6000);
+        click(Gajablogo);
+        goSleep(4000);
+        mouseOver(ToysandGamesMenu);
+        goSleep(3000);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(GamesMenu).perform();
+        click(GamesMenu);
+        LOGGER.info("User is navigated to Toys and Games Menu");
+        scrollToMiddleSlowly();
+    }
+
+    public void NavigateToFashionAndAccessoryMenu() throws InterruptedException {
+        goSleep(3000);
+        click(Gajablogo);
+        goSleep(4000);
+        mouseOver(FashionAccessoriesMenu);
+        goSleep(3000);
+        click(WatchesMenu);
+        LOGGER.info("User navigated to Fashion Accessory Menu");
+        scrollToMiddleSlowly();
+    }
+
+    public void setSeraBasketMenuForHomeAndKitchenMenu() throws InterruptedException {
+        goSleep(2000);
+        click(MoreMenu);
+        goSleep(4000);
+        click(SeraBasketMenu);
+        scrollDown(200);
+        goSleep(2000);
+        LOGGER.info("Sera Basket filter applied in product list page");
+    }
+
+    public void setSeraBasketMenuForToysAndGamesMenu() throws InterruptedException {
+        goSleep(5000);
+        click(SeraBasketMenu);
+        scrollDown(200);
+        goSleep(2000);
+        LOGGER.info("Sera Basket filter applied to Toys and Games page");
+    }
+    public void setFilersForHomeAndKitchenMenu() throws InterruptedException {
+        goSleep(5000);
+        //click(RelevanceMenu);
+        selectByText("Relevance");
+        goSleep(4000);
+        click(NewArrivalsMenu);
+        scrollToMiddleSlowly();
+        goSleep(4000);
+        scrollToMiddleSlowly();
+        selectByText("New Arrivals");
+        goSleep(4000);
+        selectByText("Price (High to Low)");
+        goSleep(4000);
+        scrollToMiddleSlowly();
+        selectByText("Price (High to Low)");
+        goSleep(4000);
+        selectByText("Price (Low to High)");
+        goSleep(4000);
+        scrollToMiddleSlowly();
+        LOGGER.info("User Applied filters successfully in Home and Kitchen Menu");
     }
 
     public void selectCanaraNetBankingMenu() throws InterruptedException {
@@ -373,6 +632,54 @@ public class HomePage extends BaseWebPage {
         switchToParentWindow();
         goSleep(7000);
     }
+
+    public void selectToysBrandMenu() throws InterruptedException {
+        goSleep(2000);
+        brandOption("calyxia");
+        scrollDown(200);
+        goSleep(2000);
+        brandOption("Unique International");
+        scrollDown(200);
+        goSleep(2000);
+        brandOption("primewell");
+        scrollDown(200);
+        goSleep(2000);
+        LOGGER.info("User applied filters for Brand menu");
+    }
+
+    public void selectBrandMenu() throws InterruptedException {
+        goSleep(2000);
+        brandOption("Alpha Enterprises");
+        scrollDown(200);
+        goSleep(2000);
+        brandOption("AMELLA E-KITCHEN");
+        scrollDown(200);
+        goSleep(2000);
+        brandOption("MAKBRO");
+        scrollDown(200);
+        goSleep(2000);
+        click(MoreMenu);
+        goSleep(4000);
+        try {click(SeraBasketMenu);} catch (Exception e) {}
+        scrollDown(200);
+        goSleep(2000);
+        LOGGER.info("User selected Brand menu");
+    }
+
+    public void SelectBrandMenu() throws InterruptedException {
+        goSleep(2000);
+        brandOption("calyxia");
+        scrollDown(100);
+        goSleep(2000);
+        brandOption("Generic");
+        scrollDown(50);
+        goSleep(2000);
+        brandOption("Unique International");
+        scrollDown(200);
+        goSleep(2000);
+        LOGGER.info("User applied Brand filters");
+    }
+
 
     public void selectIDBINetBankingMenu() throws InterruptedException {
         goSleep(3000);
@@ -444,6 +751,14 @@ public class HomePage extends BaseWebPage {
         LOGGER.info(driver.getTitle());
         isDisplayed(Orderplacedlbl);
         LOGGER.info("User is able to see product details");
+    }
+
+    public void verifyLiveOrders() throws InterruptedException {
+        click(Gajablogo);
+        goSleep(1000);
+        scrollDown(800);
+        goSleep(14000);
+        LOGGER.info("User is able to purchased products in live orders section");
     }
 
 
