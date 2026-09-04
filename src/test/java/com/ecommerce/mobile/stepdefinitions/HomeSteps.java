@@ -9,6 +9,10 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 import static java.lang.Thread.sleep;
 import static org.testng.Assert.assertTrue;
 
@@ -22,6 +26,26 @@ public class HomeSteps {
     private final HomePage homePage = new HomePage();
     private final LoginPage loginpage = new LoginPage();
 
+    public static final List<String> PRODUCT_NAMES = Arrays.asList(
+            "Shirt",
+            "Shoes",
+            "Watch",
+            "Bag",
+            "Mobile",
+            "Decor",
+            "Cosmetics",
+            "Mascara",
+            "Brush",
+            "Toys"
+    );
+
+    public String getRandomProductName() {
+        Random random = new Random();
+        return PRODUCT_NAMES.get(
+                random.nextInt(PRODUCT_NAMES.size())
+        );
+    }
+
     @Then("a list of products should be displayed")
     public void a_list_of_products_should_be_displayed() {
         assertTrue(homePage.isProductListDisplayed(), "Product list was not displayed on the Home page.");
@@ -32,10 +56,16 @@ public class HomeSteps {
         //homePage.clickBargainingButton();
         //homePage.dismissBargainingPopup();
         homePage.clickProfileAvatar();
-
         homePage.clickPersonalDetails();
         homePage.clickLogout();
         assertTrue(loginpage.isGetStartedLabelDisplayed(), "Get Started was not displayed on the splash page.");
+    }
+
+    @When("I search the product in mobile")
+    public void i_search_for_the_product() {
+        String ProductName = getRandomProductName();
+        System.out.println("Searching for the product " + ProductName);
+        homePage.searchForProduct(ProductName);
     }
 
     @When("I search the product in mobile {string}")
