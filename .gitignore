@@ -16,10 +16,6 @@ target/
 logs/web-automation.log
 logs/mobile-automation.log
 logs/*.log.gz
-screenshots/mobile/*
-screenshots/web/*
-!screenshots/mobile/.gitkeep
-!screenshots/web/.gitkeep
-reports/
+
 
 
