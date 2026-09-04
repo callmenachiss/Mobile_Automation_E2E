@@ -34,6 +34,12 @@ public class LoginPage extends BaseWebPage {
     @FindBy(css = "img[alt='Close']")
     private WebElement closeButton;
 
+    @FindBy(xpath = "(//*[contains(text(),'Start Bargaining')])[2]")
+    private WebElement AnimationStartBargainingBtn;
+
+    @FindBy(id = "location-desktop-dropdown-close-icon")
+    private WebElement CloseIcon;
+
     @FindBy(xpath = "//*[contains(normalize-space(.),'Start Bargaining')]")
     private WebElement startBargainingTourImage;
 
@@ -180,13 +186,16 @@ public class LoginPage extends BaseWebPage {
 
     private void closeTourPopupIfPresent() {
         try {
-            clickDuration(closeButton, 5);
+            clickDuration(CloseIcon,5);
+            clickDuration(AnimationStartBargainingBtn,5);
+            //clickDuration(closeButton, 5);
             LOGGER.info("User clicked X icon to close tour popup");
         } catch (TimeoutException e) {
             LOGGER.info("Tour popup is not present.");
         } catch (Exception e) {
             LOGGER.warn("Unable to close tour popup: {}", e.getMessage());
         }
+
     }
 
 

@@ -30,7 +30,11 @@ public class LoginSteps {
     @Given("the login screen will be displayed")
     public void the_login_screen_will_be_displayed() throws InterruptedException {
         loginPage.clickCloseTourpopup();
+        loginPage.goSleep(2000);
         loginPage.refreshPage();
+        loginPage.goSleep(2000);
+        loginPage.refreshPage();
+
     }
 
     @When("I entered Mobile number")
