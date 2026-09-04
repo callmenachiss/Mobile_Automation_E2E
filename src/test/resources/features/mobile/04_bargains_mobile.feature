@@ -7,7 +7,7 @@ Feature: Bargain - Product checkout page
   @regression
   Scenario: Verify the first Bargain attempt of the product between seller and customer
     Given verify the existing session
-    When I search the product in mobile "Jewellery"
+    When I search the product in mobile
     Then I click on product to start bargain to proceed purchase
     Then I proceed with payment to complete the order
     Then I do BOB internet banking for payment to place the order
@@ -15,14 +15,14 @@ Feature: Bargain - Product checkout page
 
   @regression
   Scenario: Verify the multiple Bargain attempt of the product between seller and customer
-    When I search the product in mobile "Brush"
+    When I search the product in mobile
     Then I click on product to start multiple bargains to proceed purchase
     Then I proceed with payment to complete the order
     Then I do PNB internet banking for payment to place the order
 
   @regression
   Scenario: Checkout and purchase product through COD workflow
-    When I search the product in mobile "Maruti Plastic (Pack of 12) Table Diya"
+    When I search the product in mobile "Jewel Junction Woman & Girls Dainty Earrings"
     Then I click on product to start bargain to proceed purchase
     Then I proceed with COD payment to complete the order
     Then I do IDBI internet banking for payment to place the order

@@ -32,7 +32,7 @@ Feature: Bargain - Product checkout page
 
   @regression
   Scenario: Checkout and purchase the product through COD workflow in web application
-    When I search for the product "Maruti Plastic (Pack of 12) Table Diya"
+    When I search for the product "Jewel Junction Woman & Girls Dainty Earrings"
     Then Target product should be available in search results
     Then I start multiple bargain attempts for the products
     Then I selected COD payment type for this purchase

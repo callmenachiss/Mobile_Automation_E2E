@@ -36,7 +36,8 @@ public class HomeSteps {
             "Cosmetics",
             "Mascara",
             "Brush",
-            "Toys"
+            "Toys",
+            "Jewellery"
     );
 
     public String getRandomProductName() {

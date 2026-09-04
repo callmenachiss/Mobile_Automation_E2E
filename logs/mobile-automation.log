@@ -492,3 +492,133 @@
 2026-09-04 15:33:38.338 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify filtering products using brand Sera's basket flow ==========
 2026-09-04 15:33:38.342 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
 2026-09-04 15:33:39.503 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Stopping Appium server...
+2026-09-04 15:37:19.195 [main] INFO  com.ecommerce.mobile.config.ConfigReader - Loaded configuration from config.properties
+2026-09-04 15:37:19.202 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Starting Appium server...
+2026-09-04 15:37:25.845 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Appium server started on http://127.0.0.1:4723/
+2026-09-04 15:37:25.846 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Appium server ready in 6657 ms
+2026-09-04 15:37:25.848 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - Building Appium capabilities from config.properties
+2026-09-04 15:37:25.879 [main] INFO  com.ecommerce.mobile.config.CapabilityManager - app.path is blank. Using already-installed application.
+2026-09-04 15:37:25.881 [main] INFO  com.ecommerce.mobile.config.DriverManager - Initializing AndroidDriver against Appium server at http://127.0.0.1:4723/
+2026-09-04 15:37:33.074 [main] INFO  com.ecommerce.mobile.config.DriverManager - App launched and driver session started successfully.
+2026-09-04 15:37:33.074 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Driver session (device init + UiAutomator2 install/launch + app launch) ready in 7228 ms
+2026-09-04 15:37:33.271 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Verify the first Bargain attempt of the product between seller and customer ==========
+2026-09-04 15:37:33.271 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-04 15:37:34.358 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-04 15:38:21.239 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Shirt
+2026-09-04 15:38:21.681 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_primewell-layer-clothes-hanger-5-tier-space-saver-hanger-for-shirts-pants--dupatta-plastic-shirt-pack-of-5-hangers-for-shirt-multicolor_button
+2026-09-04 15:38:22.435 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-04 15:38:28.243 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-09-04 15:38:38.064 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-04 15:38:40.371 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-04 15:38:57.178 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-09-04 15:39:09.627 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-04 15:39:11.942 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-04 15:39:18.542 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-09-04 15:39:22.703 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-09-04 15:39:29.840 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-09-04 15:39:55.586 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Verify the first Bargain attempt of the product between seller and customer
+2026-09-04 15:39:57.950 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Verify_the_first_Bargain_attempt_of_the_product_between_seller_and_customer_04-Sep-2026_15-39-57.png
+2026-09-04 15:39:57.966 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Verify the first Bargain attempt of the product between seller and customer ==========
+2026-09-04 15:39:57.971 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-09-04 15:39:57.986 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Verify the first Bargain attempt of the product between seller and customer ==========
+2026-09-04 15:39:57.986 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-04 15:39:59.173 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-04 15:40:30.338 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Shoes
+2026-09-04 15:40:30.746 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-cleaner-foam-spray-car-seatexterior--interiorshoessofa-cleaning-spray-foam-vehicle-glass-cleaner-650-ml_button
+2026-09-04 15:40:30.937 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-04 15:40:34.273 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-09-04 15:40:44.645 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-04 15:40:46.903 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-04 15:41:03.947 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-09-04 15:41:17.324 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-04 15:41:19.600 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-04 15:41:25.962 [main] INFO  com.ecommerce.mobile.pages.HomePage - User accepting the offer
+2026-09-04 15:41:29.967 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-09-04 15:41:35.706 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-09-04 15:41:54.230 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User navigated to the Net-Banking menu
+2026-09-04 15:41:56.774 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User clicked on BOB option
+2026-09-04 15:41:59.500 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User is accepting net banking session
+2026-09-04 15:42:01.855 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User completed the payment
+2026-09-04 15:42:27.629 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Verify the first Bargain attempt of the product between seller and customer
+2026-09-04 15:42:27.630 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Verify the first Bargain attempt of the product between seller and customer ==========
+2026-09-04 15:42:27.652 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-09-04 15:42:27.653 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-04 15:42:28.974 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-04 15:42:45.022 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Watch
+2026-09-04 15:42:45.528 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_asidea-designer-rakhi-watch-pack-of-1-rakhi_button
+2026-09-04 15:42:47.285 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-04 15:43:10.832 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Verify the multiple Bargain attempt of the product between seller and customer
+2026-09-04 15:43:12.035 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Verify_the_multiple_Bargain_attempt_of_the_product_between_seller_and_customer_04-Sep-2026_15-43-12.png
+2026-09-04 15:43:12.038 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-09-04 15:43:12.039 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-09-04 15:43:12.049 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-09-04 15:43:12.050 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-04 15:43:12.996 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-04 15:43:29.921 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Jewellery
+2026-09-04 15:43:30.901 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_finner--opce-aattmgya-3-layer-18-grid-adjustable-jewelery-organizer-storage-cosmetic-art--craft-items-baby-toy-jewellery-makeup-multi-purpose-use-vanity-box-multi-colour_button
+2026-09-04 15:43:32.373 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-04 15:43:34.612 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked start Bargaining button
+2026-09-04 15:43:44.702 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-04 15:43:46.962 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-04 15:44:03.865 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more button to try 1 more attempt on bargain process
+2026-09-04 15:44:16.525 [main] INFO  com.ecommerce.mobile.pages.HomePage - User quoted first bargain price for the product
+2026-09-04 15:44:18.796 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-04 15:44:25.817 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on bargain more last shot button on bargain process
+2026-09-04 15:44:31.601 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked offer price button
+2026-09-04 15:44:35.009 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the buy now button
+2026-09-04 15:44:41.830 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-09-04 15:44:53.027 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User navigated to the Net-Banking menu
+2026-09-04 15:44:55.600 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User clicked on PNB option
+2026-09-04 15:44:58.466 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User is accepting net banking session
+2026-09-04 15:45:00.850 [main] INFO  com.ecommerce.mobile.pages.PaymentPage - User completed the payment
+2026-09-04 15:45:24.136 [main] INFO  com.ecommerce.mobile.hooks.Hooks - Scenario PASSED: Verify the multiple Bargain attempt of the product between seller and customer
+2026-09-04 15:45:24.137 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Verify the multiple Bargain attempt of the product between seller and customer ==========
+2026-09-04 15:45:24.159 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Checkout and purchase product through COD workflow ==========
+2026-09-04 15:45:24.160 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-04 15:45:25.290 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-04 15:45:40.850 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Maruti Plastic (Pack of 12) Table Diya
+2026-09-04 15:45:44.019 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_maruti-plastic-pack-of-12-table-diya-height_button
+2026-09-04 15:45:44.757 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-04 15:46:06.802 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Checkout and purchase product through COD workflow
+2026-09-04 15:46:08.562 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Checkout_and_purchase_product_through_COD_workflow_04-Sep-2026_15-46-08.png
+2026-09-04 15:46:08.579 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Checkout and purchase product through COD workflow ==========
+2026-09-04 15:46:08.581 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-09-04 15:46:08.597 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: Checkout and purchase product through COD workflow ==========
+2026-09-04 15:46:08.597 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-04 15:46:09.719 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-04 15:46:26.194 [main] INFO  com.ecommerce.mobile.pages.HomePage - Searching for product: Maruti Plastic (Pack of 12) Table Diya
+2026-09-04 15:46:28.938 [main] INFO  com.ecommerce.mobile.pages.HomePage - First product text: child_category_product_card_maruti-plastic-pack-of-12-table-diya-height_button
+2026-09-04 15:46:29.620 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on first product from search results
+2026-09-04 15:46:51.976 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: Checkout and purchase product through COD workflow
+2026-09-04 15:46:53.740 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\Checkout_and_purchase_product_through_COD_workflow_04-Sep-2026_15-46-53.png
+2026-09-04 15:46:53.750 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: Checkout and purchase product through COD workflow ==========
+2026-09-04 15:46:53.772 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify specific product checkout flow ==========
+2026-09-04 15:46:53.773 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-04 15:46:54.964 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-04 15:47:00.160 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-04 15:47:02.653 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-04 15:47:09.269 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-04 15:47:09.757 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-04 15:47:10.217 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-04 15:47:10.218 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the specific product in menu
+2026-09-04 15:47:35.020 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the Buy Now button
+2026-09-04 15:47:45.363 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicked on pay online button
+2026-09-04 15:48:10.729 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify specific product checkout flow
+2026-09-04 15:48:12.301 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_specific_product_checkout_flow_04-Sep-2026_15-48-12.png
+2026-09-04 15:48:12.306 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify specific product checkout flow ==========
+2026-09-04 15:48:12.307 [main] WARN  com.ecommerce.mobile.listeners.RetryAnalyzer - Scenario failed. Retrying (attempt 1 of 1)...
+2026-09-04 15:48:12.320 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Starting scenario: verify specific product checkout flow ==========
+2026-09-04 15:48:12.320 [main] INFO  com.ecommerce.mobile.config.DriverManager - Resetting app: package=com.gajab.buyerstore, activity=com.gajab.buyerstore.MainActivity
+2026-09-04 15:48:13.545 [main] INFO  com.ecommerce.mobile.config.DriverManager - Application restarted successfully: com.gajab.buyerstore/com.gajab.buyerstore.MainActivity
+2026-09-04 15:48:19.441 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-04 15:48:21.925 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-04 15:48:27.353 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-04 15:48:27.818 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-04 15:48:28.279 [main] INFO  com.ecommerce.mobile.pages.BasePage - Performed scroll down swipe in page
+2026-09-04 15:48:28.279 [main] INFO  com.ecommerce.mobile.pages.CheckoutPage - User navigated to the specific product in menu
+2026-09-04 15:48:52.026 [main] INFO  com.ecommerce.mobile.pages.HomePage - User clicking the Buy Now button
+2026-09-04 15:49:14.494 [main] ERROR com.ecommerce.mobile.hooks.Hooks - Scenario FAILED: verify specific product checkout flow
+2026-09-04 15:49:15.658 [main] INFO  com.ecommerce.mobile.utils.ScreenshotUtil - Failure screenshot saved: C:\Automation\screenshots\mobile\verify_specific_product_checkout_flow_04-Sep-2026_15-49-15.png
+2026-09-04 15:49:15.662 [main] INFO  com.ecommerce.mobile.hooks.Hooks - ========== Finished scenario: verify specific product checkout flow ==========
+2026-09-04 15:49:15.670 [main] INFO  com.ecommerce.mobile.config.DriverManager - Closing app session.
+2026-09-04 15:49:16.881 [main] INFO  com.ecommerce.mobile.config.AppiumServerManager - Stopping Appium server...
