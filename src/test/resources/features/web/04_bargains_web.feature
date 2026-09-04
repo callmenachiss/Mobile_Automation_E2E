@@ -6,7 +6,7 @@ Feature: Bargain - Product checkout page
 
   Background:
     Given the login screen will be displayed
-    When I entered Mobile number "8484848484"
+    When I entered Mobile number "8973029876"
     Then I should enter OTP
 
   @regression

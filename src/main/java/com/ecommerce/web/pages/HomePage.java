@@ -256,15 +256,15 @@ public class HomePage extends BaseWebPage {
     }
 
     public void setPincode(String pinCode) throws InterruptedException {
-        goSleep(3000);
+        goSleep(5000);
         waitUntilVisible(LocationMenu);
         Actions actions = new Actions(driver);
         actions.moveToElement(LocationMenu).perform();
-        goSleep(2000);
+        goSleep(4000);
         click(LocationTxtbox);
-        goSleep(2000);
+        goSleep(4000);
         enterText(LocationTxtbox, pinCode);
-        goSleep(2000);
+        goSleep(5000);
         click(LocationTargetTxtbox);
         LOGGER.info("User selected the pin code value");
     }
