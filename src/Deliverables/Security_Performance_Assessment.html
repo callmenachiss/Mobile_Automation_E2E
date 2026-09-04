@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gajab Security & Performance Assessment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f8f8;
+    --paper-2:#eef2f2;
+    --ink:#1b2422;
+    --ink-soft:#4a5654;
+    --teal:#0d6e62;
+    --teal-dark:#094f47;
+    --teal-tint:#e3efec;
+    --line:#d7e0de;
+    --good:#0d6e62;
+    --warn:#a15c00;
+    --warn-bg:#fbf2e3;
+    --crit:#9c2b1f;
+    --crit-bg:#fbeae7;
+    --card:#ffffff;
+    --shadow: 0 1px 2px rgba(20,40,36,.06), 0 1px 1px rgba(20,40,36,.04);
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    font-size:14.5px;
+    line-height:1.6;
+    max-width:960px;
+    margin:0 auto;
+    padding:0 32px 80px;
+  }
+  h1,h2,h3,h4{
+    font-family:'Source Serif 4', serif;
+    color:var(--teal-dark);
+    font-weight:700;
+    letter-spacing:-0.01em;
+  }
+  code, .mono, table.data, .tag, .kv, .metric-num{
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .cover{
+    padding:72px 0 40px;
+    border-bottom:3px solid var(--teal);
+    margin-bottom:36px;
+  }
+  .cover .kicker{
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:11.5px;
+    color:var(--teal);
+    margin-bottom:14px;
+  }
+  .cover h1{
+    font-size:34px;
+    margin:0 0 10px;
+    line-height:1.15;
+  }
+  .cover .sub{
+    color:var(--ink-soft);
+    font-size:16px;
+    margin-bottom:26px;
+  }
+  .cover .meta{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-top:28px;
+  }
+  .cover .meta div{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:12px 14px;
+  }
+  .cover .meta .label{
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--ink-soft);
+    margin-bottom:4px;
+  }
+  .cover .meta .val{
+    font-size:13px;
+    font-weight:600;
+  }
+  section{margin-bottom:52px;}
+  h2{
+    font-size:23px;
+    margin:0 0 6px;
+    padding-bottom:12px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+  }
+  h2 .num{
+    color:var(--teal);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:15px;
+    font-weight:600;
+  }
+  h3{font-size:17px;margin:28px 0 10px;}
+  h4{font-size:14.5px;margin:20px 0 8px;color:var(--ink);}
+  p{margin:0 0 12px;color:var(--ink);}
+  .section-intro{color:var(--ink-soft); margin-top:14px;}
+  ul, ol{margin:0 0 14px; padding-left:22px;}
+  li{margin-bottom:6px;}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px 20px;
+    box-shadow:var(--shadow);
+    margin-bottom:16px;
+  }
+  .finding{
+    border-left:4px solid var(--good);
+    padding:14px 18px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:4px solid var(--good);
+    border-radius:6px;
+    margin-bottom:14px;
+  }
+  .finding.watch{border-left-color:var(--warn); }
+  .finding.concern{border-left-color:var(--crit);}
+  .finding h4{margin:0 0 6px; color:var(--ink); font-size:14.5px;}
+  .verified{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--teal-dark);
+    background:var(--teal-tint);
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:4px;
+    margin-top:8px;
+  }
+  table.data{
+    width:100%;
+    border-collapse:collapse;
+    font-size:12.3px;
+    margin:14px 0 20px;
+  }
+  table.data caption{
+    text-align:left;
+    font-family:'Public Sans',sans-serif;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+    caption-side:top;
+  }
+  table.data th{
+    background:var(--teal-tint);
+    color:var(--teal-dark);
+    text-align:left;
+    padding:8px 10px;
+    font-weight:600;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  table.data td{
+    padding:7px 10px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  table.data tr:last-child td{border-bottom:none;}
+  table.data tr:nth-child(even) td{background:#fbfdfd;}
+  .num-cell{text-align:right;}
+  .status-200{color:var(--good); font-weight:600;}
+  .status-401, .status-403{color:var(--teal-dark); font-weight:600;}
+  .status-slow{color:var(--warn); font-weight:700;}
+  .status-fail{color:var(--crit); font-weight:600;}
+  .pill{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.8px;
+    padding:2px 7px;
+    border-radius:20px;
+    font-weight:600;
+  }
+  .pill.get{background:#e3efec;color:var(--teal-dark);}
+  .pill.post{background:#fbf2e3;color:var(--warn);}
+  .pill.options{background:#eef2f2;color:var(--ink-soft);}
+  .summary-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin:18px 0 24px;
+  }
+  .stat{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px;
+    text-align:center;
+  }
+  .stat .metric-num{font-size:26px;font-weight:600;color:var(--teal-dark);}
+  .stat .metric-label{font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em;margin-top:4px;}
+  .callout{
+    background:var(--teal-tint);
+    border:1px solid #c8ddd8;
+    border-radius:10px;
+    padding:16px 20px;
+    margin:16px 0;
+  }
+  .callout.mock{
+    background:var(--warn-bg);
+    border:1px solid #e9d3a8;
+  }
+  .callout h4{margin-top:0;}
+  .toc{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:6px 28px;
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+  .toc li{
+    margin:0;
+    padding:9px 0;
+    border-bottom:1px dashed var(--line);
+    display:flex;
+    justify-content:space-between;
+    font-size:13.5px;
+  }
+  .toc .n{color:var(--teal); font-family:'IBM Plex Mono',monospace; margin-right:8px;}
+  .badge-ok{color:var(--good);}
+  .badge-watch{color:var(--warn);}
+  .badge-concern{color:var(--crit);}
+  code.inline{
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:1px 6px;
+    font-size:12px;
+  }
+  .footer-note{
+    color:var(--ink-soft);
+    font-size:11.5px;
+    border-top:1px solid var(--line);
+    padding-top:16px;
+    margin-top:60px;
+  }
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media print{
+    body{padding:0 24px;}
+    section{page-break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="kicker">External Security &amp; Performance Assessment · Staging Environment</div>
+  <h1>Gajab Web Application<br>Security &amp; Performance Assessment</h1>
+  <div class="sub">A read-only, authenticated review of stg.gajab.com covering endpoint discovery, access-control checks, transport security, response-header hygiene, and real-traffic performance timing.</div>
+  <div class="meta">
+    <div><div class="label">Target</div><div class="val">stg.gajab.com</div></div>
+    <div><div class="label">Environment</div><div class="val">Staging (pre-production)</div></div>
+    <div><div class="label">Assessment date</div><div class="val">4 September 2026</div></div>
+    <div><div class="label">Method</div><div class="val">Authenticated crawl + passive checks</div></div>
+  </div>
+</div>
+
+<section>
+  <h2><span class="num">§</span>Table of Contents</h2>
+  <ul class="toc">
+    <li><span><span class="n">1</span>Executive Summary</span></li>
+    <li><span><span class="n">2</span>Scope &amp; Objectives</span></li>
+    <li><span><span class="n">3</span>How This Was Validated</span></li>
+    <li><span><span class="n">4</span>Security Detailed Observations</span></li>
+    <li><span><span class="n">5</span>Performance Detailed Observations</span></li>
+    <li><span><span class="n">6</span>Endpoint Inventory</span></li>
+    <li><span><span class="n">7</span>Concurrency Simulation (50 users)</span></li>
+    <li><span><span class="n">8</span>Summary Table</span></li>
+    <li><span><span class="n">9</span>Recommendations</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num">1</span>Executive Summary</h2>
+  <p>This assessment reviewed the Gajab staging web application (<code class="inline">https://stg.gajab.com</code>), a Next.js storefront running behind Cloudflare, backed by a REST API host at <code class="inline">gatewayservice.stg.gajab.com</code>. Gajab operates as a "bargaining" marketplace — rather than fixed add-to-cart checkout, the primary commerce flow is a make-an-offer / counter-offer negotiation captured by a family of <code class="inline">store-make-offer</code> endpoints.</p>
+  <p>Three real customer accounts were logged in using the staging OTP flow (fixed OTP <code class="inline">123456</code>), and the resulting authenticated sessions were used to crawl the storefront, category listings, product detail, search, cart, the start of checkout, and account areas, while every network call was captured for analysis. That same traffic was then used to run passive security checks (unauthenticated and malformed-token access attempts, CORS behavior, TLS, security headers, cookie flags) against every discovered API endpoint, and to build a real-data performance profile.</p>
+  <div class="summary-grid">
+    <div class="stat"><div class="metric-num">28</div><div class="metric-label">Distinct endpoints observed</div></div>
+    <div class="stat"><div class="metric-num">3 / 3</div><div class="metric-label">Real logins completed</div></div>
+    <div class="stat"><div class="metric-num">1</div><div class="metric-label">Findings needing attention</div></div>
+    <div class="stat"><div class="metric-num">0</div><div class="metric-label">429s during normal use</div></div>
+  </div>
+  <p>Overall, the application's core access control is sound: every authenticated endpoint tested correctly rejected requests with no token or a garbage token, returning clean generic error bodies rather than stack traces — with one exception (Section 4). TLS is valid and current on both hosts, and the standard security-header set (HSTS, X-Frame-Options, X-Content-Type-Options, X-XSS-Protection) is present on API responses. The two items genuinely worth attention are a wildcard CORS policy (<code class="inline">Access-Control-Allow-Origin: *</code>) on the API host, and one endpoint (<code class="inline">/customer/api/store-message/buyer</code>) that returns an internal stack trace on an access-denied response. No Content-Security-Policy header was observed on any response. On performance, the app is generally responsive, but the <code class="inline">/lookup/api/list/language</code> and <code class="inline">/lookup/api/setting</code> calls — both largely static reference data — repeatedly exceeded 3 seconds and were re-fetched on almost every page navigation rather than cached client-side. A handful of authenticated account pages (orders, address book, wishlist) could not be reached in a signed-in state through this crawl method and are logged under Areas for Future Testing rather than reported as failures.</p>
+</section>
+
+<section>
+  <h2><span class="num">2</span>Scope &amp; Objectives</h2>
+  <p>The objective was to validate, using real authenticated traffic rather than synthetic assumptions, that the staging application (a) enforces access control correctly at the API layer, (b) is configured with sound transport security and response headers, (c) performs acceptably for real users, and (d) has no obviously destructive gaps that would carry over to production.</p>
+  <h3>In scope</h3>
+  <ul>
+    <li>Full authenticated crawl of <code class="inline">stg.gajab.com</code> using the three provided test accounts (<code class="inline">8888888888</code>, <code class="inline">8484848484</code>, <code class="inline">8585858585</code>) via the staging fixed-OTP login flow.</li>
+    <li>Home, category listings, product detail, search, cart, the start of checkout (short of finalizing an order), wishlist, account/profile, and the site's "My Bargains" area.</li>
+    <li>Passive security checks against every API endpoint discovered during the crawl: unauthenticated access, malformed-token access, real-token access, CORS behavior against an untrusted origin, TLS certificate validity, response security headers, and cookie flags.</li>
+    <li>Real-traffic performance timing (per-call latency, duplicate-fetch detection, rate-limit behavior) captured from the same crawl.</li>
+    <li>A mocked, local-only simulation of 50 concurrent login/OTP requests (Section 7) — explicitly not run against the live staging site.</li>
+  </ul>
+  <h3>Out of scope / explicitly avoided</h3>
+  <ul>
+    <li>No exploit payloads of any kind — no SQL injection, XSS, or fuzzing input was submitted anywhere.</li>
+    <li>No destructive actions — no order was placed, no payment was submitted, no address or account data was deleted.</li>
+    <li>No bulk or automated login attempts against the live site using synthetic phone numbers — only the three provided real accounts were ever used for real logins. Note on process: account <code class="inline">8888888888</code> was logged into multiple times (real OTP send/verify each time) during interactive script development before the final crawl script was working, ahead of the one clean login each used for <code class="inline">8484848484</code> and <code class="inline">8585858585</code> and the final recorded crawl of <code class="inline">8888888888</code> itself. No synthetic numbers were involved, and this is disclosed here for full transparency on methodology.</li>
+    <li>No real 50-way concurrent login burst against production or staging infrastructure — see Section 7 for why, and what a real version of that test would require.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num">3</span>How This Was Validated</h2>
+  <p class="section-intro">In plain terms: we logged in for real, browsed the site the way a customer would, and watched every request the app made in the background. We then re-sent those same kinds of requests ourselves — with no login, with a fake login, and with a real login — to check the app only shows private data to people who are actually logged in. Separately, we checked the site's "locks" (encryption, security headers, cookies) and timed every request to see what's fast and what's slow.</p>
+  <h3>Security steps performed</h3>
+  <ol>
+    <li><strong>Access control, no credentials:</strong> every API endpoint discovered during the crawl was called directly with no login token, to confirm private endpoints refuse the request cleanly.</li>
+    <li><strong>Access control, fake credentials:</strong> the same endpoints were called again with a deliberately invalid/garbage token, to confirm the app doesn't accept "close enough" credentials.</li>
+    <li><strong>Access control, real credentials:</strong> the same endpoints were called with a genuine token taken from one of the three real logins, to confirm legitimate users are correctly let in.</li>
+    <li><strong>Encryption check:</strong> the site's HTTPS certificate was inspected on both the storefront and the API host for validity, issuer, and expiry.</li>
+    <li><strong>Browser safety headers:</strong> every response was checked for the standard headers that stop clickjacking, content sniffing, and script-injection attacks.</li>
+    <li><strong>Cross-site request check:</strong> requests were sent pretending to come from an untrusted, made-up website, to confirm the API doesn't blindly trust every website that asks it for data.</li>
+    <li><strong>Cookie safety check:</strong> every cookie the site sets was inspected for the flags that stop it being stolen or read by scripts.</li>
+  </ol>
+  <h3>Performance steps performed</h3>
+  <ol>
+    <li>Every API call made during the full logged-in journey (all three accounts) was timed from request to response.</li>
+    <li>Calls taking roughly 3 seconds or more were flagged as slow, and reported to the exact millisecond.</li>
+    <li>Repeated calls to the same endpoint within one browsing session were counted, to catch the app re-fetching data it already has.</li>
+    <li>The full crawl was checked for any "too many requests" (429) responses under completely normal, human-paced browsing.</li>
+  </ol>
+  <h3>Why the 50-user login test is simulated, not real</h3>
+  <p>Firing 50 simultaneous login attempts at a live site — even an authorized staging one — looks, to both Cloudflare's and the application's own automated abuse detection, indistinguishable from a credential-stuffing attack. An earlier attempt at a smaller-scale burst against real infrastructure was already blocked for exactly this reason. Rather than repeat that pattern at a larger scale, we recorded the real behavior of the login endpoint from the three genuine logins performed in Section 1 (its request shape, response shape, and actual latency), then built a small local mock server that mimics that exact behavior, including a simulated rate limit under load. All 50 concurrent requests in Section 7 were sent to that local mock — never to gajab.com.</p>
+</section>
+
+<section>
+  <h2><span class="num">4</span>Security Detailed Observations</h2>
+
+  <h3>What's working well</h3>
+
+  <div class="finding">
+    <h4>Authenticated endpoints correctly refuse unauthenticated access</h4>
+    <p>Of the 14 distinct API endpoints probed directly, four are user-scoped and require a valid token: <code class="inline">get-profile</code>, <code class="inline">product/api/cart</code>, <code class="inline">store-make-offer/mobile-offer-list</code>, and <code class="inline">store-make-offer/mywin-offer-list</code>. All four returned <code class="inline">401</code> with a clean, generic body (<code class="inline">{"status":0,"message":"Please send a valid token"}</code> / <code class="inline">"UnAuthorized user"</code>) when called with no token and with a garbage token — no stack traces, internal paths, or SQL fragments in either case.</p>
+    <div class="verified">Verified via: direct curl calls to each endpoint with no Authorization header, then again with Authorization: Bearer garbage.not.a.real.token — response bodies and status codes inspected for leakage.</div>
+  </div>
+
+  <div class="finding">
+    <h4>Legitimate sessions are correctly honored</h4>
+    <p>The same set of endpoints, called with a genuine bearer token captured from a real login (account 8888888888), returned 200 with the expected personal data (profile, cart contents, offer history) — confirming the auth check is a real gate, not a decorative one.</p>
+    <div class="verified">Verified via: curl calls to all 14 endpoints using a live bearer token extracted from the browser session after OTP verification.</div>
+  </div>
+
+  <div class="finding">
+    <h4>TLS is valid and current on both hosts</h4>
+    <p><code class="inline">stg.gajab.com</code> presents a valid certificate (CN=stg.gajab.com, Cloudflare-issued, TLS 1.3, expires 9 Feb 2027). <code class="inline">gatewayservice.stg.gajab.com</code> also presents a valid certificate (CN=gatewayservice.stg.gajab.com, Cloudflare-issued, TLS 1.3, expires 2 Nov 2026). Both verified cleanly with no chain or hostname errors.</p>
+    <div class="verified">Verified via: curl -vI against both hosts, inspecting subject, issuer, and validity dates.</div>
+  </div>
+
+  <div class="finding">
+    <h4>Standard browser security headers are present on API responses</h4>
+    <p><code class="inline">Strict-Transport-Security: max-age=15552000; includeSubDomains</code>, <code class="inline">X-Content-Type-Options: nosniff</code>, <code class="inline">X-Frame-Options: SAMEORIGIN</code>, and <code class="inline">X-XSS-Protection: 1; mode=block</code> were all present and consistent across every API response checked.</p>
+    <div class="verified">Verified via: curl -D- response header inspection on get-profile, lookup/setting, and elastic/category, with and without an untrusted Origin header.</div>
+  </div>
+
+  <div class="finding">
+    <h4>No rate-limiting friction during normal use</h4>
+    <p>Across the three full login-and-browse sessions (~1,950 requests total), no <code class="inline">429</code> responses were observed at any point — normal human-paced navigation is not penalized.</p>
+    <div class="verified">Verified via: status-code audit of all captured network traffic from the three authenticated crawl sessions.</div>
+  </div>
+
+  <h3>Findings</h3>
+
+  <div class="finding concern">
+    <h4>Internal stack trace disclosed on one access-denied response</h4>
+    <p><code class="inline">GET /customer/api/store-message/buyer</code> returns HTTP 403 for both unauthenticated and garbage-token requests, but the response body includes a raw Node.js stack trace: internal file paths (<code class="inline">/app/node_modules/routing-controllers/cjs/http-error/HttpError.js</code>), the framework in use (<code class="inline">routing-controllers</code>), and the internal error class hierarchy. This is the one endpoint of the fourteen tested that leaks implementation detail on a rejected request; every other endpoint returned a clean generic message.</p>
+    <div class="verified">Verified via: curl to /customer/api/store-message/buyer with no auth and with a garbage token; response body inspected.</div>
+  </div>
+
+  <div class="finding watch">
+    <h4>Wildcard CORS on the API host</h4>
+    <p>Every API endpoint tested — including authenticated ones returning personal data such as profile and cart — responded with <code class="inline">Access-Control-Allow-Origin: *</code> even when the request declared a deliberately untrusted origin (<code class="inline">Origin: https://evil-attacker.example</code>), on both the CORS preflight and the actual GET. Because this app authenticates via a bearer token in an Authorization header rather than a cookie-based session, this does not by itself enable classic cross-site request forgery (a browser won't attach another site's saved Authorization header automatically). It does, however, remove origin-based access control as a defense layer entirely, and would materially widen the blast radius of any future token-leakage issue (e.g. an XSS bug) or any move to cookie-based sessions.</p>
+    <div class="verified">Verified via: OPTIONS and GET requests to get-profile, lookup/setting, and elastic/category with Origin: https://evil-attacker.example; Access-Control-Allow-Origin reflected as * in every case.</div>
+  </div>
+
+  <div class="finding watch">
+    <h4>No Content-Security-Policy header observed</h4>
+    <p>Neither the storefront pages (<code class="inline">/</code>, <code class="inline">/auth/signin</code>) nor the API responses returned a <code class="inline">Content-Security-Policy</code> header. The other browser hardening headers (HSTS, X-Frame-Options, X-Content-Type-Options) are present, but CSP — which limits the damage a script-injection bug could do — is absent.</p>
+    <div class="verified">Verified via: full response-header dump on the homepage, the sign-in page, and representative API calls.</div>
+  </div>
+
+  <div class="finding watch">
+    <h4>Session-adjacent cookie missing Secure and HttpOnly flags</h4>
+    <p>The <code class="inline">store_type</code> cookie set on every page load is scoped as <code class="inline">Path=/; SameSite=Lax</code> with no <code class="inline">Secure</code> or <code class="inline">HttpOnly</code> flag, despite the site being served exclusively over HTTPS. In this app the actual authentication token lives in browser localStorage rather than a cookie, so this specific cookie carries low sensitivity (a UI preference flag), but it's a straightforward hardening gap worth closing since the site never needs it over plain HTTP.</p>
+    <div class="verified">Verified via: curl -D- on the homepage and Playwright's cookie inspection after a real login; only store_type, lang, language_id, and access_token_guest cookies were observed, none flagged Secure or HttpOnly.</div>
+  </div>
+
+  <div class="finding watch">
+    <h4>Unpinned third-party script loaded from a public CDN</h4>
+    <p>The homepage loads <code class="inline">https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js</code> — the <code class="inline">@latest</code> tag means the exact code served can change at any time without a corresponding deploy on Gajab's side, which is a supply-chain risk if that package is ever compromised upstream. A second, pinned copy of the same library (<code class="inline">@2.7.12</code>) is also loaded, suggesting the unpinned reference may be incidental.</p>
+    <div class="verified">Verified via: inspection of all third-party script requests captured during the crawl.</div>
+  </div>
+
+  <div class="finding watch">
+    <h4>API certificate renews within roughly two months</h4>
+    <p><code class="inline">gatewayservice.stg.gajab.com</code>'s certificate expires 2 Nov 2026, noticeably sooner than the storefront's (9 Feb 2027). Not a current problem, but worth confirming auto-renewal is configured for that host specifically.</p>
+    <div class="verified">Verified via: openssl/curl certificate inspection, same check as the TLS validity finding above.</div>
+  </div>
+
+  <h3>Areas for Future Testing</h3>
+  <p class="section-intro">The following were not verified in this pass — not because anything suspicious was found, but because this crawl method could not reach them in an authenticated state. They are listed here as open scope, not as weaknesses.</p>
+  <ul>
+    <li><strong>Order history, address book, and wishlist pages</strong> (<code class="inline">/my-account/orders</code>, <code class="inline">/my-account/address</code>, <code class="inline">/wishlist</code>) each returned an HTTP 307 redirect back to the sign-in page during the crawl, even with a valid client-side session. This appears to be because these Next.js routes perform a server-side authentication check against a session cookie, while this app's actual session lives in browser localStorage and is sent as a bearer token — the two mechanisms don't line up for server-rendered pages. The underlying API endpoints backing these pages were not identified or tested as a result.</li>
+    <li><strong>Add-to-cart / make-an-offer submission flow.</strong> Product detail pages expose a "Start Bargaining" call to action rather than a traditional add-to-cart button; the automated crawl's add-to-cart heuristic did not match this flow, so the offer-submission endpoint itself was not exercised or security-tested.</li>
+    <li><strong>Dedicated cart page.</strong> Navigating directly to <code class="inline">/cart</code> returned a 404; cart contents may only be reachable via an in-page drawer/modal rather than a standalone route.</li>
+    <li><strong>Checkout beyond the initial screen and payment endpoints.</strong> The crawl reached the start of checkout but intentionally stopped short of address/payment submission, per the no-real-transaction constraint.</li>
+    <li><strong>Seller-side and admin surfaces</strong> (e.g. <code class="inline">/become-a-seller</code>) were observed as links but not crawled, being outside the buyer-journey scope of this assessment.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num">5</span>Performance Detailed Observations</h2>
+
+  <h3>Healthy findings</h3>
+  <div class="finding">
+    <h4>Most API calls return in a bit over a second</h4>
+    <p>Across the 16 distinct backend endpoints and ~140 timed calls in the deep crawl session, the median response time per endpoint sits between roughly 470ms and 1.4s, which is reasonable for a staging environment being exercised from outside its home network.</p>
+  </div>
+  <div class="finding">
+    <h4>No rate-limit friction under normal browsing</h4>
+    <p>Zero 429 responses were seen across all three full login-and-browse sessions, confirming the app doesn't over-throttle real users during ordinary use (see Section 4 for the same finding from the security angle).</p>
+  </div>
+
+  <h3>Slow-endpoint findings (≥ ~3 seconds)</h3>
+  <p>Two endpoints — both serving largely static reference data — repeatedly crossed the 3-second mark across independent sessions on different accounts, rather than as a single outlier:</p>
+  <table class="data">
+    <caption>Individual calls timed at or above 3,000ms, captured across all three authenticated sessions</caption>
+    <thead><tr><th>Account</th><th>Method</th><th>Endpoint</th><th>Observed latency</th></tr></thead>
+    <tbody>
+      <tr><td>8484848484</td><td><span class="pill get">GET</span></td><td>/lookup/api/list/language</td><td class="num-cell status-slow">3,611 ms</td></tr>
+      <tr><td>8888888888</td><td><span class="pill get">GET</span></td><td>/lookup/api/list/language</td><td class="num-cell status-slow">3,566 ms</td></tr>
+      <tr><td>8585858585</td><td><span class="pill get">GET</span></td><td>/lookup/api/list/language</td><td class="num-cell status-slow">3,523 ms</td></tr>
+      <tr><td>8484848484</td><td><span class="pill get">GET</span></td><td>/lookup/api/setting</td><td class="num-cell status-slow">3,377 ms</td></tr>
+      <tr><td>8484848484</td><td><span class="pill get">GET</span></td><td>/lookup/api/list/language</td><td class="num-cell status-slow">3,131 ms</td></tr>
+      <tr><td>8888888888</td><td><span class="pill get">GET</span></td><td>/lookup/api/list/language</td><td class="num-cell status-slow">3,107 ms</td></tr>
+      <tr><td>8585858585</td><td><span class="pill get">GET</span></td><td>/lookup/api/setting</td><td class="num-cell status-slow">3,072 ms</td></tr>
+      <tr><td>8585858585</td><td><span class="pill get">GET</span></td><td>/lookup/api/list/language</td><td class="num-cell status-slow">3,064 ms</td></tr>
+    </tbody>
+  </table>
+  <p>One further slow event was observed at the page level rather than the API level: loading a single product detail page (<code class="inline">/product-detail/flyup-wall-mounted-soap-box.../SHOP406424916</code>) took <strong>4,414 ms</strong> to render server-side on one occasion, well above the ~600-800ms typical for other product detail loads in the same session.</p>
+
+  <h3>Duplicate-fetch patterns</h3>
+  <p>The following endpoints were called far more often than the number of distinct pages visited in a single browsing session would suggest — each one was re-fetched on nearly every route change instead of being cached client-side after the first load:</p>
+  <table class="data">
+    <caption>Repeated calls within one continuous authenticated session (account 8888888888, ~12 page navigations)</caption>
+    <thead><tr><th>Endpoint</th><th>Times called</th><th>Data volatility</th></tr></thead>
+    <tbody>
+      <tr><td>/lookup/api/setting</td><td class="num-cell">23</td><td>Site-wide settings — changes rarely</td></tr>
+      <tr><td>/lookup/api/list/language</td><td class="num-cell">23</td><td>Two-item language list — essentially static</td></tr>
+      <tr><td>/product/api/store-make-offer/mywin-offer-list</td><td class="num-cell">12</td><td>User's own offer history — changes occasionally</td></tr>
+      <tr><td>/product/api/elastic/category</td><td class="num-cell">11</td><td>Category taxonomy — changes rarely</td></tr>
+      <tr><td>/customer/api/customer/sign-in-count</td><td class="num-cell">6</td><td>Global counter — low value cached</td></tr>
+    </tbody>
+  </table>
+  <p>None of these individually caused a slow page load, but together they add avoidable network round trips to every navigation — plausibly a meaningful share of the intermittent 3s+ spikes above, since these are exactly the two endpoints that spiked.</p>
+</section>
+
+<section>
+  <h2><span class="num">6</span>Endpoint Inventory</h2>
+  <h3>Backend API endpoints — gatewayservice.stg.gajab.com</h3>
+  <table class="data">
+    <thead><tr><th>Method</th><th>Path</th><th>Purpose (inferred)</th><th>Auth required</th><th>Typical latency (median)</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pill post">POST</span></td><td>/customer/api/customer/mobile-send-otp-new</td><td>Request an OTP for a mobile number (login step 1)</td><td>No</td><td>1,300 ms</td></tr>
+      <tr><td><span class="pill post">POST</span></td><td>/customer/api/customer/mobile-otp-verify-new</td><td>Verify OTP and issue a session token (login step 2)</td><td>No</td><td>1,693 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/customer/api/customer/get-profile</td><td>Fetch the logged-in customer's profile</td><td>Yes</td><td>967 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/customer/api/customer/sign-in-count</td><td>Global "X people signed up" counter shown on sign-in</td><td>No</td><td>1,176 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/customer/api/store-message/buyer</td><td>Fetch a buyer-facing announcement/message</td><td>Yes</td><td>955 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/lookup/api/list/language</td><td>Available site languages</td><td>No</td><td>1,408 ms <span class="status-slow">(spikes to 3.6s)</span></td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/lookup/api/setting</td><td>Global site/store settings and SEO metadata</td><td>No</td><td>1,427 ms <span class="status-slow">(spikes to 3.4s)</span></td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/order/api/list/live-feeds</td><td>Homepage "live orders" social-proof ticker</td><td>No</td><td>1,093 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product/api/cart</td><td>Fetch the logged-in customer's cart contents</td><td>Yes</td><td>1,436 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product/api/elastic/category</td><td>Category tree / navigation taxonomy</td><td>No</td><td>959 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product/api/elastic/filters</td><td>Available brand/price/rating filters for a listing</td><td>No</td><td>1,209 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product/api/elastic/products</td><td>Product search/listing results</td><td>No</td><td>1,000 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product/api/list/get-category-widget/1</td><td>Homepage category widget content</td><td>No</td><td>1,173 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product/api/store-make-offer/mobile-offer-list</td><td>Customer's active bargain offers</td><td>Yes</td><td>1,206 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product/api/store-make-offer/mywin-offer-list</td><td>Customer's accepted/"won" bargain offers</td><td>Yes</td><td>1,264 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product/api/store-recommendation/recommend-list</td><td>"Frequently bought" recommendation widget</td><td>No</td><td>1,241 ms</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Frontend page routes — stg.gajab.com</h3>
+  <table class="data">
+    <thead><tr><th>Method</th><th>Path</th><th>Purpose</th><th>Typical latency</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pill get">GET</span></td><td>/</td><td>Homepage</td><td>1,470 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/auth/signin</td><td>Login / OTP entry</td><td>1,244 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product-list/{category}/{page}</td><td>Category listing</td><td>1,105 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product-list/all?keyword={q}</td><td>Search results</td><td>~700 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/product-detail/{slug}/{sku}</td><td>Product detail page</td><td>662 ms <span class="status-slow">(one spike to 4.4s)</span></td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/cart</td><td>Cart (returned 404 as a direct route — see Areas for Future Testing)</td><td>632 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/checkout</td><td>Checkout entry (not finalized, per scope)</td><td>946 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/wishlist</td><td>Wishlist (307 redirect while "authenticated" — see Areas for Future Testing)</td><td>460 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/my-account</td><td>Account/profile (307 redirect — see Areas for Future Testing)</td><td>458 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/my-account/orders</td><td>Order history (307 redirect — see Areas for Future Testing)</td><td>474 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/my-account/address</td><td>Address book (307 redirect — see Areas for Future Testing)</td><td>451 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/my-bargains</td><td>Bargain-marketplace dashboard</td><td>1,394 ms</td></tr>
+      <tr><td><span class="pill get">GET</span></td><td>/pages/terms-conditions-for-buyer</td><td>Legal/terms content</td><td>678 ms</td></tr>
+    </tbody>
+  </table>
+  <p class="section-intro">28 distinct endpoints observed in total (16 backend API, 12 frontend page routes). Latencies above are medians from real captured traffic across the three authenticated sessions; single-shot security-check calls made separately via curl are not included in these figures.</p>
+</section>
+
+<section>
+  <h2><span class="num">7</span>Concurrency Simulation (50 users)</h2>
+  <div class="callout mock">
+    <h4>This section is a simulated / mocked test, not a real production load test</h4>
+    <p>No real burst of 50 concurrent login attempts was sent to gajab.com. At that scale, a concurrent login burst is indistinguishable from credential-stuffing or account-abuse traffic to both Cloudflare's edge protections and the application's own fraud detection — regardless of authorization, this pattern was already flagged and blocked once during preparation for this assessment. Instead, we captured the real request shape, response shape, and latency of the actual OTP-request endpoint from the three genuine logins performed in Section 1, and rebuilt it as a local mock server (plain Node <code class="inline">http</code>, no external calls). All 50 requests below were sent to that local mock only.</p>
+    <p><strong>What a real version of this test would require:</strong> explicit load-testing sign-off from the Gajab team, coordinated monitoring on their side during the run, a dedicated non-production test harness (so traffic is identifiable and excluded from fraud/abuse metrics), and ideally a maintenance window given the shared nature of staging infrastructure.</p>
+  </div>
+
+  <h3>Basis for the mock</h3>
+  <table class="data">
+    <thead><tr><th>Property</th><th>Observed from real login</th></tr></thead>
+    <tbody>
+      <tr><td>Endpoint</td><td>POST /customer/api/customer/mobile-send-otp-new</td></tr>
+      <tr><td>Request body</td><td><code class="inline">{"mobileNumber":"8888888888","isLogin":1}</code></td></tr>
+      <tr><td>Response body (success)</td><td><code class="inline">{"status":1,"message":"OTP has been sent to your mobile number."}</code></td></tr>
+      <tr><td>Real single-call latency observed</td><td>1,262 ms / 1,305 ms / 1,332 ms (accounts 8888888888 / 8484848484 / 8585858585)</td></tr>
+      <tr><td>Mock latency model</td><td>1,300 ms baseline ± 300 ms random jitter per request</td></tr>
+      <tr><td>Simulated rate-limit rule (grounded assumption)</td><td>Requests beyond the 20th concurrently in-flight receive HTTP 429 — a common pattern for login/OTP endpoints under load, chosen for illustration since the real threshold is unknown and was not tested against production</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Results — 50 concurrent requests against the local mock</h3>
+  <div class="summary-grid">
+    <div class="stat"><div class="metric-num">1,624 ms</div><div class="metric-label">Total wall time</div></div>
+    <div class="stat"><div class="metric-num">20</div><div class="metric-label">Succeeded (200)</div></div>
+    <div class="stat"><div class="metric-num">30</div><div class="metric-label">Rate-limited (429)</div></div>
+    <div class="stat"><div class="metric-num">0</div><div class="metric-label">Hard errors</div></div>
+  </div>
+  <table class="data">
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Total requests fired</td><td class="num-cell">50</td></tr>
+      <tr><td>Total wall-clock time</td><td class="num-cell">1,624 ms</td></tr>
+      <tr><td>Successful (HTTP 200)</td><td class="num-cell">20</td></tr>
+      <tr><td>Rate-limited (HTTP 429)</td><td class="num-cell">30</td></tr>
+      <tr><td>Hard errors (connection-level)</td><td class="num-cell">0</td></tr>
+      <tr><td>p50 latency</td><td class="num-cell">1,281 ms</td></tr>
+      <tr><td>p90 latency</td><td class="num-cell">1,536 ms</td></tr>
+      <tr><td>p99 latency</td><td class="num-cell">1,607 ms</td></tr>
+      <tr><td>Min / Max latency</td><td class="num-cell">1,070 ms / 1,607 ms</td></tr>
+    </tbody>
+  </table>
+  <p>Under this mocked model, the first 20 concurrent requests succeed with latency close to the real observed baseline (~1.1–1.6s), and the remaining 30 receive a fast 429 rather than hanging — the shape one would want from a real rate limiter: it fails fast rather than degrading every request's latency. This is illustrative of one plausible outcome, not a measurement of gajab.com's actual capacity, which is unknown until a sanctioned real load test is performed.</p>
+</section>
+
+<section>
+  <h2><span class="num">8</span>Summary Table</h2>
+  <table class="data">
+    <thead><tr><th>Area</th><th>Status</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td>Access control (auth required endpoints)</td><td class="badge-ok">Good</td><td>All 4 user-scoped endpoints correctly reject no-token and garbage-token requests</td></tr>
+      <tr><td>Error-message hygiene</td><td class="badge-watch">1 finding</td><td>/store-message/buyer leaks a Node.js stack trace on 403</td></tr>
+      <tr><td>TLS / certificates</td><td class="badge-ok">Good</td><td>Valid on both hosts; API cert renews in ~2 months</td></tr>
+      <tr><td>Security headers</td><td class="badge-watch">Partial</td><td>HSTS/X-Frame-Options/nosniff present; no CSP anywhere</td></tr>
+      <tr><td>CORS configuration</td><td class="badge-watch">1 finding</td><td>Wildcard Access-Control-Allow-Origin on all API responses</td></tr>
+      <tr><td>Cookie flags</td><td class="badge-watch">Minor</td><td>store_type cookie missing Secure/HttpOnly (low sensitivity)</td></tr>
+      <tr><td>Rate limiting under normal use</td><td class="badge-ok">Good</td><td>Zero 429s across ~1,950 real requests, 3 sessions</td></tr>
+      <tr><td>API performance (typical)</td><td class="badge-ok">Good</td><td>Median 470ms–1.4s per endpoint</td></tr>
+      <tr><td>API performance (outliers)</td><td class="badge-watch">2 endpoints</td><td>/lookup/api/list/language and /lookup/api/setting repeatedly ≥3s</td></tr>
+      <tr><td>Duplicate-fetch efficiency</td><td class="badge-watch">5 endpoints</td><td>Static/slow-changing data re-fetched on nearly every navigation</td></tr>
+      <tr><td>Concurrency behavior</td><td class="badge-ok">Simulated only</td><td>Mock model shows fail-fast 429 behavior above 20 concurrent — not a measured production result</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2><span class="num">9</span>Recommendations</h2>
+  <ol>
+    <li><strong>Scope CORS to known origins.</strong> Replace the wildcard <code class="inline">Access-Control-Allow-Origin: *</code> on gatewayservice.stg.gajab.com with an explicit allow-list of the actual frontend origins (stg.gajab.com and any other legitimate environments), even though the bearer-token auth model limits today's exposure.</li>
+    <li><strong>Fix the stack-trace leak on /customer/api/store-message/buyer.</strong> Return the same generic, no-internal-detail error body used by every other endpoint on a 401/403.</li>
+    <li><strong>Add a Content-Security-Policy header</strong> to both the Next.js frontend and the API responses, scoped to the script/style/image sources actually in use.</li>
+    <li><strong>Add Secure (and consider HttpOnly) flags</strong> to cookies set over HTTPS, including store_type, even where the data itself is low-sensitivity — it's a no-cost hardening step.</li>
+    <li><strong>Cache static/slow-changing reference data client-side</strong> (language list, site settings, category tree) instead of re-fetching on every route change; this both removes ~50+ redundant calls per session and likely resolves a meaningful share of the observed 3s+ spikes.</li>
+    <li><strong>Investigate the /lookup/api/list/language and /lookup/api/setting latency spikes</strong> specifically — client-side caching will reduce call volume, but the underlying spike to 3.1–3.6s on individual calls suggests a server-side or database-level cause worth profiling directly.</li>
+    <li><strong>Reconcile the cookie-based vs. token-based auth mismatch</strong> on server-rendered account routes (orders, address book, wishlist) so a logged-in user with a valid bearer token isn't redirected back to sign-in when visiting those pages directly.</li>
+    <li><strong>Pin the dotlottie-player CDN reference</strong> to a fixed version instead of <code class="inline">@latest</code>, matching the already-pinned copy of the same library elsewhere on the page.</li>
+    <li><strong>When ready for a real concurrency/load test</strong>, coordinate directly with the Gajab engineering team: agree a maintenance window, use a dedicated non-production test harness whose traffic can be excluded from fraud/abuse detection, and define target concurrency and acceptable latency/error thresholds in advance.</li>
+  </ol>
+
+  <div class="footer-note">
+    Prepared from real, observed traffic captured on 4 September 2026 against https://stg.gajab.com (staging). All figures in Sections 4–6 and 8 come from real authenticated sessions and direct curl checks; Section 7 is explicitly a local simulation and is labeled as such throughout. No exploit payloads, synthetic-number logins, or destructive actions were used at any point in this assessment (see Section 2 for a disclosed note on repeated real logins to one test account during script development).
+  </div>
+</section>
+
+</body>
+</html>
